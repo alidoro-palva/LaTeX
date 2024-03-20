@@ -1,0 +1,59 @@
+\documentclass[a5paper,10pt]{article}
+\oddsidemargin=0pt
+\hoffset=-1.5cm
+\voffset=-1.5cm
+\topmargin=-1.5cm
+\textwidth=12.8cm
+\textheight=18.6cm
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage[russian]{babel}
+\usepackage[T2A]{fontenc}
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{bm}
+\usepackage{graphicx}
+
+\begin{document}
+
+\noindent
+{\it Виноградова И.А. и др. - Математический анализ в задачах и упражнениях. Том 2 (2018)}
+
+\medskip
+\noindent
+Разложить функцию $f(x)$ в тригонометричкий ряд Фурье на заданном отрезке.
+
+\medskip
+\noindent
+{\bf 14.1} $f(x)=\cos^4x$ на $[-\pi;\pi].$
+
+\medskip
+\noindent
+$\displaystyle f(x)=\cos^4x=\left(\frac{1+\cos2x}{2}\right)^2=
+\frac14+\cos2x+\frac{\cos^22x}{4}=\frac14+\cos2x+\frac{1+\cos4x}{8}=\\
+=\frac38+\cos2x+\frac18\cos4x.$
+
+\medskip
+\noindent
+{\bf 14.3} $f(x)=\sin x$ на $\displaystyle \left[-\frac{\pi}{2};\frac{\pi}{2}\right].$
+
+\medskip
+\noindent
+$\displaystyle b_n=\frac{2}{\pi}\int_{-\pi/2}^{\pi/2}\sin x\cdot\sin2nx\,dx=
+\frac{1}{\pi}\int_{-\pi/2}^{\pi/2}[\cos(2n-1)x-\cos(2n+1)x]\,dx=\\
+=\left.\frac{1}{\pi}\left[\frac{1}{2n-1}\sin(2n-1)x-
+\frac{1}{2n+1}\sin(2n+1)x\right]\right|_{-\pi/2}^{\pi/2}=\\
+=\frac{1}{\pi}\left[\frac{1}{2n-1}\sin\left(\pi n-\frac{\pi}{2}\right)-
+\frac{1}{2n+1}\sin\left(\pi n+\frac{\pi}{2}\right)-\right.\\
+\left.-\frac{1}{2n-1}\sin\left(-\pi n+\frac{\pi}{2}\right)+
+\frac{1}{2n+1}\sin\left(-\pi n-\frac{\pi}{2}\right)\right]=\\
+=\frac{2}{\pi}\left[\frac{1}{2n-1}\sin\left(\pi n-\frac{\pi}{2}\right)-
+\frac{1}{2n+1}\sin\left(\pi n+\frac{\pi}{2}\right)\right]=\\
+=\frac{2}{\pi}\left[\frac{1}{2n-1}(-1)^{n+1}-\frac{1}{2n+1}(-1)^n\right]=
+\frac{2}{\pi}\cdot\frac{(-1)^{n+1}4n}{4n^2-1}=\frac{8}{\pi}\cdot\frac{(-1)^{n+1}n}{4n^2-1}.\\
+\sin x = \frac{8}{\pi}\sum_{x-1}^{\infty}\frac{(-1)^{n+1}n}{4n^2-1}\sin2nx,\quad
+ x\in \left(-\frac{\pi}{2};\frac{\pi}{2}\right).$
+
+
+\end{document}
