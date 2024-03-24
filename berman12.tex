@@ -1,0 +1,917 @@
+\documentclass[a5paper,10pt]{article}
+\oddsidemargin=0pt
+\hoffset=-1.5cm
+\voffset=-1.5cm
+\topmargin=-1.5cm
+\textwidth=12.8cm
+\textheight=18.6cm
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage[T2A]{fontenc}
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{bm}
+\usepackage{graphicx}
+
+\begin{document}
+
+\noindent {\it Берман. Сборник задач по курсу математического анализа.
+Издание двадцатое. М., 1985.}
+
+\bigskip
+\section* {Глава XII. Многомерные интегралы и кратное интегрирование}
+
+\medskip
+\noindent Вычислить двойные интегралы, взятые по прямоугольным областям интегрирования $D$, заданным условиями в скобках.
+
+\medskip\noindent
+\noindent{\bf 3479.} $\displaystyle \iint_D\frac{x^2}{1+y^2}\,dxdy\qquad (0\le x \le1,\quad 0\le y\le 1)$.
+
+\smallskip
+\noindent $\blacktriangleleft$ $\displaystyle \iint_D\frac{x^2}{1+y^2}\,dxdy=\int_0^1x^2dx\int_0^1\frac{dy}{1+y^2}=
+\int_0^1x^2dx\cdot\arctg y\Big|_0^1=\frac{\pi}{4}\cdot\frac{x^3}{3}\Big|_0^1=\frac{\pi}{12}.$
+$\blacktriangleright$
+
+\medskip\noindent
+Вычислить интегралы.
+
+\medskip
+\noindent{\bf 3508.} $\displaystyle \iint_D(x^2+y)\,dx\,dy,\quad D$ -- область, ограниченная параболами
+$y=x^2$ и $y^2=x$.
+
+\smallskip
+\noindent $\blacktriangleleft$ $\displaystyle \iint_D(x^2+y)\,dx\,dy=
+\int_0^1dx\int_{x^2}^{\sqrt x}(x^2+y)\,dy=
+\int_0^1\left(x^2y+\frac{y^2}{2}\right)\Big|_{x^2}^{\sqrt x}dx=$\\
+$\displaystyle =\int_0^1\left(x^{5/2}+\frac{x}{2}-x^4-\frac{x^4}{2}\right)\,dx
+=\left(\frac27x^{7/2}+\frac{x^2}{4}-\frac{3}{10}x^5\right)\Big|_0^1
+=\frac27+\frac{1}{4}-\frac{3}{10}=\frac{33}{140}.$ $\blacktriangleright$
+
+\medskip
+\noindent{\bf 3519.} $\displaystyle \int_0^a dx\int_0^x dy\int_0^y xyz\,dz=
+\int_0^a dx\int_0^x dy\cdot xy\frac{z^2}{2}\Big|_0^y=\frac12\int_0^a dx\int_0^xxy^3dy=$\\
+$\displaystyle =\frac12\int_0^a dx\cdot x\frac{y^4}{4}\Big|_0^x=\frac18\int_0^a x^5 dx=
+\frac18\cdot\frac{x^6}{6}\Big|_0^a=\frac{a^6}{48}$.
+
+\medskip
+\noindent{\bf 3523.} $\displaystyle \iiint_\Omega xy\,dx\,dy\,dz,\quad\Omega$ -- область, ограниченная
+гиперболическим параболоидом $z=xy$ и плоскостями $x+y=1$ и $z=0\ (z\ge0)$.
+
+\smallskip\noindent $\blacktriangleleft$ $\displaystyle \iiint_\Omega xy\,dx\,dy\,dz=
+\int_0^1x\,dx\int_0^{1-x}y\,dy\int_0^{xy}dz=\int_0^1x\,dx\int_0^{1-x}y\,dy\cdot xy=$\\
+$\displaystyle =\int_0^1x^2\,dx\cdot\frac{y^3}{3}\Big|_0^{1-x}=\frac13\int_0^1(x^2-3x^3+3x^4-x^5)\,dx=$\\
+$\displaystyle =\frac13\cdot\left(\frac13x^3-\frac34x^4+\frac35x^5-\frac16x^6\right)\Big|_0^1=
+\frac13\cdot\left(\frac13-\frac34+\frac35-\frac16\right)=\frac13\cdot\frac{1}{60}=\frac{1}{180}$.
+$\blacktriangleright$
+
+\medskip
+\noindent Перейти в двойном интеграле $\displaystyle\iint_Df(x,y)\,dx\,dy$
+к полярным координатам $\rho$ и $\varphi$ $(x=\rho\cos\varphi,\quad y=\rho\sin\varphi)$,
+и расставить пределы интегрирования:
+
+\medskip
+\noindent{\bf 3527.} $D$ -- область, являющаяся общей частью двух кругов $x^2+y^2\le ax$ и $x^2+y^2\le by$.
+
+\smallskip
+\noindent $\blacktriangleleft$ Первая окружность в полярной системе координат имеет уравнение
+$\rho=a\cos\varphi$, вторая окружность -- уравнение $\rho=b\sin\varphi$. Они пересекаются в начале
+координат и в точке для которой $a\cos\varphi=b\sin\varphi$. Отсюда имеем
+$$a\cos\varphi-b\sin\varphi=\sqrt{a^2+b^2}\sin(\arctg\frac ab-\varphi)=0
+\mbox{ или }\varphi=\arctg\frac ab.$$
+Теперь можем записать искомый интеграл:
+$$\int_0^{\arctg\frac ab}d\varphi\int_0^
+{b\sin\varphi}f(\rho\cos\varphi,\rho\sin\varphi) \rho\, d\rho+\int_{\arctg\frac ab}^{\frac{\pi}{2}}d\varphi\int_0^
+{a\cos\varphi}f(\rho\cos\varphi,\rho\sin\varphi) \rho\, d\rho.$$
+$\blacktriangleright$
+
+\medskip
+\noindent{\bf 3531.} $D$ -- область, определенная неравенствами $x\ge0,\quad y\ge0,\quad
+(x^2+y^2)^3\le4a^2x^2y^2$.
+
+\smallskip\noindent $\blacktriangleleft$ Область представляет собой часть первого квадранта, отрезанную кривой, уравнение которой в полярных координатах будет следующим:
+$$(\rho^2\cos^2\varphi+\rho^2\sin^2\varphi)^3=4a^2\rho^4\cos^2\varphi\sin^2\varphi\mbox{ или }
+\rho=a\sin2\varphi.$$
+Теперь мы можем написать искомый интеграл:
+$$\int_0^{\frac{\pi}{2}}d\varphi\int_0^{a\sin2\varphi}f(\rho\cos\varphi,\rho\sin\varphi) \rho\, d\rho.$$
+$\blacktriangleright$
+
+\medskip
+\noindent Двойные интегралы преобразовать к полярным коордианатам:
+
+\medskip
+\noindent{\bf 3533.} $\displaystyle \int_{R/2}^{2R}dy\int_0^{\sqrt{2Ry-y^2}}f(x,y)\,dx$.
+
+\smallskip
+\noindent $\blacktriangleleft$ Выведем уравнение кривой $x=\sqrt{2Ry-y^2}$ в полярной системе
+координат:\\
+$\rho\cos\varphi=\sqrt{2R\rho\sin\varphi-\rho^2\sin^2\varphi^2};
+\quad\rho^2\cos^2\varphi=2R\rho\sin\varphi-\rho^2\sin^2\varphi^2;$\\
+$\rho^2=2R\rho\sin\varphi;\quad\rho=2R\sin\varphi.$
+Прямая $y=R/2$ имеет уравнение $\rho\sin\varphi=R/2$ или $\displaystyle\rho=\frac{R}{2\sin\varphi}$,
+Аналогично получаем уравнение прямой $y=2R$, которое имеет вид $\displaystyle\rho=\frac{2R}{\sin\varphi}.$ Найдем полярные углы $\varphi_A,\varphi_B$ точек $A,B$, в которых кривая пересекает эти прямые,
+для этого решим следующие уравнения:\\
+$\displaystyle2R\sin\varphi_A=\frac{R}{2\sin\varphi_A};\quad\sin^2\varphi_A=\frac{1}{4};
+\quad\sin\varphi_A=\frac{1}{2};\quad\varphi_A=\frac{\pi}{6};$\\
+$\displaystyle2R\sin\varphi_B=\frac{2R}{\sin\varphi_B};\quad\sin^2\varphi_B=1;
+\quad\sin\varphi_B=1;\quad\varphi_B=\frac{\pi}{2};$\\
+Теперь мы можем написать искомый интеграл.\\
+$\displaystyle \int_{R/2}^{2R}dy\int_0^{\sqrt{2Ry-y^2}}f(x,y)\,dx=
+\int_{\pi/6}^{\pi/2}d\varphi\int_{R/(2\sin\varphi)}^{2R\sin\varphi}f(\rho\cos\varphi,\rho\sin\varphi)\rho\,d\rho$.
+$\blacktriangleright$ 
+
+\medskip
+\noindent{\bf 3534.} $\displaystyle \int_0^Rdx\int_0^{\sqrt{R^2-x^2}}f(x^2+y^2)\,dy$.
+
+\smallskip
+\noindent $\blacktriangleleft$ Выведем уравнение кривой $x=\sqrt{R^2-x^2}$ в полярной системе
+координат:\\
+$\rho\cos\varphi=\sqrt{R^2-\rho^2\sin^2\varphi};
+\quad\rho^2\cos^2\varphi=R^2-\rho^2\sin^2\varphi;\quad\rho^2=R^2;\quad\rho=R.$\\
+Эта кривая пересекает прямую $y=R$ при значении полярного угла $\pi/2$. Теперь можно
+написать искомый интеграл:\\
+$\displaystyle \int_0^Rdx\int_0^{\sqrt{R^2-x^2}}f(x^2+y^2)\,dy=
+\int_{0}^{R}d\rho\int_{0}^{\pi/2}f(\rho^2)\rho\,d\varphi=\frac{\pi}{2}\int_{0}^{R}f(\rho^2)\rho\,d\rho$.
+ $\blacktriangleright$ 
+
+\medskip
+\noindent С помощью перехода к полярным координатам вычислить двойные интегралы:
+
+\medskip
+\noindent{\bf 3536.} $\displaystyle \int_0^Rdx\int_0^{\sqrt{R^2-x^2}}\ln(1+x^2+y^2)\,dy$.
+
+\smallskip
+\noindent $\blacktriangleleft$ Воспользовавшись результатом задачи 3534, мы можем написать:\\
+$\displaystyle \int_0^Rdx\int_0^{\sqrt{R^2-x^2}}\ln(1+x^2+y^2)\,dy=
+\frac{\pi}{2}\int_{0}^{R}\ln(1+\rho^2)\rho\,d\rho=$\\
+$\displaystyle =\frac{\pi}{4}\int_{0}^{R}\ln(1+\rho^2)\,d(1+\rho^2)=
+\frac{\pi}{4}\int_{1}^{1+R^2}\ln t\,dt=
+\frac{\pi}{4}t\ln t\Big|_{1}^{1+R^2}-\frac{\pi}{4}\int_{1}^{1+R^2}\frac tt\,dt=$\\
+$\displaystyle =\frac{\pi}{4}[(1+R^2)\ln(1+R^2)-\ln1-1-R^2+1]=\frac{\pi}{4}[(1+R^2)\ln(1+R^2)-R^2]$.
+$\blacktriangleright$ 
+
+\medskip
+\noindent{\bf 3539.} $\displaystyle \iint_D\sqrt{R^2-x^2-y^2}\,dx\,dy$, где $D$ -- круг $x^2+y^2\le Rx$.
+
+\smallskip
+\noindent $\blacktriangleleft$ В полярной системе круг имеет уравнение
+$\rho^2\cos^2\varphi+\rho^2\sin^2\varphi\le R\rho\cos\varphi$
+или $\rho\le R\cos\varphi,\ -\pi/2\le\varphi\le\pi/2$. Записываем интеграл\\
+$\displaystyle \iint_D\sqrt{R^2-x^2-y^2}\,dx\,dy=
+\int_{-\pi/2}^{\pi/2}d\varphi\int_0^{R\cos\varphi}\sqrt{R^2-\rho^2}\rho\,d\rho=$\\
+$\displaystyle =-\frac12\int_{-\pi/2}^{\pi/2}d\varphi\int_0^{R\cos\varphi}\sqrt{R^2-\rho^2}\,d(R^2-\rho^2)=
+-\frac13\int_{-\pi/2}^{\pi/2}d\varphi\cdot (R^2-\rho^2)^{3/2}\Big|_0^{R\cos\varphi}=$\\
+$\displaystyle =-\frac{R^3}{3}\int_{-\pi/2}^{\pi/2}(|\sin\varphi|^3-1)\,d\varphi=
+-\frac{2R^3}{3}\int_{0}^{\pi/2}(\sin^3\varphi-1)\,d\varphi=$\\
+$\displaystyle =\frac{2R^3}{3}\int_{0}^{\pi/2}(1-\cos^2\varphi)\,d(\cos\varphi)+\frac{\pi R^3}{3}=
+\frac{2R^3}{3}\left(\cos\varphi-\frac{\cos^3\varphi}{3}\right)\Big|_{0}^{\pi/2}+\frac{\pi R^3}{3}=$\\
+$\displaystyle =\frac{2R^3}{3}\cdot \left(-\frac{2}{3}\right)+\frac{\pi R^3}{3}=
+\frac{R^3}{3}\left(\pi-\frac43\right)$. $\blacktriangleright$
+
+\medskip
+\noindent Перейти в тройном интеграле $\displaystyle\iiint_\Omega f(x,y,z)\,dx\,dy\,dz$
+к цилиндрическим координатам
+$\rho$, $\varphi$,  $z$ $(x=\rho\cos\varphi,\ y=\rho\sin\varphi,\ z=z)$ или сферическим координатам
+$\rho$, $\theta$, $\varphi$ $(x=\rho\cos\varphi\sin\theta,\ y=
+\rho\sin\varphi\sin\theta,\ z=\rho\cos\theta)$
+и расставить пределы интегрирования:
+
+\medskip
+\noindent{\bf 3547.} $\Omega$ -- область, находящаяся в первом октанте и ограниченная цилиндром
+$x^2+y^2=R^2$ и плоскостями $z=0$, $z=1$, $y=x$, $y=x\sqrt3$.
+
+\smallskip
+\noindent $\blacktriangleleft$ Перейдем к цилиндрической системе координат. Для плоскости $y=x$
+имеем $\rho\sin\varphi=\rho\cos\varphi;\ \tg\varphi=1$ или $\varphi=\pi/4$.
+Для плоскости $y=x\sqrt3$ так же точно получаем $\varphi=\pi/3$.
+Теперь можно написать интеграл:\\
+$\displaystyle\iiint_\Omega f(x,y,z)\,dx\,dy\,dz=\int_0^1dz\int_{\pi/4}^{\pi/3}d\varphi
+\int_0^Rf(\rho\cos\varphi,\rho\sin\varphi,z)\rho\,d\rho$. $\blacktriangleright$ 
+
+\medskip
+\noindent{\bf 3551.} $\Omega$ -- общая часть двух шаров $x^2+y^2+z^2\le R^2$ и $x^2+y^2+(z-R)^2\le R^2$.
+
+\smallskip
+\noindent $\blacktriangleleft$ Перейдем к сферической системе координат. Уравнение второго шара в этой системе будет таким:
+$(\rho\cos\varphi\sin\theta)^2+(\rho\sin\varphi\sin\theta)^2+(\rho\cos\theta-R)^2\le R^2;$\\
+$\quad\rho^2\sin^2\theta+\rho^2\cos^2\theta-2R\rho\cos\theta+R^2\le R^2;\quad
+\rho\le2R\cos\theta.$\\
+Сферы пересекаются по окружности, для которой $2R\cos\theta=R$ или $\theta=\pi/3$.\\
+Теперь можем записать искомый интеграл:\\
+$\displaystyle\int_0^{2\pi}d\varphi\int_0^{\pi/3}\sin\theta\,d\theta\int_0^Rf(\rho\cos\varphi\sin\theta,
+\rho\sin\varphi\sin\theta,\rho\cos\theta)\rho^2d\rho+$\\
+$\displaystyle +\int_0^{2\pi}d\varphi\int_{\pi/3}^{\pi/2}\sin\theta\,d\theta
+\int_0^{2R\cos\theta}f(\rho\cos\varphi\sin\theta,
+\rho\sin\varphi\sin\theta,\rho\cos\theta)\rho^2d\rho$. $\blacktriangleright$ 
+
+\medskip
+\noindent Вычислить интегралы с помощью перехода к цилиндрическим или сферическим координатам:
+
+\medskip
+\noindent{\bf 3553.} $\displaystyle\int_0^2dx\int_0^{\sqrt{2x-x^2}}dy\int_0^az\sqrt{x^2+y^2}\,dz$.
+
+\smallskip
+\noindent $\blacktriangleleft$ Переходим к цилиндрической системе координат. Проекция области
+интегрирования на плоскость $Oxy$ представляет собой полукруг радиуса $1$
+с центром в точке $(1,0,0)$, расположенный в верхней полуплоскости.
+Уравнение ограничивающей его окружности будет иметь вид\\
+$y=\sqrt{2x-x^2}$ или $\rho\sin\varphi=\sqrt{2\rho\cos\varphi-\rho^2\cos^2\varphi;}\quad
+\rho^2\sin^2\varphi=2\rho\cos\varphi-\rho^2\cos^2\varphi;$\\
+$\rho=2\cos\varphi$. Теперь можем написать интеграл в цилиндрической системе координат:\\
+$\displaystyle\int_0^{\pi/2}d\varphi\int_0^{2\cos\varphi}d\rho\int_0^az\rho^2dz=
+\int_0^{\pi/2}d\varphi\int_0^{2\cos\varphi}\frac{a^2\rho^2}{2}d\rho=
+\frac{a^2}{6}\int_0^{\pi/2}(2\cos\varphi)^3d\varphi=$\\
+$\displaystyle\frac{4a^2}{3}\int_0^{\pi/2}(1-\sin^2\varphi)\,d(\sin\varphi)=
+\frac{4a^2}{3}\left(\sin\varphi-\frac{\sin^3\varphi}{3}\right)\Big|_0^{\pi/2}=\frac89a^2$.
+$\blacktriangleright$
+
+\medskip
+\noindent{\bf 3557.} $\displaystyle\iiint_\Omega\frac{dx\,dy\,dz}{\sqrt{x^2+y^2+(z-2)^2}}$,
+где $\Omega$ -- шар $x^2+y^2+z^2\le1$.
+
+\smallskip
+\noindent $\blacktriangleleft$ Переходим к сферической системе координат.
+Преобразуем интеграл в повторный.\\
+$\displaystyle\int_0^{2\pi}d\varphi\int_0^1d\rho\int_0^{\pi}\frac{\rho^2\sin\theta\,d\theta}
+{\sqrt{\rho^2\cos^2\varphi\sin^2\theta+\rho^2\sin^2\varphi\sin^2\theta+
+(\rho\cos\theta-2)^2}}=$\\
+$\displaystyle=\frac14\int_0^{2\pi}d\varphi\int_0^1\rho\,d\rho\int_0^{\pi}\frac{d(\rho^2-4\rho\cos\theta+4)}
+{\sqrt{\rho^2-4\rho\cos\theta+4}}=$\\
+$\displaystyle=\frac12\int_0^{2\pi}d\varphi\int_0^1\rho\,d\rho\cdot\sqrt{\rho^2-4\rho\cos\theta+4}\Big|_0^{\pi}=
+\frac12\int_0^{2\pi}d\varphi\int_0^1[(2+\rho)-(2-\rho)]\cdot\rho\,d\rho=$\\
+$\displaystyle=\int_0^{2\pi}d\varphi\int_0^1\rho^2d\rho=\frac13\int_0^{2\pi}d\varphi=\frac23\pi.$
+$\blacktriangleright$
+
+\medskip
+\noindent Найти двойным интегрированием объемы тел, ограниченных данными
+поверхностями (входящие в условия задач параметры считаются положительными):
+
+\medskip
+\noindent{\bf 3562.} Плоскостями $y=0$, $z=0$, $3x+y=6$, $3x+2y=12$ и $x+y+z=6$.
+
+\smallskip
+\noindent $\blacktriangleleft$ Объем равен двойному интегралу по треугольнику $D$,
+расположенному в плоскости $Oxy$ и имеющему вершины $(2,0),$ $(4,0)$ и $(0,6).$\\
+$\displaystyle V=\iint_D(6-x-y)\,dx\,dy=\int_0^6dy\int_{2-\frac y3}^{4-\frac23y}(6-x-y)\,dx=$\\
+$\displaystyle\int_0^6dy\cdot\left[(6-y)x-\frac{x^2}{2}\right]\Big|_{2-\frac y3}^{4-\frac23y}=
+\int_0^6dy\cdot\left[(6-y)\left(2-\frac13y\right)-\frac12\left(2-\frac13y\right)(6-y)\right]=$\\
+$\displaystyle\int_0^6\left(6-2y+\frac{y^2}{6}\right)\,dy=
+\left(6y-y^2+\frac{y^3}{6\cdot3}\right)\Big|_0^6=12.$
+$\blacktriangleright$
+
+\medskip
+\noindent{\bf 3568.} Цилиндром $z=4-x^2$, координатными плоскостями и плоскостью\\
+$2x+y=4\ (x\ge0)$.
+
+\smallskip
+\noindent $\blacktriangleleft$ Объем равен двойному интегралу по треугольнику $D$,
+расположенному в плоскости $Oxy$ и имеющему вершины $(0,0),$ $(2,0)$ и $(0,4).$\\
+$\displaystyle V=\iint_D(4-x^2)\,dx\,dy=\int_0^2(4-x^2)\,dx\int_{0}^{4-2x}dy=
+\int_0^2(4-x^2)(4-2x)\,dx=$\\
+$\displaystyle =\int_0^2(16-8x-4x^2+2x^3)\,dx=\left(16x-4x^2-\frac43x^3+\frac12x^4\right)\Big|_0^2=
+32-16-\frac{32}{3}+8=\frac{40}{3}.$\\
+$\blacktriangleright$
+
+\medskip
+\noindent{\bf 3571.} Эллиптическим цилиндром $\displaystyle \frac{x^2}{4}+y^2=1$,
+плоскостями $z=12-3x-4y$ и $z=1$.
+
+\smallskip
+\noindent $\blacktriangleleft$ Объем равен двойному интегралу по эллипсу $D$,
+расположенному в плоскости $Oxy$ и имеющему полуоси $2$ и $1$.\\
+$\displaystyle V=\iint_D(11-3x-4y)\,dx\,dy=
+\int_{-1}^1dy\int_{-2\sqrt{1-y^2}}^{2\sqrt{1-y^2}}(11-3x-4y)\,dx=$\\
+$\displaystyle=\int_{-1}^1dy\cdot\left[(11-4y)x-\frac32x^2\right]\Big|_{-2\sqrt{1-y^2}}^{2\sqrt{1-y^2}}=
+\int_{-1}^1 4(11-4y)\sqrt{1-y^2}\,dy=$\\
+$\displaystyle=44\int_{-1}^1 \sqrt{1-y^2}\,dy-16\int_{-1}^1 y\sqrt{1-y^2}\,dy)=22\pi.$\\
+Здесь первый интеграл равен $\pi/2$ -- площади единичной полуокружности, а второй интеграл равен нулю как интеграл по симметричному промежутку от нечетной функции.
+$\blacktriangleright$
+
+\medskip
+\noindent{\bf 3577.} Параболоидом $z=x^2+y^2$, цилиндром $y=x^2$ и плоскостями $y=1$ и $z=0$.
+
+\smallskip
+\noindent $\blacktriangleleft$ Объем равен двойному интегралу по области $D$, расположенной в плоскости
+$Oxy$ и представляющей собой сегмент параболы $y=x^2$, отсеченный прямой $y=1$.\\
+$\displaystyle V=\iint_D(x^2+y^2)\,dx\,dy=\int_{-1}^1dx\int_{x^2}^{1}(x^2+y^2)\,dy=
+\int_{-1}^1dx\cdot\left(x^2y+\frac{y^3}{3}\right)\Big|_{x^2}^{1}=$\\
+$\displaystyle =\int_{-1}^1\left(x^2+\frac{1}{3}-x^4-\frac{x^6}{3}\right)dx=
+\left(\frac{x^3}{3}+\frac{x}{3}-\frac{x^5}{5}-\frac{x^7}{21}\right)\Big|_{-1}^1=\frac{88}{105}.$
+$\blacktriangleright$
+
+\medskip
+\noindent{\bf 3588.} Цилиндром $x^2+y^2=2x$, плоскостями $2x-z=0$ и $4x-z=0$.
+
+\smallskip
+\noindent $\blacktriangleleft$ Объем равен двойному интегралу по области $D$, расположенной в плоскости
+$Oxy$ и представляющей собой круг $(x-1)^2+y^2=1$.\\
+$\displaystyle V=\iint_D(4x-2x)\,dx\,dy=\int_{0}^22x\,dx\int_{-\sqrt{1-(x-1)^2}}^{\sqrt{1-(x-1)^2}}dy=
+4\int_0^2x\sqrt{1-(x-1)^2}\,dx$\\
+$\displaystyle =-2\int_0^2\sqrt{1-(x-1)^2}\,d(1-(x-1)^2)+4\int_0^2\sqrt{1-(x-1)^2}\,dx=$\\
+Последний интеграл здесь равен $\pi/2$ как половина площади единичного круга.\\
+$\displaystyle =-2\cdot\frac23(1-(x-1)^2)^{3/2}\Big|_0^2+2\pi=0+2\pi=2\pi.$
+$\blacktriangleright$
+
+\medskip
+\noindent{\bf 3592.} Гиперболическим параболоидом $\displaystyle z=\frac{xy}{a}$,
+цилиндром $x^2+y^2=ax$ и плоскостью $z=0\ (x\ge0,\ y\ge0)$.
+
+\smallskip
+\noindent $\blacktriangleleft$ Объем равен двойному интегралу по области $D$, расположенной в плоскости
+$Oxy$ и представляющей собой полукруг $\displaystyle\left(x-\frac a2\right)^2+y^2=\frac{a^2}{4},\quad x\ge0$.\\
+$\displaystyle V=\iint_D\frac{xy}{a}\,dx\,dy=$ переходим к полярной системе координат:\\
+$\displaystyle=\int_{0}^{\pi/2}d\varphi\int_0^{a\cos\varphi}\frac{r^3\sin\varphi\cos\varphi}{a}\,dr
+=\frac1a\int_{0}^{\pi/2}\sin\varphi\cos\varphi\,d\varphi\int_0^{a\cos\varphi}{r^3}dr=$\\
+$\displaystyle=\frac{a^4}{4a}\int_{0}^{\pi/2}\cos^5\varphi\sin\varphi\,d\varphi=
+-\frac{a^4}{4a}\int_{0}^{\pi/2}\cos^5\varphi\,d(\cos\varphi)=
+-\frac{a^3}{24}\cos^6\varphi\Big|_{0}^{\pi/2}=\frac{a^3}{24}$.
+$\blacktriangleright$
+
+\medskip
+\noindent Найти двойным интегрированием площади указанных областей:
+
+\medskip
+\noindent{\bf 3598.} Области, ограниченной прямыми $y=x$, $y=5x$, $x=1$.
+
+\smallskip
+\noindent $\blacktriangleleft$ $\displaystyle\int_0^1dx\int_x^{5x}dy=\int_0^14x\,dx=2x^2\Big|_0^1=2.$ $\blacktriangleright$
+
+\medskip
+\noindent{\bf 3602*.} Области, ограниченной линией $(x^2+y^2)^2=2ax^3$.
+
+\smallskip
+\noindent $\blacktriangleleft$ Перейдем к полярной системе координат $x=r\cos \varphi,\ y=r\sin\varphi.$
+Получаем следующее уравнение кривой: $r=2a\cos^3\varphi.$ Площадь области с учетом якобиана можно
+записать в виде интеграла\\
+$\displaystyle \int_{-\pi/2}^{\pi/2}d\varphi\int_0^{2a\cos^3\varphi}r\,dr=
+\int_{-\pi/2}^{\pi/2}d\varphi\cdot 2a^2\cos^6\varphi=
+\frac{a^2}{4}\int_{-\pi/2}^{\pi/2}(1+\cos2\varphi)^3d\varphi=$\\
+$\displaystyle =\frac{a^2}{4}\left(\int_{-\pi/2}^{\pi/2}d\varphi+3\int_{-\pi/2}^{\pi/2}\cos2\varphi\,d\varphi+
+3\int_{-\pi/2}^{\pi/2}\cos^22\varphi\,d\varphi+\int_{-\pi/2}^{\pi/2}\cos^32\varphi\,d\varphi\right)=$\\
+$\displaystyle =\frac{a^2}{4}\left(\varphi\Big|_{-\pi/2}^{\pi/2}+\frac32\int_{-\pi/2}^{\pi/2}\cos2\varphi\,d(2\varphi)+
+\frac32\int_{-\pi/2}^{\pi/2}(1+\cos4\varphi)\,d\varphi+\right.$\\
+$\displaystyle \left.+\frac12\int_{-\pi/2}^{\pi/2}(1-\sin^22\varphi)\,d(\sin2\varphi)\right)=$\\
+$\displaystyle =\frac{a^2}{4}\left(\pi+\frac32\sin2\varphi\Big|_{-\pi/2}^{\pi/2}+
+\frac32\varphi\Big|_{-\pi/2}^{\pi/2}+\frac38\int_{-\pi/2}^{\pi/2}\cos4\varphi\,d(4\varphi)+\right.$\\
+$\displaystyle \left.+\frac12\sin2\varphi\Big|_{-\pi/2}^{\pi/2}-\frac16\sin^32\varphi\Big|_{-\pi/2}^{\pi/2}\right)=$\\
+$\displaystyle =\frac{a^2}{4}\left(\pi+0+
+\frac32\pi+\frac38\sin4\varphi\Big|_{-\pi/2}^{\pi/2}+0-0\right)=
+\frac{a^2}{4}\left(\pi+\frac32\pi+0\right)=\frac58\pi a^2$.
+$\blacktriangleright$
+
+\medskip
+\noindent
+Вычислить тройным интегрированием объемы тел, ограниченных данными поверхностями (входящие в уловия задач параметры считаются положительными):
+
+\medskip
+\noindent{\bf 3612.} Цилиндрами $z=\ln(x+2)$ и $z=\ln(6-x)$ и плоскостями $x=0$, $x+y=2$, $x-y=2$.
+
+\smallskip
+\noindent $\blacktriangleleft$ Проекция тела на плоскость $Oxy$ представляет собой треугольник
+с вершинами $(0,2,0)$, $(0,-2,0)$ и $(2,0,0)$, а само тело расположено между двумя логарифмическими
+цилиндрами. Объем выражается интегралом\\
+$\displaystyle V=\int_0^2dx\int_{x-2}^{2-x}dy\int_{\ln(x+2)}^{\ln(6-x)}dz=
+\int_0^2[\ln(6-x)-\ln(x+2)]\,dx\int_{x-2}^{2-x}dy=$\\
+$\displaystyle =\int_0^2(4-2x)[\ln(6-x)-\ln(x+2)]\,dx=$\\
+$\displaystyle =\int_0^2[(4-2x)\ln(6-x)\,dx+(2x-4)\ln(x+2)]\,dx=$\\
+$\displaystyle =-2\int_0^2(6-x)\ln(6-x)\,d(6-x)+8\int_0^2\ln(6-x)\,d(6-x)+$\\
+$\displaystyle +2\int_0^2(x+2)\ln(x+2)\,d(x+2)-8\int_0^2\ln(x+2)\,d(x+2)=$\\
+Далее нам нужно вывести (или взять из справочника) следующие формулы:\\
+1. $\displaystyle\int\ln x\,dx=x\ln x-\int\frac xx\,dx=x(\ln x-1)$.\\
+2. $\displaystyle\int x\ln x\,dx=\frac12\int\ln x\,d(x^2)=\frac12x^2\ln x-\frac12\int x\,dx=\frac14x^2(2\ln x-1)$.\\
+Используя эти формулы вычисляем интегралы\\
+$\displaystyle =-\frac12(6-x)^2[2\ln(6-x)-1]\Big|_0^2+8(6-x)[\ln(6-x)-1]\Big|_0^2+$\\
+$\displaystyle +\frac12(x+2)^2(2\ln(x+2)-1)\Big|_0^2-8(x+2)[\ln(x+2)-1]\Big|_0^2=$\\
+$\displaystyle -\frac12[4^2(2\ln4-1)-6^2(2\ln6-1)]+8[4(\ln4-1)-6(\ln6-1)]+$\\
+$\displaystyle +\frac12[4^2(2\ln4-1)-2^2(2\ln2-1)]-8[4(\ln4-1)-2(\ln2-1)]=$\\
+Первые слагаемые каждой квадратной скобки сокращаются\\
+$18(2\ln6-1)-48(\ln6-1)-2(2\ln2-1)+16(\ln2-1)=$\\
+$(36-48)(\ln2+\ln3)-18+48+(-4+16)\ln2+2-16=16-12\ln3=$\\
+$=4(4-3\ln3).$ $\blacktriangleright$
+
+\medskip
+\noindent{\bf 3621.} $(x^2+y^2+z^2)^3=a^2z^4$.
+
+\smallskip
+\noindent $\blacktriangleleft$ Переходим к сферической системе координат. Получаем\\
+$(r^2\cos^2\varphi\sin^2\theta+r^2\sin^2\varphi\sin^2\theta+r^2\cos^2\theta)^3=a^2r^4\cos^4\theta;\quad
+r^6=a^2r^4\cos^4\theta;$\\
+$r^2=a^2\cos^4\theta;\quad r=a\cos^2\theta.$ Теперь можем написать интеграл.\\
+$\displaystyle V=\int_0^{2\pi}d\varphi\int_{0}^{\pi}d\theta\int_0^{a\cos^2\theta}r^2\sin\theta\,dr=
+\frac13\int_0^{2\pi}d\varphi\int_{0}^{\pi}\sin\theta\,d\theta\cdot r^3\Big|_0^{a\cos^2\theta}=$\\
+$\displaystyle =-\frac{a^3}{3}\int_0^{2\pi}d\varphi\int_{0}^{\pi}\cos^6\theta\,d(\cos\theta)=
+-\frac{a^3}{21}\int_0^{2\pi}d\varphi\cdot\cos^7\theta\Big|_{0}^{\pi}=
+\frac{2a^3}{21}\int_0^{2\pi}d\varphi=$\\
+$\displaystyle =\frac{4\pi}{21}a^3$. $\blacktriangleright$
+
+\medskip
+\noindent{\bf 3625.} $x^2+y^2+z^2=1$, $x^2+y^2+z^2=16$, $z^2=x^2+y^2$, $x=0$, $y=0$, $z=0$\\
+$(x\ge0,\ y\ge0,\ z\ge0)$.
+
+\smallskip
+\noindent $\blacktriangleleft$ Часть шарового слоя, расположенного в первом октанте разрезается конусом
+на две области. Мы будем вычислять объем области, которая примыкает к оси $Oz$, поскольку
+ответ задачника предполагает именно эту область. Переходим к сферической системе координат:\\
+$\displaystyle V=\int_0^{\pi/2}d\varphi\int_{0}^{\pi/4}d\theta\int_1^4r^2\sin\theta\,dr=
+\frac13\int_0^{\pi/2}d\varphi\int_{\pi/4}^{\pi/2}\sin\theta\,d\theta\cdot r^3\Big|_1^4=$\\
+$\displaystyle =\frac{63}{3}\int_0^{\pi/2}d\varphi\int_{0}^{\pi/4}\sin\theta\,d\theta=
+-21\int_0^{\pi/2}d\varphi\cdot\cos\theta\Big|_{0}^{\pi/4}=
+21\left(1-\frac{\sqrt2}{2}\right)\int_0^{\pi/2}d\varphi=$\\
+$\displaystyle =\frac{21}{4}(2-\sqrt2)\pi$. $\blacktriangleright$
+
+\medskip
+\noindent{\bf 3627.} Вычислить площадь той части поверхности $z^2=2xy$, 
+которая находится над прямоугольником, лежащим в плоскости $z=0$ и 
+ограниченным прямыми $x=0,\ y=0,\ x=3,\ y=6$.
+
+\smallskip
+\noindent $\blacktriangleleft$ 
+$\displaystyle z=\sqrt{xy};\ z'_x=\frac{\sqrt{2 y}}{2\sqrt x};
+\ z'^2_x=\frac{y}{2x}.\ z'_y=\frac{\sqrt{2 x}}{2\sqrt y};
+\ z'^2_y=\frac{x}{2y}.$\\[3pt]
+$\displaystyle S=\int_0^3dx\int_0^6\sqrt{1+\frac{y}{2x}+\frac{x}{2y}}\,dy=
+\int_0^3dx\int_0^6\sqrt{\frac{2xy+y^2+x^2}{2xy}}\,dy=\\[3pt]
+=\int_0^3dx\int_0^6\frac{x+y}{\sqrt{2xy}}\,dy=
+\int_0^3dx\cdot\left.\left(\frac{\sqrt x}{\sqrt2}\cdot2\sqrt y+
+\frac{1}{\sqrt{2x}}\cdot \frac{2y^{3/2}}{3}\right)\right|_0^6=\\[3pt]
+=\int_0^3\left(2\sqrt3\sqrt x+\frac{4\sqrt3}{\sqrt x}\right)\,dx=
+\left.\left(\frac{4\sqrt3x^{3/2}}{3}+8\sqrt3\sqrt x\right)\right|_0^3=12+24=36$.\\[3pt]
+Ответ: $36$. $\blacktriangleright$
+
+\medskip
+\noindent В задачах 3632, 3633, 3638 найти площади указанных частей данных поверхностей:
+
+\medskip
+\noindent{\bf 3632.} Части $z^2=4x$, вырезанной цилиндром $y^2=4x$ и плоскостью $x=1$.
+
+\smallskip
+\noindent $\blacktriangleleft$ Вырезанная из параболического цилиндра 
+часть состоит из двух симметричных относительно плоскости $Oxy$ 
+лепестков, имеющих общую точку в начале координат. Проекцией 
+вырезанной части на плоскость $Oxy$ служит сегмент параболы $y^2=4x$. 
+Верхний лепесток поверхности описывается функцией $z=2\sqrt x$.\\[3pt]
+$\displaystyle S=2\int_{0}^{1}dx\int_{-2\sqrt x}^{2\sqrt x}\sqrt{1+z^{'2}_x+z^{'2}_y}\,dy=
+2\int_{0}^{1}dx\int_{-2\sqrt x}^{2\sqrt x}\sqrt{1+\frac 1x}\,dy=$\\[3pt]
+$\displaystyle =8\int_{0}^{1}\sqrt{x+1}\,dx=
+\frac{16}{3}\cdot(x+1)\sqrt{x+1}\Big|_0^1=
+\frac{16}{3}\cdot(2\sqrt 2-1)$.\\[3pt]
+Ответ: $\displaystyle \frac{16}{3}\cdot(2\sqrt 2-1)$. 
+$\blacktriangleright$
+
+\medskip
+\noindent{\bf 3633.} Части $z=xy$, вырезанной цилиндром $x^2+y^2=R^2$.
+
+\smallskip
+\noindent $\blacktriangleleft$ $z=xy;\ z'_x=y;\ z'^2_x=y^2;\ z'_y=x;\ z'^2_y=x^2$. $C$ 
+-- круг $x^2+y^2\le R^2$ в плоскости $Oxy$.\\[3pt]
+$\displaystyle S=\iint_C\sqrt{1+x^2+y^2}\,dxdy=
+\int_0^{2\pi}d\varphi \int_0^R\sqrt{1+r^2}\cdot r\,dr=\\[3pt]
+=2\pi\cdot \frac12 \int_0^R\sqrt{1+r^2}\,d(1+r^2)=
+\pi \cdot \frac23 (1+r^2)^{3/2}\Big|_0^R=
+\frac{2\pi}{3}\left[ (1+R^2)^{3/2}-1\right]$.\\[3pt]
+Ответ: $\displaystyle \frac{2\pi}{3}\left[ (1+R^2)^{3/2}-1\right]$. $\blacktriangleright$
+
+\medskip
+\noindent{\bf 3638.} Части $\displaystyle z=\frac{x+y}{x^2+y^2}$, вырезанной поверхностями $x^2+y^2=1$, $x^2+y^2=4$ и лежащей в первом октанте.
+
+\smallskip
+\noindent $\blacktriangleleft$ $\displaystyle z_x=\frac{(x^2+y^2)-2x(x+y)}{(x^2+y^2)^2}$,
+$\displaystyle z_y=\frac{(x^2+y^2)-2y(x+y)}{(x^2+y^2)^2}$.\\
+Вырезанная часть проецируется на четверть кольца, лежащую в плоскости $Oxy$, которую обозначим через $D$.
+Тогда площадь равна интегралу\\
+$\displaystyle S=\int_D\sqrt{1+\frac{[(x^2+y^2)-2x(x+y)]^2}{(x^2+y^2)^4}+\frac{[(x^2+y^2)-2y(x+y)]^2}{(x^2+y^2)^4}}\,dx\,dy=$\\
+Переходим к полярной системе координат. Преобразуем отдельно подынтегральное выражение\\
+$\displaystyle \sqrt{1+\frac{[\rho^2-2\rho^2\cos\varphi(\cos\varphi+\sin\varphi)]^2}{\rho^8}+
+\frac{[\rho^2-2\sin\varphi(\cos\varphi+\sin\varphi)]^2}{\rho^8}}=$\\
+$\displaystyle =\sqrt{\frac{\rho^4+2-4(\sin\varphi+\cos\varphi)^2+4(\sin\varphi+\cos\varphi)^2}{\rho^4}}=
+\sqrt{\frac{\rho^4+2}{\rho^4}}$.\\
+Продолжим вычисление площади\\
+$\displaystyle S=\int_1^4\rho\,d\rho\int_0^{\pi/2}\sqrt{\frac{\rho^4+2}{\rho^4}}\,d\varphi=
+\frac{\pi}{2}\int_1^4\frac{\sqrt{\rho^4+2}}{\rho}\,d\rho$=\\
+$\displaystyle\Big|\rho^4+2=t^2;\quad \rho=(t^2-2)^{1/4};\quad d\rho=\frac 14(t^2-2)^{-3/4}\cdot 2t.\Big|$\\
+$\displaystyle =\frac{\pi}{4}\int_{\sqrt3}^{3\sqrt2}\frac{t^2}{t^2-2}\,dt=
+\frac{\pi}{4}\cdot\left.\left(t+\frac{1}{\sqrt2}\ln\left|\frac{t-\sqrt2}{t+\sqrt2}\right|\right)\right|_{\sqrt3}^{3\sqrt2}=$\\
+$\displaystyle =\frac{\pi}{4}\cdot\left(3\sqrt2+\frac{1}{\sqrt2}\ln\left|\frac{3\sqrt2-\sqrt2}{3\sqrt2+\sqrt2}\right|
+-\sqrt3-\frac{1}{\sqrt2}\ln\left|\frac{\sqrt3-\sqrt2}{\sqrt3+\sqrt2}\right|\right)=$\\
+$\displaystyle =\frac{\pi}{4}\cdot\left[3\sqrt2+\frac{1}{\sqrt2}\ln\frac{1}{2}
+-\sqrt3-\frac{1}{\sqrt2}\ln\frac{1}{(\sqrt3+\sqrt2)^2}\right]=$\\
+$\displaystyle =\frac{\pi}{4}\cdot\left[3\sqrt2-\frac{\sqrt2}{2}\ln2
+-\sqrt3+\sqrt2\ln(\sqrt3+\sqrt2)\right]$.
+$\blacktriangleright$
+
+\medskip
+\noindent{\bf 3641.} Вычислить полную поверхность тела, ограниченного сферой\\
+$x^2+y^2+z^2=3a^2$ и параболоидом $x^2+y^2=2az\ (z\ge 0)$.
+
+\smallskip
+\noindent $\blacktriangleleft$ Найдем пересечение поверхностей. 
+Сначала вычитаем первое уравнение из второго.\\[3pt]
+$\begin{cases}x^2+y^2+z^2=3a^2\\x^2+y^2=2az\end{cases};\quad 
+\begin{cases}x^2+y^2+z^2=3a^2\\-z^2=2az-3a^2\end{cases}$.\\[3pt]
+Ищем неотрицательное значение $z$ из квадратного уравнения 
+$z^2+2az-3a^2=0$. $z=-a\pm\sqrt{a^2+3a^2}=-a\pm 2a;\ z=a$. 
+Подставляем это значение во второе уравнение. $x^2+y^2=2a^2$. 
+Поверхность состоит из двух частей, расположенных над кругом $C$ 
+в плоскости $Oxy$ с уравнением $x^2+y^2\le 2a^2$.\\[3pt]
+Часть 1. $z=\sqrt{3a^2-x^2-y^2}$; $\displaystyle z'_x=
+\frac{-2x}{2\sqrt{3a^2-x^2-y^2}}$; $\displaystyle z'^2_x=
+\frac{x^2}{3a^2-x^2-y^2}$.\\[3pt]
+$\displaystyle z'_y=\frac{-2y}{2\sqrt{3a^2-x^2-y^2}}$; 
+$\displaystyle z'^2_y=\frac{y^2}{3a^2-x^2-y^2}$.\\[3pt]
+Часть 2. $\displaystyle z=\frac{x^2+y^2}{2a}$; 
+$\displaystyle z'_x=\frac{2x}{2a}$; $\displaystyle z'^2_x=\frac{x^2}{a^2}$.
+$\displaystyle z'_y=\frac{2y}{2a}$; $\displaystyle z'^2_y=
+\frac{y^2}{a^2}$.\\[3pt]
+$\displaystyle S=\iint_C\sqrt{1+\frac{x^2+y^2}{3a^2-x^2-y^2}}\,dxdy+
+\iint_C\sqrt{1+\frac{x^2+y^2}{a^2}}\,dxdy=\\[3pt]
+=\int_0^{2\pi}d\varphi\int_0^{a\sqrt2}\sqrt{1+\frac{r^2}{3a^2-r^2}}r\,dr+
+\int_0^{2\pi}d\varphi\int_0^{a\sqrt2}\sqrt{1+\frac{r^2}{a^2}}r\,dr=\\[3pt]
+=-2\pi\cdot\frac{a\sqrt3}{2}\int_0^{a\sqrt2}\frac{d(3a^2-r^2)}{\sqrt{3a^2-r^2}}+
+2\pi\cdot\frac{1}{2a}\int_0^{a\sqrt2}\sqrt{a^2+r^2}\,d(a^2+r^2)=\\[3pt]
+=-\pi a\sqrt{3}\cdot 2\sqrt{3a^2-r^2}\Big|_0^{a\sqrt2}+
+\frac{\pi}{a}\cdot\frac23 (a^2+r^2)^{3/2}\Big|_0^{a\sqrt2}=\\[3pt]
+=2\pi a\sqrt{3}(a\sqrt3-a)+\frac{2\pi}{3a} (3\sqrt{3}a^3-a^3)=
+6\pi a^2-2\sqrt3\pi a^2+2\sqrt3\pi a^2-\frac{2\pi a^2}{3}=
+\frac{16\pi a^2}{3}$.\\[3pt]
+Ответ: $\displaystyle \frac{16\pi a^2}{3}$. $\blacktriangleright$
+
+\medskip
+\noindent{\bf 3642.} Оси двух однаковых цилиндров радиуса $R$ пересекаются под прямым углом. Найти площадь части поверхности одного из цилиндров, лежащей в другом.
+
+\smallskip
+\noindent $\blacktriangleleft$ Выберем такую систему координат, чтобы оси $Ox$ и $Oy$ располагались по осям цилиндров.
+Тогда цилиндры будут иметь уравнения $y^2+z^2=R^2$ и $x^2+z^2=R^2$. Первая поверхность располагается вдоль оси $Ox$, вторая -- вдоль
+оси $Oy$. Вторая находится внутри первой, когда $-x<y<x$. Для того, чтобы получить эту площадь, можно вычислить одну восьмую этой площади, находящуюся в первом октанте, и умножить ее на 8.\\
+$\displaystyle S=8\int_0^Rdx\int_0^x\sqrt{1+\frac{x^2}{R^2-x^2}}\,dy=8\int_0^Rx\sqrt{1+\frac{x^2}{R^2-x^2}}\,dx=$\\
+$\displaystyle =8R\int_0^R\frac{x\,dx}{\sqrt{R^2-x^2}}\,dx=-4R\int_0^R\frac{d(R^2-x^2)}{\sqrt{R^2-x^2}}=
+-4R\int_0^R\frac{d(R^2-x^2)}{\sqrt{R^2-x^2}}=$\\
+$\displaystyle =-8R\sqrt{R^2-x^2}\Big|_0^R=8R^2.$
+$\blacktriangleright$
+
+\medskip
+\noindent Найти двойным интегрированием статические моменты однородных плоских фигур (плотность $\gamma=1$:
+
+\medskip
+\noindent{\bf 3644.} Полукруга радиуса $R$ относительно диаметра.
+
+\smallskip
+\noindent $\blacktriangleleft$ Расположим систему координат так, чтобы ее начало
+совпало с центром полукруга $D$, диаметр лежал на оси $Ox$,
+а сам полукруг находился в верхней полуплоскости. Тогда\\
+$\displaystyle M_x=\iint_Dy\,dx\,dy=\int_{-R}^{R}dx\int_0^{\sqrt{R^2-x^2}}y\, dy=
+\int_{-R}^{R}dx\cdot\frac{y^2}{2}\Big|_0^{\sqrt{R^2-x^2}}=\\
+=\frac12\int_{-R}^{R}(R^2-x^2)dx=
+\frac12\left(R^2x-\frac{x^3}{3}\right)\Big|_{-R}^{R}=
+\frac 12\left(R^3-\frac{R^3}{3}+R^3-\frac{R^3}{3}\right)=\frac32R^3.$
+$\blacktriangleright$
+
+\medskip
+\noindent{\bf 3646.} Правильного шестиугольника со стороной $a$ относительно стороны.
+
+\smallskip
+\noindent $\blacktriangleleft$ Расположим систему координат так, чтобы ее начало совпало с серединой
+строны шестиугольника $D$, эта сторона лежала на оси $Oy$, а сам шестиугольник
+находился в правой полуплоскости. Тогда\\
+$\displaystyle M_y=\iint_Dx\,dx\,dy=\int_0^{a\sqrt 3/2} x\,dx\int_{-\sqrt3x/3-a/2}^{\sqrt3x/3+a/2} dy+
+\int_{a\sqrt 3/2}^{a\sqrt 3} x\,dx\int_{\sqrt3x/3-3a/2}^{-\sqrt3x/3+3a/2} dy=\\
+=\int_0^{a\sqrt 3/2} x(2\sqrt3x/3+a)\,dx+
+\int_{a\sqrt 3/2}^{a\sqrt 3} x(-2\sqrt3x/3+3a)\,dx=\\
+\left.\left(\frac{2\sqrt3}{9}x^3+\frac{a}{2}x^2\right)\right|_0^{a\sqrt 3/2}+
+\left.\left(-\frac{2\sqrt3}{9}x^3+\frac{3a}{2}x^2\right)\right|_{a\sqrt 3/2}^{a\sqrt 3}=\\
+\frac28a^3+\frac38a^3-2a^3+\frac92a^3+\frac28a^3-\frac98a^3=\frac{2+3-16+36+2-9}{8}=\frac94a^3.$
+
+\medskip\noindent
+Задачу можно решить другим способом, если знать, что статический момент фигуры связан с ее центром ее
+тяжести. Мы знаем, что $x$-координаты центра тяжести выражается формулой
+$x_c=M_y/M$, где $M$ масса фигуры.
+Отсюда получаем $M_y=x_c\cdot M$. Из соображений симметрии мы знаем,
+что центр тяжести шестиугольника находится в его геометрическом центре, то есть
+$\displaystyle x_c=\frac{\sqrt3}{2}a$. Масса шестиугольника при единичной плотности
+равна его площади. Мы знаем, что равностронний треугольник со стороной $a$ имеет
+площадь $\displaystyle \frac{\sqrt3}{4}a^2$. А у шестиугольника площадь в $6$ раз больше,
+т. е. $\displaystyle M=\frac{3\sqrt3}{2}a^2$. Теперь можно вычислить статический момент.
+$\displaystyle M_y=\frac{\sqrt3}{2}a\cdot \frac{3\sqrt3}{2}a^2=\frac94a^3.$ $\blacktriangleright$
+
+\medskip
+\noindent{\bf 3647.} Доказать, что статический момент треугольника с основанием $a$ относительно этого основания зависит только от высоты треугольника.
+
+\smallskip
+\noindent $\blacktriangleleft$ Расположим систему координат так, чтобы точки треугольника $ABC$
+с основанием $AB=a$ и высотой $h$, опущенной на это основание, имели следующие
+координаты $A(0,0)$, $B(a,0)$, $C(t,h)$. Здесь $t$ -- произвольное число. Нам надо доказать,
+что статический момент треугольника от $t$ не зависит. Боковые стороны треугольника
+имеют уравнения $\displaystyle x=\frac th y$ и $\displaystyle x=\frac{t-a}{h}y+a$. Поэтому
+статический момент относительно основания равен
+$$\displaystyle M_x=\int_0^hy\,dy\int_{ty/h}^{(t-a)y/h+a} dx=\int_0^hy\left(\frac{h-y}{h}a\right)\,dy.$$
+Мы видим, что интеграл от $t$ не зависит.
+$\blacktriangleright$
+
+\medskip
+\noindent Найти двойным интегрированием центры масс однородных плоских фигур:
+
+\medskip
+\noindent{\bf 3649.} Фигуры ограниченной синусоидой $y=\sin x$, осью $Ox$ и прямой $x=\pi/4$.
+
+\smallskip
+\noindent $\blacktriangleleft$
+$\displaystyle M=\int_0^{\pi/4}\sin x\,dx=-\cos x\Big|_0^{\pi/4}=-\frac{\sqrt2}{2}+1=\frac{2-\sqrt2}{2}$.\\
+$\displaystyle M_x=\int_0^{\pi/4}dx\int_0^{\sin x}y\,dy=\frac12\int_0^{\pi/4}\sin^2x\,dx=
+\frac14\int_0^{\pi/4}(1-\cos2x)\,dx=\\
+=\frac14\left(x-\frac{\sin2x}{2}\right)\Big|_0^{\pi/4}=\frac14\left(\frac{\pi}{4}-\frac12\right)=
+\frac18\left(\frac{\pi}{2}-1\right)$.\\
+$\displaystyle M_y=\int_0^{\pi/4}x\,dx\int_0^{\sin x}\,dy=\int_0^{\pi/4}x\sin x\,dx=
+-x\cos x\Big|_0^{\pi/4}+\int_0^{\pi/4}\cos x\,dx=\\
+=-\frac{\pi}{4}\cdot\frac{\sqrt2}{2}+\sin x\Big|_0^{\pi/4}=
+-\frac{\pi}{4}\cdot\frac{\sqrt2}{2}+\frac{\sqrt2}{2}=\frac{\sqrt2}{2}\left(1-\frac{\pi}{4}\right)$.\\
+$\displaystyle x_c=M_y/M=\frac{\sqrt2}{2}\left(1-\frac{\pi}{4}\right)\cdot\frac{2}{2-\sqrt2}=
+\left(1-\frac{\pi}{4}\right)\cdot\frac{1}{\sqrt2-1}=\left(1-\frac{\pi}{4}\right)(\sqrt2+1)$.\\
+$\displaystyle y_c=M_x/M=\frac18\left(\frac{\pi}{2}-1\right)\cdot\frac{2}{2-\sqrt2}=
+\frac18\left(\frac{\pi}{2}-1\right)(2+\sqrt2)$.
+$\blacktriangleright$
+
+\medskip
+\noindent{\bf 3652.} Фигуры, ограниченной замкнутой линией $y^2=x^2-x^4\ (x\ge0)$.
+
+\smallskip
+\noindent $\blacktriangleleft$ Поскольку фигура симметрична относительно оси $Ox$, центр
+тяжести находится на оси $Ox$, т. е. $y_c=0$.\\
+$\displaystyle M=2\int_0^1\sqrt{x^2-x^4}\,dx=2\int_0^1x\sqrt{1-x^2}\,dx=
+-\int_0^1\sqrt{1-x^2}\,d(1-x^2)x=\\
+=-\frac23(1-x^2)^{3/2}\Big|_0^1=\frac23$.\\
+$\displaystyle M_y=\int_0^1x\,dx\int_{-\sqrt{x^2-x^4}}^{\sqrt{x^2-x^4}}dy=
+2\int_0^1x^2\sqrt{1-x^2}\,dx=\qquad\Big|x=\sin t.\Big|\qquad=\\
+2\int_0^{\pi/2}\sin^2t\cos^2t\,dt=\frac12\int_0^{\pi/2}\sin^22t\,dt=
+\frac14\int_0^{\pi/2}(1-\cos4t)\,dt=\\
+=\frac{\pi}{8}-\frac{1}{16}\sin4t\Big|_0^{\pi/2}=\frac{\pi}{8}$.\quad
+$\displaystyle x_c=M_y/M=\frac{\pi}{8}\cdot\frac32=\frac{3}{16}\pi$.
+$\blacktriangleright$
+
+\medskip
+\noindent Найти моменты инерции однородных плоских фигур (плотность $\gamma=1$):
+
+\medskip
+\noindent{\bf 3656.} Прямоугольника со сторонами $a$ и $b$ относительно точки пересечения диагоналей.
+
+\smallskip
+\noindent $\blacktriangleleft$
+Расположим систему координат так, чтобы начало находилось в точке пересечения диагоналей, ось
+$Ox$ была параллельна стороне $a$, а ось $Oy$ была параллельна стороне $b$.\\
+$\displaystyle J=\int_0^adx\int_0^b\left[\left(x-\frac a2\right)^2+\left(y-\frac b2\right)^2\right]\,dy=\\
+=\int_0^a\left[b\left(x-\frac a2\right)^2+
+\frac13\left(b-\frac b2\right)^3-\frac13\left(-\frac b2\right)^3\right]\,dx=
+\left[\frac b3\left(x-\frac a2\right)^3+\frac {b^3x}{12}\right]\Big|_0^a=\\
+=\frac{a^3b}{12}+\frac {ab^3}{12}=\frac{ab(a^2+b^2)}{12}$. $\blacktriangleright$
+
+\medskip
+\noindent{\bf 3658.} Круга радиуса $R$ относительно точки, лежащей на окружности.
+
+\smallskip\noindent $\blacktriangleleft$ Расположим систему координат так, чтобы круг $D$ касался
+оси $Oy$ в начале координат и находился в правой полуплоскости. В полярной системе координат
+окружность будет задаваться уравнением $\rho=2R\cos\varphi$. Вычисляем момент:\\
+$\displaystyle J=\iint_D(x^2+y^2)\,dx\,dy=\int_{-\pi/2}^{\pi/2}d\varphi\int_0^{2R\cos\varphi}\rho^3d\rho=
+\frac14\int_{-\pi/2}^{\pi/2}16R^4\cos^4\varphi\,d\varphi=
+4R^4\int_{-\pi/2}^{\pi/2}\left(\frac{1+\cos2\varphi}{2}\right)^2d\varphi=
+R^4\int_{-\pi/2}^{\pi/2}\left(1+2\cos2\varphi+\frac{1+\cos4\varphi}{2}\right)\,d\varphi=\\
+R^4\frac32\varphi\Big|_{-\pi/2}^{\pi/2}+R^4\sin2\varphi\Big|_{-\pi/2}^{\pi/2}+
+\frac{R^4}{8}\sin4\varphi\Big|_{-\pi/2}^{\pi/2}=\frac{3\pi R^4}{2}$.
+$\blacktriangleright$
+
+\medskip
+\noindent Найти статические моменты однородных тел (плотность $\gamma=1$):
+
+\medskip
+\noindent{\bf 3663.} Прямоугольного параллелепипеда с ребрами $a$, $b$ и $c$ относительно его граней.
+
+\smallskip\noindent
+$\blacktriangleleft$ Можно воспользоваться известными формулами о центре масс тела.
+Выберем начало системы координат в одной из вершин параллелепипеда и пустим ее оси так,
+чтобы ось $Ox$ шла по ребру параллелепипеда с длиной $a$, ось $Oy$ по ребру с длиной $b$
+и ось $Oz$ по ребру с длиной $c$. Из соображений симметрии мы заключаем, что центр тяжести
+параллелепипеда находится в геометрическом центре тела и имеет координаты
+$x_c=a/2,\quad y_c=b/2,\quad z_c=c/2$. Масса параллелепипеда $M=abc$. Отсюда,
+используя известные формулы для центра тяжести, можно сразу написать значения
+статических моментов тела относительно координатных плоскостей или, что то же самое,
+относительно граней. Имеем $x_c=M_{yz}/M$, отсюда
+$$M_{yz}=x_cM=\frac{a^2bc}{2}.$$
+Аналогично
+$$M_{zx}=y_cM=\frac{ab^2c}{2},$$
+$$M_{xy}=z_cM=\frac{abc^2}{2}.$$
+$\blacktriangleright$
+
+\medskip
+\noindent{\bf 3664.} Прямого кругового конуса (радиус основания $R$, высота $H$) относительно плоскости, проходящей через вершину параллельно основанию.
+
+\smallskip\noindent
+$\blacktriangleleft$ Расположим начало координат в вершине конуса, а ось $Oz$ пустим
+по оси конуса. Тогда радиус кругового сечения конуса плоскостью, параллельной плоскости
+$Oxy$ имеющей данную координату $z\ (0\le z\le H)$, будет $\displaystyle \frac RHz$, а его площадь,
+а значит и масса будет равна $\displaystyle \pi\frac {R^2}{H^2}z^2dz$. Нам осталось написать
+интеграл для вычисления момента\\
+$\displaystyle M_{xy}=\int_0^Hz\pi\frac {R^2}{H^2}z^2dz=
+\frac {\pi R^2}{H^2}\cdot\frac{z^4}{4}\Big|_0^H=\frac {\pi R^2H^2}{4}$.
+$\blacktriangleright$
+
+\medskip
+\noindent Найти центры масс однородных тел, ограниченных данными поверхностями:
+
+\medskip
+\noindent{\bf 3668.} Цилиндром $\displaystyle z=\frac{y^2}{2}$ и плоскостями $x=0$, $y=0$, $z=0$ и $2x+3y-12=0$.
+
+\smallskip\noindent
+$\blacktriangleleft$
+$\displaystyle M=\int_0^4dy\int_0^{6-3y/2}\int_0^{y^2/2}dz=
+\frac12\int_0^4y^2dy\int_0^{6-3y/2}dx=
+\frac14\int_0^4y^2(12-3y)\,dy=\\
+=\frac14\left(4y^3-\frac34y^4\right)\Big|_0^4=64-48=16$.\\
+$\displaystyle M_{yz}=\int_0^4dy\int_0^{6-3y/2}x\,dx\int_0^{y^2/2}dz=
+\frac12\int_0^4y^2dy\int_0^{6-3y/2}x\,dx=\\
+=\frac{1}{16}\int_0^4y^2(12-3y)^2dy=
+\frac{1}{16}\left(48y^3-18y^4+\frac95y^5\right)\Big|_0^4=\\
+48\cdot4-18\cdot16+\frac{9\cdot64}{5}=12\cdot16-18\cdot16+\frac{36\cdot16}{5}=\frac{6\cdot16}{5}$.\\
+$\displaystyle M_{zx}=\int_0^4y\,dy\int_0^{6-3y/2}dx\int_0^{y^2/2}dz=
+\frac12\int_0^4y^3dy\int_0^{6-3y/2}dx=\\
+=\frac14\int_0^4y^3(12-3y)\,dy=\frac14\left(3y^4-\frac35y^5\right)\Big|_0^4=
+3\cdot64-\frac{3\cdot4\cdot64}{5}=\frac{3\cdot64}{5}$.\\
+$\displaystyle M_{xy}=\int_0^4dy\int_0^{6-3y/2}dx\int_0^{y^2/2}z\,dz=
+\frac18\int_0^4y^4dy\int_0^{6-3y/2}dx=\\
+=\frac{1}{16}\int_0^4y^4(12-3y)\,dy=
+\frac{1}{16}\left(\frac{12}{5}y^5-\frac12y^6\right)\Big|_0^4=
+\frac{12\cdot64}{5}-2\cdot64=\frac{2\cdot64}{5}$.\\
+$\displaystyle c_x=\frac{6\cdot64}{5}:16=\frac65,\quad
+c_y=\frac{3\cdot64}{5}:16=\frac{12}{5},\quad c_z=\frac{2\cdot64}{5}:16=\frac85$.
+$\blacktriangleright$
+
+\medskip
+\noindent{\bf 3671.} Сферой $x^2+y^2+z^2=R^2$ и конусом
+$z\tg\alpha=\sqrt{x^2+y^2}$ (шаровой сектор).
+
+\smallskip\noindent
+$\blacktriangleleft$ Задача такова, что имеется два тела, на которые конус разбивает
+шар. Ответ задачника показывает, что имеется в виду часть, лежащая в верхней полуплоскости.
+Из соображений симметрии мы можем заключить, что центр тяжести
+лежит на оси $Oz$. Сразу перейдем к сферической системе координат.
+$\displaystyle M=\int_0^R\rho^2d\rho\int_0^{\pi/2-\alpha}\sin\theta\,d\theta\int_0^{2\pi}d\varphi=
+2\pi\int_0^R\rho^2d\rho\int_0^{\pi/2\alpha}\sin\theta\,d\theta=\\
+=-2\pi\int_0^R\rho^2d\rho\cdot\cos\theta\Big|_0^{\pi/2-\alpha}=
+2\pi(1-\sin\alpha)\int_0^R\rho^2d\rho=\frac{2\pi(1-\sin\alpha)R^3}{3}$.\\
+$\displaystyle M_{xy}=\int_0^R\rho^3d\rho\int_0^{\pi/2-\alpha}\sin\theta\cos\theta\,d\theta\int_0^{2\pi}d\varphi=
+2\pi\int_0^R\rho^3d\rho\int_0^{\pi/2-\alpha}\sin\theta\cos\theta\,d\theta=\\
+=-\frac{\pi}{2}\int_0^R\rho^3d\rho \cos2\theta\Big|_0^{\pi/2-\alpha}=
+\frac{\pi(\cos2\alpha+1)}{2}\int_0^R\rho^3d\rho=\frac{\pi(\cos2\alpha+1)R^4}{8}$.\\
+$\displaystyle x_c=0,\quad y_c=0,\quad z_c=
+\frac{\pi(\cos2\alpha+1)R^4}{8}:\frac{2\pi(1-\sin\alpha)R^3}{3}=
+\frac{3(\cos2\alpha+1)R}{16(1-\sin\alpha)}=\\
+=\frac{3(2-2\sin^2\alpha)R}{16(1-\sin\alpha)}=\frac{3R(1+\sin\alpha)}{8}$.
+$\blacktriangleright$
+
+\medskip
+\noindent Найти моменты инерции однородных тел с массой, равной $M$.
+
+\medskip
+\noindent{\bf 3676.} Шара радиуса $R$ относительно касательной прямой.
+
+\smallskip\noindent
+$\blacktriangleleft$ Уравнение шара $x^2+y^2+z^2=R^2$. Сначала вычислим момент инерции
+шара относительно оси $Oz$, проходящей через центр тяжести. Квадрат расстояния точки $(x,y,z)$
+до этой оси равен $x^2+y^2$. В сферической системе координат эта величина равна $\rho^2\sin^2\theta$.
+Момент инерции однородного шара плостности $\displaystyle\gamma=\frac{3M}{4\pi R^3}$ представим
+интегралом в сферической системе координат\\
+$\displaystyle J_c=\gamma\int_0^{2\pi}d\varphi\int_0^R\rho^4d\rho\int_0^{\pi}\sin^3\theta\,d\theta=
+\gamma\int_0^{2\pi}d\varphi\int_0^R\rho^4d\rho\int_0^{\pi}(\cos^2\theta-1)\,d(\cos\theta)=\\
+\gamma\int_0^{2\pi}d\varphi\int_0^R\rho^4d\rho\left(\frac{\cos^3\theta}{3}-\cos\theta\right)\Big|_0^{\pi}=
+\gamma\cdot\frac{4}{3}\int_0^{2\pi}d\varphi\int_0^R\rho^4d\rho=
+\gamma\cdot\frac{4 R^5}{15}\int_0^{2\pi}d\varphi=\\
+=\gamma\cdot\frac{8\pi R^5}{15}=\frac{3M}{4\pi R^3}\cdot\frac{8\pi R^5}{15}=\frac{2MR^2}{5}$.\\
+Чтобы вычислить момент инерции шара относительно касательной, воспользуемся
+теоремой Гюйгенса--Штейнера\\
+$\displaystyle J=J_c+MR^2=\frac{2MR^2}{5}+MR^2=\frac{7MR^2}{5}$.
+$\blacktriangleright$
+
+\medskip
+\noindent{\bf 3680.} Параболоида вращения (радиус основания $R$, высота $H$ относительно оси, проходящей через его центр масс перпендикулярно к оси вращения (экваториальный момент).
+
+\smallskip\noindent
+$\blacktriangleleft$ Расположим систему координат так, чтобы начало координат
+находилось в вершине параболоида, а ось $Oz$ шла по оси параболоида от вершины
+в сторону его основания. Тогда параболоид будет иметь уравнение
+$z=k(x^2+y^2)$. При $z=H$ мы оказываемся на основании параболоида,
+т. е. $(x^2+y^2)=R^2$. Из этого условия можно вычислить $k=H/R^2$.
+Итак, уравнение параболоида имеет вид
+$\displaystyle z=\frac{H}{R^2}(x^2+y^2),\ 0\le z \le H$.
+Из него получается, что $\displaystyle x^2+y^2=\frac{R^2}{H}z$, а это
+квадрат радиуса круга, который образуется при сечении параболоида плоскостью
+параллельной основанию на расстоянии $z$ от вершины. Площадь этого круга равна
+$\displaystyle S_z=\frac{\pi R^2}{H}z$. Пользуясь этим вычисляем $z$-координату центра тяжести.\\
+$\displaystyle M=\int_0^H\frac{\pi R^2}{H}z\,dz=\frac{\pi R^2H^2}{2H}=\frac{\pi R^2H}{2}$,\\
+$\displaystyle M_{xy}=\int_0^H\frac{\pi R^2}{H}z^2dz=\frac{\pi R^2H^3}{3H}=\frac{\pi R^2H^2}{3}$.\\
+$\displaystyle z_c=\frac{\pi R^2H^2}{3}:\frac{\pi R^2H}{2}=\frac 23H$.\\
+Вычислим момент инерции параболоида относительно оси $Oy$. Интеграл запишем
+в цилиндрической системе координат\\
+$\displaystyle J=\int_0^{2\pi}d\varphi\int_0^Rd\rho\int_{H\rho^2/R^2}^H(\rho^2\cos^2\varphi+z^2)\rho\,dz=\\
+=\int_0^{2\pi}d\varphi\int_0^Rd\rho
+\left(\rho^3\cos^2\varphi\cdot z+\frac{\rho z^3}{3}\right)\Big|_{H\rho^2/R^2}^H=\\
+=\int_0^{2\pi}d\varphi\int_0^R\left[\rho^3\cos^2\varphi\cdot
+H\left(1-\frac{\rho^2}{R^2}\right)+\frac{\rho H^3}{3}\left(1-\frac{\rho^6}{R^6}\right)\right]d\rho=\\
+=\int_0^{2\pi}\left[H\cos^2\varphi\left(\frac{R^4}{4}-\frac{R^6}{6R^2}\right)+
+\frac{H^3}{3}\left(\frac{R^2}{2}-\frac{R^8}{8R^6}\right)\right]d\varphi=\\
+=\int_0^{2\pi}\left(\frac{HR^4}{12}\cos^2\varphi+\frac{H^3R^2}{8}\right)d\varphi=
+\int_0^{2\pi}\left(\frac{HR^4}{24}+\frac{HR^4}{24}\cos2\varphi+\frac{H^3R^2}{8}\right)d\varphi=\\
+=\frac{HR^4\pi}{12}+\frac{HR^4}{48}\sin2\varphi\Big|_0^{2\pi}+\frac{H^3R^2\pi}{4}
+=\frac{HR^4\pi}{12}+\frac{H^3R^2\pi}{4}$.\\
+Пользуясь теоремой Гюйгенса--Штейнера вычисляем момент относительно оси параллельной оси $Oy$
+и проходящей через центр тяжести параболоида.\\
+$\displaystyle J_c=J-\frac{4H^2}{9}\cdot\frac{\pi R^2H}{2}=
+\frac{HR^4\pi}{12}+\frac{H^3R^2\pi}{4}-\frac{2H^3R^2\pi}{9}=
+\frac{HR^2\pi}{36}(3R^2+H^2)$.
+$\blacktriangleright$
+
+\medskip
+\noindent{\bf 3685.} Плоское кольцо ограничено двумя концентрическими окружностями, радиусы которых равны $R$ и $r$ $(R>r)$. Зная, что плотность материала обратно пропорциональна расстоянию от центра окружностей, найти массу кольца. Плотность на окружности внутреннего круга равна единице.
+
+\smallskip\noindent
+$\blacktriangleleft$ Сначала определим поверхностную плотность. Если точка кольца
+находится на расстоянии $\rho$ от центра кольца, тогда плотность в этой точке должна
+быть равна $\displaystyle\frac r\rho$. Теперь массу кольца можно записать интегралом в
+полярной системе координат.\\
+$\displaystyle M=\int_0^{2\pi}d\varphi\int_r^Rr\,d\rho=2\pi r(R-r)$.
+$\blacktriangleright$
+
+\medskip
+\noindent{\bf 3689*.} Вычислить массу тела, ограниченного круглым конусом, высота которого равна $h$, а угол между осью и образующей равен $\alpha$, если плотность пропорциональна $n\mbox{-й}$ степени расстояния от плоскости, проведенной через вершину конуса параллельно основанию, причем на единице расстояния она равна $\gamma$ $(n>0)$.
+
+\smallskip\noindent
+$\blacktriangleleft$
+Расположим начало системы координат в вершине конуса, а координатную ось $Oz$ направим
+по оси конуса в сторону основания. Тогда уравнение конуса будет
+$\displaystyle z=\tg\left(\frac{\pi}{2}-\alpha\right)\sqrt{x^2-y^2}$ или
+$\displaystyle z=\ctg\alpha\sqrt{x^2-y^2}$. Радиус основания при $z=h$
+будет равен $h\tg\alpha$. Объемная плотность конуса будет равна $\gamma z^n$.
+Теперь мы можем записать массу конуса интегралом в цилиндрической системе координат.\\
+$\displaystyle M=\int_0^{2\pi}d\varphi\int_0^{h\tg\alpha}d\rho
+\int_{\rho\ctg\alpha}^h\gamma z^n\rho\,dz=
+\frac{\gamma}{n+1}\int_0^{2\pi}d\varphi\int_0^{h\tg\alpha}\rho\,d\rho\cdot
+ z^{n+1}\Big|_{\rho\ctg\alpha}^h=\\
+=\frac{\gamma}{n+1}\int_0^{2\pi}d\varphi\int_0^{h\tg\alpha}
+\rho(h^{n+1}-\rho^{n+1}\ctg^{n+1}\alpha)\,d\rho=\\
+=\frac{\gamma}{n+1}\int_0^{2\pi}\left(\frac{h^2\tg^2\alpha}{2}h^{n+1}-
+\frac{h^{n+3}\tg^{n+3}\alpha}{n+3}\ctg^{n+1}\alpha\right)d\varphi=\\
+=\frac{2\pi\gamma h^{n+3}}{n+1}\left(\frac{\tg^2\alpha}{2}-
+\frac{\tg^2\alpha}{n+3}\right)=
+\frac{2\pi\gamma h^{n+3}}{n+1}\cdot\frac{n+1}{2(n+3)}\tg^2\alpha=
+\frac{\pi\gamma h^{n+3}\tg^2\alpha}{n+3}$.
+$\blacktriangleright$
+
+\medskip
+\noindent{\bf 3691.} Вычислить массу тела, ограниченного параболоидом $x^2+y^2=2az$ и сферой $x^2+y^2+z^2=3a^2$ $(z>0)$, если плотность в каждой точке равна сумме квадратов координат.
+
+\smallskip\noindent
+$\blacktriangleleft$
+Найдем уравнения поверхностей в сферической системе координат.\\
+Параболоид\\
+$\displaystyle r^2\sin^2\theta\cos^2\varphi+r^2\sin^2\theta\sin^2\varphi=2ar\cos\theta;\quad
+r^2\sin^2\theta=2ar\cos\theta;\quad r=\frac{2a\cos\theta}{\sin^2\theta}$.\\
+Сфера\\
+$\displaystyle r^2\sin^2\theta\cos^2\varphi+r^2\sin^2\theta\sin^2\varphi+r^2\cos^2\theta=3a^2;\quad
+r^2=3a^2;\quad r=\sqrt3a$.\\
+Эти поверхности пересекаются по окружности, точки которой имеют одну и ту же координату $\theta$.
+Для нахождения этого $\theta$ решаем уравнение\\
+$\displaystyle \frac{2a\cos\theta}{\sin^2\theta}=\sqrt3a;\quad
+\frac{2a\cos\theta}{1-\cos^2\theta}=\sqrt3a;\quad \sqrt3\cos^2\theta+2\cos\theta-\sqrt3=0;$\\
+При решении квадратного уравнения оставляем корень, попадающий в диапазон $[-1,1]$
+(выбираем знак плюс перед радикалом)\\
+$\displaystyle \cos\theta=\frac{-1\pm\sqrt{1+3}}{\sqrt3}=\frac{1}{\sqrt3}=\frac{\sqrt3}{3}.\quad
+\sin\theta=\frac{\sqrt6}{3}.\quad \theta=\arcsin\frac{\sqrt6}{3}=\arccos\frac{\sqrt3}{3}$.\\
+Теперь можно записать массу в виде суммы двух интегралов\\
+$\displaystyle M=\int_0^{2\pi}d\varphi\int_0^{\arcsin(\sqrt6/3)}d\theta\int_0^{\sqrt3a}r^4\sin\theta\,dr+\\
++\int_0^{2\pi}d\varphi\int_{\arcsin(\sqrt6/3)}^{\pi/2}d\theta
+\int_0^{2a\cos\theta/\sin^2\theta}r^4\sin\theta\,dr=\\
+=\int_0^{2\pi}d\varphi\int_0^{\arcsin(\sqrt6/3)}\sin\theta\,d\theta\cdot
+\frac{r^5}{5}\Big|_0^{\sqrt3a}+\\
++\int_0^{2\pi}d\varphi\int_{\arcsin(\sqrt6/3)}^{\pi/2}\sin\theta\,d\theta\cdot
+\frac{r^5}{5}\Big|_0^{2a\cos\theta/\sin^2\theta}=\\
+=\frac{9\sqrt3a^5}{5}\int_0^{2\pi}d\varphi\int_0^{\arcsin(\sqrt6/3)}\sin\theta\,d\theta+
+\frac15\int_0^{2\pi}d\varphi\int_{\arcsin(\sqrt6/3)}^{\pi/2}
+\frac{32a^5\cos^5\theta\sin\theta}{\sin^{10}\theta}\,d\theta=\\
+=\frac{9\sqrt3a^5}{5}\int_0^{2\pi}d\varphi\cdot(-\cos\theta)\Big|_0^{\arcsin(\sqrt6/3)}+\\
++\frac15\int_0^{2\pi}d\varphi\int_{\arcsin(\sqrt6/3)}^{\pi/2}
+\frac{32a^5(1-\sin^2\theta)^2}{\sin^{9}\theta}\,d(\sin\theta)=\\
+=\frac{9\sqrt3a^5}{5}\int_0^{2\pi}d\varphi\cdot(-\cos\theta)\Big|_0^{\arccos(\sqrt3/3)}+\\
++\frac{32a^5}{5}\int_0^{2\pi}d\varphi\int_{\arcsin(\sqrt6/3)}^{\pi/2}
+(\sin^{-9}\theta-2\sin^{-7}\theta+\sin^{-5}\theta)\,d(\sin\theta)=\\
+=\frac{9\sqrt3a^5}{5}\left(1-\frac{\sqrt3}{3}\right)\int_0^{2\pi}d\varphi+\\
++\frac{32a^5}{5}\int_0^{2\pi}d\varphi\cdot
+\left(-\frac{\sin^{-8}\theta}{8}+\frac{\sin^{-6}\theta}{3}-\frac{\sin^{-4}\theta}{4}\right)\Big|_{\arcsin(\sqrt6/3)}^{\pi/2}=\\
+=\frac{18\pi a^5(\sqrt3-1)}{5}+
+\frac{64\pi a^5}{5}\cdot\left(-\frac18+\frac13-\frac14+\frac{81}{8\cdot16}-\frac{27}{3\cdot8}+\frac{9}{4\cdot4}\right)=\\
+=\frac{18\pi a^5(\sqrt3-1)}{5}+
+\frac{64\pi a^5}{5}\cdot\frac{-48+128-96+243-432-216}{8\cdot16\cdot3}=\\
+=\frac{18\pi a^5(\sqrt3-1)}{5}+
+\frac{\pi a^5}{5}\cdot\frac{11}{6}=\frac{\pi a^5}{5}\left(18\sqrt3-\frac{97}{6} \right)$.
+$\blacktriangleright$
+
+\bigskip
+\noindent{\scriptsize \copyright Alidoro, 2016. palva@mail.ru }
+
+\end{document}

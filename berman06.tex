@@ -1,0 +1,692 @@
+\documentclass[a5paper,10pt]{article}
+\oddsidemargin=0pt
+\hoffset=-1.5cm
+\voffset=-1.5cm
+\topmargin=-1.5cm
+\textwidth=12.8cm
+\textheight=18.6cm
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage[T2A]{fontenc}
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{bm}
+\usepackage{graphicx}
+
+\begin{document}
+
+\noindent {\it Берман. Сборник задач по курсу математического анализа.
+Издание двадцатое. М., 1985.}
+
+\bigskip
+\section* {Глава VI. Неопределенный интеграл}
+
+\medskip
+\noindent
+
+\medskip
+\noindent{\bf 1676.} $\displaystyle\int\sqrt x\,dx=\frac23x\sqrt x.$
+
+\medskip
+\noindent{\bf 1677.} $\displaystyle\int\sqrt[m]{x^n}\,dx=\int x^{n/m}=
+\frac{m}{n+m}\int x^{{n+m}/m}.$
+
+\medskip
+\noindent{\bf 1936.} $\displaystyle\int\frac{x\,dx}{\sqrt{1+2x}}=
+\qquad\left|t=\sqrt{1+2x},\quad x=
+\frac{t^2-1}{2},\quad dx=t\,dt.\right|\\
+=\int\frac{(t^2-1)\cdot t\,dx}{2t}=\frac{t^3}{6}-\frac t2=
+\frac{(1+2x)\sqrt{1+2x}}{6}-\frac{\sqrt{1+2x}}{2}=
+\frac{(x-1)\sqrt{1+2x}}{3}$.
+
+\medskip
+\noindent{\bf 1941.} $\displaystyle\int\frac{dx}{\sqrt{9x^2-6x+2}}=
+\frac13\int\frac{d(3x-1)}{\sqrt{(3x-1)^2+1}}=\frac13\ln(3x-1+\sqrt{9x^2-6x+2})$.
+
+\medskip
+\noindent{\bf 1947.} $\displaystyle\int\frac{(3x-1)\,dx}{\sqrt{x^2+2x+2}}=
+\frac32\int\frac{d(x^2+2x+2)}{\sqrt{x^2+2x+2}}-
+4\int\frac{d(x+1)}{\sqrt{(x+1)^2+1}}=$\\
+$\displaystyle =3\sqrt{x^2+2x+2}-4\ln(x+1+\sqrt{x^2+2x+2})$.
+
+\medskip
+\noindent{\bf 1954.} $\displaystyle\int\frac{\sqrt x\,dx}{\sqrt{2x+3}}=\int\sqrt x\,d\sqrt{2x+3}=
+\sqrt{2x^2+3x}-\frac12\int\sqrt{2+\frac3x}\,dx=$\\
+$\displaystyle =x\sqrt{2+\frac3x}-\frac x2\sqrt{2+\frac3x}+\frac12\int x\,d\sqrt{2+\frac3x}=
+\frac x2\sqrt{2+\frac3x}-\frac34\int \frac{dx}{\sqrt{2x^2+3x}}=$\\
+$\displaystyle =\frac{\sqrt{2x^2+3x}}{2}-
+\frac{3}{4\sqrt2}\int\frac{d(x+3/4)}{\sqrt{(x+3/4)^2-(3/4)^2}}=$\\
+$\displaystyle =\frac{\sqrt{2x^2+3x}}{2}-
+\frac{3}{4\sqrt2}\ln\left(x+\frac34+\sqrt{x^2+\frac32x}\right)$.
+
+\medskip
+\noindent{\bf 1957.} $\displaystyle\int x\sin x\,\cos x\,dx=
+\int x\sin x\,d\sin x=\frac12\int x\,d\sin^2 x=$\\
+$\displaystyle =\frac12\left(x\sin^2 x-\int\sin^2 x\,dx\right)=
+\frac{x\sin^2 x}{2}-\frac12\int\frac{1-\cos 2 x}{2}\,dx=$\\
+$\displaystyle =\frac{x-x\cos2x}{4}-\frac x4+\frac{\sin2x}{8}=
+\frac{\sin2x}{8}-\frac{x\cos2x}{4}$.
+
+\medskip
+\noindent{\bf 1966.} $\displaystyle\int\frac{dx}{e^x+1}=\qquad
+\left|t=e^x,\quad dt=e^xdx=t\,dx,\quad dx=\frac{dt}{t}\right|\\
+=\int\frac{dt}{t(t+1)}=
+\int\frac{dt}{t}-\int\frac{dt}{t+1}=
+\ln|t|-\ln|t+1|=\ln\frac{e^x}{e^x+1}$.
+
+\medskip
+\noindent{\bf 1974.} $\displaystyle\int\frac{(1+\tg x)\,dx}{\sin 2x}=
+\qquad \left| t=\tg x,\quad x=\arctg t,\quad dx=\frac{dt}{1+t^2}.\right|\\
+=\int\frac{(1+t)(1+t^2)\,dx}{2t(1+t^2)}=\frac12\ln t+\frac12 t=
+\frac12\ln |\tg x|+\frac12 \tg x$.
+
+\medskip
+\noindent{\bf 1984.} $\displaystyle\int\frac{x^4 dx}{\sqrt{(1-x^2)^3}}=\qquad| x=\sin u,\quad dx=\cos u.|
+\qquad =\int\frac{\sin^4u\cdot\cos u}{\cos^3 u}\,du=\\
+=\int\frac{d\tg u}{(1+\ctg^2 u)^2}=\int\frac{\tg^4 u\,d\tg u}{(1+\tg^2 u)^2}=
+\qquad| t=\tg u|\qquad =\int\frac{t^4\,dt}{(1+t^2)^2}=\\
+=\int dt-\int\frac{t^2\,dt}{(1+t^2)^2}-\int\frac{(1+t^2)\,dt}{(1+t^2)^2}=
+t-\arctg t -\int\frac{t^2\,dt}{(1+t^2)^2}=$\\
+Отдельно вычислим интеграл\\
+$\displaystyle-\int\frac{t^2\,dt}{(1+t^2)^2}=\frac12\int t\cdot\,d\left(\frac{1}{1+t^2}\right)=\frac12\cdot\frac{t}{1+t^2}-\frac12\int\frac{dt}{1+t^2}=\frac12\cdot\frac{t}{1+t^2}-\frac12\arctg t.$\\
+Подставим в основной интеграл\\
+$\displaystyle t-\arctg t+\frac12\cdot\frac{t}{1+t^2}-\frac12\arctg t=\frac{2t^3+3t}{2(1+t^2)}-\frac32\arctg t=$\\
+Учитывая, что $\displaystyle t=\tg u=\tg\arcsin x=\frac{x}{\sqrt{1-x^2}}$, получаем\\
+$\displaystyle =\left(\frac{2x^3}{(1-x^2)\sqrt{1-x^2}}+\frac{3x}{\sqrt{1-x^2}}\right)\Big/
+\left(2+\frac{2x^2}{1-x^2}\right)-\frac32\arcsin x=\\
+=\frac{3x-x^3}{(1-x^2)\sqrt{1-x^2}}\cdot\frac{1-x^2}{2}-\frac32\arcsin x=
+\frac{3x-x^3}{2\sqrt{1-x^2}}-\frac32\arcsin x$.
+
+\medskip
+\noindent Еще один вариант решения задачи.\\
+$\displaystyle\int\frac{x^4 dx}{\sqrt{(1-x^2)^3}}=
+-\frac12\int\frac{x^3 d(1-x^2)}{\sqrt{(1-x^2)^3}}=
+\int x^3 d\frac{1}{\sqrt{1-x^2}}=\frac{x^3}{\sqrt{1-x^2}}-3\int \frac{x^2 dx}{\sqrt{1-x^2}}=\\
+=\frac{x^3}{\sqrt{1-x^2}}+\frac32\int \frac{x\,d(1-x^2)}{\sqrt{1-x^2}}=
+\frac{x^3}{\sqrt{1-x^2}}+3\int x\,d\sqrt{1-x^2}=\\
+=\frac{x^3}{\sqrt{1-x^2}}+3x\sqrt{1-x^2}-3\int\sqrt{1-x^2}\,dx=$\\
+Отдельно вычислим интеграл $\displaystyle\int\sqrt{1-x^2}\,dx$. Для этого положим\\
+$\displaystyle I=\int\sqrt{1-x^2}\,dx=
+x\sqrt{1-x^2}-\int\frac{-x^2\,dx}{\sqrt{1-x^2}}=$\\
+$\displaystyle =x\sqrt{1-x^2}-\int\sqrt{1-x^2}\,dx+\int\frac{dx}{\sqrt{1-x^2}}=
+x\sqrt{1-x^2}-I+\arcsin x$.\\
+Отсюда находим:
+$\displaystyle I=\frac x2\sqrt{1-x^2}+\frac{1}{2}\arcsin x$.\\
+Теперь вычисляем сам интеграл задачи:\\
+$\displaystyle =\frac{x^3}{\sqrt{1-x^2}}+3x\sqrt{1-x^2}-\frac{3x}{2}\sqrt{1-x^2}-\frac32\arcsin x=$\\
+$\displaystyle =\frac{2x^3+3x-3x^3}{2\sqrt{1-x^2}}-\frac32\arcsin x=
+\frac{3x-x^3}{2\sqrt{1-x^2}}-\frac32\arcsin x$.
+
+\medskip
+\noindent{\bf 1992.} $\displaystyle\int\frac{dx}{(2+x)\sqrt{1+x}}=
+\qquad\left|t=\sqrt{1+x},\quad x=t^2-1,\quad dx=2t\,dt.\right|\\
+=\int\frac{2t\,dt}{(t^2+1)t}=2 \arctg t=2 \arctg \sqrt{1+x}$.
+
+\medskip
+\noindent{\bf 2009.} $\displaystyle\int\ln(x+\sqrt{1+x^2})\,dx=
+x\ln(x+\sqrt{1+x^2})-\int\frac{x\,dx}{\sqrt{1+x^2}}=$\\
+$\displaystyle =x\ln(x+\sqrt{1+x^2})-\int\frac{d(1+x^2)}{2\sqrt{1+x^2}}=
+x\ln(x+\sqrt{1+x^2})-\sqrt{1+x^2}$.
+
+\medskip
+\noindent{\bf 2018.} $\displaystyle\int\frac{32x\,dx}{(2x-1)(4x^2-16x+15)}=
+\int\frac{32x\,dx}{(2x-1)(2x-3)(2x-5)}=$\\
+$\displaystyle =\int\left(\frac{A}{2x-1}+\frac{B}{2x-3}+\frac{C}{2x-5} \right )\,dx=\ldots\\
+32x=A(2x-3)(2x-5)+B(2x-1)(2x-5)+C(2x-1)(2x-3).\\
+x=1/2,\quad A=2.\quad x=3/2,\quad B=-12,\quad x=5/2,\quad C=10.\\
+\ldots=\int\left(\frac{2}{2x-1}-\frac{12}{2x-3}+\frac{10}{2x-5} \right )\,dx=$\\
+$\displaystyle =\int\frac{d(2x-1)}{2x-1}-6\int\frac{d(2x-3)}{2x-3}+5\int\frac{d(2x-3)}{2x-5},dx=$\\
+$\displaystyle =\ln|2x-1|-6\ln|2x-3|+5\ln|2x-5|$.
+
+\medskip
+\noindent{\bf 2023.} $\displaystyle\int\left(\frac{x+2}{x-1}\right)^2\frac{dx}{x}=
+\int\left(\frac{A}{x-1}+\frac{B}{(x-1)^2}+\frac{C}{x}\right)\,dx=\ldots\\
+(x+2)^2=Ax(x-1)+Bx+C(x-1)^2.\\
+x=1,\quad B=9,\quad x=0,\quad C=4,\quad x=-1,\quad 1=2A-9+16,\quad A=-3.\\
+\ldots=\int\left(-\frac{3}{x-1}+\frac{9}{(x-1)^2}+\frac{4}{x}\right)\,dx-=
+=4\ln|x|-3\ln|x-1|-\frac{9}{x-1}$.
+
+\medskip
+\noindent{\bf 2034.} $\displaystyle\int\frac{x^3-2x^2+4}{x^3(x-2)^2}=
+\int\left(\frac{A}{x}+\frac{B}{x^2}+\frac{C}{x^3}+
+\frac{D}{x-2}+\frac{E}{(x-2)^2}\right)\,dx=\ldots\\
+x^3-2x^2+4=Ax^2(x-2)^2+Bx(x-2)^2+C(x-2)^2+Dx^3(x-2)+Ex^3=$\\
+$\displaystyle =(A+D)x^4+(-4A+B-2D+E)x^3+(4A-4B+C)x^2+(4B-4C)x+4C.\\
+\begin{cases}
+A+D=0\\
+-4A+B-2D+E=1\\
+4A-4B+C=-2\\
+4B-4C=0\\
+4C=4
+\end{cases};\quad
+\begin{cases}
+D=-1/4\\
+E=1/2\\
+A=1/4\\
+B=1\\
+C=1
+\end{cases}.\\
+\ldots=\int\left(\frac{1/4}{x}+\frac{1}{x^2}+\frac{1}{x^3}-
+\frac{1/4}{x-2}+\frac{1/2}{(x-2)^2}\right)\,dx=$\\
+$\displaystyle =\frac14\ln|x|-\frac{1}{x}-\frac{1}{2x^2}-\frac14\ln|x-2|-\frac{1}{2(x-2)}=
+\ln\left|\frac{x}{x-1}\right|-\frac{1}{x}-\frac{1}{2x^2}-\frac{1}{2(x-2)}$.
+
+\medskip
+\noindent{\bf 2047.} $\displaystyle\int\frac{dx}{1+x^4}=
+\int\frac{dx}{(x^2-\sqrt2x+1)(x^2+\sqrt2x+1)}=$\\
+$\displaystyle \int\left(\frac{Ax+B}{x^2-\sqrt2x+1}+
+\frac{Cx+D}{x^2+\sqrt2x+1}\right )\,dx=\ldots\\
+1=(Ax+B)(x^2+\sqrt2x+1)+(Cx+D)(x^2-\sqrt2x+1).\\
+\begin{cases}A+C=0\\\sqrt2A+B-\sqrt2C+D=0\\
+A+\sqrt2B+C-\sqrt2D=0\\B+D=1\end{cases};\quad
+\begin{cases}C=-A\\\sqrt2A+B+\sqrt2A-B=-1\\
+A+\sqrt2B-A+\sqrt2B=\sqrt2\\D=1-B\end{cases};\\
+\begin{cases}C=\frac{1}{2\sqrt2}\\
+A=-\frac{1}{2\sqrt2}\\B=\frac{1}{2}\\D=\frac{1}{2}\end{cases}.\\
+\ldots=\frac{\sqrt2}{4}\int\frac{-x+\sqrt2}{x^2-\sqrt2x+1}\,dx+
+\frac{\sqrt2}{4}\int\frac{x+\sqrt2}{x^2+\sqrt2x+1}\,dx=$\\
+$\displaystyle =-\frac{\sqrt2}{8}\int\frac{2x-\sqrt2}{x^2-\sqrt2x+1}\,dx+
+\frac{\sqrt2}{8}\int\frac{\sqrt2}{x^2-\sqrt2x+1}\,dx+\\
++\frac{\sqrt2}{8}\int\frac{2x+\sqrt2}{x^2+\sqrt2x+1}\,dx
++\frac{\sqrt2}{8}\int\frac{\sqrt2}{x^2+\sqrt2x+1}\,dx=$\\
+$\displaystyle =-\frac{\sqrt2}{8}\ln(x^2-\sqrt2x+1)+
+\frac{1}{4}\int\frac{d(x-\sqrt2/2)}{(x-\sqrt2/2)^2+1/2}+\\
++\frac{\sqrt2}{8}\ln(x^2+\sqrt2x+1)+
+\frac{1}{4}\int\frac{d(x+\sqrt2/2)}{(x+\sqrt2/2)^2+1/2}=$\\
+$\displaystyle =\frac{\sqrt2}{8}\ln\frac{x^2+\sqrt2x+1}{x^2-\sqrt2x+1}+
+\frac{\sqrt2}{4}(\arctg(\sqrt2x-1)+\arctg(\sqrt2x+1))=$\\
+$\displaystyle =\frac{\sqrt2}{8}\ln\frac{x^2+\sqrt2x+1}{x^2-\sqrt2x+1}+
+\frac{\sqrt2}{4}\arctg\frac{\sqrt2x}{1-x^2}=.$
+
+\medskip
+\noindent{\bf 2053.} $\displaystyle\int\frac{2x\,dx}{(1+x)(1+x^2)^2}=
+\int\left(\frac{A}{1+x}+\frac{Bx+C}{1+x^2}+
+\frac{Dx+E}{(1+x^2)^2}\right )\,dx=\ldots\\
+2x=A(1+x^2)^2+(Bx+C)(1+x)(1+x^2)+(Dx+E)(1+x).\\
+x=-1,\quad -2=4A,\quad A=-1/2.\\
+x=i,\quad 2i=(E-D)+(D+E)i,\quad E=1,\quad D=1.\\
+2=\left.((Bx+C)(1+x)2x+(Dx+E)+D(1+x))\right|_{x=i};\\
+2=-2(B+C)+2(C-B)i+i+1+1+i;\\
+B+C=0,\quad B-C=1,\quad B=1/2,\quad C=-1/2.\\
+\ldots=\int\left(-\frac{1}{2(1+x)}+\frac{x-1}{2(1+x^2)}+
+\frac{x+1}{(1+x^2)^2}\right )\,dx=$\\
+$\displaystyle =-\frac12\ln|1+x|+\frac14\int\frac{2x\,dx}{1+x^2}-
+\frac12\int\frac{dx}{1+x^2}+\frac12\int\frac{2x\,dx}{(1+x^2)^2}+
+\int\frac{dx}{(1+x^2)^2}=$\\
+$\displaystyle =\frac14\ln(1+x^2)-\frac12\ln|1+x|-
+\frac12\arctg x-\frac{1}{2(1+x^2)}+\int\frac{dx}{(1+x^2)^2}.\\
+=\frac14\ln(1+x^2)-\frac12\ln|1+x|-
+\frac12\arctg x-\frac{1}{2(1+x^2)}+\int\frac{dx}{(1+x^2)^2}$.\\
+Имеем: $\displaystyle\arctg x=\int\frac{dx}{1+x^2}=
+\frac{x}{1+x^2}+2\int\frac{x^2\,dx}{(1+x^2)^2}=$\\
+$\displaystyle =\frac{x}{1+x^2}+2\int\frac{dx}{1+x^2}-2\int\frac{dx}{(1+x^2)^2}=
+\frac{x}{1+x^2}+2\arctg x-2\int\frac{dx}{(1+x^2)^2}$.\\
+Отсюда получаем: $\displaystyle\int\frac{dx}{(1+x^2)^2}=
+\frac12\left(\frac{x}{1+x^2}+\arctg x \right )$.\\
+Ответ: $\displaystyle\frac14\ln(1+x^2)-\frac12\ln|1+x|-\frac{1-x}{2(1+x^2)}$.
+
+\medskip
+\noindent{\bf 2057.} $\displaystyle
+\int\frac{(4x^2-8x)\,dx}{(x-1)^2(x^2+1)^2}=
+\frac{A}{x-1}+\frac{Bx+C}{x^2+1}+
+\int\left(\frac{D}{x-1}+\frac{Ex+F}{x^2+1}\right)\,dx=\ldots\\
+\frac{4x^2-8x}{(x-1)^2(x^2+1)^2}=
+-\frac{A}{(x-1)^2}+\frac{B(x^2+1)-2x(Bx+C)}
+{(x^2+1)^2}+\frac{D}{x-1}+\frac{Ex+F}{x^2+1};\\
+4x^2-8x=-A(x^4+2x^2+1)+B(x^2-2x+1)(x^2+1)-\\
+-2x(x^2-2x+1)(Bx+C)+D(x-1)(x^4+2x^2+1)+\\
++(x^2-2x+1)(x^2+1)(Ex+F);\\
+x=1,\quad -4=-4A,\quad A=1.\\
+x=i,\quad -4-8i=-2i\cdot(-2i)(C+Bi)=-4C-4Bi,\\
+B=2,\quad C=1.\\
+0x^5=(D+E)x^5,\\
+-8x=(-2B-2C+D-2F+E)x=(-6+D-2F+E)x,\\
+0=-A+B-D+F=1-D+F.\\
+\begin{cases}
+D+E=0\\
+D-2F+E=-2\\
+D-F=1
+\end{cases};\quad
+\begin{cases}
+D+E=0\\
+-2F=-2\\
+D-F=1
+\end{cases};\quad
+\begin{cases}
+E=-2\\
+F=1\\
+D=2
+\end{cases}.\\
+\int\frac{(4x^2-8x)\,dx}{(x-1)^2(x^2+1)^2}=
+\frac{1}{x-1}+\frac{2x+1}{x^2+1}+
+\int\left(\frac{2}{x-1}+\frac{-2x+1}{x^2+1}\right)\,dx=$\\
+$\displaystyle =\frac{1}{x-1}+\frac{2x+1}{x^2+1}+2\ln|x-1|-\ln(x^2+1)+\arctg x=$\\
+$\displaystyle =\frac{3x^2-x}{(x-1)(x^2+1)}+\ln\frac{(x-1)^2}{x^2+1}-\arctg x$.
+
+\medskip
+\noindent{\bf 2066.} $\displaystyle
+\int\frac{5-3x+6x^2+5x^3-x^4}{x^5-x^4-2x^3+2x^2+x-1}\,dx=
+\int\frac{5-3x+6x^2+5x^3-x^4}{(x-1)^3(x+1)^2}\,dx=$\\
+$\displaystyle =\frac{Ax^2+Bx+C}{(x-1)^2(x+1)}+
+\int\left(\frac{D}{x-1}+\frac{E}{x+1}\right)\,dx=\ldots\\
+\frac{5-3x+6x^2+5x^3-x^4}{(x-1)^3(x+1)^2}=$\\
+$\displaystyle =\frac{(x-1)^2(x+1)(2Ax+B)-[2(x^2-1)+(x-1)^2](Ax^2+Bx+C)}{(x-1)^4(x+1)^2}+\\
++\frac{D}{x-1}+\frac{E}{x+1}.\\
+(5-3x+6x^2+5x^3-x^4)(x-1)=(x-1)^2(x+1)(2Ax+B)-\\
+-(x-1)(3x+1)(Ax^2+Bx+C)+(x-1)^3(x+1)^2D+(x-1)^4(x+1)E.\\
+5-3x+6x^2+5x^3-x^4=(x^2-1)(2Ax+B)-(3x+1)(Ax^2+Bx+C)+\\
++(x-1)^2(x+1)^2D+(x-1)^3(x+1)E.\\
+-x^4=(D+E)x^4.\quad 5x^3=(2A-3A-2E)x^3.\\
+6x^2=(B-A-3B-2D)x^2.\quad -3x=(-2A-3C-B+2E)x.\\
+5=-B-C+D-E.\\
+\begin{cases}D+E=-1\\-A-2E=5\\-A-2B-2D=6\\
+-2A-B-3C+2E=-3\\-B-C+D-E=5\end{cases};\quad
+\begin{cases}E=-1-D\\-A+2D=3\\-A-2B-2D=6\\
+-2A-B-3C-2D=-1\\-B-C+2D=4\end{cases};\\
+\begin{cases}E=-1-D\\A=2D-3\\-2B-4D=3\\
+-B-3C-6D=-7\\-B-C+2D=4\end{cases};\quad
+\begin{cases}E=-1-D\\A=2D-3\\2C-8D=-5\\
+-2C-8D=-11\\-B=C-2D+4\end{cases};\quad
+\begin{cases}E=-2\\A=-1\\C=3/2\\
+D=1\\B=-7/2\end{cases}.\\
+\ldots=\frac{3-7x-2x^2}{2(x^3-x^2-x+1)}+
+\int\left(\frac{1}{x-1}-\frac{2}{x+1}\right)\,dx=$\\
+$\displaystyle =\frac{3-7x-2x^2}{2(x^3-x^2-x+1)}+\ln\frac{|x-1|}{(x+1)^2}$.
+
+\medskip
+\noindent{\bf 2075.} $\displaystyle\int\frac{dx}{\sqrt[4]{(x-1)^3(x+2)^5}}=
+\int\frac{\sqrt[4]{x-1}\,dx}{(x-1)(x+2)\sqrt[4]{x+2}}=$\\
+$\displaystyle \left|\frac{x-1}{x+2}=t^4,\quad x-1=t^4(x+2),\quad
+x=\frac{1+2t^4}{1-t^4},\quad x-1=\frac{3t^4}{1-t^4},\right.\\
+\left.x+2=\frac{3}{1-t^4},\quad
+dx=\frac{8t^3(1-t^4)+4t^3(1+2t^4)}{(1-t^4)^2}\,dt=
+\frac{12t^3\,dt}{(1-t^4)^2}.\right|\\
+=\int\frac{t(1-t^4)^212t^3\,dx}{3t^4\cdot3\cdot(1-t^4)^2}=
+\frac43\int dt=\frac43t=
+\frac43\sqrt[4]{\frac{x-1}{x+2}}$.
+
+\medskip
+\noindent{\bf 2080.} $\displaystyle\int\frac{dx}{\sqrt[3]{1+x^3}}=
+\qquad\left|x^{-3}+1=t^3,\quad x=\frac{1}{\sqrt[3]{t^3-1}},\quad
+dx=-\frac{t^2\,dt}{\sqrt[3]{(t^3-1)^4}}.\right|\\
+=-\int\frac{\sqrt[3]{t^3-1}\cdot t^2\,dt}{t\sqrt[3]{(t^3-1)^4}}=
+-\int\frac{t\,dt}{t^3-1}=
+-\int\left(\frac{A}{t-1}+\frac{Bt+C}{t^2+t+1}\right )\,dt=\ldots\\
+t=A(t^2+t+1)+(Bt+C)(t-1).\quad t=1,\quad A=1/3.\\
+t=0,\quad 0=C-A,\quad C=A=1/3.\\
+t=-1,\quad -1=1/3+(B-1/3)\cdot2,\quad B=-1/3.\\
+\ldots=-\frac13\int\left(\frac{1}{t-1}-\frac{t-1}{t^2+t+1}\right )\,dt=$\\
+$\displaystyle =-\frac13\left(\ln|t-1|-\frac12\int\frac{(2t+1)\,dt}{t^2+t+1}+
+\frac32\int\frac{dt}{(t+\frac12)^2+\frac34}\right)=$\\
+$\displaystyle =-\frac13\ln|t-1|+\frac16\ln(t^2+t+1)-
+\frac12\cdot\frac{2}{\sqrt3}\arctg\frac{2t+1}{\sqrt3}=$\\
+$\displaystyle =\frac16\ln\frac{t^2+t+1}{(t-1)^2}-
+\frac{1}{\sqrt3}\arctg\frac{2t+1}{\sqrt3},\quad
+t=\frac{\sqrt[3]{1+x^3}}{x}$.
+
+\medskip
+\noindent{\bf 2089.} $\displaystyle\int\sqrt[3]{1+\sqrt[4]{x}}\,dx=$\\
+$\displaystyle \left|1+\sqrt[4]x=t^3,\quad
+x=(t^3-1)^4,\quad dx=12t^2(t^3-1)^3\,dt\right|$\\
+$\displaystyle =12\int t^3(t^3-1)^3\,dt=12\left(\frac{t^{13}}{13}-
+\frac{3t^{10}}{10}+\frac{3t^{7}}{7}-\frac{t^{4}}{4}\right),\quad
+t=\sqrt[3]{1+\sqrt[4]{x}}$.
+
+\medskip
+\noindent{\bf 2092.} $\displaystyle\int\frac{dx}{\cos x\sin^3x}=
+\int\frac{d(\sin x)}{(1-\sin^2 x)\sin^3x}=
+\int\frac{dt}{(1-t)(1+t)t^3}=$\\
+$\displaystyle \int\left(\frac{A}{1-t}+\frac{B}{1+t}+\frac{C}{t}+
+\frac{D}{t^2}+\frac{E}{t^3}+ \right )\,dt=\ldots\\
+1=A(1+t)t^3+B(1-t)t^3+C(1-t^2)t^2+D(1-t^2)t+E(1-t^2).\\
+t=1,\quad A=1/2.\quad t=-1,\quad B=-1/2,\quad t=0,\quad E=1.\\
+0t^3=(A+B-D)t^3,\quad D=0.\quad 0t^4=(A-B-C)t^4,\quad C=1.\\
+\ldots=\int\left(\frac{1}{2(1-t)}-\frac{1}{2(1+t)}+
+\frac1t+\frac{1}{t^3} \right )\,dt=$\\
+$\displaystyle =-\frac12\ln|1-t|-\frac12\ln|1+t|+\ln|t|-
+\frac12\cdot\frac{1}{t^2}=$\\
+$\displaystyle =-\frac12\ln|1-t^2|+\ln|t|-\frac{1}{2t^2}=
+-\frac12\ln|1-\sin^2x|+\ln|\sin x|-\frac{1}{2\sin^2x}=$\\
+$\displaystyle =\ln|\tg x|-\frac{1}{2\sin^2x}$.
+
+\medskip
+\noindent{\bf 2099.} $\displaystyle\int\ctg^4x\,dx=
+\qquad\left|x=\arcctg t,\quad
+dx=-\frac{dt}{1+t^2}\quad t=\ctg x.\right|\qquad\\
+=-\int\frac{t^4}{1+t^2}\,dt=
+-\int\left(t^2-1+\frac{1}{1+t^2}\right)\,dt=
+-\frac{t^3}{3}+t+\arcctg t=$\\
+$\displaystyle =\ctg x-\frac{\ctg^3x}{3}+x$.
+
+\medskip
+\noindent{\bf 2106.} $\displaystyle \int\frac{dx}{a\cos x+b\sin x}=\qquad \left|t=\tg\frac x2;\quad x=2\arctg t;\quad dx=\frac{2\,dt}{1+t^2}\right|\qquad =\\[3pt]
+=\int\frac{2dt}{(1+t^2)\left(a\frac{1-t^2}{1+t^2}+b\frac{2t}{1+t^2}\right)}=
+\frac 2 a\int\frac{dt}{1-\left(t^2-2\cdot\frac ba t\right)}=\\[3pt]
+=\frac 2 a\int\frac{dt}{1+\frac {b^2}{a^2}-\left(t-\frac ba \right)^2}=
+\frac 2 a\cdot \frac{a}{2\sqrt{a^2+b^2}}
+\ln\left|\frac{\frac{\sqrt{a^2+b^2}}{a}+\left(t-\frac ba\right)}
+{\frac{\sqrt{a^2+b^2}}{a}-\left(t-\frac ba\right)}\right|=\\[3pt]
+=\frac{1}{\sqrt{a^2+b^2}}
+\ln\left|\frac{\sqrt{a^2+b^2}+(at-b)}
+{\sqrt{a^2+b^2}-(at-b)}\right|+C$, где
+$\displaystyle t=\tg\frac x2$. И это ответ.\\[3pt]
+Такую форму ответа можно было бы и оставить, но ответ задачника другой. Это связано с тем, что задачник предполагает другой метод решения. Сначала мы приведем данный ответ к ответу задачника. Для этого мы попытаемся получить под логарифмом тангенс суммы.\\[3pt]
+$\displaystyle \frac{1}{\sqrt{a^2+b^2}}
+\ln\left|\frac{\sqrt{a^2+b^2}+(at-b)}
+{\sqrt{a^2+b^2}-(at-b)}\right|=
+\frac{1}{\sqrt{a^2+b^2}}
+\ln\left|\frac{t+\frac{\sqrt{a^2+b^2}-b}{a}}{\frac{\sqrt{a^2+b^2}+b}{a}-t}\right|$.\\[3pt]
+Прибавив константу, мы не изменим ответ, который от константы не зависит.\\[3pt]
+$\displaystyle \frac{1}{\sqrt{a^2+b^2}}
+\ln\left|\frac{t+\frac{\sqrt{a^2+b^2}-b}{a}}{\frac{\sqrt{a^2+b^2}+b}{a}-t}\right|+\frac{1}{\sqrt{a^2+b^2}}
+\ln\frac{\sqrt{a^2+b^2}+b}{a}=$\\[3pt]
+Под логарифм положительная константа $\displaystyle \frac{\sqrt{a^2+b^2}+b}{a}$ попадет в виде множителя и вызовет сокращения.\\[3pt]
+$\displaystyle =\frac{1}{\sqrt{a^2+b^2}}
+\ln\left|\frac{t+\frac{\sqrt{a^2+b^2}-b}{a}}{\frac{\sqrt{a^2+b^2}+b}{a}-t}\cdot\frac{\sqrt{a^2+b^2}+b}{a} \right|=\frac{1}{\sqrt{a^2+b^2}}
+\ln\left|\frac{t+\frac{\sqrt{a^2+b^2}-b}{a}}{1-\frac{a}{\sqrt{a^2+b^2}+b}t}\right|=\\[3pt]
+=\frac{1}{\sqrt{a^2+b^2}}
+\ln\left|\frac{t+\frac{\sqrt{a^2+b^2}-b}{a}}{1-\frac{a(\sqrt{a^2+b^2}-b)}{a^2+b^2-b^2}t}\right|=\frac{1}{\sqrt{a^2+b^2}}
+\ln\left|\frac{\tg\frac x2+\frac{\sqrt{a^2+b^2}-b}{a}}{1-\frac{\sqrt{a^2+b^2}-b}{a}\cdot\tg\frac x2}\right|=\\[3pt]
+\frac{1}{\sqrt{a^2+b^2}}
+\ln\left|\tg\left(\frac x2+\arctg\frac{\sqrt{a^2+b^2}-b}{a}\right)\right|=\frac{1}{\sqrt{a^2+b^2}}
+\ln\left|\tg\left(\frac x2+\frac{\arctg x}{2}\right)\right|$.\\[3pt]
+Здесь мы заменили угол, тангенс которого равен $\displaystyle \frac{\sqrt{a^2+b^2}-b}{a}$, вдвое большим углом, тангенс которого равен $x$. Остается вычислить этот тангенс по формуле тангенса двойного угла.\\[3pt]
+$\displaystyle x=\frac{2\cdot\frac{\sqrt{a^2+b^2}-b}{a}}{1-
+\left(\frac{\sqrt{a^2+b^2}-b}{a}
+\right)^2}=
+\frac{2(\sqrt{a^2+b^2}-b)a^2}{a(a^2-(\sqrt{a^2+b^2}-b)^2)}=\\[3pt]
+=\frac{2(\sqrt{a^2+b^2}-b)a}{a^2-(a^2+b^2-2b\sqrt{a^2+b^2}+b^2)}=\frac{2(\sqrt{a^2+b^2}-b)a}{2b\sqrt{a^2+b^2}-2b^2}=\frac ab$.\\[3pt]
+Окончательный ответ
+$\displaystyle \frac{1}{\sqrt{a^2+b^2}}
+\ln\left|\tg\frac{x+\arctg \frac ab}{2}\right|+C$.\\[3pt]
+Он совпадает с приведенным в задачнике.
+
+\noindent Интеграл можно взять без использование универсальной тригонометрической подстановки. Ответ задачника подразумевает, что использован именно этот метод.\\[3pt]
+$\displaystyle \int\frac{dx}{a\cos x+b\sin x}=\int\frac{dx}{\sqrt{a^2+b^2}\sin\left(x+\arctg\frac{a}{b}\right)}=\\[3pt]
+=\frac{1}{\sqrt{a^2+b^2}}\int\frac{d\left(x+\arctg\frac{a}{b}\right)}{\sin\left(x+\arctg\frac{a}{b}\right)}=\frac{1}{\sqrt{a^2+b^2}}
+\ln\left|\tg\frac{x+\arctg \frac ab}{2}\right|+C$.\\[3pt]
+Здесь использован в качестве табличного следующий интеграл:\\[3pt]
+$\displaystyle \int\frac{dx}{\sin x}=\ln\left|\tg\frac {x}{2}\right|+C$.\\[3pt]
+В англоязычных руководствах в качестве табличного используется другая форма этого интеграла:\\[3pt]
+$\displaystyle \int\frac{dx}{\sin x}=-\ln(\ctg x+\cosec x)+C$,\\[3pt]
+что дает нам возможность получить еще одну форму ответа.
+
+\medskip
+\noindent{\bf 2111.} $\displaystyle\int\frac{dx}{5+4\sin x}=
+\qquad\left|t=\tg\frac x2,\quad x=2\arctg t,\quad
+dx=\frac{2\,dt}{1+t^2}\right|\\
+=\int\frac{2\,dt}{(5+\frac{8t}{1+t^2})(1+t^2)}
+=\int\frac{2\,dt}{5t^2+8t+5}=
+\frac25\int\frac{dt}{(t+\frac45)^2+\frac{9}{25}}=$\\
+$\displaystyle =\frac25\cdot\frac53\arctg\frac{t+\frac45}{\frac35}=
+\frac23\arctg\frac{5t+4}{3}=\frac23\arctg\frac{5\tg\frac x2+4}{3}$.
+
+\medskip
+\noindent{\bf 2116.} $\displaystyle \int\frac{dx}{5-4\sin x+3\cos x}=\qquad \left|t=\tg\frac x2;\quad x=2\arctg t;\quad dx=\frac{2\,dt}{1+t^2};\right.\\[3pt]
+\left.\sin x=\frac{2t}{1+t^2};\quad \cos x=\frac{1-t^2}{1+t^2}. \right|\qquad =\int\frac{\frac{2}{1+t^2}\cdot dt}{5-4\cdot\frac{2t}{1+t^2}+3\cdot\frac{1-t^2}{1+t^2}}=\\[3pt]
+=\int\frac{2(1+t^2)\,dt}{(1+t^2)(5+5t^2-8t+3-3t^2)}=\int\frac{2\,dt}{2t^2-8t+8}=\int\frac{dt}{(t-2)^2}=-\frac{1}{t-2}=\\[3pt]
+=\frac{1}{2-\tg\frac x2}+C$.
+
+\medskip
+\noindent{\bf 2120.} $\displaystyle\int\frac{dx}{a^2\sin^2x+b^2\cos^2x}=
+\frac{1}{a^2}\int\frac{d(\tg x)}{\tg^2 x+\left(\frac ba\right)^2}=
+\frac{1}{ab}\arctg\left(\frac{a}{b}\tg x\right)$.
+
+\medskip
+\noindent{\bf 2123.} $\displaystyle \int\sqrt{1+\sin x}\,dx=\int\sqrt{\sin^2\frac x2+2\sin\frac x2\cos\frac x2+\cos^2\frac x2}\,dx=\\[3pt]
+=\int\left(\sin\frac x2+\cos\frac x2\right)\,dx=2\int\left(\sin\frac x2+\cos\frac x2\right)\,d\left(\frac x2\right)=2\left(\sin\frac x2-2\cos\frac x2\right)+C$.
+
+\medskip
+\noindent{\bf 2127.} $\displaystyle
+\int\frac{dx}{\sqrt{1-\sin^4x}}=
+\qquad \left|t=\tg x,\quad dx=\frac{dt}{1+t^2}. \right|\\
+1-\sin^4x=1-\left(\frac{1-\cos2x}{2}\right)^2=
+1-\left(\frac{1-\frac{1-t^2}{1+t^2}}{2}\right)^2=
+1-\left(\frac{t^2}{1+t^2}\right)^2=\frac{1+2t^2}{(1+t^2)^2}.\\
+=\int\frac{dx}{\sqrt{1-\sin^4x}}=
+\int\frac{(1+t^2)\,dt}{(1+t^2)\sqrt{1+2t^2}}=
+\frac{1}{\sqrt2}\int\frac{dt}{\sqrt{t^2+\frac12}}=$\\
+$\displaystyle =\frac{1}{\sqrt2}\ln\left(t+\sqrt{t^2+\frac12}\right)=
+\frac{1}{\sqrt2}\ln\left(\sqrt 2\tg x+
+\sqrt{2\tg^2x+1}\right)-\frac{1}{\sqrt2}\ln\sqrt2=$\\
+$\displaystyle =\frac{1}{\sqrt2}\ln\left(\sqrt 2\tg x+\sqrt{2\tg^2x+1}\right)+C$.
+
+\medskip
+\noindent{\bf 2139.} $\displaystyle\int\cth^2x\,dx=
+\int\ch x\cdot\frac{d(\sh x)}{\sh^2x}=
+-\int\ch x\,d\left(\frac{1}{\sh x}\right)=$\\
+$\displaystyle =-\frac{\ch x}{\sh x}+\int\frac{\sh x}{\sh x}\,dx=
+x-\cth x$.
+
+\medskip
+\noindent{\bf 2150.} $\displaystyle\int\frac{e^{2x}dx}{\sh^4x}=
+16\int\frac{e^x\,d(e^x)}{(e^x-e^{-x})^4}=
+16\int\frac{t\,dt}{\left(t-\frac 1t\right)^4}=
+16\int\frac{\frac{1}{t^3}{}\,dt}{\left(1-\frac{1}{t^2}\right)^4}=$\\
+$\displaystyle =8\int\frac{d\left(-\frac{1}{t^2} \right )}{\left(1-\frac{1}{t^2}\right)^4}=
+8\int\frac{d\left(1-\frac{1}{t^2}\right)}{\left(1-\frac{1}{t^2}\right)^4}=
+-\frac{8}{3\left(1-\frac{1}{t^2}\right)^3}=
+-\frac{8t^3}{3\left(t-\frac{1}{t}\right)^3}=$\\
+$\displaystyle =-\frac{8(e^x)^3}{3\left(e^x-\frac{1}{e^x}\right)^3}=
+-\frac{e^{3x}}{3\sh^3 x}$.
+
+\medskip
+\noindent{\bf 2154.} $\displaystyle \int\frac{dx}{x\sqrt{2+x-x^2}}\,dx=
+\int\frac{dx}{x\sqrt{(1+x)(2-x)}}\,dx
+=\int\sqrt{\frac{1+x}{2-x}}\cdot\frac{dx}{x(1+x)}=$\\
+$\displaystyle \left|\frac{1+x}{2-x}=t^2,\quad 1+x=(2-x)t^2,\quad
+x=\frac{2t^2-1}{t^2+1},\quad x+1=\frac{3t^2}{t^2+1},\right.\\
+\left.dx=\frac{(t^2+1)4t-2t(2t^2-1)}{(t^2+1)^2}\,dt=
+\frac{6t\,dt}{(t^2+1)^2}\right|\\
+=\int\frac{t(t^2+1)^2\cdot6t\,dt}
+{(2t^2-1)\cdot3t^2(t^2+1)^2}=
+\int\frac{dt}{t^2-1/2}=
+\frac{\sqrt2}{2}\ln\left|\frac{t-\sqrt2/2}{t+\sqrt2/2}\right|=$\\
+$\displaystyle =-\frac{\sqrt2}{2}\ln\left|\frac{\sqrt2t+1}{\sqrt2t-1}\right|=
+-\frac{\sqrt2}{2}\ln
+\left|\frac{2\cdot\frac{1+x}{2-x}+2\sqrt2\cdot\sqrt{\frac{1+x}{2-x}}+1}
+{2\cdot\frac{1+x}{2-x}-1}\right|=$\\
+$\displaystyle =-\frac{\sqrt2}{2}\ln
+\left|\frac{2(1+x)+2\sqrt2\cdot\sqrt{2+x-x^2}+2-x}
+{2(1+x)-(2-x)}\right|=$\\
+$\displaystyle =-\frac{\sqrt2}{2}\ln\left|\frac{4+x+2\sqrt2\cdot\sqrt{2+x-x^2}}{3x}\right|=$\\
+$\displaystyle =-\frac{\sqrt2}{2}\ln\frac{2\sqrt2}{3}-
+\frac{\sqrt2}{2}\ln
+\left|\frac{\sqrt{2+x-x^2}+\sqrt2}{x}+\frac{1}{2\sqrt2}\right|=$\\
+$\displaystyle =C-\frac{\sqrt2}{2}\ln\left|\frac{\sqrt{2+x-x^2}+\sqrt2}{x}+
+\frac{1}{2\sqrt2}\right|$.
+
+\medskip
+\noindent{\bf 2162.} $\displaystyle\int\frac{dx}{x^2(x+\sqrt{1+x^2})}=
+-\int\frac{(x-\sqrt{1+x^2})}{x^2}\,dx=$\\
+$\displaystyle =-\int\frac{dx}{x}+\int\frac{\sqrt{1+x^2}}{x^2}\,dx=
+-\ln|x|+\int\frac{dx}{x^2\sqrt{1+x^2}}+\int\frac{dx}{\sqrt{1+x^2}}=$\\
+$\displaystyle =\ln\left|\frac{x+\sqrt{1+x^2}}x\right|+\int\frac{dx}{x^2\sqrt{1+x^2}}$.\\
+Оставшийся интеграл вычисляем подстановкой Абеля.\\
+$\displaystyle t=\frac{x}{\sqrt{1+x^2}},\quad t^2(1+x^2)=x^2,\quad
+x^2=\frac{t^2}{1-t^2};\quad t\sqrt{1+x^2}=x,\\
+dt\sqrt{1+x^2}+\frac{tx\,dx}{\sqrt{1+x^2}}=dx,\quad
+dt\sqrt{1+x^2}+t^2\,dx=dx,\quad \frac{dt}{1-t^2}=\frac{dx}{\sqrt{1+x^2}}.\\
+\int\frac{dx}{x^2\sqrt{1+x^2}}=\int\frac{(1-t^2)dt}{t^2(1-t^2)}=
+\int\frac{dt}{t^2}=-\frac1t=-\frac{\sqrt{1+x^2}}{x}$.\\
+Ответ: $\displaystyle\ln\left|\frac{x+\sqrt{1+x^2}}x\right|-\frac{\sqrt{1+x^2}}{x}$.
+
+\medskip
+\noindent{\bf 2170.} $\displaystyle\int\frac{x^4\,dx}{\sqrt{x^2+4x+5}}=
+(Ax^3+Bx^2+Cx+D)\sqrt{x^2+4x+5}+
+\lambda\int\frac{dx}{\sqrt{x^2+4x+5}};\\
+\frac{x^4}{\sqrt{x^2+4x+5}}=
+(3Ax^2+2Bx+C)\sqrt{x^2+4x+5}+
+\frac{(Ax^3+Bx^2+Cx+D)(x+2)}{\sqrt{x^2+4x+5}}+\\
++\frac{\lambda}{\sqrt{x^2+4x+5}};\\
+x^4=(3Ax^2+2Bx+C)(x^2+4x+5)+(Ax^3+Bx^2+Cx+D)(x+2)+\lambda;\\
+1=3A+A,\quad 0=12A+2B+2A+B,\quad 0=15A+8B+C+2B+C,\\
+0=10B+4C+2C+D;\quad 0=5C+2D+\lambda.\\
+A=\frac14,\quad B=-\frac76,\quad
+C=-\frac{15}{2}A-5B=-\frac{15}{8}+\frac{35}{6}=
+\frac{140-45}{24}=\frac{95}{24},\\
+D=\frac{70}{6}-\frac{6\cdot95}{24}=\frac{280-570}{24}=
+-\frac{290}{24}=-\frac{145}{12},\\
+\lambda=-\frac{5\cdot95}{24}+\frac{145}{6}=\frac{580-475}{24}=
+\frac{105}{24}=\frac{35}{8}$.\\
+Ответ: $\displaystyle\left(\frac14x^3-\frac76x^2+\frac{95}{24}x-
+\frac{145}{12}\right)\sqrt{x^2+4x+5}+
+\frac{35}{8}\ln\left(x+2+\sqrt{x^2+4x+5}\right)$.
+
+\medskip
+\noindent{\bf 2174.} $\displaystyle
+\int\frac{(2x+3)\,dx}{(x^2+2x+3)\sqrt{x^2+2x+4}}=$\\
+$\displaystyle =\int\frac{(2x+2)\,dx}{(x^2+2x+3)\sqrt{x^2+2x+4}}+
+\int\frac{dx}{(x^2+2x+3)\sqrt{x^2+2x+4}}.\\
+1) \int\frac{(2x+2)\,dx}{(x^2+2x+3)\sqrt{x^2+2x+4}}=
+2\int\frac{d\sqrt{x^2+2x+4}}{x^2+2x+3}=2\int\frac{dt}{t^2-1}=$\\
+$\displaystyle =\ln\left|\frac{t-1}{t+1}\right|=
+\ln\left|\frac{\sqrt{x^2+2x+4}-1}{\sqrt{x^2+2x+4}+1}\right|.\\
+2) \int\frac{dx}{(x^2+2x+3)\sqrt{x^2+2x+4}}=\ldots\\
+t=\left(\sqrt{x^2+2x+4}\right)'=
+\frac{x+1}{\sqrt{x^2+2x+4}},\quad
+x+1=t\sqrt{x^2+2x+4},\\
+x^2+2x+1=(x^2+2x+4)t^2,\quad x^2+2x+4-3=(x^2+2x+4)t^2,\\
+x^2+2x+4=\frac{3}{1-t^2},\quad x^2+2x+3=\frac{2+t^2}{1-t^2},\\
+dx=dt\sqrt{x^2+2x+4}+t^2dx,\quad
+\frac{dx}{\sqrt{x^2+2x+4}}=\frac{dt}{1-t^2}.\\
+\ldots=\int\frac{dt}{2+t^2}=-\frac{1}{\sqrt2}\arcctg\frac{t}{\sqrt2}=
+-\frac{1}{\sqrt2}\arcctg\frac{x+1}{\sqrt{2(x^2+2x+4)}}=$\\
+$\displaystyle =-\frac{1}{\sqrt2}\arctg\frac{\sqrt{2(x^2+2x+4)}}{x+1}+
+\frac{1}{\sqrt2}\cdot\frac{\pi}{2}$.\\
+Ответ:
+$\displaystyle\ln\left|\frac{\sqrt{x^2+2x+4}-1}{\sqrt{x^2+2x+4}+1}\right|-
+\frac{1}{\sqrt2}\arctg\frac{\sqrt{2(x^2+2x+4)}}{x+1}+C$.
+
+\medskip
+\noindent{\bf 2177.} $\displaystyle\int x\sqrt[3]{a+x}\,dx=
+\frac34\int x\,d[(a+x)^{4/3}]=
+\frac34x(a+x)^{4/3}-\frac34\int (a+x)^{4/3}dx=$\\
+$\displaystyle =\frac34x(a+x)^{4/3}-\frac{9}{28}(a+x)^{7/3}dx=
+\frac{3(4x-3a)\sqrt[3]{(a+x)^4}}{28}$.
+
+\medskip
+\noindent{\bf 2185.} $\displaystyle\int x^2\sh x\,dx=\int x^2d(\ch x)=
+x^2\ch x-2\int x\ch x\,dx=$\\
+$\displaystyle =x^2\ch x-2\int x\,d(\sh x)=
+x^2\ch x-2x\sh x+2\int\sh x\,dx=$\\
+$\displaystyle =x^2\ch x-2x\sh x+2\ch x$.
+
+\medskip
+\noindent{\bf 2191.} $\displaystyle\int\sin\sqrt x\,dx=
+\qquad\left|t=\sqrt x,\quad x=t^2\right|\qquad =2\int t\sin t\,dt=$\\
+$\displaystyle =-2\int t\,d(\cos t)=-2t\cos t+2\int\cos t\,dt=-2t\cos t+2\sin t=$\\
+$\displaystyle =2(\sin\sqrt x-\sqrt x\cos\sqrt x)$.
+
+\medskip
+\noindent{\bf 2197.} $\displaystyle\int\frac{dx}{x^3\sqrt{(1+x)^3}}=
+\int\frac{dx}{x^3(1+x)\sqrt{1+x}}=$\\
+$\displaystyle \left|\sqrt{1+x}=t,\quad x=t^2-1\right.\quad dx=2t\,dt.|$\\
+$\displaystyle =\int\frac{2\,dt}{t^2(t^2-1)^3}=
+\int\left(\frac{A}{t^2}+\frac{B}{t^2-1}+
+\frac{C}{(t^2-1)^2}+\frac{D}{(t^2-1)^3}\right)\,dt=\ldots\\
+2=(t^2-1)^3A+t^2(t^2-1)^2B+t^2(t^2-1)C+t^2D.\\
+t^2=0,\quad A=-2.\quad t^2=1,\quad D=2.\\
+0t^2=3A+B-C+D,\quad B-C=4.\\
+0t^4=-3A-2B+C,\quad 2B-C=6.\quad B=2,\quad C=-2.\\
+\ldots=\int\left(-\frac{2}{t^2}+\frac{2}{t^2-1}-
+\frac{2}{(t^2-1)^2}+\frac{2}{(t^2-1)^3}\right)\,dt=\ldots\\
+I_n=\int\frac{dt}{(t^2-1)^n}=\frac{t}{(t^2-1)^n}+
+2n\int\frac{t^2\,dt}{(t^2-1)^{n+1}}=$\\
+$\displaystyle =\frac{t}{(t^2-1)^n}+2n\int\frac{(t^2-1)\,dt}{(t^2-1)^{n+1}}+
+2n\int\frac{dt}{(t^2-1)^{n+1}}=$\\
+$\displaystyle =\frac{t}{(t^2-1)^n}+2nI_n+2nI_{n+1}.\quad
+I_{n+1}=-\frac{2n-1}{2n}I_n-\frac{t}{2n(t^2-1)^n}.\\
+I_2=-\frac14\ln\left|\frac{t-1}{t+1}\right|-\frac{t}{2(t^2-1)}.\quad
+I_3=\frac{3}{16}\ln\left|\frac{t-1}{t+1}\right|+
+\frac{3t}{8(t^2-1)}-\frac{t}{4(t^2-1)^2}.\\
+\ldots=\frac{2}{t}+\ln\left|\frac{t-1}{t+1}\right|+
+\frac12\ln\left|\frac{t-1}{t+1}\right|+\frac{t}{t^2-1}+
+\frac{3}{8}\ln\left|\frac{t-1}{t+1}\right|+
+\frac{3t}{4(t^2-1)}-\frac{t}{2(t^2-1)^2}=$\\
+$\displaystyle =\frac{15}{8}\ln\left|\frac{t-1}{t+1}\right|+
+\frac{8(t^2-1)^2+4t^2(t^2-1)+3t^2(t^2-1)-2t^2}{4t(t^2-1)^2}=$\\
+$\displaystyle =\frac{15}{8}\ln\left|\frac{\sqrt{1+x}-1}{\sqrt{1+x}+1}\right|+
+\frac{8x^2+7(x+1)x-2(x+1)}{4x^2\sqrt{1+x}}=$\\
+$\displaystyle =\frac{15x^2+5x-2}{4x^2\sqrt{1+x}}+
+\frac{15}{8}\ln\left|\frac{\sqrt{1+x}-1}{\sqrt{1+x}+1}\right|$.
+
+\medskip
+\noindent{\bf 2203.} $\displaystyle\int x\ln(1+x^3)\,dx=
+\frac12\int\ln(1+x^3)\,d(x^2)=
+\frac{x^2}{2}\ln(1+x^3)-\frac32\int\frac{x^4dx}{1+x^3}.\\
+\int\frac{x^4dx}{1+x^3}=\int\left(x-\frac{x}{(1+x)(1-x+x^2)} \right )\,dx=
+\int\left(x+\frac{A}{1+x}+\frac{Bx+C}{1-x+x^2}\right )\,dx.\\
+-x=(1-x+x^2)A+(1+x)(Bx+C).\quad x=-1,\quad A=1/3.\\
+x=0,\quad 0=A+C,\quad C=-1/3.\quad x=1,\quad -1=A+2B+2C,\quad
+B=-1/3.\\
+\int\frac{x^4dx}{1+x^3}=\frac{x^2}{2}+\frac13\ln|1+x|-
+\frac13\int\frac{x+1}{1-x+x^2}$
+
+\medskip
+\noindent{\bf 2210.} $\displaystyle\int\frac{\sin 2x\,dx}{\cos^4x+\sin^4x}=
+\int\frac{2\sin x\cos x\,dx}{(1+\tg^4 x)\cos^4x}=
+\int\frac{2\tg x\,d(\tg x)}{1+\tg^4 x}=$\\
+$\displaystyle =\int\frac{d(\tg^2 x)}{1+\tg^4 x}=\arctg(\tg^2x)$.
+
+\medskip
+\noindent{\bf 2216.} $\displaystyle\int\frac{xe^xdx}{\sqrt{1+e^x}}=
+\qquad\left|1+e^x=t^2,\quad x=\ln(t^2-1),\quad
+dx=\frac{2t\,dt}{t^2-1}.\right|\qquad\\
+=\int\frac{\ln(t^2-1)\cdot(t^2-1)\cdot2t\,dt}{t\cdot(t^2-1)}=
+2\int\ln(t^2-1)\,dt=$\\
+$\displaystyle =2t\ln(t^2-1)-4\int\frac{t^2dt}{t^2-1}=
+2t\ln(t^2-1)-4t-2\ln\left|\frac{t-1}{t+1}\right|=$\\
+$\displaystyle =2x\sqrt{1+e^x}-4\sqrt{1+e^x}-
+2\ln\left|\frac{\sqrt{1+e^x}-1}{\sqrt{1+e^x}+1}\right|$.
+
+\medskip
+\noindent{\bf 2222.} $\displaystyle\int\frac{dx}{\sqrt{1+e^x+e^{2x}}}=
+\qquad\left|e^x=t,\quad x=\ln t,\quad dx=\frac{dt}{t}.\right|\qquad\\
+=\int\frac{dt}{t\sqrt{1+t+t^2}}=
+\qquad\left|t=\frac{1}{u},\quad dt=-\frac{du}{u^2}.\right|\qquad
+=-\int\frac{u\cdot u\,du}{u^2\sqrt{u^2+u+1}}=$\\
+$\displaystyle =-\int\frac{d\left(u+\frac12\right)}
+{\sqrt{\left(u+\frac12\right)^2+\frac34}}=
+-\ln\left|u+\frac12+\sqrt{u^2+u+1}\right|=$\\
+$\displaystyle =\ln\left|\frac{1}{u+\frac12+\sqrt{u^2+u+1}}\right|=
+\ln\left|\frac{u+1-\sqrt{u^2+u+1}}{\frac12u-\frac12+\frac12\sqrt{u^2+u+1}}\right|=$\\
+$\displaystyle =\ln2+\ln\left|\frac{u+1-\sqrt{u^2+u+1}}{u-1+\sqrt{u^2+u+1}}\right|=
+=\ln\left|\frac{1+e^x-\sqrt{1+e^x+e^{2x}}}{1-e^x+\sqrt{1+e^x+e^{2x}}}\right|+C$.\\
+Далее оцениваем радикал. Имеем: $\sqrt{1+e^x+e^{2x}}=
+\sqrt{\left(e^x+\frac12\right)^2+\frac34}<e^x+\frac12;$\\
+$\displaystyle \sqrt{1+e^x+e^{2x}}=\sqrt{(e^x+1)^2-e^x}>e^x+1$.
+Теперь мы обнаруживаем, что числитель и знаменатель дроби положителен, и мы
+можем снять знак модуля. Окончательный ответ:
+$\displaystyle\ln\frac{1+e^x-\sqrt{1+e^x+e^{2x}}}{1-e^x+\sqrt{1+e^x+e^{2x}}}+C$.
+
+\medskip
+\noindent{\bf 2225.} $\displaystyle\int\frac{(3+x^2)^2x^3dx}{(1+x^2)^3}=
+\frac12\int\frac{(3+x^2)^2x^2d(1+x^2)}{(1+x^2)^3}=
+\qquad\left|1+x^2=t\right|\qquad\\
+=\frac12\int\frac{(t+2)^2(t-1)\,dt}{t^3}=
+\frac12\int\left( 1+\frac{3}{t}-\frac{4}{t^3}\right)\,dt=$\\
+$\displaystyle =\frac12t+\frac32\ln|t|+\frac{1}{t^2}=
+\frac12x^2+\frac32\ln(x^2+1)+\frac{1}{(x^2+1)^2}+C$.
+
+\medskip
+\noindent{\bf 2227.} $\displaystyle\int\frac{dx}{\sin^4x+\cos^4x}=
+\int\frac{dx}{(\tg^4x+1)\cos^4x}=
+\int\frac{(\tg^2x+1)\,d(\tg x)}{\tg^4x+1}=$\\
+$\displaystyle =\int\frac{(t^2+1)\,dt}{t^4+1}=
+\int\frac{\left(1+\frac{1}{t^2}\right)\,dt}{t^2+\frac{1}{t^2}}=
+\int\frac{d\left(t-\frac{1}{t}\right)}{t^2+\frac{1}{t^2}}=
+\int\frac{d\left(t-\frac{1}{t}\right)}{\left(t-\frac{1}{t}\right)^2+2}=$\\
+$\displaystyle =\frac{1}{\sqrt2}\arctg\frac{t-\frac{1}{t}}{\sqrt2}=
+\frac{\sqrt2}{2}\arctg\left[\frac{\sqrt2}{2}
+\left(\frac{\sin x}{\cos x}-\frac{\cos x}{\sin x}\right)\right]=$\\
+$\displaystyle =\frac{\sqrt2}{2}\arctg\frac{\sqrt2(\sin^2x-\cos^2x)}{2\sin x\cos x}=
+-\frac{\sqrt2}{2}\arctg(\sqrt2\ctg2x)$.
+
+\bigskip
+\noindent{\scriptsize \copyright Alidoro, 2016. palva@mail.ru }
+
+\end{document}

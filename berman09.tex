@@ -1,0 +1,156 @@
+\documentclass[a5paper,10pt]{article}
+\oddsidemargin=0pt
+\hoffset=-1.5cm
+\voffset=-1.5cm
+\topmargin=-1.5cm
+\textwidth=12.8cm
+\textheight=18.6cm
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage[T2A]{fontenc}
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{bm}
+\usepackage{graphicx}
+
+\begin{document}
+
+\noindent {\it Берман. Сборник задач по курсу математического анализа.
+Издание двадцатое. М., 1985.}
+
+\bigskip
+\section* {Глава IX. Ряды}
+
+\medskip
+\noindent Доказать сходимость следующих рядов с помощью признака Даламбера. 
+
+\medskip
+\noindent{\bf 2755.} $\displaystyle\frac{1}{2}+\frac{2}{2^2}+\ldots+\frac{n}{2^n}+\ldots$\\
+$\blacktriangleleft$ $\displaystyle\lim_{n\to\infty}\frac{n+1}{2^{n+1}}\cdot\frac{2^n}{n}=
+\lim_{n\to\infty}\frac{n+1}{2n}=\frac12<1$. Сходится. $\blacktriangleright$
+
+\medskip
+\noindent{\bf 2756.} $\displaystyle\tg\frac{\pi}{4}+2\tg\frac{\pi}{8}+
+\ldots+n\tg\frac{\pi}{2^{n+1}}+\ldots$\\
+$\blacktriangleleft$ $\displaystyle\lim_{n\to\infty}
+\frac{(n+1)\tg\frac{\pi}{2^{n+2}}}{n\tg\frac{\pi}{2^{n+1}}}=
+\lim_{n\to\infty}\frac{n+1}{n}\cdot
+\frac{\sin\frac{\pi}{2^{n+2}}}{\cos\frac{\pi}{2^{n+2}}}\cdot
+\frac{\cos\frac{\pi}{2^{n+1}}}{\sin\frac{\pi}{2^{n+1}}}=
+\lim_{n\to\infty}\frac{\pi}{2^{n+2}}\cdot\frac{2^{n+1}}{\pi}=$\\
+$\displaystyle =1/2<1$.
+Сходится. $\blacktriangleright$
+
+\medskip
+\noindent{\bf 2759.} $\displaystyle\frac{1}{3}+\frac{1\cdot 3}{3\cdot 6}+
+\ldots+\frac{1\cdot3\cdot\ldots\cdot(2n-1)}{3^n\cdot n!}+\ldots$\\
+$\blacktriangleleft$ $\displaystyle\lim_{n\to\infty}
+\frac{1\cdot3\cdot\ldots\cdot(2n+1)}{3^{n+1}(n+1)!}\cdot
+\frac{3^n\cdot n!}{1\cdot3\cdot\ldots\cdot(2n-1)}=
+\lim_{n\to\infty}\frac{2n+1}{3(n+1)}=$\\
+$\displaystyle =2/3<1$. Сходится. $\blacktriangleright$
+
+\medskip
+\noindent{\bf 2762.} $\displaystyle\frac22+\frac{2\cdot3}{4\cdot 2}+\ldots+
+\frac{(n+1)!}{2^n\cdot n!}+\cdot$\\
+$\blacktriangleleft$ $\displaystyle\lim_{n\to\infty}\frac{(n+2)!\cdot2^n\cdot n!}
+{2^{n+1}(n+1)!(n+1)!}=\lim_{n\to\infty}\frac{n+2}{2(n+1)}=\frac12<1$. Сходится.
+$\blacktriangleright$
+
+\medskip
+\noindent Доказать сходимость следующих рядов с помощью радикального признака Коши.
+
+\medskip
+\noindent{\bf 2764.} $\displaystyle\frac13+\left(\frac25\right)^2+\dots
++\left(\frac{n}{2n+1}\right)^n+\ldots$\\
+$\blacktriangleleft$ $\displaystyle\lim_{n\to\infty}\frac{n}{2n+1}=\frac12<1$.
+Сходится. $\blacktriangleright$
+
+\medskip
+\noindent{\bf 2765.} $\displaystyle\arcsin 1+\arcsin^2\frac12+\ldots+
+\arcsin^n\frac1n+\dots$\\
+$\blacktriangleleft$ $\displaystyle\lim_{n\to\infty}\arcsin\frac1n=0<1$. Сходится.
+$\blacktriangleright$
+
+\medskip
+\noindent Вопрос о сходимости следующих рядов решить с помощью интегрального
+признака Коши.
+
+\medskip
+\noindent{\bf 2768.} $\displaystyle\frac{1}{2\ln2}+\frac{1}{3\ln3}+\ldots+
+\frac{1}{n\ln n}+\ldots$\\
+
+\smallskip
+\noindent$\blacktriangleleft$ $\displaystyle\int_2^\infty\frac{dx}{x\ln x}=
+\int_2^\infty\frac{d\ln x}{\ln x}=\ln\ln x\big|_2^\infty$. Интеграл и ряд расходятся.
+$\blacktriangleright$
+
+\medskip
+\noindent{\bf 2769.} $\displaystyle\left(\frac{1+1}{1+1^2}\right)^2+
+\left(\frac{1+2}{1+2^2}\right)^2+\ldots+\left(\frac{1+n}{1+n^2}\right)^2+
+\ldots$\\
+$\blacktriangleleft$ $\displaystyle\int_1^\infty\left(\frac{1+x}{1+x^2}\right)^2dx=
+\int_1^\infty\frac{1+x^2}{(1+x^2)^2}\,dx+\int_1^\infty\frac{2x\,dx}{(1+x^2)^2}=$\\
+$\displaystyle =
+\int_1^\infty\frac{dx}{1+x^2}+\int_1^\infty\frac{d(x^2+1)}{(x^2+1)^2}=
+\arctg x\big|_1^\infty-\frac{1}{1+x^2}\big|_1^\infty$. Интеграл и ряд сходятся.
+$\blacktriangleright$
+
+\medskip
+\noindent Выяснить, какие из следующих рядов сходятся, какие расходятся.
+
+\medskip
+\noindent{\bf 2773.} $\displaystyle\sqrt2+\sqrt\frac32+\ldots+\sqrt\frac{n+1}{n}+\ldots$\\
+$\blacktriangleleft$ $\displaystyle\lim_{n\to\infty}\sqrt\frac{n}{n+1}=1\ne0$.
+Общий член ряда не стремится к нулю. Ряд расходится. $\blacktriangleright$
+
+\medskip
+\noindent{\bf 2777.} $\displaystyle\frac{1}{1+1^2}+\frac{2}{1+2^2}+\ldots+
+\frac{n}{1+n^2}+\ldots$\\
+$\blacktriangleleft$ Сравниваем данный ряд с расходящимся рядом
+$\displaystyle\sum_{n=1}^\infty\frac1n$. Вычисляем предел отношения общих членов:
+$\displaystyle\lim_{n\to\infty}\frac{n}{1+n^2}\cdot\frac{n}{1}=
+\lim_{n\to\infty}\frac{n^2}{1+n^2}=1$. Предел конечный и не равен нулю, поэтому
+исходный ряд также расходится. $\blacktriangleright$
+
+\medskip
+\noindent{\bf 2778.} $\displaystyle\frac13+\frac{3}{3^2}+\ldots+\frac{2n-1}{3^n}+\ldots$\\
+$\blacktriangleleft$ Применяем интегральный признак. Для этого сначала вычислим
+неопределенный интеграл:\\
+$\displaystyle\int\frac{2x-1}{3^x}\,dx=-\frac{1}{\ln3}\int(2x-1)\,d(3^{-x})=
+-\frac{2x-1}{\ln3\cdot3^x}+\frac{2}{\ln3}\int 3^{-x}dx=$\\
+$\displaystyle =
+-\frac{2x-1}{\ln3\cdot3^x}-\frac{2}{(\ln3)^2\cdot 3^x}$.\\
+Интеграл $\displaystyle\int_1^\infty\frac{2x-1}{3^x}\,dx$ сходится, поэтому
+данный ряд также сходится. $\blacktriangleright$
+
+\medskip
+\noindent Доказать каждое из следующих соотношений с помощью ряда, общим
+членом которого является данная функция.
+
+\medskip
+\noindent{\bf 2785.} $\displaystyle\lim_{n\to\infty}\frac{a^n}{n!}$.
+$\blacktriangleleft$ Доказываем сходимость ряда
+$\displaystyle\sum_{n=1}^{\infty}\frac{a^n}{n!}$ методом Даламбера:\\
+$\displaystyle\lim_{n\to\infty}\frac{a^{n+1}}{(n+1)!}\cdot\frac{n!}{a^n}=
+\lim_{n\to\infty}\frac{a}{n+1}=0$.\\
+Теперь можно применить необходимый признак сходимости ряда.
+$\blacktriangleright$
+
+\medskip
+\noindent{\bf 2788.} $\displaystyle\lim_{n\to\infty}\frac{n^n}{(n!)^2}$.
+$\blacktriangleleft$ Доказываем сходимость ряда
+$\displaystyle\sum_{n=1}^{\infty}\frac{n^n}{(n!)^2}$ методом Даламбера:\\
+$\displaystyle\lim_{n\to\infty}\frac{(n+1)^{n+1}}{[(n+1)!]^2}\cdot\frac{(n!)^2}{n^n}=
+\lim_{n\to\infty}\frac{n+1}{(n+1)^2}\left(1+\frac1n\right)^n=
+\lim_{n\to\infty}\frac{e}{n+1}=0$.\\
+Теперь можно применить необходимый признак сходимости ряда.
+$\blacktriangleright$
+
+\bigskip
+\noindent{\scriptsize \copyright Alidoro, 2016. palva@mail.ru }
+
+\end{document}
