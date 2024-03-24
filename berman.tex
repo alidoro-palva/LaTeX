@@ -1,0 +1,3160 @@
+\documentclass[a5paper,10pt]{article}
+\oddsidemargin=0pt
+\hoffset=-1.5cm
+\voffset=-1.5cm
+\topmargin=-1.5cm
+\textwidth=12.8cm
+\textheight=18.6cm
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage[T2A]{fontenc}
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{bm}
+\usepackage{graphicx}
+
+\begin{document}
+
+\noindent {\it Берман. Сборник задач по курсу математического анализа.
+Издание двадцатое. М., 1985.}
+
+\bigskip
+\section* {Глава II. Понятие о пределе}
+
+\medskip
+\noindent Вычислить пределы:
+
+\medskip
+\noindent{\bf 286.} $\displaystyle \lim_{x\to\infty}
+\left(\frac{x^3}{2x^2-1}-\frac{x^2}{2x+1}\right)=
+\lim_{x\to\infty}\frac{2x^4+x^3-2x^4+x^2}{(2x^2-1)(2x+1)}=$\\
+$\displaystyle =\lim_{x\to\infty}\frac{1+\frac{1}{x}}
+{\left(2-\frac{1}{x^2}\right)\left(2+\frac{1}{x}\right)}=\frac14$.
+
+\medskip
+\noindent{\bf 288.} $\displaystyle\lim_{x\to\infty}
+\frac{(x+1)^{10}+(x+2)^{10}+\ldots+(x+100)^{10}}{x^{10}+10^{10}}=$\\
+$\displaystyle =\lim_{x\to\infty}
+\frac{\left(1+\frac1x\right)^{10}+\left(1+\frac2x\right)^{10}+
+\ldots+\left(1+\frac{100}{x}\right)^{10}}{1+\frac{10^{10}}{x^{10}}}=100$.
+
+\medskip
+\noindent{\bf 290.} $\displaystyle\lim_{x\to\infty}
+\frac{\sqrt{x^2+1}-\sqrt[3]{x^2+1}}{\sqrt[4]{x^4+1}-\sqrt[5]{x^4+1}}=
+\lim_{x\to\infty}\frac{x\left(\sqrt{1+\frac{1}{x^2}}-
+\sqrt[3]{\frac{1}{x}+\frac{1}{x^3}}\right)}
+{x\left(\sqrt[4]{1+\frac{1}{x^4}}-\sqrt[5]{\frac{1}{x}+\frac{1}{x^5}}\right)}=1$.
+
+\medskip
+\noindent{\bf 292.} $\displaystyle\lim_{x\to\infty}
+\frac{\sqrt[3]{x^4+3}-\sqrt[5]{x^3+4}}{\sqrt[3]{x^7+1}}=$\\
+$\displaystyle =\lim_{x\to\infty}\frac{x^{7/3}
+\left(\sqrt[3]{\frac{1}{x^3}+\frac{3}{x^7}}-
+\sqrt[5]{x^{3-35/3}+4x^{-35/3}}\right)}
+{x^{7/3}\cdot\sqrt[3]{1+\frac{1}{x^7}}}=\frac01=0$.
+
+\medskip
+\noindent{\bf 294.} $\displaystyle\lim_{x\to 0}
+\frac{\sqrt{1+x}-1}{x^2}=\quad|t=\sqrt{1+x};\quad x=t^2-1;\quad t\to 1.|\quad=$\\
+$\displaystyle =\lim_{t\to 1}\frac{t-1}{(t^2-1)^2}=
+\lim_{t\to 1}\frac{1}{(t-1)(t+1)^2}=\infty$.
+
+\medskip
+\noindent{\bf 299.} $\displaystyle\lim_{x\to 0}
+\frac{\sqrt[3]{1+x^2}-1}{x^2}=\quad|t=
+\sqrt[3]{1+x^2};\quad x^2=t^3-1;\quad t\to 1.|\quad=$\\
+$\displaystyle =\lim_{t\to 1}\frac{t-1}{t^3-1}=
+\lim_{t\to 1}\frac{1}{t^2+t+1}=\frac13$.
+
+\medskip
+\noindent{\bf 303.} $\displaystyle\lim_{x\to 0}
+\frac{\sqrt[3]{1+x^2}-\sqrt[4]{1-2x}}{x+x^2}=
+\lim_{x\to 0}\frac{\sqrt[3]{1+x^2}-1}{x+x^2}-
+\lim_{x\to 0}\frac{\sqrt[4]{1-2x}-1}{x+x^2}=$\\
+$\displaystyle =\lim_{x\to 0}\frac{1+x^2-1}
+{x(x+1)[\sqrt[3]{(1+x^2)^2}+\sqrt[3]{1+x^2}+1]}-$\\
+$\displaystyle-\lim_{x\to 0}\frac{1-2x-1}
+{x(x+1)[\sqrt[4]{(1-2x)^3}+\sqrt[4]{(1-2x)^2}+\sqrt[4]{1-2x}+1]}=
+0+\frac24=\frac12$.
+
+\medskip
+\noindent{\bf 304.} $\displaystyle\lim_{x\to 1}
+\frac{\sqrt[3]{7+x^3}-\sqrt{3+x^2}}{x-1}=
+\lim_{x\to 1}\frac{\sqrt[3]{7+x^3}-2}{x-1}-
+\lim_{x\to 1}\frac{\sqrt{3+x^2}-2}{x-1}=$\\
+$\displaystyle=\lim_{x\to 1}\frac{7+x^3-8}
+{(x-1)[\sqrt[3]{(7+x^3)^2}+\sqrt[3]{7+x^3}\cdot2+4]}-
+\lim_{x\to 1}\frac{3+x^2-4}{(x-1)(\sqrt{3+x^2}+2)}=$\\
+$\displaystyle=\lim_{x\to 1}\frac{x^2+x+1}
+{\sqrt[3]{(7+x^3)^2}+\sqrt[3]{7+x^3}\cdot2+4}-
+\lim_{x\to 1}\frac{x+1}{\sqrt{3+x^2}+2}=\frac{3}{4+4+4}-\frac{2}{2+2}=-\frac14$.
+
+\medskip
+\noindent {\bf Используем первый замечательный предел и его следствия:}
+$$\lim_{x\to0}\frac{\sin x}{x}=1,\qquad \lim_{x\to0}\frac{\tg x}{x}=1,\qquad
+\lim_{x\to0}\frac{\arcsin x}{x}=1,\qquad \lim_{x\to0}\frac{\arctg x}{x}=1.$$
+
+\medskip
+\noindent Вычислить пределы:
+
+\medskip
+\noindent{\bf 320.} $\displaystyle\lim_{x\to 0}
+\frac{2x-\arcsin x}{2x+\arctg x}=\lim_{x\to 0}
+\frac{x\left(2-\frac{\arcsin x}{x}\right)}
+{x\left(2+\frac{\arctg x}{x}\right)}=
+\frac{2-1}{2+1}=\frac13$.
+
+\medskip
+\noindent{\bf 337.} $\displaystyle\lim_{x\to\pi}
+\frac{1-\sin\frac{x}{2}}{\cos\frac{x}{2}(\cos\frac{x}{4}-\sin\frac{x}{4})}=
+\quad|t=\pi-x;\quad x=\pi-t;\quad t\to 0.|\quad=$\\
+$\displaystyle=\lim_{t\to 0}\frac{1-\cos\frac{t}{2}}{\sin\frac{t}{2}
+\left[\cos\left(\frac{\pi}{4}-\frac{t}{4}\right)-
+\sin\left(\frac{\pi}{4}-\frac{t}{4}\right)\right]}=$\\
+$\displaystyle=\lim_{t\to 0}\frac{1-\cos\frac{t}{2}}{\sin\frac{t}{2}
+\left(\cos\frac{\pi}{4}\cos\frac{t}{4}+\sin\frac{\pi}{4}\sin\frac{t}{4}-
+\sin\frac{\pi}{4}\cos\frac{t}{4}+\cos\frac{\pi}{4}\sin\frac{t}{4}\right)}=$\\
+$\displaystyle=\lim_{t\to 0}\frac{2\sin^2\frac{t}{4}}{\sin\frac{t}{2}
+\left(\sqrt2\sin\frac{t}{4}\right)}=
+\lim_{t\to 0}\frac{2t^2\cdot 2\cdot 4}
+{4^2\cdot t\cdot\sqrt2\cdot t}=\frac{\sqrt2}{2}$.
+
+\medskip
+\noindent{\bf 345.} $\displaystyle\lim_{x\to 0}
+\frac{\sqrt2-\sqrt{1+\cos x}}{\sin^2x}=
+\lim_{x\to 0}\frac{2-1-\cos x}{\sin^2x\cdot(\sqrt2+\sqrt{1+\cos x})}=$\\
+$\displaystyle=\lim_{x\to 0}\frac{2\sin^2\frac{x}{2}}
+{\sin^2x\cdot(\sqrt2+\sqrt{1+\cos x})}=
+\lim_{x\to 0}\frac{2\cdot x^2}{2^2\cdot x^2\cdot
+(\sqrt2+\sqrt{1+\cos x})}=\frac{\sqrt2}{8}$.
+
+\medskip
+\noindent{\bf 349.} $\displaystyle\lim_{x\to 0}
+\frac{\sqrt[3]{1+\arctg3x}-\sqrt[3]{1-\arcsin3x}}
+{\sqrt{1-\arcsin2x}-\sqrt{1+\arctg2x}}=
+\lim_{x\to 0}\frac{1+\arctg3x-1+\arcsin3x}{1-\arcsin2x-1-\arctg2x}\times$\\
+$\displaystyle\times\lim_{x\to 0}\frac{\sqrt{1-\arcsin2x}+\sqrt{1+\arctg3x}}
+{\sqrt[3]{(1+\arctg3x)^2}+\sqrt[3]{(1+\arctg3x)(1-\arcsin3x)}+
+\sqrt[3]{(1-\arcsin3x)^2}}=$\\
+$\displaystyle =\lim_{x\to 0}\frac{3x\cdot(\frac{\arctg3x}{3x}+\frac{\arcsin3x}{3x})}
+{-2x\cdot(\frac{\arcsin2x}{2x}+\frac{\arctg2x}{2x})}\cdot\frac23=-1$.
+
+\medskip
+\noindent{\bf 350.} $\displaystyle\lim_{x\to -1}
+\frac{\sqrt{\pi}-\sqrt{\arccos x}}{\sqrt{x+1}}=
+\lim_{x\to -1}\frac{\pi-\arccos x}{\sqrt{x+1}\cdot(\sqrt{\pi}+\sqrt{\arccos x})}$.
+
+\noindent
+По смыслу задачи $\pi-\arccos x$ принадлежит первой четверти. Таким образом,
+выбирая знак плюс для синуса этой величины, имеем для нашего случая
+$\sin(\pi-\arccos x)=\sin\arccos x=+\sqrt{1-x^2}.$
+Поэтому $\pi-\arccos x=\arcsin\sqrt{1-x^2}$.
+Преобразуя числитель в соответствии с этим равенством, вычисляем предел:
+
+\noindent$\displaystyle\lim_{x\to -1}\frac{\arcsin \sqrt{1-x^2}}
+{\sqrt{x+1}\cdot(\sqrt{\pi}+\sqrt{\arccos x})}=
+\lim_{x\to -1}\frac{\sqrt{1-x^2}}
+{\sqrt{x+1}\cdot(\sqrt{\pi}+\sqrt{\arccos x})}=$\\
+$\displaystyle=\lim_{x\to -1}\frac{\sqrt{1-x}}
+{\sqrt{\pi}+\sqrt{\arccos x}}=\frac{\sqrt2}{2\sqrt{\pi}}$.
+
+\medskip
+\noindent {\bf Используем второй замечательный предел и его следствия:}
+$$\lim_{x\to0}(1+x)^{1/x}=e,\qquad \lim_{x\to\infty}\left(1+\frac1x\right)^x=e,\qquad\lim_{x\to0}\frac{\ln(1+x)}{x}=1,$$
+$$\lim_{x\to0}\frac{a^x-1}{x}=\ln a\mbox{ при }a>0\mbox{ и }a\ne1,\qquad\lim_{x\to0}\frac{(1+x)^\alpha-1}{\alpha x}=1\mbox{ при }\alpha\ne0.$$
+
+\medskip
+\noindent Вычислить пределы:
+
+\medskip
+\noindent{\bf 362.} $\displaystyle\lim_{x\to \infty}
+\left(\frac{x^2-2x+1}{x^2-4x+2}\right)^x=
+\lim_{x\to \infty}\left[\left(1+\frac{2x-1}{x^2-4x+2}\right)^
+{\frac{x^2-4x+2}{2x-1}}\right]^{\frac{(2x-1)x}{x^2-4x+2}}=$\\
+$\displaystyle=e^{\lim\limits_{x\to \infty}\frac{2+\frac{1}{x}}
+{1-\frac{4}{x}+\frac{2}{x^2}}}=e^2$.
+
+\medskip
+\noindent{\bf 364.} $\displaystyle\lim_{x\to 0}
+(1+\tg^2\sqrt{x})^{\frac{1}{2x}}=
+\lim_{x\to 0}[(1+\tg^2\sqrt{x})^{\frac{1}{\tg^2\sqrt x}}]^
+{\frac{\tg^2\sqrt x}{2x}}=
+e^{\lim\limits_{x\to 0}\frac{x}{2x}}=\sqrt e$.
+
+\medskip
+\noindent{\bf 373.} $\displaystyle\lim_{x\to 0}
+\frac{e^x-e^{-x}}{\sin x}=\lim_{x\to 0}\frac{x}{\sin x}\cdot
+\lim_{x\to 0}\frac{e^x-e^{-x}}{x}=
+1\cdot\lim_{x\to 0}\frac{2}{e^x}\cdot\lim_{x\to 0}\frac{e^{2x}-1}{2x}=2$.
+
+\medskip
+\noindent{\bf 380.} $\displaystyle\lim_{x\to \pm\infty}
+x(\sqrt{x^2+\sqrt{x^4+1}}-x\sqrt2)=
+\lim_{x\to \pm\infty}\frac{x(x^2+\sqrt{x^4+1}-2x^2)}
+{\sqrt{x^2+\sqrt{x^4+1}}+x\sqrt2}=$\\
+$\displaystyle=\lim_{x\to \pm\infty}\frac{1}{\left(\sqrt{1+\sqrt{1+\frac{1}{x^4}}}+\sqrt2\right)}\cdot
+\lim_{x\to \pm\infty}\frac{x^4+1-x^4}{\sqrt{x^4+1}+x^2}=
+\frac{1}{2\sqrt2}\cdot\frac{1}{\infty}=0$.
+
+\medskip
+\noindent{\bf 385.} $\displaystyle\lim_{x\to\infty}
+\frac{x+\sin x}{x+\cos x}=\lim_{x\to\infty}\frac{x+\cos x}{x+\cos x}+
+\lim_{x\to\infty}\frac{\sin x-\cos x}{x+\cos x}=1-0=1$.
+
+\medskip
+\noindent{\bf 391.} $\displaystyle\lim_{x\to \infty}
+x^2(1-\cos\frac{1}{x})=\lim_{x\to\infty}x^2\cdot2\sin^2\frac{1}{2x}=
+\lim_{x\to\infty}x^2\cdot\frac{2}{4x^2}=1/2$.
+
+\medskip
+\noindent{\bf 395.} $\displaystyle\lim_{x\to 0}
+\frac{\arcsin x-\arctg x}{x^3}.$
+
+\noindent
+По смыслу задачи $\arcsin x$, $\arctg x$ и $\arcsin x-\arctg x$
+близки к нулю и находятся в правой полуплоскости. Поэтому:
+
+\noindent
+$\displaystyle\sin(\arcsin x-\arctg x)=
+x\cdot\cos\arctg x-\cos\arcsin x\cdot\sin\arctg x=$\\
+$\displaystyle =\frac{x}{\sqrt{1+x^2}}-\frac{\sqrt{1-x^2}\cdot x}{\sqrt{1+x^2}}=
+\frac{x(1-\sqrt{1-x^2})}{\sqrt{1+x^2}}$.
+
+\noindent
+В соответствии с этим равенством преобразуем числитель и вычисляем предел:
+
+\noindent
+$\displaystyle\lim_{x\to 0}\frac{\arcsin x-\arctg x}{x^3}=
+\lim_{x\to 0}\frac{\arcsin\frac{x(1-\sqrt{1-x^2})}{\sqrt{1+x^2}}}{x^3}=
+\lim_{x\to 0}\frac{x(1-\sqrt{1-x^2})}{\sqrt{1+x^2}\cdot x^3}=$\\
+$\displaystyle=\lim_{x\to 0}\frac{x(1-1+x^2)}{\sqrt{1+x^2}\cdot x^3(1+\sqrt{1-x^2})}=
+\lim_{x\to 0}\frac{1}{\sqrt{1+x^2}(1+\sqrt{1-x^2})}=1/2$.
+
+
+\noindent{\bf 399.} $\displaystyle\lim_{x\to 0}
+\left(\frac{\sin x}{x}\right)^{\frac{\sin x}{x-\sin x}}=
+\lim_{x\to 0}\left[\left(1+\frac{\sin x-x}{x}\right)^{\frac{x}{\sin x-x}}\right]^
+{\frac{\sin x-x}{x}\cdot\frac{\sin x}{x-\sin x}}=$\\
+$\displaystyle=e^{\lim\limits_{x\to 0}\frac{\sin x(\sin x-x)}{x(x-\sin x)}}=1/e$.
+
+\bigskip
+\section* {Глава IV. Исследование функций и кривых линий}
+
+\medskip
+\noindent {\bf При вычислении кривизны и радиуса кривизны плоских линий используем следующие формулы:}
+
+$$y=y(x),\quad\varkappa=\frac{|y''|}{(1+y'^2)^{3/2}},\quad R=\frac{1}{\varkappa}.$$
+$$x=x(t),\quad y=y(t),\quad \varkappa=\frac{|y''x'-y'x''|}{(x'^2+y'^2)^{3/2}},\quad R=\frac{1}{\varkappa}.$$
+$$\rho=\rho(\varphi),\quad\varkappa=\frac{|\rho^2+2\rho'^2-\rho\rho''|}{(\rho^2+\rho'^2)^{3/2}},\quad R=\frac{1}{\varkappa}.$$
+
+\medskip
+\noindent Найти кривизну данных линий.
+
+\medskip
+\noindent{\bf 1533.} $y=\ln x$ в точке $(1,0)$.
+
+\smallskip
+\noindent $\blacktriangleleft$
+$\displaystyle y'=\frac 1x,\quad y''=-\frac{1}{x^2},\quad
+\varkappa=\frac{|y''|}{(1+y'^2)^{3/2}}=
+\left|\frac{1}{x^2}\right|\frac{x^{3/2}}{(x^2+1)^{3/2}}=
+\frac{1}{2^{3/2}}=\frac{\sqrt2}{4}$.
+$\blacktriangleright$
+
+\medskip
+\noindent Найти кривизну данных линий в произвольной точке $(x,y)$.
+
+\medskip
+\noindent{\bf 1540.} $x^{2/3}+y^{2/3}=a^{2/3}$.
+
+\smallskip
+\noindent $\blacktriangleleft$
+$\displaystyle \quad F(x)=x^{2/3}+y^{2/3}-a^{2/3};\quad
+\frac{\partial F}{\partial x}=\frac23x^{-1/3};\quad
+\frac{\partial F}{\partial y}=\frac23y^{-1/3}.\\
+y'=-\left(\frac xy\right)^{-1/3}=-\left(\frac yx\right)^{1/3};\\
+y''=-\frac13\left(\frac yx\right)^{-2/3}\cdot\frac{xy'-y}{x^2}=
+-\frac13\left(\frac xy\right)^{2/3}\cdot\frac{-x\left(\frac yx\right)^{1/3}-y}{x^2}=$\\
+$\displaystyle =\frac13\left(\frac xy\right)^{2/3}\cdot\frac{xy^{1/3}+x^{1/3}y}{x^{7/3}}=
+\frac13\cdot\frac{x^{2/3}+y^{2/3}}{y^{1/3}x^{4/3}}=
+\frac13\cdot\frac{a^{2/3}}{x^{4/3}y^{1/3}}.\\
+\varkappa=\frac{a^{2/3}}{3}\cdot\left|\frac{x}{x^{4/3}y^{1/3}(x^{2/3}+y^{2/3})^{3/2}}\right|=
+\frac{a^{2/3}}{3}\cdot\frac{1}{\sqrt[3]{|xy|}a}=
+\frac{1}{3\sqrt[3]{a|xy|}}$.
+$\blacktriangleright$
+
+\medskip
+\noindent Найти кривизну данных линий.
+
+\medskip
+\noindent{\bf 1547.} $\rho=a^{\varphi}$ в точке $\rho=1$, $\varphi=0$.
+
+\smallskip
+\noindent $\blacktriangleleft$
+$\displaystyle \rho'=a^\varphi\ln a;\quad \rho''=a^\varphi\ln^2a.\\
+\varkappa=\frac{|\rho^2+2\rho'^2-\rho\rho''|}{(\rho^2+\rho'^2)^{3/2}}=
+\frac{|(a^{\varphi})^2+2(a^{\varphi})^2\ln^2a-(a^{\varphi})^2\ln^2a|}
+{((a^{\varphi})^2+(a^{\varphi})^2\ln^2a)^{3/2}}=$\\
+$\displaystyle =\frac{1+\ln^2a}{a^{\varphi}(1+\ln^2a)^{3/2}}=
+\frac{1}{a^{\varphi}\sqrt{1+\ln^2a}}=\frac{1}{\sqrt{1+\ln^2a}}$.
+$\blacktriangleright$
+
+\medskip
+\noindent{\bf 1551.} Показать, что радиус кривизны параболы равен удвоенному
+отрезку нормали, заключенному между точками пересечния
+нормали с параболой и ее директрисой.
+
+\smallskip
+\noindent $\blacktriangleleft$ Каноническое уравнение повернутой параболы
+$x^2=2py$ или $\displaystyle y=\frac{x^2}{2p}$ ее директриса будет иметь уравнение
+$\displaystyle y=-\frac{p}{2}$. Вычислим радиус кривизны параболы в точке,
+абсцисса которой равна  $x_0$.
+$$y'=\frac{x}{p},\quad y''=\frac{1}{p},\quad
+R=\frac{(1+y'^2)^{3/2}}{|y''|}=p(1+x_0^2/p^2)^{3/2}=
+\frac{(p^2+x_0^2)^{3/2}}{p^2}.$$
+С другой стороны, нормаль к параболе в точке с координатами
+$\displaystyle \left(x_0; y_0=\frac{x_0^2}{2p}\right)$ будет иметь уравнение
+$\displaystyle y-\frac{x_0^2}{2p}=-\frac{p}{x_0}(x-x_0)$ для $x_0\ne0$ и $x=0$ для $x_0=0$.
+Абциссу пересечения нормали с директрисой находим, подставляя в уравнение нормали
+значение $\displaystyle y=-\frac{p}{2}$.
+$$\mbox{Для }x_0\ne 0\quad -\frac{p}{2}-\frac{x_0^2}{2p}=-\frac{p}{x_0}(x-x_0);\quad
+\frac{p}{2}+\frac{x_0^2}{2p}+p=\frac{p}{x_0}x;\quad x=\frac{x_0}{2}+\frac{x_0^3}{2p^2}+x_0.$$
+Эта же формула дает нам правильную абциссу и в случае, когда $x_0=0$ и нормаль вертикальна.
+Теперь можем вычислить удвоенную длину отрезка нормали:
+$$2L=2\sqrt{\left(\frac{x_0}{2}+\frac{x_0^3}{2p^2}\right)^2+
+\left(\frac{x_0^2}{2p}+\frac{p}{2}\right)^2}=
+2\sqrt{\frac{x_0^2}{4}+\frac{x_0^4}{2p^2}+\frac{x_0^6}{4p^4}+
+\frac{x_0^4}{4p^2}+\frac{x_0^2}{2}+\frac{p^2}{4}}=$$
+$$=\frac{2\sqrt{p^6+3p^4x_0^2+3p^2x_0^4+x_0^6}}{2p^2}=
+\frac{(p^2+x_0^2)^{3/2}}{p^2}.$$
+Мы видим, что вычисленные значения совпадают. $\blacktriangleright$
+
+\medskip
+\noindent{\bf 1552.} Показать, что радиус кривизны циклоиды в любой ее точке вдвое больше
+длины нормали в той же точке.
+
+\smallskip
+\noindent $\blacktriangleleft$ Параметрические уравнения циклоиды $$x=at-a\sin t,\quad y=a-a\cos t.$$
+Вычисляем производные и направление касательной $$x'=a-a\cos t,\quad y'=a\sin t.$$
+Нормаль имеет направление $(-a\sin t; a-a\cos t)$. Ее уравнение таково:
+$$\frac{x-at+a\sin t}{-a\sin t}=\frac{y-a+a\cos t}{a-a\cos t}.$$
+Подставим в это уравнение $y=0$, чтобы вычислить абсциссу точки пересечения нормали
+с осью $Ox$
+$$\frac{x-at+a\sin t}{-a\sin t}=\frac{-a+a\cos t}{a-a\cos t};\quad x-at+a\sin t=a\sin t;\quad x=at.$$
+Вычисляем длину нормали
+$$L=\sqrt{(-a\sin t)^2+(a-a\cos t)^2}=a\sqrt{\sin^2 t+1-2\cos t+\cos^2t}=2a\sin\frac t2.$$
+Теперь займемся радиусом кривизны. Для этого вычисляем вторые производные
+$x''=a\sin t,\quad y''=a\cos t$ и используем формулу для радиуса кривизны
+$$R=\frac{(x'^2+y'^2)^{3/2}}{|y''x'-y'x''|}=
+\frac{((a-a\cos t)^2+a^2\sin^2 t)^{3/2}}{|a\cos t(a-a\cos t)-a\sin t\cdot a\sin t|}=
+\frac{(2a^2-2a^2\cos t)^{3/2}}{|a^2\cos t-a^2|}=$$
+$$=\frac{(4a^2\sin^2\frac t2)^{3/2}}{2a^2\sin^2\frac t2}=
+\frac{8a^3\sin^3\frac t2}{2a^2\sin^2\frac t2}=4a\sin \frac t2.$$
+Радиус оказался вдвое больше длины нормали в той же точке.
+$\blacktriangleright$
+
+\medskip
+\noindent{\bf 1553.} Показать, что радиус кривизны лемнискаты $\rho^2=a^2\cos 2\varphi$
+обратно пропорционален соответствующему полярному радиусу.
+
+\smallskip
+\noindent $\blacktriangleleft$ Дифференцируем по $\varphi$ обе части уравнения лемнискаты и
+находим $\rho'$. Затем вычисляем $\rho'^2$ и $\rho''$:
+$$2\rho\rho'=-2a^2\sin 2\varphi;\quad \rho'=-\frac{a^2\sin 2\varphi}{\rho};$$
+$$\rho'^2=\frac{a^4\sin^2 2\varphi}{\rho^2}=\frac{a^4-a^4\cos^2 2\varphi}{\rho^2}=
+\frac{a^4-\rho^4}{\rho^2}=\frac{a^4}{\rho^2}-\rho^2;$$
+$$\rho''=-\frac{2a^2\rho\cos 2\varphi+\frac{a^2\sin 2\varphi}{\rho}\cdot a^2\sin 2\varphi}{\rho^2}=
+-\frac{2\rho^2 a^2\cos 2\varphi+a^4-a^4\cos^2 2\varphi}{\rho^3}=$$
+$$=-\frac{2\rho^4+a^4-\rho^4}{\rho^3}.$$
+Теперь по известной формуле записываем радиус кривизны:
+$$R=\frac{(\rho^2+\rho'^2)^{3/2}}{|\rho^2+2\rho'^2-\rho\rho''|}=
+\frac{(\rho^2+\frac{a^4}{\rho^2}-\rho^2)^{3/2}}{\left|\rho^2+2\cdot
+\frac{a^4-\rho^4}{\rho^2}+\frac{2\rho^4+a^4-\rho^4}{\rho^2}\right|}=$$
+$$=\frac{a^6}{\rho^3}\cdot\frac{\rho^2}{|\rho^4+2a^4-2\rho^4+2\rho^4+a^4-\rho^4|}=\frac{a^2}{3\rho}.$$
+Мы видим, что радиус кривизны в данной точке обратно пропорционален полярному радиусу этой точки.
+$\blacktriangleright$
+
+\medskip
+\noindent{\bf 1555.} Найти окружность кривизны гиперболы $xy=1$ в точке
+$(1,1)$.
+
+\smallskip
+\noindent $\blacktriangleleft$ Находим радиус кривизны в точке $(1,1)$.
+$$y=\frac1x;\quad y'=-\frac{1}{x^2};\quad
+y''=\frac{2}{x^3};\quad R=\frac{(1+1)^{3/2}}{2}=\sqrt2.$$
+В точке $x=1$ производная функции $y(x)$ равна $-1$, поэтому угловой коэффициент
+нормали будет равен $1$. Нормаль в точке $(1,1)$ имеет уравнение
+$$(y-1)=1\cdot(x-1)\mbox{ или }x=1,$$ то есть нормаль является биссектрисой
+первого квадранта. Центр окружности кривизны лежит на этой биссектрисе и
+находится  со стороны вогнутости гиперболы на расстоянии $\sqrt2$ от точки $(1,1)$.
+Очевидно, что он имеет координаты $(2,2)$. По известному центру и радиусу
+окружности можно написать ее уравнение: $(x-2)^2+(y-2)^2=2$. $\blacktriangleright$
+
+\medskip
+\section* {Глава V. Определенный интеграл}
+
+\medskip
+\section* {Глава VI. Неопределенный интеграл}
+
+\medskip
+\noindent
+
+\medskip
+\noindent{\bf 1676.} $\displaystyle\int\sqrt x\,dx=\frac23x\sqrt x.$
+
+\medskip
+\noindent{\bf 1677.} $\displaystyle\int\sqrt[m]{x^n}\,dx=\int x^{n/m}=
+\frac{m}{n+m}\int x^{{n+m}/m}.$
+
+\medskip
+\noindent{\bf 1936.} $\displaystyle\int\frac{x\,dx}{\sqrt{1+2x}}=
+\qquad\left|t=\sqrt{1+2x},\quad x=
+\frac{t^2-1}{2},\quad dx=t\,dt.\right|\\
+=\int\frac{(t^2-1)\cdot t\,dx}{2t}=\frac{t^3}{6}-\frac t2=
+\frac{(1+2x)\sqrt{1+2x}}{6}-\frac{\sqrt{1+2x}}{2}=
+\frac{(x-1)\sqrt{1+2x}}{3}$.
+
+\medskip
+\noindent{\bf 1941.} $\displaystyle\int\frac{dx}{\sqrt{9x^2-6x+2}}=
+\frac13\int\frac{d(3x-1)}{\sqrt{(3x-1)^2+1}}=\frac13\ln(3x-1+\sqrt{9x^2-6x+2})$.
+
+\medskip
+\noindent{\bf 1947.} $\displaystyle\int\frac{(3x-1)\,dx}{\sqrt{x^2+2x+2}}=
+\frac32\int\frac{d(x^2+2x+2)}{\sqrt{x^2+2x+2}}-
+4\int\frac{d(x+1)}{\sqrt{(x+1)^2+1}}=$\\
+$\displaystyle =3\sqrt{x^2+2x+2}-4\ln(x+1+\sqrt{x^2+2x+2})$.
+
+\medskip
+\noindent{\bf 1954.} $\displaystyle\int\frac{\sqrt x\,dx}{\sqrt{2x+3}}=\int\sqrt x\,d\sqrt{2x+3}=
+\sqrt{2x^2+3x}-\frac12\int\sqrt{2+\frac3x}\,dx=$\\
+$\displaystyle =x\sqrt{2+\frac3x}-\frac x2\sqrt{2+\frac3x}+\frac12\int x\,d\sqrt{2+\frac3x}=
+\frac x2\sqrt{2+\frac3x}-\frac34\int \frac{dx}{\sqrt{2x^2+3x}}=$\\
+$\displaystyle =\frac{\sqrt{2x^2+3x}}{2}-
+\frac{3}{4\sqrt2}\int\frac{d(x+3/4)}{\sqrt{(x+3/4)^2-(3/4)^2}}=$\\
+$\displaystyle =\frac{\sqrt{2x^2+3x}}{2}-
+\frac{3}{4\sqrt2}\ln\left(x+\frac34+\sqrt{x^2+\frac32x}\right)$.
+
+\medskip
+\noindent{\bf 1957.} $\displaystyle\int x\sin x\,\cos x\,dx=
+\int x\sin x\,d\sin x=\frac12\int x\,d\sin^2 x=$\\
+$\displaystyle =\frac12\left(x\sin^2 x-\int\sin^2 x\,dx\right)=
+\frac{x\sin^2 x}{2}-\frac12\int\frac{1-\cos 2 x}{2}\,dx=$\\
+$\displaystyle =\frac{x-x\cos2x}{4}-\frac x4+\frac{\sin2x}{8}=
+\frac{\sin2x}{8}-\frac{x\cos2x}{4}$.
+
+\medskip
+\noindent{\bf 1966.} $\displaystyle\int\frac{dx}{e^x+1}=\qquad
+\left|t=e^x,\quad dt=e^xdx=t\,dx,\quad dx=\frac{dt}{t}\right|\\
+=\int\frac{dt}{t(t+1)}=
+\int\frac{dt}{t}-\int\frac{dt}{t+1}=
+\ln|t|-\ln|t+1|=\ln\frac{e^x}{e^x+1}$.
+
+\medskip
+\noindent{\bf 1974.} $\displaystyle\int\frac{(1+\tg x)\,dx}{\sin 2x}=
+\qquad \left| t=\tg x,\quad x=\arctg t,\quad dx=\frac{dt}{1+t^2}.\right|\\
+=\int\frac{(1+t)(1+t^2)\,dx}{2t(1+t^2)}=\frac12\ln t+\frac12 t=
+\frac12\ln |\tg x|+\frac12 \tg x$.
+
+\medskip
+\noindent{\bf 1984.} $\displaystyle\int\frac{x^4 dx}{\sqrt{(1-x^2)^3}}=\qquad| x=\sin u,\quad dx=\cos u.|
+\qquad =\int\frac{\sin^4u\cdot\cos u}{\cos^3 u}\,du=\\
+=\int\frac{d\tg u}{(1+\ctg^2 u)^2}=\int\frac{\tg^4 u\,d\tg u}{(1+\tg^2 u)^2}=
+\qquad| t=\tg u|\qquad =\int\frac{t^4\,dt}{(1+t^2)^2}=\\
+=\int dt-\int\frac{t^2\,dt}{(1+t^2)^2}-\int\frac{(1+t^2)\,dt}{(1+t^2)^2}=
+t-\arctg t -\int\frac{t^2\,dt}{(1+t^2)^2}=$\\
+Отдельно вычислим интеграл\\
+$\displaystyle-\int\frac{t^2\,dt}{(1+t^2)^2}=\frac12\int t\cdot\,d\left(\frac{1}{1+t^2}\right)=\frac12\cdot\frac{t}{1+t^2}-\frac12\int\frac{dt}{1+t^2}=\frac12\cdot\frac{t}{1+t^2}-\frac12\arctg t.$\\
+Подставим в основной интеграл\\
+$\displaystyle t-\arctg t+\frac12\cdot\frac{t}{1+t^2}-\frac12\arctg t=\frac{2t^3+3t}{2(1+t^2)}-\frac32\arctg t=$\\
+Учитывая, что $\displaystyle t=\tg u=\tg\arcsin x=\frac{x}{\sqrt{1-x^2}}$, получаем\\
+$\displaystyle =\left(\frac{2x^3}{(1-x^2)\sqrt{1-x^2}}+\frac{3x}{\sqrt{1-x^2}}\right)\Big/
+\left(2+\frac{2x^2}{1-x^2}\right)-\frac32\arcsin x=\\
+=\frac{3x-x^3}{(1-x^2)\sqrt{1-x^2}}\cdot\frac{1-x^2}{2}-\frac32\arcsin x=
+\frac{3x-x^3}{2\sqrt{1-x^2}}-\frac32\arcsin x$.
+
+\medskip
+\noindent Еще один вариант решения задачи.\\
+$\displaystyle\int\frac{x^4 dx}{\sqrt{(1-x^2)^3}}=
+-\frac12\int\frac{x^3 d(1-x^2)}{\sqrt{(1-x^2)^3}}=
+\int x^3 d\frac{1}{\sqrt{1-x^2}}=\frac{x^3}{\sqrt{1-x^2}}-3\int \frac{x^2 dx}{\sqrt{1-x^2}}=\\
+=\frac{x^3}{\sqrt{1-x^2}}+\frac32\int \frac{x\,d(1-x^2)}{\sqrt{1-x^2}}=
+\frac{x^3}{\sqrt{1-x^2}}+3\int x\,d\sqrt{1-x^2}=\\
+=\frac{x^3}{\sqrt{1-x^2}}+3x\sqrt{1-x^2}-3\int\sqrt{1-x^2}\,dx=$\\
+Отдельно вычислим интеграл $\displaystyle\int\sqrt{1-x^2}\,dx$. Для этого положим\\
+$\displaystyle I=\int\sqrt{1-x^2}\,dx=
+x\sqrt{1-x^2}-\int\frac{-x^2\,dx}{\sqrt{1-x^2}}=$\\
+$\displaystyle =x\sqrt{1-x^2}-\int\sqrt{1-x^2}\,dx+\int\frac{dx}{\sqrt{1-x^2}}=
+x\sqrt{1-x^2}-I+\arcsin x$.\\
+Отсюда находим:
+$\displaystyle I=\frac x2\sqrt{1-x^2}+\frac{1}{2}\arcsin x$.\\
+Теперь вычисляем сам интеграл задачи:\\
+$\displaystyle =\frac{x^3}{\sqrt{1-x^2}}+3x\sqrt{1-x^2}-\frac{3x}{2}\sqrt{1-x^2}-\frac32\arcsin x=$\\
+$\displaystyle =\frac{2x^3+3x-3x^3}{2\sqrt{1-x^2}}-\frac32\arcsin x=
+\frac{3x-x^3}{2\sqrt{1-x^2}}-\frac32\arcsin x$.
+
+\medskip
+\noindent{\bf 1992.} $\displaystyle\int\frac{dx}{(2+x)\sqrt{1+x}}=
+\qquad\left|t=\sqrt{1+x},\quad x=t^2-1,\quad dx=2t\,dt.\right|\\
+=\int\frac{2t\,dt}{(t^2+1)t}=2 \arctg t=2 \arctg \sqrt{1+x}$.
+
+\medskip
+\noindent{\bf 2009.} $\displaystyle\int\ln(x+\sqrt{1+x^2})\,dx=
+x\ln(x+\sqrt{1+x^2})-\int\frac{x\,dx}{\sqrt{1+x^2}}=$\\
+$\displaystyle =x\ln(x+\sqrt{1+x^2})-\int\frac{d(1+x^2)}{2\sqrt{1+x^2}}=
+x\ln(x+\sqrt{1+x^2})-\sqrt{1+x^2}$.
+
+\medskip
+\noindent{\bf 2018.} $\displaystyle\int\frac{32x\,dx}{(2x-1)(4x^2-16x+15)}=
+\int\frac{32x\,dx}{(2x-1)(2x-3)(2x-5)}=$\\
+$\displaystyle =\int\left(\frac{A}{2x-1}+\frac{B}{2x-3}+\frac{C}{2x-5} \right )\,dx=\ldots\\
+32x=A(2x-3)(2x-5)+B(2x-1)(2x-5)+C(2x-1)(2x-3).\\
+x=1/2,\quad A=2.\quad x=3/2,\quad B=-12,\quad x=5/2,\quad C=10.\\
+\ldots=\int\left(\frac{2}{2x-1}-\frac{12}{2x-3}+\frac{10}{2x-5} \right )\,dx=$\\
+$\displaystyle =\int\frac{d(2x-1)}{2x-1}-6\int\frac{d(2x-3)}{2x-3}+5\int\frac{d(2x-3)}{2x-5},dx=$\\
+$\displaystyle =\ln|2x-1|-6\ln|2x-3|+5\ln|2x-5|$.
+
+\medskip
+\noindent{\bf 2023.} $\displaystyle\int\left(\frac{x+2}{x-1}\right)^2\frac{dx}{x}=
+\int\left(\frac{A}{x-1}+\frac{B}{(x-1)^2}+\frac{C}{x}\right)\,dx=\ldots\\
+(x+2)^2=Ax(x-1)+Bx+C(x-1)^2.\\
+x=1,\quad B=9,\quad x=0,\quad C=4,\quad x=-1,\quad 1=2A-9+16,\quad A=-3.\\
+\ldots=\int\left(-\frac{3}{x-1}+\frac{9}{(x-1)^2}+\frac{4}{x}\right)\,dx-=
+=4\ln|x|-3\ln|x-1|-\frac{9}{x-1}$.
+
+\medskip
+\noindent{\bf 2034.} $\displaystyle\int\frac{x^3-2x^2+4}{x^3(x-2)^2}=
+\int\left(\frac{A}{x}+\frac{B}{x^2}+\frac{C}{x^3}+
+\frac{D}{x-2}+\frac{E}{(x-2)^2}\right)\,dx=\ldots\\
+x^3-2x^2+4=Ax^2(x-2)^2+Bx(x-2)^2+C(x-2)^2+Dx^3(x-2)+Ex^3=$\\
+$\displaystyle =(A+D)x^4+(-4A+B-2D+E)x^3+(4A-4B+C)x^2+(4B-4C)x+4C.\\
+\begin{cases}
+A+D=0\\
+-4A+B-2D+E=1\\
+4A-4B+C=-2\\
+4B-4C=0\\
+4C=4
+\end{cases};\quad
+\begin{cases}
+D=-1/4\\
+E=1/2\\
+A=1/4\\
+B=1\\
+C=1
+\end{cases}.\\
+\ldots=\int\left(\frac{1/4}{x}+\frac{1}{x^2}+\frac{1}{x^3}-
+\frac{1/4}{x-2}+\frac{1/2}{(x-2)^2}\right)\,dx=$\\
+$\displaystyle =\frac14\ln|x|-\frac{1}{x}-\frac{1}{2x^2}-\frac14\ln|x-2|-\frac{1}{2(x-2)}=
+\ln\left|\frac{x}{x-1}\right|-\frac{1}{x}-\frac{1}{2x^2}-\frac{1}{2(x-2)}$.
+
+\medskip
+\noindent{\bf 2047.} $\displaystyle\int\frac{dx}{1+x^4}=
+\int\frac{dx}{(x^2-\sqrt2x+1)(x^2+\sqrt2x+1)}=$\\
+$\displaystyle \int\left(\frac{Ax+B}{x^2-\sqrt2x+1}+
+\frac{Cx+D}{x^2+\sqrt2x+1}\right )\,dx=\ldots\\
+1=(Ax+B)(x^2+\sqrt2x+1)+(Cx+D)(x^2-\sqrt2x+1).\\
+\begin{cases}A+C=0\\\sqrt2A+B-\sqrt2C+D=0\\
+A+\sqrt2B+C-\sqrt2D=0\\B+D=1\end{cases};\quad
+\begin{cases}C=-A\\\sqrt2A+B+\sqrt2A-B=-1\\
+A+\sqrt2B-A+\sqrt2B=\sqrt2\\D=1-B\end{cases};\\
+\begin{cases}C=\frac{1}{2\sqrt2}\\
+A=-\frac{1}{2\sqrt2}\\B=\frac{1}{2}\\D=\frac{1}{2}\end{cases}.\\
+\ldots=\frac{\sqrt2}{4}\int\frac{-x+\sqrt2}{x^2-\sqrt2x+1}\,dx+
+\frac{\sqrt2}{4}\int\frac{x+\sqrt2}{x^2+\sqrt2x+1}\,dx=$\\
+$\displaystyle =-\frac{\sqrt2}{8}\int\frac{2x-\sqrt2}{x^2-\sqrt2x+1}\,dx+
+\frac{\sqrt2}{8}\int\frac{\sqrt2}{x^2-\sqrt2x+1}\,dx+\\
++\frac{\sqrt2}{8}\int\frac{2x+\sqrt2}{x^2+\sqrt2x+1}\,dx
++\frac{\sqrt2}{8}\int\frac{\sqrt2}{x^2+\sqrt2x+1}\,dx=$\\
+$\displaystyle =-\frac{\sqrt2}{8}\ln(x^2-\sqrt2x+1)+
+\frac{1}{4}\int\frac{d(x-\sqrt2/2)}{(x-\sqrt2/2)^2+1/2}+\\
++\frac{\sqrt2}{8}\ln(x^2+\sqrt2x+1)+
+\frac{1}{4}\int\frac{d(x+\sqrt2/2)}{(x+\sqrt2/2)^2+1/2}=$\\
+$\displaystyle =\frac{\sqrt2}{8}\ln\frac{x^2+\sqrt2x+1}{x^2-\sqrt2x+1}+
+\frac{\sqrt2}{4}(\arctg(\sqrt2x-1)+\arctg(\sqrt2x+1))=$\\
+$\displaystyle =\frac{\sqrt2}{8}\ln\frac{x^2+\sqrt2x+1}{x^2-\sqrt2x+1}+
+\frac{\sqrt2}{4}\arctg\frac{\sqrt2x}{1-x^2}=.$
+
+\medskip
+\noindent{\bf 2053.} $\displaystyle\int\frac{2x\,dx}{(1+x)(1+x^2)^2}=
+\int\left(\frac{A}{1+x}+\frac{Bx+C}{1+x^2}+
+\frac{Dx+E}{(1+x^2)^2}\right )\,dx=\ldots\\
+2x=A(1+x^2)^2+(Bx+C)(1+x)(1+x^2)+(Dx+E)(1+x).\\
+x=-1,\quad -2=4A,\quad A=-1/2.\\
+x=i,\quad 2i=(E-D)+(D+E)i,\quad E=1,\quad D=1.\\
+2=\left.((Bx+C)(1+x)2x+(Dx+E)+D(1+x))\right|_{x=i};\\
+2=-2(B+C)+2(C-B)i+i+1+1+i;\\
+B+C=0,\quad B-C=1,\quad B=1/2,\quad C=-1/2.\\
+\ldots=\int\left(-\frac{1}{2(1+x)}+\frac{x-1}{2(1+x^2)}+
+\frac{x+1}{(1+x^2)^2}\right )\,dx=$\\
+$\displaystyle =-\frac12\ln|1+x|+\frac14\int\frac{2x\,dx}{1+x^2}-
+\frac12\int\frac{dx}{1+x^2}+\frac12\int\frac{2x\,dx}{(1+x^2)^2}+
+\int\frac{dx}{(1+x^2)^2}=$\\
+$\displaystyle =\frac14\ln(1+x^2)-\frac12\ln|1+x|-
+\frac12\arctg x-\frac{1}{2(1+x^2)}+\int\frac{dx}{(1+x^2)^2}.\\
+=\frac14\ln(1+x^2)-\frac12\ln|1+x|-
+\frac12\arctg x-\frac{1}{2(1+x^2)}+\int\frac{dx}{(1+x^2)^2}$.\\
+Имеем: $\displaystyle\arctg x=\int\frac{dx}{1+x^2}=
+\frac{x}{1+x^2}+2\int\frac{x^2\,dx}{(1+x^2)^2}=$\\
+$\displaystyle =\frac{x}{1+x^2}+2\int\frac{dx}{1+x^2}-2\int\frac{dx}{(1+x^2)^2}=
+\frac{x}{1+x^2}+2\arctg x-2\int\frac{dx}{(1+x^2)^2}$.\\
+Отсюда получаем: $\displaystyle\int\frac{dx}{(1+x^2)^2}=
+\frac12\left(\frac{x}{1+x^2}+\arctg x \right )$.\\
+Ответ: $\displaystyle\frac14\ln(1+x^2)-\frac12\ln|1+x|-\frac{1-x}{2(1+x^2)}$.
+
+\medskip
+\noindent{\bf 2057.} $\displaystyle
+\int\frac{(4x^2-8x)\,dx}{(x-1)^2(x^2+1)^2}=
+\frac{A}{x-1}+\frac{Bx+C}{x^2+1}+
+\int\left(\frac{D}{x-1}+\frac{Ex+F}{x^2+1}\right)\,dx=\ldots\\
+\frac{4x^2-8x}{(x-1)^2(x^2+1)^2}=
+-\frac{A}{(x-1)^2}+\frac{B(x^2+1)-2x(Bx+C)}
+{(x^2+1)^2}+\frac{D}{x-1}+\frac{Ex+F}{x^2+1};\\
+4x^2-8x=-A(x^4+2x^2+1)+B(x^2-2x+1)(x^2+1)-\\
+-2x(x^2-2x+1)(Bx+C)+D(x-1)(x^4+2x^2+1)+\\
++(x^2-2x+1)(x^2+1)(Ex+F);\\
+x=1,\quad -4=-4A,\quad A=1.\\
+x=i,\quad -4-8i=-2i\cdot(-2i)(C+Bi)=-4C-4Bi,\\
+B=2,\quad C=1.\\
+0x^5=(D+E)x^5,\\
+-8x=(-2B-2C+D-2F+E)x=(-6+D-2F+E)x,\\
+0=-A+B-D+F=1-D+F.\\
+\begin{cases}
+D+E=0\\
+D-2F+E=-2\\
+D-F=1
+\end{cases};\quad
+\begin{cases}
+D+E=0\\
+-2F=-2\\
+D-F=1
+\end{cases};\quad
+\begin{cases}
+E=-2\\
+F=1\\
+D=2
+\end{cases}.\\
+\int\frac{(4x^2-8x)\,dx}{(x-1)^2(x^2+1)^2}=
+\frac{1}{x-1}+\frac{2x+1}{x^2+1}+
+\int\left(\frac{2}{x-1}+\frac{-2x+1}{x^2+1}\right)\,dx=$\\
+$\displaystyle =\frac{1}{x-1}+\frac{2x+1}{x^2+1}+2\ln|x-1|-\ln(x^2+1)+\arctg x=$\\
+$\displaystyle =\frac{3x^2-x}{(x-1)(x^2+1)}+\ln\frac{(x-1)^2}{x^2+1}-\arctg x$.
+
+\medskip
+\noindent{\bf 2066.} $\displaystyle
+\int\frac{5-3x+6x^2+5x^3-x^4}{x^5-x^4-2x^3+2x^2+x-1}\,dx=
+\int\frac{5-3x+6x^2+5x^3-x^4}{(x-1)^3(x+1)^2}\,dx=$\\
+$\displaystyle =\frac{Ax^2+Bx+C}{(x-1)^2(x+1)}+
+\int\left(\frac{D}{x-1}+\frac{E}{x+1}\right)\,dx=\ldots\\
+\frac{5-3x+6x^2+5x^3-x^4}{(x-1)^3(x+1)^2}=$\\
+$\displaystyle =\frac{(x-1)^2(x+1)(2Ax+B)-[2(x^2-1)+(x-1)^2](Ax^2+Bx+C)}{(x-1)^4(x+1)^2}+\\
++\frac{D}{x-1}+\frac{E}{x+1}.\\
+(5-3x+6x^2+5x^3-x^4)(x-1)=(x-1)^2(x+1)(2Ax+B)-\\
+-(x-1)(3x+1)(Ax^2+Bx+C)+(x-1)^3(x+1)^2D+(x-1)^4(x+1)E.\\
+5-3x+6x^2+5x^3-x^4=(x^2-1)(2Ax+B)-(3x+1)(Ax^2+Bx+C)+\\
++(x-1)^2(x+1)^2D+(x-1)^3(x+1)E.\\
+-x^4=(D+E)x^4.\quad 5x^3=(2A-3A-2E)x^3.\\
+6x^2=(B-A-3B-2D)x^2.\quad -3x=(-2A-3C-B+2E)x.\\
+5=-B-C+D-E.\\
+\begin{cases}D+E=-1\\-A-2E=5\\-A-2B-2D=6\\
+-2A-B-3C+2E=-3\\-B-C+D-E=5\end{cases};\quad
+\begin{cases}E=-1-D\\-A+2D=3\\-A-2B-2D=6\\
+-2A-B-3C-2D=-1\\-B-C+2D=4\end{cases};\\
+\begin{cases}E=-1-D\\A=2D-3\\-2B-4D=3\\
+-B-3C-6D=-7\\-B-C+2D=4\end{cases};\quad
+\begin{cases}E=-1-D\\A=2D-3\\2C-8D=-5\\
+-2C-8D=-11\\-B=C-2D+4\end{cases};\quad
+\begin{cases}E=-2\\A=-1\\C=3/2\\
+D=1\\B=-7/2\end{cases}.\\
+\ldots=\frac{3-7x-2x^2}{2(x^3-x^2-x+1)}+
+\int\left(\frac{1}{x-1}-\frac{2}{x+1}\right)\,dx=$\\
+$\displaystyle =\frac{3-7x-2x^2}{2(x^3-x^2-x+1)}+\ln\frac{|x-1|}{(x+1)^2}$.
+
+\medskip
+\noindent{\bf 2075.} $\displaystyle\int\frac{dx}{\sqrt[4]{(x-1)^3(x+2)^5}}=
+\int\frac{\sqrt[4]{x-1}\,dx}{(x-1)(x+2)\sqrt[4]{x+2}}=$\\
+$\displaystyle \left|\frac{x-1}{x+2}=t^4,\quad x-1=t^4(x+2),\quad
+x=\frac{1+2t^4}{1-t^4},\quad x-1=\frac{3t^4}{1-t^4},\right.\\
+\left.x+2=\frac{3}{1-t^4},\quad
+dx=\frac{8t^3(1-t^4)+4t^3(1+2t^4)}{(1-t^4)^2}\,dt=
+\frac{12t^3\,dt}{(1-t^4)^2}.\right|\\
+=\int\frac{t(1-t^4)^212t^3\,dx}{3t^4\cdot3\cdot(1-t^4)^2}=
+\frac43\int dt=\frac43t=
+\frac43\sqrt[4]{\frac{x-1}{x+2}}$.
+
+\medskip
+\noindent{\bf 2080.} $\displaystyle\int\frac{dx}{\sqrt[3]{1+x^3}}=
+\qquad\left|x^{-3}+1=t^3,\quad x=\frac{1}{\sqrt[3]{t^3-1}},\quad
+dx=-\frac{t^2\,dt}{\sqrt[3]{(t^3-1)^4}}.\right|\\
+=-\int\frac{\sqrt[3]{t^3-1}\cdot t^2\,dt}{t\sqrt[3]{(t^3-1)^4}}=
+-\int\frac{t\,dt}{t^3-1}=
+-\int\left(\frac{A}{t-1}+\frac{Bt+C}{t^2+t+1}\right )\,dt=\ldots\\
+t=A(t^2+t+1)+(Bt+C)(t-1).\quad t=1,\quad A=1/3.\\
+t=0,\quad 0=C-A,\quad C=A=1/3.\\
+t=-1,\quad -1=1/3+(B-1/3)\cdot2,\quad B=-1/3.\\
+\ldots=-\frac13\int\left(\frac{1}{t-1}-\frac{t-1}{t^2+t+1}\right )\,dt=$\\
+$\displaystyle =-\frac13\left(\ln|t-1|-\frac12\int\frac{(2t+1)\,dt}{t^2+t+1}+
+\frac32\int\frac{dt}{(t+\frac12)^2+\frac34}\right)=$\\
+$\displaystyle =-\frac13\ln|t-1|+\frac16\ln(t^2+t+1)-
+\frac12\cdot\frac{2}{\sqrt3}\arctg\frac{2t+1}{\sqrt3}=$\\
+$\displaystyle =\frac16\ln\frac{t^2+t+1}{(t-1)^2}-
+\frac{1}{\sqrt3}\arctg\frac{2t+1}{\sqrt3},\quad
+t=\frac{\sqrt[3]{1+x^3}}{x}$.
+
+\medskip
+\noindent{\bf 2089.} $\displaystyle\int\sqrt[3]{1+\sqrt[4]{x}}\,dx=$\\
+$\displaystyle \left|1+\sqrt[4]x=t^3,\quad
+x=(t^3-1)^4,\quad dx=12t^2(t^3-1)^3\,dt\right|$\\
+$\displaystyle =12\int t^3(t^3-1)^3\,dt=12\left(\frac{t^{13}}{13}-
+\frac{3t^{10}}{10}+\frac{3t^{7}}{7}-\frac{t^{4}}{4}\right),\quad
+t=\sqrt[3]{1+\sqrt[4]{x}}$.
+
+\medskip
+\noindent{\bf 2092.} $\displaystyle\int\frac{dx}{\cos x\sin^3x}=
+\int\frac{d(\sin x)}{(1-\sin^2 x)\sin^3x}=
+\int\frac{dt}{(1-t)(1+t)t^3}=$\\
+$\displaystyle \int\left(\frac{A}{1-t}+\frac{B}{1+t}+\frac{C}{t}+
+\frac{D}{t^2}+\frac{E}{t^3}+ \right )\,dt=\ldots\\
+1=A(1+t)t^3+B(1-t)t^3+C(1-t^2)t^2+D(1-t^2)t+E(1-t^2).\\
+t=1,\quad A=1/2.\quad t=-1,\quad B=-1/2,\quad t=0,\quad E=1.\\
+0t^3=(A+B-D)t^3,\quad D=0.\quad 0t^4=(A-B-C)t^4,\quad C=1.\\
+\ldots=\int\left(\frac{1}{2(1-t)}-\frac{1}{2(1+t)}+
+\frac1t+\frac{1}{t^3} \right )\,dt=$\\
+$\displaystyle =-\frac12\ln|1-t|-\frac12\ln|1+t|+\ln|t|-
+\frac12\cdot\frac{1}{t^2}=$\\
+$\displaystyle =-\frac12\ln|1-t^2|+\ln|t|-\frac{1}{2t^2}=
+-\frac12\ln|1-\sin^2x|+\ln|\sin x|-\frac{1}{2\sin^2x}=$\\
+$\displaystyle =\ln|\tg x|-\frac{1}{2\sin^2x}$.
+
+\medskip
+\noindent{\bf 2099.} $\displaystyle\int\ctg^4x\,dx=
+\qquad\left|x=\arcctg t,\quad
+dx=-\frac{dt}{1+t^2}\quad t=\ctg x.\right|\qquad\\
+=-\int\frac{t^4}{1+t^2}\,dt=
+-\int\left(t^2-1+\frac{1}{1+t^2}\right)\,dt=
+-\frac{t^3}{3}+t+\arcctg t=$\\
+$\displaystyle =\ctg x-\frac{\ctg^3x}{3}+x$.
+
+\medskip
+\noindent{\bf 2106.} $\displaystyle \int\frac{dx}{a\cos x+b\sin x}=\qquad \left|t=\tg\frac x2;\quad x=2\arctg t;\quad dx=\frac{2\,dt}{1+t^2}\right|\qquad =\\[3pt]
+=\int\frac{2dt}{(1+t^2)\left(a\frac{1-t^2}{1+t^2}+b\frac{2t}{1+t^2}\right)}=
+\frac 2 a\int\frac{dt}{1-\left(t^2-2\cdot\frac ba t\right)}=\\[3pt]
+=\frac 2 a\int\frac{dt}{1+\frac {b^2}{a^2}-\left(t-\frac ba \right)^2}=
+\frac 2 a\cdot \frac{a}{2\sqrt{a^2+b^2}}
+\ln\left|\frac{\frac{\sqrt{a^2+b^2}}{a}+\left(t-\frac ba\right)}
+{\frac{\sqrt{a^2+b^2}}{a}-\left(t-\frac ba\right)}\right|=\\[3pt]
+=\frac{1}{\sqrt{a^2+b^2}}
+\ln\left|\frac{\sqrt{a^2+b^2}+(at-b)}
+{\sqrt{a^2+b^2}-(at-b)}\right|+C$, где
+$\displaystyle t=\tg\frac x2$. И это ответ.\\[3pt]
+Такую форму ответа можно было бы и оставить, но ответ задачника другой. Это связано с тем, что задачник предполагает другой метод решения. Сначала мы приведем данный ответ к ответу задачника. Для этого мы попытаемся получить под логарифмом тангенс суммы.\\[3pt]
+$\displaystyle \frac{1}{\sqrt{a^2+b^2}}
+\ln\left|\frac{\sqrt{a^2+b^2}+(at-b)}
+{\sqrt{a^2+b^2}-(at-b)}\right|=
+\frac{1}{\sqrt{a^2+b^2}}
+\ln\left|\frac{t+\frac{\sqrt{a^2+b^2}-b}{a}}{\frac{\sqrt{a^2+b^2}+b}{a}-t}\right|$.\\[3pt]
+Прибавив константу, мы не изменим ответ, который от константы не зависит.\\[3pt]
+$\displaystyle \frac{1}{\sqrt{a^2+b^2}}
+\ln\left|\frac{t+\frac{\sqrt{a^2+b^2}-b}{a}}{\frac{\sqrt{a^2+b^2}+b}{a}-t}\right|+\frac{1}{\sqrt{a^2+b^2}}
+\ln\frac{\sqrt{a^2+b^2}+b}{a}=$\\[3pt]
+Под логарифм положительная константа $\displaystyle \frac{\sqrt{a^2+b^2}+b}{a}$ попадет в виде множителя и вызовет сокращения.\\[3pt]
+$\displaystyle =\frac{1}{\sqrt{a^2+b^2}}
+\ln\left|\frac{t+\frac{\sqrt{a^2+b^2}-b}{a}}{\frac{\sqrt{a^2+b^2}+b}{a}-t}\cdot\frac{\sqrt{a^2+b^2}+b}{a} \right|=\frac{1}{\sqrt{a^2+b^2}}
+\ln\left|\frac{t+\frac{\sqrt{a^2+b^2}-b}{a}}{1-\frac{a}{\sqrt{a^2+b^2}+b}t}\right|=\\[3pt]
+=\frac{1}{\sqrt{a^2+b^2}}
+\ln\left|\frac{t+\frac{\sqrt{a^2+b^2}-b}{a}}{1-\frac{a(\sqrt{a^2+b^2}-b)}{a^2+b^2-b^2}t}\right|=\frac{1}{\sqrt{a^2+b^2}}
+\ln\left|\frac{\tg\frac x2+\frac{\sqrt{a^2+b^2}-b}{a}}{1-\frac{\sqrt{a^2+b^2}-b}{a}\cdot\tg\frac x2}\right|=\\[3pt]
+\frac{1}{\sqrt{a^2+b^2}}
+\ln\left|\tg\left(\frac x2+\arctg\frac{\sqrt{a^2+b^2}-b}{a}\right)\right|=\frac{1}{\sqrt{a^2+b^2}}
+\ln\left|\tg\left(\frac x2+\frac{\arctg x}{2}\right)\right|$.\\[3pt]
+Здесь мы заменили угол, тангенс которого равен $\displaystyle \frac{\sqrt{a^2+b^2}-b}{a}$, вдвое большим углом, тангенс которого равен $x$. Остается вычислить этот тангенс по формуле тангенса двойного угла.\\[3pt]
+$\displaystyle x=\frac{2\cdot\frac{\sqrt{a^2+b^2}-b}{a}}{1-
+\left(\frac{\sqrt{a^2+b^2}-b}{a}
+\right)^2}=
+\frac{2(\sqrt{a^2+b^2}-b)a^2}{a(a^2-(\sqrt{a^2+b^2}-b)^2)}=\\[3pt]
+=\frac{2(\sqrt{a^2+b^2}-b)a}{a^2-(a^2+b^2-2b\sqrt{a^2+b^2}+b^2)}=\frac{2(\sqrt{a^2+b^2}-b)a}{2b\sqrt{a^2+b^2}-2b^2}=\frac ab$.\\[3pt]
+Окончательный ответ
+$\displaystyle \frac{1}{\sqrt{a^2+b^2}}
+\ln\left|\tg\frac{x+\arctg \frac ab}{2}\right|+C$.\\[3pt]
+Он совпадает с приведенным в задачнике.
+
+\noindent Интеграл можно взять без использование универсальной тригонометрической подстановки. Ответ задачника подразумевает, что использован именно этот метод.\\[3pt]
+$\displaystyle \int\frac{dx}{a\cos x+b\sin x}=\int\frac{dx}{\sqrt{a^2+b^2}\sin\left(x+\arctg\frac{a}{b}\right)}=\\[3pt]
+=\frac{1}{\sqrt{a^2+b^2}}\int\frac{d\left(x+\arctg\frac{a}{b}\right)}{\sin\left(x+\arctg\frac{a}{b}\right)}=\frac{1}{\sqrt{a^2+b^2}}
+\ln\left|\tg\frac{x+\arctg \frac ab}{2}\right|+C$.\\[3pt]
+Здесь использован в качестве табличного следующий интеграл:\\[3pt]
+$\displaystyle \int\frac{dx}{\sin x}=\ln\left|\tg\frac {x}{2}\right|+C$.\\[3pt]
+В англоязычных руководствах в качестве табличного используется другая форма этого интеграла:\\[3pt]
+$\displaystyle \int\frac{dx}{\sin x}=-\ln(\ctg x+\cosec x)+C$,\\[3pt]
+что дает нам возможность получить еще одну форму ответа.
+
+\medskip
+\noindent{\bf 2111.} $\displaystyle\int\frac{dx}{5+4\sin x}=
+\qquad\left|t=\tg\frac x2,\quad x=2\arctg t,\quad
+dx=\frac{2\,dt}{1+t^2}\right|\\
+=\int\frac{2\,dt}{(5+\frac{8t}{1+t^2})(1+t^2)}
+=\int\frac{2\,dt}{5t^2+8t+5}=
+\frac25\int\frac{dt}{(t+\frac45)^2+\frac{9}{25}}=$\\
+$\displaystyle =\frac25\cdot\frac53\arctg\frac{t+\frac45}{\frac35}=
+\frac23\arctg\frac{5t+4}{3}=\frac23\arctg\frac{5\tg\frac x2+4}{3}$.
+
+\medskip
+\noindent{\bf 2116.} $\displaystyle \int\frac{dx}{5-4\sin x+3\cos x}=\qquad \left|t=\tg\frac x2;\quad x=2\arctg t;\quad dx=\frac{2\,dt}{1+t^2};\right.\\[3pt]
+\left.\sin x=\frac{2t}{1+t^2};\quad \cos x=\frac{1-t^2}{1+t^2}. \right|\qquad =\int\frac{\frac{2}{1+t^2}\cdot dt}{5-4\cdot\frac{2t}{1+t^2}+3\cdot\frac{1-t^2}{1+t^2}}=\\[3pt]
+=\int\frac{2(1+t^2)\,dt}{(1+t^2)(5+5t^2-8t+3-3t^2)}=\int\frac{2\,dt}{2t^2-8t+8}=\int\frac{dt}{(t-2)^2}=-\frac{1}{t-2}=\\[3pt]
+=\frac{1}{2-\tg\frac x2}+C$.
+
+\medskip
+\noindent{\bf 2120.} $\displaystyle\int\frac{dx}{a^2\sin^2x+b^2\cos^2x}=
+\frac{1}{a^2}\int\frac{d(\tg x)}{\tg^2 x+\left(\frac ba\right)^2}=
+\frac{1}{ab}\arctg\left(\frac{a}{b}\tg x\right)$.
+
+\medskip
+\noindent{\bf 2123.} $\displaystyle \int\sqrt{1+\sin x}\,dx=\int\sqrt{\sin^2\frac x2+2\sin\frac x2\cos\frac x2+\cos^2\frac x2}\,dx=\\[3pt]
+=\int\left(\sin\frac x2+\cos\frac x2\right)\,dx=2\int\left(\sin\frac x2+\cos\frac x2\right)\,d\left(\frac x2\right)=2\left(\sin\frac x2-2\cos\frac x2\right)+C$.
+
+\medskip
+\noindent{\bf 2127.} $\displaystyle
+\int\frac{dx}{\sqrt{1-\sin^4x}}=
+\qquad \left|t=\tg x,\quad dx=\frac{dt}{1+t^2}. \right|\\
+1-\sin^4x=1-\left(\frac{1-\cos2x}{2}\right)^2=
+1-\left(\frac{1-\frac{1-t^2}{1+t^2}}{2}\right)^2=
+1-\left(\frac{t^2}{1+t^2}\right)^2=\frac{1+2t^2}{(1+t^2)^2}.\\
+=\int\frac{dx}{\sqrt{1-\sin^4x}}=
+\int\frac{(1+t^2)\,dt}{(1+t^2)\sqrt{1+2t^2}}=
+\frac{1}{\sqrt2}\int\frac{dt}{\sqrt{t^2+\frac12}}=$\\
+$\displaystyle =\frac{1}{\sqrt2}\ln\left(t+\sqrt{t^2+\frac12}\right)=
+\frac{1}{\sqrt2}\ln\left(\sqrt 2\tg x+
+\sqrt{2\tg^2x+1}\right)-\frac{1}{\sqrt2}\ln\sqrt2=$\\
+$\displaystyle =\frac{1}{\sqrt2}\ln\left(\sqrt 2\tg x+\sqrt{2\tg^2x+1}\right)+C$.
+
+\medskip
+\noindent{\bf 2139.} $\displaystyle\int\cth^2x\,dx=
+\int\ch x\cdot\frac{d(\sh x)}{\sh^2x}=
+-\int\ch x\,d\left(\frac{1}{\sh x}\right)=$\\
+$\displaystyle =-\frac{\ch x}{\sh x}+\int\frac{\sh x}{\sh x}\,dx=
+x-\cth x$.
+
+\medskip
+\noindent{\bf 2150.} $\displaystyle\int\frac{e^{2x}dx}{\sh^4x}=
+16\int\frac{e^x\,d(e^x)}{(e^x-e^{-x})^4}=
+16\int\frac{t\,dt}{\left(t-\frac 1t\right)^4}=
+16\int\frac{\frac{1}{t^3}{}\,dt}{\left(1-\frac{1}{t^2}\right)^4}=$\\
+$\displaystyle =8\int\frac{d\left(-\frac{1}{t^2} \right )}{\left(1-\frac{1}{t^2}\right)^4}=
+8\int\frac{d\left(1-\frac{1}{t^2}\right)}{\left(1-\frac{1}{t^2}\right)^4}=
+-\frac{8}{3\left(1-\frac{1}{t^2}\right)^3}=
+-\frac{8t^3}{3\left(t-\frac{1}{t}\right)^3}=$\\
+$\displaystyle =-\frac{8(e^x)^3}{3\left(e^x-\frac{1}{e^x}\right)^3}=
+-\frac{e^{3x}}{3\sh^3 x}$.
+
+\medskip
+\noindent{\bf 2154.} $\displaystyle \int\frac{dx}{x\sqrt{2+x-x^2}}\,dx=
+\int\frac{dx}{x\sqrt{(1+x)(2-x)}}\,dx
+=\int\sqrt{\frac{1+x}{2-x}}\cdot\frac{dx}{x(1+x)}=$\\
+$\displaystyle \left|\frac{1+x}{2-x}=t^2,\quad 1+x=(2-x)t^2,\quad
+x=\frac{2t^2-1}{t^2+1},\quad x+1=\frac{3t^2}{t^2+1},\right.\\
+\left.dx=\frac{(t^2+1)4t-2t(2t^2-1)}{(t^2+1)^2}\,dt=
+\frac{6t\,dt}{(t^2+1)^2}\right|\\
+=\int\frac{t(t^2+1)^2\cdot6t\,dt}
+{(2t^2-1)\cdot3t^2(t^2+1)^2}=
+\int\frac{dt}{t^2-1/2}=
+\frac{\sqrt2}{2}\ln\left|\frac{t-\sqrt2/2}{t+\sqrt2/2}\right|=$\\
+$\displaystyle =-\frac{\sqrt2}{2}\ln\left|\frac{\sqrt2t+1}{\sqrt2t-1}\right|=
+-\frac{\sqrt2}{2}\ln
+\left|\frac{2\cdot\frac{1+x}{2-x}+2\sqrt2\cdot\sqrt{\frac{1+x}{2-x}}+1}
+{2\cdot\frac{1+x}{2-x}-1}\right|=$\\
+$\displaystyle =-\frac{\sqrt2}{2}\ln
+\left|\frac{2(1+x)+2\sqrt2\cdot\sqrt{2+x-x^2}+2-x}
+{2(1+x)-(2-x)}\right|=$\\
+$\displaystyle =-\frac{\sqrt2}{2}\ln\left|\frac{4+x+2\sqrt2\cdot\sqrt{2+x-x^2}}{3x}\right|=$\\
+$\displaystyle =-\frac{\sqrt2}{2}\ln\frac{2\sqrt2}{3}-
+\frac{\sqrt2}{2}\ln
+\left|\frac{\sqrt{2+x-x^2}+\sqrt2}{x}+\frac{1}{2\sqrt2}\right|=$\\
+$\displaystyle =C-\frac{\sqrt2}{2}\ln\left|\frac{\sqrt{2+x-x^2}+\sqrt2}{x}+
+\frac{1}{2\sqrt2}\right|$.
+
+\medskip
+\noindent{\bf 2162.} $\displaystyle\int\frac{dx}{x^2(x+\sqrt{1+x^2})}=
+-\int\frac{(x-\sqrt{1+x^2})}{x^2}\,dx=$\\
+$\displaystyle =-\int\frac{dx}{x}+\int\frac{\sqrt{1+x^2}}{x^2}\,dx=
+-\ln|x|+\int\frac{dx}{x^2\sqrt{1+x^2}}+\int\frac{dx}{\sqrt{1+x^2}}=$\\
+$\displaystyle =\ln\left|\frac{x+\sqrt{1+x^2}}x\right|+\int\frac{dx}{x^2\sqrt{1+x^2}}$.\\
+Оставшийся интеграл вычисляем подстановкой Абеля.\\
+$\displaystyle t=\frac{x}{\sqrt{1+x^2}},\quad t^2(1+x^2)=x^2,\quad
+x^2=\frac{t^2}{1-t^2};\quad t\sqrt{1+x^2}=x,\\
+dt\sqrt{1+x^2}+\frac{tx\,dx}{\sqrt{1+x^2}}=dx,\quad
+dt\sqrt{1+x^2}+t^2\,dx=dx,\quad \frac{dt}{1-t^2}=\frac{dx}{\sqrt{1+x^2}}.\\
+\int\frac{dx}{x^2\sqrt{1+x^2}}=\int\frac{(1-t^2)dt}{t^2(1-t^2)}=
+\int\frac{dt}{t^2}=-\frac1t=-\frac{\sqrt{1+x^2}}{x}$.\\
+Ответ: $\displaystyle\ln\left|\frac{x+\sqrt{1+x^2}}x\right|-\frac{\sqrt{1+x^2}}{x}$.
+
+\medskip
+\noindent{\bf 2170.} $\displaystyle\int\frac{x^4\,dx}{\sqrt{x^2+4x+5}}=
+(Ax^3+Bx^2+Cx+D)\sqrt{x^2+4x+5}+
+\lambda\int\frac{dx}{\sqrt{x^2+4x+5}};\\
+\frac{x^4}{\sqrt{x^2+4x+5}}=
+(3Ax^2+2Bx+C)\sqrt{x^2+4x+5}+
+\frac{(Ax^3+Bx^2+Cx+D)(x+2)}{\sqrt{x^2+4x+5}}+\\
++\frac{\lambda}{\sqrt{x^2+4x+5}};\\
+x^4=(3Ax^2+2Bx+C)(x^2+4x+5)+(Ax^3+Bx^2+Cx+D)(x+2)+\lambda;\\
+1=3A+A,\quad 0=12A+2B+2A+B,\quad 0=15A+8B+C+2B+C,\\
+0=10B+4C+2C+D;\quad 0=5C+2D+\lambda.\\
+A=\frac14,\quad B=-\frac76,\quad
+C=-\frac{15}{2}A-5B=-\frac{15}{8}+\frac{35}{6}=
+\frac{140-45}{24}=\frac{95}{24},\\
+D=\frac{70}{6}-\frac{6\cdot95}{24}=\frac{280-570}{24}=
+-\frac{290}{24}=-\frac{145}{12},\\
+\lambda=-\frac{5\cdot95}{24}+\frac{145}{6}=\frac{580-475}{24}=
+\frac{105}{24}=\frac{35}{8}$.\\
+Ответ: $\displaystyle\left(\frac14x^3-\frac76x^2+\frac{95}{24}x-
+\frac{145}{12}\right)\sqrt{x^2+4x+5}+
+\frac{35}{8}\ln\left(x+2+\sqrt{x^2+4x+5}\right)$.
+
+\medskip
+\noindent{\bf 2174.} $\displaystyle
+\int\frac{(2x+3)\,dx}{(x^2+2x+3)\sqrt{x^2+2x+4}}=$\\
+$\displaystyle =\int\frac{(2x+2)\,dx}{(x^2+2x+3)\sqrt{x^2+2x+4}}+
+\int\frac{dx}{(x^2+2x+3)\sqrt{x^2+2x+4}}.\\
+1) \int\frac{(2x+2)\,dx}{(x^2+2x+3)\sqrt{x^2+2x+4}}=
+2\int\frac{d\sqrt{x^2+2x+4}}{x^2+2x+3}=2\int\frac{dt}{t^2-1}=$\\
+$\displaystyle =\ln\left|\frac{t-1}{t+1}\right|=
+\ln\left|\frac{\sqrt{x^2+2x+4}-1}{\sqrt{x^2+2x+4}+1}\right|.\\
+2) \int\frac{dx}{(x^2+2x+3)\sqrt{x^2+2x+4}}=\ldots\\
+t=\left(\sqrt{x^2+2x+4}\right)'=
+\frac{x+1}{\sqrt{x^2+2x+4}},\quad
+x+1=t\sqrt{x^2+2x+4},\\
+x^2+2x+1=(x^2+2x+4)t^2,\quad x^2+2x+4-3=(x^2+2x+4)t^2,\\
+x^2+2x+4=\frac{3}{1-t^2},\quad x^2+2x+3=\frac{2+t^2}{1-t^2},\\
+dx=dt\sqrt{x^2+2x+4}+t^2dx,\quad
+\frac{dx}{\sqrt{x^2+2x+4}}=\frac{dt}{1-t^2}.\\
+\ldots=\int\frac{dt}{2+t^2}=-\frac{1}{\sqrt2}\arcctg\frac{t}{\sqrt2}=
+-\frac{1}{\sqrt2}\arcctg\frac{x+1}{\sqrt{2(x^2+2x+4)}}=$\\
+$\displaystyle =-\frac{1}{\sqrt2}\arctg\frac{\sqrt{2(x^2+2x+4)}}{x+1}+
+\frac{1}{\sqrt2}\cdot\frac{\pi}{2}$.\\
+Ответ:
+$\displaystyle\ln\left|\frac{\sqrt{x^2+2x+4}-1}{\sqrt{x^2+2x+4}+1}\right|-
+\frac{1}{\sqrt2}\arctg\frac{\sqrt{2(x^2+2x+4)}}{x+1}+C$.
+
+\medskip
+\noindent{\bf 2177.} $\displaystyle\int x\sqrt[3]{a+x}\,dx=
+\frac34\int x\,d[(a+x)^{4/3}]=
+\frac34x(a+x)^{4/3}-\frac34\int (a+x)^{4/3}dx=$\\
+$\displaystyle =\frac34x(a+x)^{4/3}-\frac{9}{28}(a+x)^{7/3}dx=
+\frac{3(4x-3a)\sqrt[3]{(a+x)^4}}{28}$.
+
+\medskip
+\noindent{\bf 2185.} $\displaystyle\int x^2\sh x\,dx=\int x^2d(\ch x)=
+x^2\ch x-2\int x\ch x\,dx=$\\
+$\displaystyle =x^2\ch x-2\int x\,d(\sh x)=
+x^2\ch x-2x\sh x+2\int\sh x\,dx=$\\
+$\displaystyle =x^2\ch x-2x\sh x+2\ch x$.
+
+\medskip
+\noindent{\bf 2191.} $\displaystyle\int\sin\sqrt x\,dx=
+\qquad\left|t=\sqrt x,\quad x=t^2\right|\qquad =2\int t\sin t\,dt=$\\
+$\displaystyle =-2\int t\,d(\cos t)=-2t\cos t+2\int\cos t\,dt=-2t\cos t+2\sin t=$\\
+$\displaystyle =2(\sin\sqrt x-\sqrt x\cos\sqrt x)$.
+
+\medskip
+\noindent{\bf 2197.} $\displaystyle\int\frac{dx}{x^3\sqrt{(1+x)^3}}=
+\int\frac{dx}{x^3(1+x)\sqrt{1+x}}=$\\
+$\displaystyle \left|\sqrt{1+x}=t,\quad x=t^2-1\right.\quad dx=2t\,dt.|$\\
+$\displaystyle =\int\frac{2\,dt}{t^2(t^2-1)^3}=
+\int\left(\frac{A}{t^2}+\frac{B}{t^2-1}+
+\frac{C}{(t^2-1)^2}+\frac{D}{(t^2-1)^3}\right)\,dt=\ldots\\
+2=(t^2-1)^3A+t^2(t^2-1)^2B+t^2(t^2-1)C+t^2D.\\
+t^2=0,\quad A=-2.\quad t^2=1,\quad D=2.\\
+0t^2=3A+B-C+D,\quad B-C=4.\\
+0t^4=-3A-2B+C,\quad 2B-C=6.\quad B=2,\quad C=-2.\\
+\ldots=\int\left(-\frac{2}{t^2}+\frac{2}{t^2-1}-
+\frac{2}{(t^2-1)^2}+\frac{2}{(t^2-1)^3}\right)\,dt=\ldots\\
+I_n=\int\frac{dt}{(t^2-1)^n}=\frac{t}{(t^2-1)^n}+
+2n\int\frac{t^2\,dt}{(t^2-1)^{n+1}}=$\\
+$\displaystyle =\frac{t}{(t^2-1)^n}+2n\int\frac{(t^2-1)\,dt}{(t^2-1)^{n+1}}+
+2n\int\frac{dt}{(t^2-1)^{n+1}}=$\\
+$\displaystyle =\frac{t}{(t^2-1)^n}+2nI_n+2nI_{n+1}.\quad
+I_{n+1}=-\frac{2n-1}{2n}I_n-\frac{t}{2n(t^2-1)^n}.\\
+I_2=-\frac14\ln\left|\frac{t-1}{t+1}\right|-\frac{t}{2(t^2-1)}.\quad
+I_3=\frac{3}{16}\ln\left|\frac{t-1}{t+1}\right|+
+\frac{3t}{8(t^2-1)}-\frac{t}{4(t^2-1)^2}.\\
+\ldots=\frac{2}{t}+\ln\left|\frac{t-1}{t+1}\right|+
+\frac12\ln\left|\frac{t-1}{t+1}\right|+\frac{t}{t^2-1}+
+\frac{3}{8}\ln\left|\frac{t-1}{t+1}\right|+
+\frac{3t}{4(t^2-1)}-\frac{t}{2(t^2-1)^2}=$\\
+$\displaystyle =\frac{15}{8}\ln\left|\frac{t-1}{t+1}\right|+
+\frac{8(t^2-1)^2+4t^2(t^2-1)+3t^2(t^2-1)-2t^2}{4t(t^2-1)^2}=$\\
+$\displaystyle =\frac{15}{8}\ln\left|\frac{\sqrt{1+x}-1}{\sqrt{1+x}+1}\right|+
+\frac{8x^2+7(x+1)x-2(x+1)}{4x^2\sqrt{1+x}}=$\\
+$\displaystyle =\frac{15x^2+5x-2}{4x^2\sqrt{1+x}}+
+\frac{15}{8}\ln\left|\frac{\sqrt{1+x}-1}{\sqrt{1+x}+1}\right|$.
+
+\medskip
+\noindent{\bf 2203.} $\displaystyle\int x\ln(1+x^3)\,dx=
+\frac12\int\ln(1+x^3)\,d(x^2)=
+\frac{x^2}{2}\ln(1+x^3)-\frac32\int\frac{x^4dx}{1+x^3}.\\
+\int\frac{x^4dx}{1+x^3}=\int\left(x-\frac{x}{(1+x)(1-x+x^2)} \right )\,dx=
+\int\left(x+\frac{A}{1+x}+\frac{Bx+C}{1-x+x^2}\right )\,dx.\\
+-x=(1-x+x^2)A+(1+x)(Bx+C).\quad x=-1,\quad A=1/3.\\
+x=0,\quad 0=A+C,\quad C=-1/3.\quad x=1,\quad -1=A+2B+2C,\quad
+B=-1/3.\\
+\int\frac{x^4dx}{1+x^3}=\frac{x^2}{2}+\frac13\ln|1+x|-
+\frac13\int\frac{x+1}{1-x+x^2}$
+
+\medskip
+\noindent{\bf 2210.} $\displaystyle\int\frac{\sin 2x\,dx}{\cos^4x+\sin^4x}=
+\int\frac{2\sin x\cos x\,dx}{(1+\tg^4 x)\cos^4x}=
+\int\frac{2\tg x\,d(\tg x)}{1+\tg^4 x}=$\\
+$\displaystyle =\int\frac{d(\tg^2 x)}{1+\tg^4 x}=\arctg(\tg^2x)$.
+
+\medskip
+\noindent{\bf 2216.} $\displaystyle\int\frac{xe^xdx}{\sqrt{1+e^x}}=
+\qquad\left|1+e^x=t^2,\quad x=\ln(t^2-1),\quad
+dx=\frac{2t\,dt}{t^2-1}.\right|\qquad\\
+=\int\frac{\ln(t^2-1)\cdot(t^2-1)\cdot2t\,dt}{t\cdot(t^2-1)}=
+2\int\ln(t^2-1)\,dt=$\\
+$\displaystyle =2t\ln(t^2-1)-4\int\frac{t^2dt}{t^2-1}=
+2t\ln(t^2-1)-4t-2\ln\left|\frac{t-1}{t+1}\right|=$\\
+$\displaystyle =2x\sqrt{1+e^x}-4\sqrt{1+e^x}-
+2\ln\left|\frac{\sqrt{1+e^x}-1}{\sqrt{1+e^x}+1}\right|$.
+
+\medskip
+\noindent{\bf 2222.} $\displaystyle\int\frac{dx}{\sqrt{1+e^x+e^{2x}}}=
+\qquad\left|e^x=t,\quad x=\ln t,\quad dx=\frac{dt}{t}.\right|\qquad\\
+=\int\frac{dt}{t\sqrt{1+t+t^2}}=
+\qquad\left|t=\frac{1}{u},\quad dt=-\frac{du}{u^2}.\right|\qquad
+=-\int\frac{u\cdot u\,du}{u^2\sqrt{u^2+u+1}}=$\\
+$\displaystyle =-\int\frac{d\left(u+\frac12\right)}
+{\sqrt{\left(u+\frac12\right)^2+\frac34}}=
+-\ln\left|u+\frac12+\sqrt{u^2+u+1}\right|=$\\
+$\displaystyle =\ln\left|\frac{1}{u+\frac12+\sqrt{u^2+u+1}}\right|=
+\ln\left|\frac{u+1-\sqrt{u^2+u+1}}{\frac12u-\frac12+\frac12\sqrt{u^2+u+1}}\right|=$\\
+$\displaystyle =\ln2+\ln\left|\frac{u+1-\sqrt{u^2+u+1}}{u-1+\sqrt{u^2+u+1}}\right|=
+=\ln\left|\frac{1+e^x-\sqrt{1+e^x+e^{2x}}}{1-e^x+\sqrt{1+e^x+e^{2x}}}\right|+C$.\\
+Далее оцениваем радикал. Имеем: $\sqrt{1+e^x+e^{2x}}=
+\sqrt{\left(e^x+\frac12\right)^2+\frac34}<e^x+\frac12;$\\
+$\displaystyle \sqrt{1+e^x+e^{2x}}=\sqrt{(e^x+1)^2-e^x}>e^x+1$.
+Теперь мы обнаруживаем, что числитель и знаменатель дроби положителен, и мы
+можем снять знак модуля. Окончательный ответ:
+$\displaystyle\ln\frac{1+e^x-\sqrt{1+e^x+e^{2x}}}{1-e^x+\sqrt{1+e^x+e^{2x}}}+C$.
+
+\medskip
+\noindent{\bf 2225.} $\displaystyle\int\frac{(3+x^2)^2x^3dx}{(1+x^2)^3}=
+\frac12\int\frac{(3+x^2)^2x^2d(1+x^2)}{(1+x^2)^3}=
+\qquad\left|1+x^2=t\right|\qquad\\
+=\frac12\int\frac{(t+2)^2(t-1)\,dt}{t^3}=
+\frac12\int\left( 1+\frac{3}{t}-\frac{4}{t^3}\right)\,dt=$\\
+$\displaystyle =\frac12t+\frac32\ln|t|+\frac{1}{t^2}=
+\frac12x^2+\frac32\ln(x^2+1)+\frac{1}{(x^2+1)^2}+C$.
+
+\medskip
+\noindent{\bf 2227.} $\displaystyle\int\frac{dx}{\sin^4x+\cos^4x}=
+\int\frac{dx}{(\tg^4x+1)\cos^4x}=
+\int\frac{(\tg^2x+1)\,d(\tg x)}{\tg^4x+1}=$\\
+$\displaystyle =\int\frac{(t^2+1)\,dt}{t^4+1}=
+\int\frac{\left(1+\frac{1}{t^2}\right)\,dt}{t^2+\frac{1}{t^2}}=
+\int\frac{d\left(t-\frac{1}{t}\right)}{t^2+\frac{1}{t^2}}=
+\int\frac{d\left(t-\frac{1}{t}\right)}{\left(t-\frac{1}{t}\right)^2+2}=$\\
+$\displaystyle =\frac{1}{\sqrt2}\arctg\frac{t-\frac{1}{t}}{\sqrt2}=
+\frac{\sqrt2}{2}\arctg\left[\frac{\sqrt2}{2}
+\left(\frac{\sin x}{\cos x}-\frac{\cos x}{\sin x}\right)\right]=$\\
+$\displaystyle =\frac{\sqrt2}{2}\arctg\frac{\sqrt2(\sin^2x-\cos^2x)}{2\sin x\cos x}=
+-\frac{\sqrt2}{2}\arctg(\sqrt2\ctg2x)$.
+
+\medskip
+\section* {Глава VII. Способы вычисления определенных интегралов. Несобственные интегралы}
+
+\medskip
+\noindent{\bf 2237.} $\displaystyle \int_0^1(e^x-1)^4e^xdx=
+\qquad\left|e^x=t\right|\qquad=\int_1^e(t-1)^4dt=
+\left.\frac{(t-1)^5}{5}\right|_1^e=\frac{(e-1)^5}{5}$.
+
+\medskip
+\noindent{\bf 2245.} $\displaystyle \int_{1/2}^{\sqrt3/2}\frac{x^3dx}
+{\left(\frac58-x^4\right)\sqrt{\left(\frac58-x^4\right)}}=
+-\frac14\int_{1/2}^{\sqrt3/2}\frac{d\left(\frac58-x^4\right)}
+{\left(\frac58-x^4\right)^{3/2}}=$\\
+$\displaystyle =\left.\frac12\left(\frac58-x^4\right)^{-1/2}\right|_{1/2}^{\sqrt3/2}=
+\frac12\left(\frac58-\frac{9}{16}\right)^{-1/2}-
+\frac12\left(\frac58-\frac{1}{16}\right)^{-1/2}=
+\frac{1}{2}(4-4/3)=4/3$.
+
+\medskip
+\noindent{\bf 2252.} $\displaystyle \int_{0}^{\pi/2}\cos^5x\sin2x\,dx=
+-2\int_{0}^{\pi/2}\cos^6x\,d(\cos x)=
+-\left.2\cdot\frac{\cos^7x}{7}\right|_{0}^{\pi/2}=\frac27$.
+
+\medskip
+\noindent{\bf 2260.} $\displaystyle \int_{0}^{\pi/2}x\cos x\,dx=
+\left.x\sin x\right|_{0}^{\pi/2}-\int_{0}^{\pi/2}\sin x\,dx=
+\frac{\pi}{2}+\left.\cos x\right|_{0}^{\pi/2}=\frac{\pi}{2}-1$.
+
+\medskip
+\noindent{\bf 2267.} $\displaystyle \int_{0}^{\pi/2}e^{2x}\cos x\,dx$.
+
+\smallskip
+\noindent $\blacktriangleleft$ $\displaystyle I=\int_{0}^{\pi/2}e^{2x}\cos x\,dx=
+\left.e^{2x}\sin x\right|_{0}^{\pi/2}-2\int_{0}^{\pi/2}e^{2x}\sin x\,dx=$\\
+$\displaystyle =e^{\pi}+2\int_{0}^{\pi/2}e^{2x}d(\cos x)=
+e^{\pi}+\left.2e^{2x}\cos x\right|_{0}^{\pi/2}-4\int_{0}^{\pi/2}e^{2x}\cos x\,dx=$\\
+$\displaystyle =e^{\pi}-2-4I;\quad I=\frac{e^{\pi}-2}{5}$. $\blacktriangleright$
+
+\medskip
+\noindent{\bf 2271.} Составить рекуррентную формулу и вычислить интеграл\\
+$\displaystyle \int_{-1}^0x^ne^x\,dx$ ($n$ -- целое положительное число).
+
+\smallskip
+\noindent $\blacktriangleleft$ $\displaystyle \int_{-1}^0x^ne^x\,dx\\
+I_n=\int_{-1}^0x^ne^x\,dx=x^ne^x\Big|_{-1}^0-n\int_{-1}^0x^{n-1}e^x\,dx=
+-\frac{(-1)^n}{e}-nI_{n-1}.\\
+I_0=1-\frac1e,\quad I_1=-1+\frac2e,\quad
+I_2=2-\frac5e,\quad I_3=-2\cdot3+\frac{16}{e},\ldots\\
+I_n=(-1)^nn!\left[1-\frac1e\left(\frac{1}{n!}+
+\frac{1}{(n-1)!}+\ldots+\frac{1}{1!}+\frac{1}{0!}\right)\right]$.
+$\blacktriangleright$
+
+\medskip
+\noindent{\bf 2281*.} $\displaystyle \int_0^{\pi}\sin^6\frac x2\,dx=
+\int_0^{\pi}\left(\frac{1-\cos x}{2}\right)^3dx=$\\
+$\displaystyle =\frac18\int_0^{\pi}(1-3\cos x+3\cos^2 x-\cos^3 x)\,dx=$\\
+$\displaystyle =\frac{\pi}{8}-\frac38\sin x\Big|_0^{\pi}+
+\frac38\int_0^{\pi}\frac{1+\cos2x}{2}\,dx-
+\frac18\int_0^{\pi}(1-\sin^2x)d\sin x=$\\
+$\displaystyle =\frac{\pi}{8}-0+\frac{3\pi}{16}+
+\frac{3}{16}\sin 2x\Big|_0^{\pi}-\left(\frac{\sin x}{8}-
+\frac{\sin^3x}{24} \right )\Big|_0^{\pi}=
+\frac{5\pi}{16}$.
+
+\medskip
+\noindent{\bf 2288.} $\displaystyle \int_0^1\sqrt{(1-x^2)^3}\,dx=\qquad\left|x=\sin u,\quad dx=\cos x\,dx\right|\qquad\\
+=\int_0^{\pi/2}\cos^4 u\,du=\int_0^{\pi/2}\frac{(1+\cos 2u)^2}{4}\,du=\\
+=\int_0^{\pi/2}\frac{du}{4}+\int_0^{\pi/2}\frac{\cos 2u}{2}\,du+\int_0^{\pi/2}\frac{\cos^2 2u}{4}\,du=\\
+=\frac{\pi}{8}+\frac{\sin 2u}{4}\Big|_0^{\pi/2}+\int_0^{\pi/2}\frac{1+\cos 4u}{8}\,du=
+\frac{\pi}{8}+0+\frac{\pi}{16}+\int_0^{\pi/2}\frac{\cos 4u}{8}\,du=\\
+=\frac{3\pi}{16}+\frac{\sin 4u}{32}\Big|_0^{\pi/2}=\frac{3\pi}{16}+0=\frac{3\pi}{16}.$
+
+\medskip
+\noindent{\bf 2295.} $\displaystyle \int_{\sqrt{8/3}}^{2\sqrt2}\frac{dx}{x\sqrt{(x^2-2)^5}}=\qquad
+|x=\sqrt2\sec u,\quad dx=\sqrt2\sec u \tg u\,du|\\
+=\int_{\pi/6}^{\pi/3}\frac{\sqrt2\sec u \tg u\,du}{\sqrt2\sec u\cdot 2^{5/2}\cdot \tg^5 u}=
+\frac{\sqrt2}{8}\int_{\pi/6}^{\pi/3}\frac{du}{\tg^4u}=$\\
+Отдельно вычислим неопределенный интеграл.\\
+$\displaystyle \int\frac{du}{\tg^4u}=-\int\ctg^2u\cos^2u\,d\ctg u=
+-\int\ctg^2u\cos^2u\,d\ctg u=\\
+=-\int\ctg^2u\left(1-\frac{1}{1+\ctg^2u}\right)\,d\ctg u=
+-\int\left(\ctg^2u-1+\frac{1}{1+\ctg^2u}\right)\,d\ctg u=\\
+=-\frac{\ctg^3u}{3}+\ctg u+u.$\\
+Теперь продолжаем вычисление определенного интеграла.\\
+$\displaystyle =\frac{\sqrt2}{8}\left(-\frac{\ctg^3u}{3}+\ctg u+u\right)\Big|_{\pi/6}^{\pi/3}=
+\frac{\sqrt2}{8}\left(-\frac{\sqrt3}{27}+\frac{\sqrt3}{3}+\frac{\pi}{3}+\sqrt3-\sqrt3-\frac{\pi}{6}\right)=\\
+=\frac{\sqrt2}{8}\left(\frac{8\sqrt3}{27}+\frac{\pi}{6}\right)=\frac{\sqrt6}{27}+\frac{\pi\sqrt2}{48}.$
+
+\medskip
+\noindent{\bf 2298.} Вычислить среднее значение функций $f(x)=\sin x$ и
+$f(x)=\sin^2x$ на отрезке $[0,\pi]$.
+
+\smallskip
+\noindent $\blacktriangleleft$ $\displaystyle \frac{\int_0^{\pi}\sin x\,dx}{\pi}=
+\frac{-\cos x\big|_0^{\pi}}{\pi}=\frac {2}{\pi}.\\
+\frac{\int_0^{\pi}\sin^2 x\,dx}{\pi}=\frac{\int_0^{\pi}(1-\cos 2x)\,dx}{2\pi}=
+\frac{\int_0^{\pi}dx-\int_0^{\pi}\cos 2x\,d(2x)}{2\pi}=\frac{\pi-0}{2\pi}=\frac12.$
+$\blacktriangleright$
+
+\medskip
+\noindent{\bf 2305.} $\displaystyle \int_0^2\frac{dx}{\sqrt{x+1}+\sqrt{(x+1)^3}}=\\
+\left|t=\sqrt{x+1};\quad t^2=x+1;\quad x=t^2-1;\quad dx=2t\,dt.\right|\\
+=\int_1^{\sqrt3}\frac{2t\,dt}{t+t^3}=\frac12\int_1^{\sqrt3}\frac{dt}{1+t^2}=
+\frac12\arctg x\Big|_1^{\sqrt3}=\frac12\cdot\left(\frac{\pi}{3}-\frac{\pi}{4}\right)=
+\frac{\pi}{6}$.
+
+\medskip
+\noindent{\bf 2312.} $\displaystyle \int_0^{\pi/2}\frac{dx}{2\cos x+3}=\qquad
+\left|t=\tan\frac x2;\quad\cos x=\frac{1-t^2}{1+t^2};\quad dx=\frac{2\,dt}{1+t^2}\right|\\
+=\int_0^1\frac{2\,dt}{\left(2\frac{1-t^2}{1+t^2}+3\right)(1+t^2)}=
+\int_0^1\frac{2\,dt}{2(1-t^2)+3(1+t^2)}=2\int_0^1\frac{dt}{5+t^2}=\\
+\frac{2}{\sqrt5}\arctg\frac{x}{\sqrt5}\Big|_0^1=
+\frac{2}{\sqrt5}\arctg\frac{1}{\sqrt5}$.
+
+\medskip
+\noindent{\bf 2319.} Решить уравнение
+$\displaystyle \int_{\sqrt2}^x\frac{dx}{x\sqrt{x^2-1}}=\frac{\pi}{12}$.
+
+\smallskip
+\noindent $\blacktriangleleft$ Сначала вычислим интеграл: $\displaystyle
+\int_{\sqrt2}^x\frac{dx}{x\sqrt{x^2-1}}=
+\frac12\int_{\sqrt2}^x\frac{d(x^2)}{x^2\sqrt{x^2-1}}=\\
+\left|\sqrt{x^2-1}=t;\quad x^2=t^2+1;\quad d(x^2)=2t\,dt.\right|\\
+=\frac12\int_1^{\sqrt{x^2-1}}\frac{2t\,dt}{(t^2+1)\cdot t}=\arctg t\Big|_1^{\sqrt{x^2-1}}=
+\arctg\sqrt{x^2-1}-\frac{\pi}{4}$.\\
+
+\smallskip\noindent Теперь можем решить уравнение:
+
+\smallskip\noindent
+$\displaystyle\arctg\sqrt{x^2-1}-\frac{\pi}{4}=\frac{\pi}{12};\quad
+\arctg\sqrt{x^2-1}=\frac{\pi}{3};\quad \sqrt{x^2-1}=\sqrt{3};\quad x^2=4;\\
+x=\pm2.$\\
+Подынтегральное выражение в уравнении не имеет смысла на интервале
+$(-1,1)$ поэтому при $x=-2$ интеграл также не имеет смысла. Ответ: $2$.
+$\blacktriangleright$
+
+\bigskip\noindent Вычислить несобственные интегралы (или установить их расходимость).
+
+\medskip
+\noindent{\bf 2371.} $\displaystyle \int_0^{+\infty}\frac{\ln x}{x}\,dx=
+\int_0^{+\infty}\ln x\,d(\ln x)=\frac12(\ln x)^2\Big|_0^{+\infty}$.\\
+Интеграл расходится.
+
+\medskip
+\noindent{\bf 2381.} $\displaystyle \int_0^{+\infty}e^{-ax}\cos bx\,dx$.
+
+\smallskip
+\noindent $\blacktriangleleft$ $\displaystyle I=\int_0^{+\infty}e^{-ax}\cos bx\,dx=
+\frac1b\int_0^{+\infty}e^{-ax}d(\sin bx)=\\
+=\frac1b\cdot e^{-ax}\sin bx\Big|_0^{+\infty}+\frac ab\int_0^{+\infty}e^{-ax}\sin bx\,dx=
+0-\frac{a}{b^2}\int_0^{+\infty}e^{-ax}d(\cos bx)=\\
+=-\frac{a}{b^2}\cdot e^{-ax}\cos bx\Big|_0^{+\infty}-
+\frac{a^2}{b^2}\int_0^{+\infty}e^{-ax}\cos bx\,dx=
+\frac{a}{b^2}-\frac{a^2}{b^2}I.\\
+I=\frac{a}{b^2}-\frac{a^2}{b^2}I;\quad \left(1+\frac{a^2}{b^2}\right)I=
+\frac{a}{b^2};\quad I=\frac{ab^2}{b^2(a^2+b^2)}=\frac{a}{a^2+b^2}$.
+Ответ: $\displaystyle\frac{a}{a^2+b^2}$. $\blacktriangleright$
+
+\bigskip\noindent Исследовать сходимость интегралов
+
+\bigskip\noindent {\bf 2388.} $\displaystyle \int_0^{+\infty}\frac{x^{13}}{(x^5+x^3+1)^3}\,dx$.
+
+\smallskip
+\noindent $\blacktriangleleft$ Подынтегральная функция не превосходит функции,
+интеграл от которой сходится:
+$\displaystyle\frac{x^{13}}{(x^5+x^3+1)^3}<\frac{x^{13}}{(x^5)^3}=\frac{1}{x^2}$.
+Ответ: Сходится. $\blacktriangleright$
+
+\medskip
+\noindent{\bf 2393.} $\displaystyle \int_e^{+\infty}\frac{dx}{x(\ln x)^{3/2}}$.
+
+\smallskip
+\noindent $\blacktriangleleft$ $\displaystyle \int_e^{+\infty}\frac{dx}{x(\ln x)^{3/2}}=
+\int_e^{+\infty}\frac{d(\ln x)}{(\ln x)^{3/2}}=-2\cdot\frac{1}{(\ln x)^{1/2}}\Big|_e^{+\infty}.$
+Ответ: Сходится. $\blacktriangleright$
+
+\bigskip\noindent Вычислить несобственные интегралы (или установить их расходимость).
+
+\bigskip
+\noindent{\bf 2395.} $\displaystyle \int_0^2\frac{dx}{ x^2-4x+3}$.
+
+\smallskip
+\noindent $\blacktriangleleft$ $\displaystyle \int_0^2\frac{dx}{ x^2-4x+3}=
+\int_0^2\frac{d(x-2)}{ (x-2)^2-1}=
+\lim_{a\to1-0}\frac12\ln\frac{x-3}{x-1}\Big|_0^a+\lim_{a\to1+0}\frac12\ln\frac{x-3}{1-x}\Big|_a^2$.
+Оба интеграла расходятся. Ответ: Расходится. $\blacktriangleright$
+
+\medskip
+\noindent{\bf 2403.} $\displaystyle \int_3^5\frac{x^2dx}{\sqrt{(x-3)(5-x)}}=
+\qquad\Big|t=x-4;\quad x=t+4;\quad dx=dt.\Big|$\\
+$\displaystyle =\int_{-1}^1\frac{t^2+8t+16}{\sqrt{(1+t)(1-t)}}\,dt=
+-\int_{-1}^1\frac{1-t^2}{\sqrt{1-t^2}}\,dt
++4\int_{-1}^1\frac{2t\,dt}{\sqrt{1-t^2}}+17\int_{-1}^1\frac{dt}{\sqrt{1-t^2}}=$\\
+$\displaystyle =-\int_{-1}^1\sqrt{1-t^2}\,dt
+-4\int_{-1}^1\frac{d(1-t^2)}{\sqrt{1-t^2}}+17\int_{-1}^1\frac{dt}{\sqrt{1-t^2}}=$\\
+Первый интеграл -- полукруг -- равен $\pi/2.$\\
+$\displaystyle =-\frac{\pi}{2}-8\sqrt{1-t^2}\Big|_{-1}^1+17\arcsin x\Big|_{-1}^1=
+-\frac{\pi}{2}-8\cdot0+17\pi=\frac{33}{2}\pi.$
+
+\medskip
+\noindent{\bf 2410.} $\displaystyle \int_{-1}^0\frac{e^{1/x}}{x^3}\,dx=\qquad \Big| x=\frac 1t;\quad
+dx=-\frac{dt}{t^2};\quad t=\frac 1x.\Big|\qquad=\int_{-\infty}^{-1}te^tdt=$\\
+$\displaystyle =te^t\Big|_{-\infty}^{-1}-\int_{-\infty}^{-1}e^tdt=-\frac 1e-\frac 1e=-\frac 2e$.
+
+\bigskip\noindent Исследовать сходимость интегралов.
+
+\medskip
+\noindent{\bf 2417.} $\displaystyle \int_0^{\pi/2}\frac{\ln\sin x}{\sqrt x}\,dx$.
+
+\smallskip
+\noindent $\blacktriangleleft$ Подынтегральная функция стремится к $-\infty$ при $x\to0+0$.
+При этом в некоторой окрестности нуля $\sin x>x/2$ и $\displaystyle \ln x>\frac{1}{\sqrt[3]x}$.
+Поэтому отрицательную подынтегральную функцию можно оценить снизу следующим
+образом: $$\displaystyle \frac{\ln\sin x}{\sqrt x}>\frac{\ln(x/2)}{\sqrt x}>-\frac{1}{\sqrt[3]{ x/2}\cdot\sqrt x}=-\frac{\sqrt[3]2}{x^{5/6}}.$$
+Интеграл от последней функции сходится. Поэтому исходный интеграл от функции, которая больше  (меньше по абсолютной величине), также сходится. $\blacktriangleright$
+
+\medskip
+\noindent{\bf 2422.} Можно ли найти такое $k$, чтобы интеграл
+$\displaystyle \int_{0}^{+\infty}x^kdx$ сходился?
+
+\smallskip
+\noindent $\blacktriangleleft$ При $k\le-1$ данный интеграл расходится в нуле,
+при $k\ge-1$ интеграл расходится в $+\infty$. Таким образом, параметра $k$, при
+котором интеграл сходился бы, не существует. $\blacktriangleright$
+
+\bigskip\noindent Вычислить несобственные интегралы.
+
+\medskip
+\noindent{\bf 2429.} $\displaystyle \int_{0}^{+\infty}\frac{dx}{(a^2+x^2)^n}\quad$ ($n$ -- целое
+положительное число).
+
+\smallskip
+\noindent $\blacktriangleleft$ Обозначим
+$\displaystyle I_n=\int_{0}^{+\infty}\frac{dx}{(a^2+x^2)^n}$\\
+$\displaystyle I_1=\int_{0}^{+\infty}\frac{dx}{(a^2+x^2)}=
+\frac 1a\arctg\frac xa\Big|_{0}^{+\infty}=\frac{\pi}{2a}.$\\
+Для $n>1$ имеем\\
+$\displaystyle I_{n-1}=\int_{0}^{+\infty}\frac{dx}{(a^2+x^2)^{n-1}}=
+\frac{dx}{(a^2+x^2)^{n-1}}\Big|_{0}^{+\infty}
++2(n-1)\int_{0}^{+\infty}\frac{x^2dx}{(a^2+x^2)^{n}}=$\\
+$\displaystyle =0+2(n-1)\int_{0}^{+\infty}\frac{dx}{(a^2+x^2)^{n-1}}
+-2a^2(n-1)\int_{0}^{+\infty}\frac{dx}{(a^2+x^2)^{n}}=$\\
+$2(n-1)I_{n-1}-2a^2(n-1)I_n.$ Откуда $\displaystyle I_n=\frac{2n-3}{a^2(2n-2)}I_{n-1}.$\\
+Ответ: $\displaystyle I_n=\frac{1\cdot3\cdot5\cdot\ldots\cdot(2n-3)}
+{2\cdot4\cdot6\cdot\ldots\cdot(2n-2)}\cdot\frac{\pi}{2a^{2n-1}}.$ $\blacktriangleright$
+
+\medskip
+\noindent{\bf 2432.} $\displaystyle \int_{0}^{1}(\ln x)^ndx\quad$ ($n$ -- целое
+положительное число).
+
+\smallskip
+\noindent $\blacktriangleleft$ Обозначим
+$\displaystyle I_n=\int_{0}^{1}(\ln x)^ndx.\quad$
+$\displaystyle I_1=\int_{0}^{1}\ln x\,dx=x\ln x\Big|_{0}^{1}-\int_{0}^{1}dx=0-1=-1.$\\
+$\displaystyle I_n=\int_{0}^{1}(\ln x)^ndx=x(\ln x)\Big|_{0}^{1}-n\int_{0}^{1}(\ln x)^{n-1}dx=-nI_{n-1}.$\\
+$I_2=1\cdot2,\quad I_3=-1\cdot2\cdot3,\quad I_4=1\cdot2\cdot3\cdot4,\quad\ldots,\quad I_n=(-1)^nn!.$ $\blacktriangleright$
+
+\medskip
+\noindent{\bf 2434*.} $\displaystyle \int_0^1\frac{(1-x)^n}{\sqrt x}\,dx\quad$ ($n$ -- целое
+положительное число).
+
+\smallskip
+\noindent $\blacktriangleleft$ $\displaystyle \int_0^1\frac{(1-x)^n}{\sqrt x}\,dx=\qquad\Big|x=\sin^2t,\quad dx=2\sin t\cos t\,dt.\Big|$\\
+$\displaystyle \qquad=\int_0^{\pi/2}\frac{(1-\sin^2t)^n\cdot2\sin t\cos t\,dt}{\sin t}
+=2\int_0^{\pi/2}(\cos t)^{2n+1}dt=2I_{2n+1}.$\\
+$\displaystyle I_{2n+1}=\int_0^{\pi/2}(\cos t)^{2n+1}dt=\int_0^{\pi/2}(\cos t)^{2n}d\sin t=$\\
+$\displaystyle =(\cos t)^{2n}\sin t\Big|_0^{\pi/2}+2n\int_0^{\pi/2}(\cos t)^{2n-1}\sin^2t\,dt=$\\
+$\displaystyle =0+2n\int_0^{\pi/2}(\cos t)^{2n-1}(1-\cos^2t)\,dt=2n(I_{2n-1}-I_{2n+1}).$\\
+$\displaystyle (2n+1)I_{2n+1}=2nI_{2n-1};\quad I_{2n+1}=\frac{2n}{2n+1}I_{2n-1}.$\\
+$\displaystyle I_{2n+1}=\frac{2n\cdot(2n-2)\ldots2}{(2n+1)\cdot(2n-1)\ldots3}I_1=\frac{2n\cdot(2n-2)\ldots2}{(2n+1)\cdot(2n-1)\ldots3}\int_0^{\pi/2}\cos t\,dt=$\\
+$\displaystyle =\frac{2n\cdot(2n-2)\ldots2}{(2n+1)\cdot(2n-1)\ldots3}.$\qquad
+Ответ: $\displaystyle 2\frac{2n\cdot(2n-2)\ldots2}{(2n+1)\cdot(2n-1)\ldots3}$. $\blacktriangleright$
+
+\medskip
+\noindent{\bf 2437*.} Доказать, что $\displaystyle \int_{0}^{+\infty}
+\frac{x\ln x}{(1+x^2)^2}\,dx=0$.
+
+\smallskip
+\noindent $\blacktriangleleft$ Сначала выведем следующее равенство:\\
+$\displaystyle \int_{1}^{+\infty}\frac{x\ln x}{(1+x^2)^2}\,dx=\qquad\Big|x=\frac1t,\quad dx=-\frac{dt}{t^2}\Big|\qquad =\int_{1}^{0}\frac{-\ln t}{t}\cdot\frac{t^4}{(1+t^2)^2}\cdot\frac{-1}{t^2}\,dt=$\\
+$\displaystyle =\int_{1}^{0}\frac{t\ln t}{(1+t^2)^2}\,dt=-\int_{0}^{1}\frac{x\ln x}{(1+x^2)^2}\,dx.$\quad
+Теперь можно написать:\\
+$\displaystyle \int_{0}^{+\infty}\frac{x\ln x}{(1+x^2)^2}\,dx=
+\int_{0}^{1}\frac{x\ln x}{(1+x^2)^2}\,dx+\int_{1}^{+\infty}\frac{x\ln x}{(1+x^2)^2}\,dx=0.$ $\blacktriangleright$
+
+\bigskip\noindent Вычислить интегралы, пользуясь формулами
+$$\int_0^{+\infty}e^{-x^2}dx=\frac{\sqrt\pi}{2}\mbox{ (интеграл Пуассона),}$$
+$$\int_0^{+\infty}\frac{\sin x}{x}\,dx=\frac{\pi}{2}\mbox{ (интеграл Дирихле).}$$
+
+\medskip
+\noindent{\bf 2441*.} $\displaystyle \int_{0}^{+\infty}x^2e^{-x^2}dx=
+-\frac12\int_{0}^{+\infty}x\,d(e^{-x^2})dx=$\\
+$\displaystyle =-\frac12x\,e^{-x^2}\Big|_{0}^{+\infty}+\frac12\int_{0}^{+\infty}x^2e^{-x^2}dx=
+0+\frac12\cdot\frac{\sqrt\pi}{2}=\frac{\sqrt\pi}{4}$.
+
+\medskip
+\noindent{\bf 2443.} $\displaystyle \int_{0}^{+\infty}\frac{\sin 2x}{x}\,dx=\int_{0}^{+\infty}\frac{\sin 2x}{2x}\,d(2x)=
+\int_{0}^{+\infty}\frac{\sin t}{t}\,dt=\frac{\pi}{2}$.
+
+\medskip
+\noindent{\bf 2447.} $\displaystyle \int_{0}^{+\infty}\frac{\sin^3x}{x}\,dx$.
+
+\smallskip
+\noindent $\blacktriangleleft$ Имеем формулу: $\sin3x=3\sin x-4\sin^3x$. Откуда $\displaystyle \sin^3x=\frac34\sin x-\frac{\sin 3x}{4}$. Теперь можно написать\\
+$\displaystyle \int_{0}^{+\infty}\frac{\sin^3x}{x}\,dx=\frac34\int_{0}^{+\infty}\frac{\sin x}{x}\,dx-
+\frac14\int_{0}^{+\infty}\frac{\sin 3x}{x}\,dx=\frac34\cdot\frac{\pi}{2}-\frac14\cdot\frac{\pi}{2}=\frac{\pi}{4}$. $\blacktriangleright$
+
+\bigskip\noindent Вычислить интегралы
+
+\medskip
+\noindent{\bf 2450.} $\displaystyle \int_{0}^{\pi/2}\ln \sin x\,dx$.
+
+\smallskip
+\noindent $\blacktriangleleft$ $\displaystyle I=\int_{0}^{\pi/2}\ln \sin x\,dx=
+\int_{0}^{\pi/2}\ln\left(2\sin \frac x2\cos \frac x2\right)\,dx=$\\
+$\displaystyle =\int_{0}^{\pi/2}\ln2\,dx+\int_{0}^{\pi/2}\ln\sin \frac x2\,dx+\int_{0}^{\pi/2}\ln\cos \frac x2\,dx=$\\
+Первый интеграл вычисляем, во втором интеграле делаем замену $\displaystyle \frac x2=t$,
+в третьем -- замену $\displaystyle \frac{\pi}{2}-\frac x2=t$.\\
+$\displaystyle I=\frac{\pi}{2}\ln2+2\int_{0}^{\pi/4}\ln\sin t\,dt+2\int_{\pi/4}^{\pi/2}\ln\sin t\,dt=
+\frac{\pi}{2}\ln2+2\int_{0}^{\pi/2}\ln\sin t\,dt=$\\
+$\displaystyle =\frac{\pi}{2}\ln2+2I.$\quad Отсюда $\displaystyle I=-\frac{\pi}{2}\ln2$.\qquad Ответ:
+$\displaystyle \int_{0}^{\pi/2}\ln \sin x\,dx=-\frac{\pi}{2}\ln2$. $\blacktriangleright$
+
+\medskip
+\noindent{\bf 2452*.} $\displaystyle \int_{0}^{\pi/2}x\cot x\,dx=
+\int_{0}^{\pi/2}x\cdot\frac{d(\sin x)}{\sin x}=\int_{0}^{\pi/2}x\,d(\ln\sin x)=$\\
+$\displaystyle =x\ln\sin x\Big|_{0}^{\pi/2}-\int_{0}^{\pi/2}\ln\sin x\,dx
+\mbox { (Интеграл из задачи {\bf 2450.}) }=\frac{\pi}{2}\ln2$.
+
+\medskip
+\noindent{\bf 2454.} $\displaystyle \int_{0}^{1}\frac{\ln x\,dx}{\sqrt{1-x^2}}=
+\qquad \Big|x=\sin t,\quad dx=\cos t\,dt.\Big|$\\
+$\displaystyle =\int_{0}^{\pi/2}\frac{\ln\sin t\cdot\cos t\,dt}{\cos t}=
+\int_{0}^{\pi/2}\ln\sin t\,dt\mbox { (Интеграл из задачи {\bf 2450.}) }=-\frac{\pi}{2}\ln2$.
+
+\medskip
+\section* {Глава VIII. Применения интеграла}
+
+\medskip
+\noindent{\bf 2459.} Вычислить площадь фигуры, ограниченной параболами
+$y^2+8x=16$ и $y^2-24x=48$.
+
+\medskip
+\noindent $\blacktriangleleft$ Запишем уравнение парабол в каноническом виде:
+$y^2=-8(x-2)$ и $y^2=24(x+2)$ из уравнений видно, что первая парабола
+имеет вершину в точке (2,0) и ее ветви направлены влево, вторая парабола
+имеет вершину в точке (-2,0) и ее ветви направлены вправо. Абциссу точек
+пересечения парабол находим из уравнения $-8(x-2)=24(x+2);\quad -x+2=3x+6);\quad x=-1$.
+Теперь можем записать площадь:\\
+$\displaystyle S=2\int_{-2}^{-1}\sqrt{48+24x}\,dx+2\int_{-1}^{2}\sqrt{16-8x}\,dx=$\\
+$\displaystyle =2\int_{-2}^{-1}\sqrt{48+24x}\,dx+2\int_{-1}^{2}\sqrt{16-8x}\,dx=$\\
+$\displaystyle =\frac{2}{24}\int_{-2}^{-1}\sqrt{48+24x}\,d(48+24x)-
+\frac{2}{8}\int_{-1}^{2}\sqrt{16-8x}\,d(16-8x)=$\\
+$\displaystyle =\left.\frac{1}{12}\cdot\frac23(48+24x)\sqrt{48+24x}\right|_{-2}^{-1}-
+\left.\frac{1}{4}\cdot\frac23(16-8x)\sqrt{16-8x}\right|_{-1}^{2}=$\\
+$\displaystyle =\frac{1}{18}\cdot24\sqrt{24}+\frac{1}{6}\cdot24\sqrt{24}=
+\frac29\cdot48\sqrt{6}=\frac{32}{3}\sqrt6$. $\blacktriangleright$
+
+\medskip
+\noindent{\bf 2464.} Найти площадь фигуры, ограниченной дугой гиперболы
+и ее хордой, проведенной из фокуса перпендикулярно к действительной оси.
+
+\medskip
+\noindent $\blacktriangleleft$ Вычислим интеграл, который нам понадобится
+в дальнейшем. Имеем:\\
+$\displaystyle I=\int\sqrt{x^2-a^2}\,dx=
+x\sqrt{x^2-a^2}-\int\frac{x^2dx}{\sqrt{x^2-a^2}}=$\\
+$\displaystyle =x\sqrt{x^2-a^2}-\int\frac{(x^2-a^2)\,dx}{\sqrt{x^2-a^2}}-a^2\int\frac{dx}{\sqrt{x^2-a^2}}=$\\
+$\displaystyle =x\sqrt{x^2-a^2}-I-a^2\int\frac{dx}{\sqrt{x^2-a^2}}$. Отсюда находим:\\
+$\displaystyle I=\frac x2\sqrt{x^2-a^2}-\frac{a^2}{2}\int\frac{dx}{\sqrt{x^2-a^2}}=
+\frac x2\sqrt{x^2-a^2}-\frac{a^2}{2}\ln|x+\sqrt{x^2-a^2}|$.\\
+Теперь находим площадь фигуры.\\
+$\displaystyle S=\frac {2b}{a}\int_a^{\sqrt{a^2+b^2}}\sqrt{x^2-a^2}\,dx=
+\frac{b}{a}\left.\left(x\sqrt{x^2-a^2}-a^2\ln|x+\sqrt{x^2-a^2}|\right )\right|_a^{\sqrt{a^2+b^2}}=$\\
+$\displaystyle =\frac{b}{a}\cdot(\sqrt{a^2+b^2}\cdot b-a^2\ln(\sqrt{a^2+b^2}+b)+a^2\ln a)=
+\frac{b^2c}{a}-ab\ln\frac{c+b}{a}$. $\blacktriangleright$
+
+\medskip
+\noindent{\bf 2465.} Окружность $x^2+y^2=a^2$ разбивается гиперболой
+$x^2-2y^2=a^2/4$ на три части. Определить площади этих частей.
+
+\medskip
+\noindent $\blacktriangleleft$ От окружности радиусом $a$ и площадью $\pi a^2$
+гипербола отрезает две симметричные дольки. Сначала вычислим площадь одной
+такой дольки. Координаты точек пересечения окружности и гиперболы
+находим из системы:\\
+$\displaystyle \begin{cases} x^2+y^2=a^2\\x^2-2y^2=\frac{a^2}{4}\end{cases};\quad
+\begin{cases} x^2+y^2=a^2\\-3y^2=-\frac{3a^2}{4}\end{cases};\quad
+\begin{cases} x=\pm\frac{\sqrt3}{2}a\\y=\pm\frac{a}{2}\end{cases}$.\\
+Гипербола пересекает ось $Ox$ в точках $x=\pm a/2$, а окружность пересекает
+эту ось в точках $x=\pm a$. Теперь мы можем написать площадь правой дольки:\\
+$\displaystyle S_1=\sqrt2\int_{a/2}^{a\sqrt3/2}\sqrt{x^2-a^2/4}\,dx+
+2\int_{a\sqrt3/2}^{a}\sqrt{a^2-x^2}\,dx$.\\
+Теперь нам понадобится два неопределенных интеграла:\\
+$\displaystyle\int\sqrt{x^2-a^2}\,dx=
+\frac x2\sqrt{x^2-a^2}-\frac{a^2}{2}\ln|x+\sqrt{x^2-a^2}|$,\\
+$\displaystyle\int\sqrt{a^2-x^2}\,dx=
+\frac x2\sqrt{a^2-x^2}+\frac{a^2}{2}\arcsin\frac xa$,\\
+вычисление которых можно посмотреть в задачах {\bf 2464} и {\bf 1984} соответственно.
+Пользуясь ими, получаем площадь дольки:\\
+$\displaystyle S_1=\sqrt2\left.\left(\frac x2\sqrt{x^2-a^2/4}-
+\frac{a^2}{8}\ln|x+\sqrt{x^2-a^2/4}|\right)\right|_{a/2}^{a\sqrt3/2}+\\
++\left.\left(x\sqrt{a^2-x^2}+
+a^2\arcsin\frac xa\right)\right|_{a\sqrt3/2}^{a}=
+\sqrt2\left(\frac{a\sqrt3}{4}\cdot\frac{a}{\sqrt2}-
+\frac{a^2}{8}\ln\left(\frac{a\sqrt3}{2}+\frac{a}{\sqrt2}\right)\right)-\\
+-\sqrt2\left(-\frac{a^2}{8}\ln\frac{a}{2}\right)+
+\left(\frac{a^2\pi}{2}\right)-\left(\frac {a\sqrt3}{2}\cdot\frac a2+
+\frac{a^2\pi}{3}\right)=$\\
+$\displaystyle =\frac{a^2\sqrt3}{4}-\frac{a^2\sqrt2}{8}\ln\frac{a(\sqrt2+\sqrt3)}{2}+
+\frac{a^2\sqrt2}{8}\ln\frac a2+
+\frac{a^2\pi}{6}-\frac{a^2\sqrt3}{4}=$\\
+$\displaystyle =a^2\left[\frac{\pi}{6}-\frac{\sqrt2}{8}\ln{(\sqrt2+\sqrt3)}\right]$.\\
+Площадь второй дольки $S_2$ такая же, а площадь средней части получаем вычитанием
+площадей долек из площади круга:\\
+$\displaystyle S_3=\pi a^2-S_1-S_2=
+\pi a^2-2a^2\left[\frac{\pi}{6}-\frac{\sqrt2}{8}\ln{(\sqrt2+\sqrt3)}\right]=$\\
+$\displaystyle =a^2\left[\frac{2\pi}{3}+\frac{\sqrt2}{4}\ln{(\sqrt2+\sqrt3)}\right]$.
+$\blacktriangleright$
+
+\medskip
+\noindent{\bf 2469.} Найти площадь фигуры, ограниченной осью ординат и линией\\
+$x=y^2(y-1)$.
+
+\medskip
+\noindent $\blacktriangleleft$ График функции $x=y^2(y-1)$ пересекаяет ось ординат
+в точках $x=0$ и $x=1$ и уходит между этими точками в отрицательную область. Площадь
+этой области равна\\
+$\displaystyle S=-\int_0^1y^2(y-1)\,dy=-\left.\left(\frac{y^4}{4}-
+\frac{y^3}{3}\right)\right|_0^1=-\frac14+\frac13=\frac{1}{12}$.
+$\blacktriangleright$
+
+\medskip
+\noindent{\bf 2475.} Найти площадь фигуры, ограниченной замкнутой линией
+$y^2=x^2-x^4$.
+
+\medskip
+\noindent $\blacktriangleleft$ Кривая представляет собой восьмерку, симметричную
+относительно осей $Ox$ и $Oy$ и пересекающую ось $Ox$ в точках $-1$, $0$ и $1$.
+Площадь четверти этой восьмерки расположенной в первой четверти равна интегралу\\
+$\displaystyle S/4=\int_0^1\sqrt{x^2-x^4}\,dx=-\frac12\int_0^1\sqrt{1-x^2}\,d(1-x^2)=$\\
+$\displaystyle =-\left.\frac12\cdot\frac23(1-x^2)\sqrt{1-x^2}\right|_0^1=\frac13.\quad
+S=\frac{4}{3}$. $\blacktriangleright$
+
+\medskip
+\noindent{\bf 2480.} Вычислить площадь криволинейной трапеции, ограниченной линией\\
+$y=e^{-x}(x^2+3x+1)+e^2$, осью $Ox$ и двумя прямыми,
+параллельным оси $Oy$, проведенными через точки экстремума функции $y$.
+
+\medskip
+\noindent $\blacktriangleleft$ Найдем точки экстремума. Берем производную
+функции $y$:\\
+$y'=(e^{-x}(x^2+3x+1)+e^2)'=-e^{-x}(x^2+3x+1)+e^{-x}(2x+3)=$\\
+$\displaystyle =e^{-x}(-x^2-x+2)$.\\
+Производная обращается в нуль, когда квадратный трехчлен равен нулю:\\
+$\displaystyle -x^2-x+2=0\qquad x=\frac{1\pm\sqrt{1+8}}{-2}=
+\frac{-1\mp3}{2};\quad x_1=-2,\quad x_2=1$.\\
+В полученных точках проверяем знак второй производной:\\
+$y''=(e^{-x}(-x^2-x+2))'=-e^{-x}(-x^2-x+2)+e^{-x}(-2x-1)=
+e^{-x}(x^2-x-3).\\
+y''(-2)>0,\quad y''(1)<0$.
+То есть, в точке $x=-2$ мы имеем минимум, а в точке $x=1$ -- максимум.
+Учитывая, что $y(-2)=e^2((-2)^2-3\cdot 2+1)-e^2=0$, делаем вывод, что функция $y$
+больше нуля на интересующем нас интервале $(-2,1)$, а искомая площадь
+выражается интегралом\\
+$\displaystyle S=\int_{-2}^1(e^{-x}(x^2+3x+1)+e^2)\,dx=
+-\int_{-2}^1(x^2+3x+1)\,de^{-x}+3e^2=$\\
+$\displaystyle =-\left.(e^{-x}(x^2+3x+1))\right|_{-2}^1+\int_{-2}^1e^{-x}(2x+3)\,dx+3e^2=$\\
+$\displaystyle =-(e^{-1}\cdot5-e^2\cdot(-1))+3e^2-\int_{-2}^1(2x+3)\,de^{-x}=$\\
+$\displaystyle =2e^2-\frac5e-\left.(e^{-x}(2x+3))\right|_{-2}^1+2\int_{-2}^1e^{-x}\,dx=
+2e^2-\frac5e-\frac5e-e^2-2\left.e^{-x}\right|_{-2}^1=
+e^2-\frac{10}{e}-\frac{2}{e}+2e^2=3e^2-\frac{12}{e}$.
+$\blacktriangleright$
+
+\medskip
+\noindent{\bf 2527.} Найти периметр одного из криволинейных треугольников,
+ограниченных осью абцисс и линиями $y=\ln\cos x$ и $y=\ln\sin x$.
+
+\medskip
+\noindent $\blacktriangleleft$
+Периметр складывается из отрезка $[0,\pi/2]$, расположенного на оси
+$Ox$ и двух симметричных кривых, одна из которых вычисляется интегралом\\
+$\displaystyle\int_0^{\pi/4} \sqrt{1+(\ln\cos x)'^2}\,dx=
+\int_0^{\pi/4} \sqrt{1+\frac{\sin^2 x}{\cos^2 x}}\,dx=
+\int_0^{\pi/4} \frac{dx}{\cos x}=$\\
+$\displaystyle =\int_0^{\pi/4} \frac{d(\sin x)}{\cos^2 x}=
+-\int_0^{\pi/4} \frac{d(\sin x)}{\sin^2 x-1}=
+-\left.\frac12\ln\left|\frac{\sin x-1}{\sin x+1}\right|\right|_0^{\pi/4}=$\\
+$\displaystyle =\frac12\ln\frac{2+\sqrt2}{2-\sqrt 2}=\frac12\ln\frac{(2+\sqrt2)^2}{2}=
+\ln\frac{2+\sqrt2}{\sqrt2}=\ln(\sqrt2+1)$.\\
+Сложив длины отрезка и двух кривых, получаем ответ:
+$\displaystyle\frac{\pi}{2}+2\ln(\sqrt2+1)$. $\blacktriangleright$
+
+\medskip
+\noindent{\bf 2530.} Найти длину линии $(y-\arcsin x)^2=1-x^2$.
+
+\medskip
+\noindent $\blacktriangleleft$
+$\displaystyle (y-\arcsin x)^2=1-x^2;\quad y=\arcsin x\pm\sqrt{1-x^2}.
+x=\sin t,\quad y=t\pm\cos t.\\
+L=2\int_{-\pi/2}^{\pi/2}\sqrt{\cos^2t+1-2\sin t+\sin^2t}\,dt=
+2\sqrt2\int_{-\pi/2}^{\pi/2}\sqrt{1-\sin t}\,dt=$\\
+$\displaystyle =4\sqrt2\int_{-\pi/2}^{\pi/2}
+\sqrt{\cos^2\frac t2-2\cos\frac t2\sin\frac t2+\sin^2\frac t2}\,d\frac t2=$\\
+$\displaystyle =4\sqrt2\int_{-\pi/2}^{\pi/2}
+\left(\cos\frac t2-\sin\frac t2 \right)\,d\frac t2=
+4\sqrt2\left.\left(\sin\frac t2+\cos\frac t2 \right)\right|_{-\pi/2}^{\pi/2}=
+4\sqrt2\cdot\sqrt2=8$. $\blacktriangleright$
+
+\medskip
+\noindent{\bf 2534.} Найти длину линии $x=a\cos^5t$, $y=a\sin^5t$.
+
+\medskip
+\noindent $\blacktriangleleft$
+$\displaystyle L=4\int_0^{\pi/2}\sqrt{25a^2\cos^8t\sin^2t+25a^2\sin^8t\cos^2t}\,dt=$\\
+$\displaystyle =20a\int_0^{\pi/2}\cos t\sin t\sqrt{\cos^6t+\sin^6t}\,dt=$\\
+$\displaystyle =10a\int_0^{\pi/2}\sqrt{(1-\sin^2t)^3+\sin^6t}\,d(\sin^2 t)=$\\
+$\displaystyle =10a\int_0^{\pi/2}\sqrt{1-3\sin^2t+3\sin^4t}\,d(\sin^2 t)=$\\
+$\displaystyle =10a\int_0^1\sqrt{1-3u+3u^2}\,du=10\sqrt3a\int_0^1
+\sqrt{\left(u-\frac12\right)^2+\frac{1}{12}}\,d\left(u-\frac12\right)=$\\
+$\displaystyle =5\sqrt3a\left.\left(\left(u-\frac12\right)
+\sqrt{\left(u-\frac12\right)^2+\frac{1}{12}}-
+\frac{1}{12}\ln\left(u-\frac12+
+\sqrt{\left(u-\frac12\right)^2+
+\frac{1}{12}}\right)\right)\right|_0^1=$\\
+$\displaystyle =5\sqrt3a\left(\frac12\cdot\sqrt{\frac13}+
+\frac{1}{12}\ln\left(\frac12+\sqrt{\frac13}\right)+
+\frac12\cdot\sqrt{\frac13}-
+\frac{1}{12}\ln\left(-\frac12+\sqrt{\frac13}\right)\right)=$\\
+$\displaystyle =5a\left(1+\frac{\sqrt3}{12}\ln(2+\sqrt3)^2\right)=
+5a\left(1+\frac{1}{2\sqrt3}\ln(2+\sqrt3)\right)$.
+$\blacktriangleright$
+
+\medskip
+\noindent{\bf 2559.} Криволинейная трапеция, ограниченная линией $y=xe^x$
+и прямыми $x=1$ и $y=0$ вращается вокруг оси абцисс. Найти объем тела,
+которое при этом получается.
+
+\medskip
+\noindent $\blacktriangleleft$ $\displaystyle V=\pi\int_0^1(xe^x)^2dx=
+\frac{\pi}{2}\int_0^1x^2\,d(e^{2x})=
+\frac{\pi}{2}\left(\left.x^2e^{2x}\right|_0^1-
+\int_0^1x\,d(e^{2x})\right)=$\\
+$\displaystyle =\frac{\pi}{2}\left(e^2-\left.xe^{2x}\right|_0^1
++\frac12\int_0^1e^{2x}\,d(2x)\right)=
+\frac{\pi}{2}\left(e^2-e^2+\frac12\left.e^{2x}\right|_0^1\right)=
+\frac{\pi(e^2-1)}{4}$. $\blacktriangleright$
+
+\medskip
+\noindent{\bf 2563.} Найти объем тела, полученного от вращения
+криволинейной трапеции, ограниченной линией $y=\arcsin x$,
+с основанием $[0,1]$ вокруг оси $Ox$.
+
+\medskip
+\noindent $\blacktriangleleft$ $\displaystyle V=\pi\int_0^1\arcsin^2x\,dx=
+\qquad\left|x=\sin t.\right|\qquad
+=\pi\int_0^{\pi/2}t^2\,d\sin t=$\\
+$\displaystyle =\pi\left(\left.(t^2\sin t)\right|_0^{\pi/2}-2\int_0^{\pi/2}t\sin t\,dt\right)=
+\pi\left(\frac{\pi^2}{4}+2\int_0^{\pi/2}t\,d\cos t\right)=$\\
+$\displaystyle =\pi\left(\frac{\pi^2}{4}+2\left.(t\cos t)\right|_0^{\pi/2}-
+2\int_0^{\pi/2}\cos t\,dt\right)=
+\pi\left(\frac{\pi^2}{4}+0-
+2\left.\sin t\right|_0^{\pi/2}\right)=$\\
+$\displaystyle =\pi\left(\frac{\pi^2}{4}-2\right)$. $\blacktriangleright$
+
+\medskip
+\noindent{\bf 2568.} Одна арка циклоиды $x=a(t-\sin t)$, $y=a(1-\cos t)$
+вращается вокруг своего основания. Вычислить объем тела,
+ограниченного полученной поверхностью.
+
+\medskip
+\noindent $\blacktriangleleft$ $\displaystyle V=\pi\int_0^{2\pi}y^2\,dx=
+\pi\int_0^{2\pi}a^2(1-\cos t)^2\,d[a(t-\sin t)]=$\\
+$\displaystyle =\pi a^3\int_0^{2\pi}(1-\cos t)^3\,dt=
+\pi a^3\int_0^{2\pi}(1-3\cos t+3\cos^2t-\cos^3t)\,dt=$.\\
+По формуле $\cos3t=4\cos^3t-3\cos t$ имеем:
+$\displaystyle -\cos^3t=-\frac14\cos3t-\frac34\cos t$.\\
+По формуле $\cos2t=2\cos^2t-1$ имеем:
+$\displaystyle 3\cos^2t=\frac32\cos2t+\frac32$.\\
+$\displaystyle =\pi a^3\int_0^{2\pi}
+\left(\frac52-\frac{15}{4}\cos t+\frac32\cos2t-\frac14\cos3t \right)\,dt=$\\
+$\displaystyle =\pi a^3\left.\left(\frac52t-\frac{15}{4}\sin t+\frac34\sin2t-
+\frac{1}{12}\sin3t \right)\right|_0^{2\pi}=5\pi^2a^3$. $\blacktriangleright$
+
+\medskip
+\noindent{\bf 2584.} Вычислить объем тела, ограниченного параболоидом
+$\displaystyle 2z=\frac{x^2}{4}+\frac{y^2}{9}$ и конусом
+$\displaystyle \frac{x^2}{4}+\frac{y^2}{9}=z^2$.
+
+\medskip
+\noindent $\blacktriangleleft$ Тело образует кольцеобразную область,
+расположенную между плоскостями $z=0$ и $z=2$. Точки тела находятся
+вне конуса и внутри параболоида. Сечение тела плоскостью $z=z_0$
+представляет собой эллипс с полуосями $2\sqrt{2z_0}$ и $3\sqrt{2z_0}$ из которого
+выброшена внутренность в виде эллипса с полуосями  $2z_0$ и $3z_0$.
+$\displaystyle V=\int_0^2(\pi\cdot2\sqrt{2z}\cdot3\sqrt{2z}-\pi\cdot2z\cdot3z)\,dz=
+6\pi\int_0^2(2z-z^2)\,dz=
+6\pi\left.\left(z^2-\frac{z^3}{3}\right)\right|_0^2=$\\
+$\displaystyle =6\pi\left(4-\frac{8}{3}\right)=8\pi$. $\blacktriangleright$
+
+\medskip
+\noindent{\bf 2591.} Круг переменного радиуса перемещается таким образом,
+что одна из точек его окружности остается на оси абсцисс, центр
+движется по окружности $x^2+y^2=r^2$, а плоскость этого круга
+перпендикулярна к оси абсцисс. Найти объем тела, которое при этом получается.
+
+\medskip
+\noindent $\blacktriangleleft$ $\displaystyle V=2\pi\int_{-r}^{r}(r^2-x^2)\,dx=
+2\pi\left.\left(r^2x-\frac{x^3}{3}\right)\right |_{-r}^{r}=
+2\pi\left(2r^3-\frac{2r^3}{3}\right)=\frac83\pi r^3$.
+$\blacktriangleright$
+
+\medskip
+\noindent{\bf 2597.} При вращении эллипса
+$\displaystyle \frac{x^2}{a^2}+\frac{y^2}{b^2}=1$
+вокруг большой оси получается поверхность, называемая удлиненным
+эллиспоидом вращения, при вращении вокруг малой -- поверхность,
+называемая укороченным эллипсоидом вращения. Найти площадь поверхности
+удлиненного и укороченного эллипсоидов вращения.
+
+\smallskip
+\noindent $\blacktriangleleft$\\
+1) Удлиненный эллипсоид вращения.\\
+$\displaystyle y=\frac ba\sqrt{a^2-x^2},\quad
+y'=-\frac ba\cdot\frac{x}{\sqrt{a^2-x^2}},\quad
+y'^2=\frac{b^2x^2}{a^2(a^2-x^2)}.\\
+S=2\pi\int_{-a}^ay\sqrt{1+y'^2}\,dx=
+4\pi\frac{b}{a}\int_{0}^a
+\sqrt{a^2-x^2}\cdot\sqrt{\frac{a^4+(b^2-a^2)x^2}
+{a^2(a^2-x^2)}}\,dx=$\\
+$\displaystyle =4\pi\frac{b}{a^2}\int_{0}^a\sqrt{a^4-(a^2-b^2)x^2}\,dx=
+4\pi\frac{b\sqrt{a^2-b^2}}{a^2}\int_{0}^a
+\sqrt{\frac{a^4}{a^2-b^2}-x^2}\,dx=$\\
+$\displaystyle =2\pi\frac{b\sqrt{a^2-b^2}}{a^2}\left.\left(x\sqrt{\frac{a^4}{a^2-b^2}-x^2}+
+\frac{a^4}{a^2-b^2}\arcsin\frac{x\sqrt{a^2-b^2}}{a^2} \right)\right|_{0}^a=$\\
+$\displaystyle =2\pi\frac{b\sqrt{a^2-b^2}}{a^2}\left(\frac{a^2b}{\sqrt{a^2-b^2}}+
+\frac{a^4}{a^2-b^2}\arcsin\frac{\sqrt{a^2-b^2}}{a}\right)=$\\
+$\displaystyle =2\pi b^2+\frac{2\pi ab\cdot a}{\sqrt{a^2-b^2}}\arcsin\frac{\sqrt{a^2-b^2}}{a}=
+2\pi b^2+\frac{2\pi ab}{\varepsilon}\arcsin\varepsilon$.\\
+2) Укороченный эллипсоид вращения.\\
+$\displaystyle x=\frac ab\sqrt{b^2-y^2},\quad
+x'=-\frac ab\cdot\frac{y}{\sqrt{b^2-y^2}},\quad
+x'^2=\frac{a^2y^2}{b^2(b^2-y^2)}.\\
+S=2\pi\int_{-b}^bx\sqrt{1+x'^2}\,dy=
+4\pi\frac{a}{b}\int_{0}^b
+\sqrt{b^2-y^2}\cdot\sqrt{\frac{b^4+(a^2-b^2)y^2}
+{b^2(b^2-y^2)}}\,dy=$\\
+$\displaystyle =4\pi\frac{a}{b^2}\int_{0}^b\sqrt{b^4+(a^2-b^2)y^2}\,dy=
+4\pi\frac{a\sqrt{a^2-b^2}}{b^2}\int_{0}^b
+\sqrt{\frac{b^4}{a^2-b^2}+y^2}\,dy=$\\
+$\displaystyle =2\pi\frac{a\sqrt{a^2-b^2}}{b^2}\left.\left(
+y\sqrt{\frac{b^4}{a^2-b^2}+y^2}-
+\frac{b^4}{a^2-b^2}\ln\left|y+\sqrt{\frac{b^4}{a^2-b^2}+
+y^2}\right|\right)\right|_{0}^b=$\\
+$\displaystyle =2\pi a^2-\frac{2\pi ab^2}{\sqrt{a^2-b^2}}
+\left(\ln\left|b+{\frac{ab}{\sqrt{a^2-b^2}}}\right|-
+\ln\left|\frac{b^2}{\sqrt{a^2-b^2}}\right|\right)=$\\
+$\displaystyle =2\pi a^2+\frac{2\pi ab^2}{\sqrt{a^2-b^2}}
+\cdot\ln\frac{b}{\sqrt{a^2-b^2}+a}=
+2\pi a^2+\frac{\pi ab^2}{\sqrt{a^2-b^2}}
+\cdot\ln\frac{b^2}{(a+\sqrt{a^2-b^2})^2}=$\\
+$\displaystyle =2\pi a^2+\frac{\pi ab^2}{\sqrt{a^2-b^2}}
+\cdot\ln\frac{b^2(a-\sqrt{a^2-b^2})}{(a+\sqrt{a^2-b^2})(a^2-a^2+b^2)}=$\\
+$\displaystyle =2\pi a^2+\frac{\pi ab^2}{\sqrt{a^2-b^2}}
+\cdot\ln\frac{1-\frac{\sqrt{a^2-b^2}}{a}}{1+\frac{\sqrt{a^2-b^2}}{a}}=
+2\pi a^2+\frac{\pi b^2}{\varepsilon}
+\cdot\ln\frac{1-\varepsilon}{1+\varepsilon}$.\\
+$\blacktriangleright$
+
+\medskip
+\noindent{\bf 2603.} Найти площадь поверхности, образованной вращением
+астроиды\\
+$x=a\cos^3t,\ y=a\sin^3t$ вокруг оси абсцисс.
+
+\smallskip
+\noindent $\blacktriangleleft$
+$\displaystyle x=a\cos^3t,\ y=a\sin^3t.\\
+S=4\pi\int_0^{\pi/2} y\sqrt{x'^2+y'^2}\,dt=
+4\pi a^2\int_0^{\pi/2} \sin^3t\sqrt{9\cos^4t\sin^2t+9\sin^4t\cos^2t}\,dt=$\\
+$\displaystyle =12\pi a^2\int_0^{\pi/2} \sin^4t\cos t\,dt=
+12\pi a^2\int_0^{\pi/2} \sin^4t\,d(\sin t)=
+\left.\frac{12}{5}\pi a^2\sin^5t\right|_0^{\pi/2}=\frac{12}{5}\pi a^2$.
+$\blacktriangleright$
+
+\medskip
+\noindent{\bf 2610.} Вычислить статический момент прямоугольника
+с основанием $a$ и высотой $h$ относительно его основания.
+
+\smallskip
+\noindent $\blacktriangleleft$
+$\displaystyle M=\int_0^ha y\,dy=\left.\frac a2y^2\right|_0^h=\frac{ah^2}{2}$.
+$\blacktriangleright$
+
+\medskip
+\noindent{\bf 2618.} Найти координаты центра масс фигуры,
+ограниченной осями координат и параболой $\sqrt x+\sqrt y=\sqrt a$.
+
+\smallskip
+\noindent $\blacktriangleleft$
+$P$ -- масса фигуры, $M_y$ -- статический момент фигуры относительно оси
+$Oy$, $C_x$ и $C_y$ -- координаты центра тяжести.\\
+$\displaystyle y=x-2\sqrt{ax}+a.\quad P=\int_0^a (x-2\sqrt{ax}+a)\,dx=
+\left.\left(\frac{x^2}{2}-\frac{4\sqrt{a}}{3}x^{3/2}+ax\right)\right|_0^a=
+\frac{a^2}{6}.\\
+M_y=\int_0^a x(x-2\sqrt{ax}+a)\,dx=\left.\left(\frac{x^3}{3}-
+\frac{4\sqrt a}{5}x^{5/2}+\frac{ax^2}{2}\right)\right|_0^a=$\\
+$\displaystyle =\left(\frac13-\frac45+\frac12\right)a^3=\frac{a^3}{30}.\quad
+C_x=\frac{M_y}{P}=\frac{a}{5}$. Симметричным образом
+$\displaystyle C_y=\frac{a}{5}$. $\blacktriangleright$
+
+\medskip
+\noindent{\bf 2625.} Найти координаты центра масс фигуры,
+ограниченной замкнутой линией  $y^2=ax^3-x^4$.
+
+\smallskip
+\noindent $\blacktriangleleft$
+$\displaystyle y=x\sqrt{ax-x^2}.\quad P=2\int_0^ax\sqrt{ax-x^2}\,dx=$\\
+$\displaystyle \left| \sqrt{ax-x^2}=xt,\quad ax-x^2=x^2t^2,\quad
+x=\frac{a}{t^2+1},\quad dx=-\frac{2at\,dt}{(t^2+1)^2}. \right|$\\
+$\displaystyle =-2\int_{-\infty}^0\frac{a}{t^2+1}\cdot\frac{at}{t^2+1}\cdot\frac{2at\,dt}{(t^2+1)^2}=
+4a^3\left(\int_{-\infty}^0\frac{dt}{(t^2+1)^4}-\int_{-\infty}^0\frac{dt}{(t^2+1)^3} \right ).\\
+M_x=2\int_0^ax^2\sqrt{ax-x^2}\,dx=
+-2\int_{-\infty}^0\frac{a^2}{(t^2+1)^2}\cdot\frac{at}{t^2+1}\cdot\frac{2at\,dt}{(t^2+1)^2}=$\\
+$\displaystyle =4a^4\left(\int_{-\infty}^0\frac{dt}{(t^2+1)^5}-
+\int_{-\infty}^0\frac{dt}{(t^2+1)^4}\right).\\
+I_n=\int_{-\infty}^0\frac{dx}{(x^2+1)^{n}}=
+\left.\frac{x}{(x^2+1)^{n}}\right|_{-\infty}^0+
+n\int_{-\infty}^0\frac{x\cdot 2x\,dx}{(x^2+1)^{n+1}}=$\\
+$\displaystyle =0+2n\int_{-\infty}^0\frac{dx}{(x^2+1)^{n}}-
+2n\int_{-\infty}^0\frac{dx}{(x^2+1)^{n+1}}=2nI_n-2nI_{n+1}.\\
+I_{n+1}=\frac{2n-1}{2n}I_n.\\
+I_4=\frac56I_3.\quad I_5=\frac78I_4=\frac{35}{48}I_3.\quad
+C_x=\frac{4a^4(I_5-I_4)}{4a^3(I_4-I_3)}=
+a\frac{\frac{35}{48}-\frac56}{\frac56-1}=\frac{5}{48}\cdot\frac61a=\frac58a.\\
+C_y=0.$
+$\blacktriangleright$
+
+\medskip
+\noindent{\bf 2634.} Найти центр масс сектора круга радиуса $R$
+с центральным углом, равным $2\alpha$.
+
+\smallskip
+\noindent $\blacktriangleleft$ Центр тяжести лежит на биссектрисе
+угла сектора. Расположим начало координат в центре круга, а ось $Ox$
+направим по биссектрисе. Масса сектора равна $\alpha R^2$.
+Статический момент сектора относительно оси $Oy$ равен\\
+$\displaystyle M_y=2\int_0^{R\cos\alpha}\tan\alpha x^2dx+
+2\int_{R\cos\alpha}^Rx\sqrt{R^2-x^2}\,dx=$\\
+$\displaystyle =2\frac{R^3\tan\alpha \cos^3\alpha}{3}-
+\int_{R\cos\alpha}^R\sqrt{R^2-x^2}\,d(R^2-x^2)=$\\
+$\displaystyle =\frac{2R^3\tan\alpha \cos^3\alpha}{3}-
+\frac23\left.(R^2-x^2)\sqrt{R^2-x^2}\right|_{R\cos\alpha}^R=$\\
+$\displaystyle =\frac{2R^3\tan\alpha \cos^3\alpha}{3}+
+\frac{2R^3\sin^3\alpha}{3}=\frac{2R^3\sin\alpha}{3}.\quad
+C_x=\frac{2R\sin\alpha}{3\alpha},\quad C_y=0$.
+$\blacktriangleright$
+
+\medskip
+\noindent{\bf 2640.} На каком расстоянии от геометрического центра
+лежит центр масс полушара радиуса $R$?
+
+\smallskip
+\noindent $\blacktriangleleft$ Масса полушара равна $\displaystyle \frac{2\pi R^3}{3}$.
+Расположим начало координат в центре шара и направим ось $Ox$
+по оси симметрии. Тогда статический момент полушара относительно
+плоскости $Oyz$ будет равен\\
+$\displaystyle M_{yz}=\pi\int_0^Rx(R^2-x^2)\,dx=
+\pi\left(\frac{R^4}{2}-\frac{R^4}{4}\right)=\pi\frac{R^4}{4}.\quad
+C_x=\frac38R$. $\blacktriangleright$
+
+\medskip
+\noindent{\bf 2650.} Найти момент инерции полукруга радиуса $R$
+относителльно его диаметра.
+
+\smallskip
+\noindent $\blacktriangleleft$
+$\displaystyle I=2\int_0^R x^2\sqrt{R^2-x^2}\,dx= \qquad\left|x=R\sin t,\quad
+dx=R\cos t\,dt\right|\\
+=2\int_0^{\pi/2} R^2\sin^2x\cdot R\cos t\cdot R\cos t\,dt=
+\frac{R^4}{2}\int_0^{\pi/2}\sin^22t\,dt=$\\
+$\displaystyle =\frac{R^4}{4}\int_0^{\pi/2}(1-\cos4t)\,dt=\frac{\pi R^4}{8}$.
+$\blacktriangleright$
+
+\medskip
+\noindent{\bf 2656.} Эллипс с полуосями $a$ и $b$ вращается вокруг одной из
+своих осей. Найти момент инерции получающегося тела (эллипсоид вращения)
+относительно оси вращения.
+
+\smallskip
+\noindent $\blacktriangleleft$ Бесконечно тонкий слой на расстоянии $x$ от
+оси вращения $Oy$ и с толщиной $dx$ имеет форму цилиндра с радиусом $|x|$ и
+высотой $\displaystyle \frac ba\sqrt{a^2-x^2}$ имеет момент инерции
+$\displaystyle x^2\cdot 2\pi |x|\frac ba\sqrt{a^2-x^2}\,dx$. Поэтому
+момент инерции тела вращения относительно оси $Oy$ выражается интегралом\\
+$\displaystyle I_y=\frac{4\pi b}{a}\int_{0}^ax^3\sqrt{a^2-x^2}\,dx=
+\frac{2\pi b}{a}\int_{0}^ax^2\sqrt{a^2-x^2}\,d(x^2)=\ldots\\
+t^2=a^2-x^2,\quad x^2=a^2-t^2,\quad d(x^2)=-2t\,dt.\\
+\ldots-=\frac{2\pi b}{a}\int_{a}^0(a^2-t^2)t\cdot2t\,dt=
+\frac{4\pi b}{a}\int_{0}^a(a^2t^2-t^4)\,dt=
+\frac{4\pi b}{a}\left(\frac{a^2a^3}{3}-\frac{a^5}{5}\right)=
+\frac{8\pi a^4b}{15}$.\\
+Симметричным образом, если мы будем вращать эллипс вокруг другой оси, то
+получим тело с моментом инерции
+$\displaystyle \frac{8\pi ab^4}{15}$.
+$\blacktriangleright$
+
+\medskip
+\noindent{\bf 2657.} Найти момент инерции параболоида вращения, радиус
+основания которого $R$, высота $H$, относительно оси вращения.
+
+\smallskip
+\noindent $\blacktriangleleft$ Рассмотрим часть параболы
+$\displaystyle y=H\left(1-\frac{x^2}{R^2}\right)$, расположенную в первом октанте.
+При ее вращении вокруг оси $Oy$ получается параболоид с параметрами,
+описанными в условии задачи. Цилиндр толщины $dx$ радиуса $x$ и высоты $y$
+имеет момент инерции $\displaystyle x^2\cdot2\pi xH\left(1-\frac{x^2}{R^2}\right)\,dx$.
+Интегрируя этот момент от нуля до $R$ мы получим момент параболоида.\\
+$\displaystyle I_y=2\pi H\int_0^Rx^3\left(1-\frac{x^2}{R^2}\right)\,dx=
+2\pi H\left.\left(\frac{x^4}{4}-\frac{x^6}{6R^2}\right)\right|_0^R=\pi HR^4/6$.
+$\blacktriangleright$
+
+\medskip
+\noindent{\bf 2659.} Криволинейная трапеция, ограниченная линиями
+$y=e^x,\ y=0,\ x=0$ и $x=1$, вращается:
+1) вокруг оси $Ox$, 2) вокруг оси $Oy$. Вычислить момент инерции
+получающегося тела относительно оси вращения.
+
+\smallskip
+\noindent $\blacktriangleleft$\\
+1) $\displaystyle I_x=\int_0^1 x^2\cdot2\pi x\,dx+
+\int_1^e x^2\cdot2\pi x(1-\ln x)\,dx=
+2\pi\int_0^e x^3dx-2\pi\int_1^e x^3\ln x\,dx=$\\
+$\displaystyle =\frac{\pi e^4}{2}-\frac{\pi}{2}\int_1^e\ln x\,d(x^4)=
+\frac{\pi e^4}{2}-\left.\frac{\pi}{2}x^4\ln x\right|_1^e+
+\frac{\pi}{2}\int_1^ex^3\,dx=\frac{\pi}{2}\int_1^ex^3\,dx=$\\
+$\displaystyle =\left.\frac{\pi}{8}x^4\right|_1^e=\frac{\pi}{8}(e^4-1)$.
+
+\noindent 2) $\displaystyle I_y=\int_0^1 x^2\cdot2\pi x\cdot e^xdx=
+2\pi\int_0^1 x^3e^xdx=
+2\pi\left.x^3e^x\right|_0^1-6\pi\int_0^1x^2e^xdx=$\\
+$\displaystyle =2\pi e-6\pi\left.x^2e^x\right|_0^1+12\pi \int_0^1xe^xdx=
+-4\pi e+12\pi\left.xe^x\right|_0^1-12\pi\int_0^1e^xdx=$\\
+$\displaystyle =8\pi e-12\pi\left.e^x\right|_0^1=-4\pi e+12\pi=4\pi(3-e)$.\\
+$\blacktriangleright$
+
+\medskip
+\noindent{\bf 2664.} Эллипс с осями $AA_1=2a$ и $BB_1=2b$
+вращается вокруг прямой, параллельной оси $AA_1$ и отстоящей от нее
+на расстояние $3b$. Найти объем тела, которое при этом получается.
+
+\smallskip
+\noindent $\blacktriangleleft$ Площадь эллипса равнa $\pi ab$.
+Центр тяжести эллипса находится в точке пересечения осей и
+отстоит от оси вращения на расстояние $3b$. Длина окружности,
+которую описывает центр тяжести при вращении равна $6\pi b$.
+Применяя вторую теорему Гульдина получаем объем тела вращения
+$6\pi^2 ab^2$. $\blacktriangleright$
+
+\medskip
+\noindent{\bf 2666.} Фигура, образованная первыми арками циклоид
+$$x=a(t-\sin t),\quad y=a(1-\cos t)$$
+и
+$$x=a(t-\sin t),\quad y=-a(1-\cos t),$$
+вращается вокруг оси ординат. Найти объем и поверхность тела, которое при
+этом получается.
+
+\smallskip
+\noindent $\blacktriangleleft$ Точка описывает первую арку циклоиды,
+когда параметр $t$ изменяется от $0$ до $2\pi$. Основание арки имеет
+длину $2\pi a$. Из соображений симметрии центр тяжести фигуры образованной
+арками отстоит от оси ординат на расстояние $\pi a$, а длина окружности,
+которую описывает центр при вращении равна $2\pi^2a$. Теперь нам надо
+вычислить площадь фигуры. Она равна интегралу\\
+$\displaystyle S=2\int_0^{2\pi}y\,dx=
+2a^2\int_0^{2\pi}(1-\cos t)\,d(t-\sin t)=
+2a^2\int_0^{2\pi}(1-\cos t)^2\,dt=$\\
+$\displaystyle =2a^2\cdot2\pi-4a^2\cdot0+2a^2\int_0^{2\pi}\cos^2t\,dt=
+4\pi a^2+a^2\int_0^{2\pi}(1+\cos2t)\,dt=$\\
+$\displaystyle =4\pi a^2+2\pi a^2+a^2\int_0^{2\pi}\cos2t\,dt=6\pi a^2$.\\
+Используя вторую теорему Гульдина мы можем написать объем:\\
+$V=6\pi a^2\cdot 2\pi^2a=12\pi^3a^3$.\\
+
+\smallskip
+\noindent Вычислим площадь поверхности. Центр тяжести контура фигуры
+тот же, что и сама фигура, поэтому и длина окружности, которую
+он описывает при вращении будет той же -- $2\pi^2a$. Теперь
+вычислим длину контура фигуры. Она равна интегралу\\
+$\displaystyle L=4\int_0^{\pi}\sqrt{x'^2+y'^2}\,dt=
+4a\int_0^{\pi}\sqrt{(t-\sin t)'^2+(1-\cos t)'^2}\,dt=$\\
+$\displaystyle =4a\int_0^{\pi}\sqrt{1-2\cos t+\cos t^2+\sin^2t}\,dt=
+8a\int_0^{\pi}\sqrt{\frac{1-\cos t}{2}}\,dt=$\\
+$\displaystyle =16a\int_0^{\pi}\sin\frac t2\,d\frac t2=
+-\left.16a\cos\frac t2\right|_0^{\pi}=16a$.\\
+Теперь по первой теореме Гульдина получаем площадь поверхности\\
+$S_{\mbox{пов.}}=16a\cdot 2\pi^2a=32\pi^2a^2$. $\blacktriangleright$
+
+\medskip
+\noindent{\bf 2676.} С какой силой материальная ломаная $y=|x|+1$
+притягивает материальную точку массы $m$, находящуюся в начале
+координат? (Линейная плотность равна $\gamma$.)
+
+\smallskip
+\noindent $\blacktriangleleft$
+Поскольку лучи ломаной симметричны относительно оси $Oy$, составляющие
+сил тяготения от этих лучей, направленные вдоль оси $Ox$ уравновешивают
+друг друга и дают нулевую сумму, а составляющие, направленные вдоль оси
+$Oy$ равны и одинаково направлены. Таким образом, искомая сила тяготения
+в два раза больше чем составляющая силы тяготения от одного луча,
+направленная вдоль оси $Oy$. Возьмем луч, расположенный в правой полуплоскости.
+Рассмотрим бесконечно малый участок луча с координатой $x$ и соответствующий
+длине $dx$ оси $Ox$. Его масса равна $\gamma\sqrt 2\,dx$, расстояние участка
+от начала координат равно $\sqrt{x^2+(x+1)^2}=\sqrt{2x^2+2x+1}$, а косинус
+угла между направлением силы тяготения и осью $Oy$ равен
+$\displaystyle\frac{x+1}{\sqrt{2x^2+2x+1}}$. Теперь мы можем
+записать искомую силу интегралом:\\
+$\displaystyle F=2\int_0^{\infty}\frac{km\sqrt 2\gamma}{2x^2+2x+1}\cdot
+\frac{x+1}{\sqrt{2x^2+2x+1}}\,dx=
+2\sqrt 2km\gamma\int_0^{\infty}\frac{(x+1)\,dx}{(2x^2+2x+1)^{3/2}}=$\\
+$\displaystyle =2\sqrt 2km\gamma\int_0^{\infty}\frac{(x+1/2)\,dx}{(2x^2+2x+1)^{3/2}}+
+\sqrt 2km\gamma\int_0^{\infty}\frac{dx}{(2x^2+2x+1)^{3/2}}$.\\
+Первый интеграл приводится к интегралу степенной функции:\\
+$\displaystyle \frac{\sqrt 2km\gamma}{2}\int_0^{\infty}
+\frac{d(2x^2+2x+1)}{(2x^2+2x+1)^{3/2}}=
+-\left.\frac{\sqrt 2km\gamma}{\sqrt{2x^2+2x+1}}\right|_0^{\infty}=
+\sqrt 2km\gamma$.\\
+Ко второму интегралу применяем подстановку Абеля:\\
+$\displaystyle t=\frac{2x+1}{\sqrt{2x^2+2x+1}},\quad 2x+1=t\sqrt{2x^2+2x+1},\quad
+4x^2+4x+1=t^2(2x^2+2x+1),\\
+2(2x^2+2x+1)-1=t^2(2x^2+2x+1),\quad
+2x^2+2x+1=\frac{1}{2-t^2},\\
+2\,dx=dt\sqrt{2x^2+2x+1}+t^2dx,\quad (2-t^2)\,dx=\sqrt{2x^2+2x+1}\,dt,\\
+\frac{dx}{\sqrt{2x^2+2x+1}}=\frac{dt}{2-t^2}.\\
+\sqrt 2km\gamma\int_0^{\infty}\frac{dx}{(2x^2+2x+1)^{3/2}}=
+\sqrt 2km\gamma\int_1^{\sqrt2}dt=\sqrt 2km\gamma(\sqrt2-1).$\\
+Окончательный ответ: $\sqrt 2km\gamma+\sqrt 2km\gamma(\sqrt2-1)=2km\gamma$.
+$\blacktriangleright$
+
+\medskip
+\noindent{\bf 2682.} Вычислить работу, которую необходимо затратить,
+для того чтобы выкачать воду, наполняющую цилиндрический резервуар
+высотой $H=5\mbox{ м}$, имеющий в основании круг радиуса $R=3\mbox{ м}$.
+
+\smallskip
+\noindent $\blacktriangleleft$
+Бесконечно тонкий горизонтальный слой воды толщины $dx$ имеет объем $\pi R^2\,dx$
+Его вес в ньютонах $\pi R^2 1000g\,dx$. Если слой расположен на глубине $x$, то
+работа в джоулях, требующаяся для подъема воды этого слоя до уровня верхней кромки
+резервуара, равна $\pi R^2 1000gx\,dx$. Работа по выкачиванию всей воды равна
+интегралу\\
+$\displaystyle \int_0^H\pi R^2 1000gx\,dx=\pi R^2 500gH^2=
+3{,}14\cdot 3^2\cdot500\cdot10\cdot5^2=
+3{,}5325\cdot10^6\mbox{ Дж}$.
+$\blacktriangleright$
+
+\medskip
+\noindent{\bf 2691.} Круглый цилиндр, радиус основания которого
+равен $R$, а высота $H$, вращается вокруг своей оси с постоянной
+угловой скоростью $\omega$. Плотность материала, из которого
+сделан цилиндр, равна $\gamma$. Найти кинетическую энергию цилиндра.
+
+\smallskip
+\noindent $\blacktriangleleft$
+Кинетическая энергия равна $I\omega^2/2$, а момент инерции равен
+интегралу\\
+$I=\displaystyle \int_0^Rx^2\cdot2\pi xH\gamma\,dx=2\pi H\gamma\int_0^Rx^3dx=
+2\pi H\gamma\cdot\frac{R^4}{4}$.\\
+Теперь мы можем вычислить энергию, которая равна
+$\pi R^4H\omega^2\gamma/4$. $\blacktriangleright$
+
+\medskip
+\section* {Глава IX. Ряды}
+
+\medskip
+\noindent Доказать сходимость следующих рядов с помощью признака Даламбера. 
+
+\medskip
+\noindent{\bf 2755.} $\displaystyle\frac{1}{2}+\frac{2}{2^2}+\ldots+\frac{n}{2^n}+\ldots$\\
+$\blacktriangleleft$ $\displaystyle\lim_{n\to\infty}\frac{n+1}{2^{n+1}}\cdot\frac{2^n}{n}=
+\lim_{n\to\infty}\frac{n+1}{2n}=\frac12<1$. Сходится. $\blacktriangleright$
+
+\medskip
+\noindent{\bf 2756.} $\displaystyle\tg\frac{\pi}{4}+2\tg\frac{\pi}{8}+
+\ldots+n\tg\frac{\pi}{2^{n+1}}+\ldots$\\
+$\blacktriangleleft$ $\displaystyle\lim_{n\to\infty}
+\frac{(n+1)\tg\frac{\pi}{2^{n+2}}}{n\tg\frac{\pi}{2^{n+1}}}=
+\lim_{n\to\infty}\frac{n+1}{n}\cdot
+\frac{\sin\frac{\pi}{2^{n+2}}}{\cos\frac{\pi}{2^{n+2}}}\cdot
+\frac{\cos\frac{\pi}{2^{n+1}}}{\sin\frac{\pi}{2^{n+1}}}=
+\lim_{n\to\infty}\frac{\pi}{2^{n+2}}\cdot\frac{2^{n+1}}{\pi}=$\\
+$\displaystyle =1/2<1$.
+Сходится. $\blacktriangleright$
+
+\medskip
+\noindent{\bf 2759.} $\displaystyle\frac{1}{3}+\frac{1\cdot 3}{3\cdot 6}+
+\ldots+\frac{1\cdot3\cdot\ldots\cdot(2n-1)}{3^n\cdot n!}+\ldots$\\
+$\blacktriangleleft$ $\displaystyle\lim_{n\to\infty}
+\frac{1\cdot3\cdot\ldots\cdot(2n+1)}{3^{n+1}(n+1)!}\cdot
+\frac{3^n\cdot n!}{1\cdot3\cdot\ldots\cdot(2n-1)}=
+\lim_{n\to\infty}\frac{2n+1}{3(n+1)}=$\\
+$\displaystyle =2/3<1$. Сходится. $\blacktriangleright$
+
+\medskip
+\noindent{\bf 2762.} $\displaystyle\frac22+\frac{2\cdot3}{4\cdot 2}+\ldots+
+\frac{(n+1)!}{2^n\cdot n!}+\cdot$\\
+$\blacktriangleleft$ $\displaystyle\lim_{n\to\infty}\frac{(n+2)!\cdot2^n\cdot n!}
+{2^{n+1}(n+1)!(n+1)!}=\lim_{n\to\infty}\frac{n+2}{2(n+1)}=\frac12<1$. Сходится.
+$\blacktriangleright$
+
+\medskip
+\noindent Доказать сходимость следующих рядов с помощью радикального признака Коши.
+
+\medskip
+\noindent{\bf 2764.} $\displaystyle\frac13+\left(\frac25\right)^2+\dots
++\left(\frac{n}{2n+1}\right)^n+\ldots$\\
+$\blacktriangleleft$ $\displaystyle\lim_{n\to\infty}\frac{n}{2n+1}=\frac12<1$.
+Сходится. $\blacktriangleright$
+
+\medskip
+\noindent{\bf 2765.} $\displaystyle\arcsin 1+\arcsin^2\frac12+\ldots+
+\arcsin^n\frac1n+\dots$\\
+$\blacktriangleleft$ $\displaystyle\lim_{n\to\infty}\arcsin\frac1n=0<1$. Сходится.
+$\blacktriangleright$
+
+\medskip
+\noindent Вопрос о сходимости следующих рядов решить с помощью интегрального
+признака Коши.
+
+\medskip
+\noindent{\bf 2768.} $\displaystyle\frac{1}{2\ln2}+\frac{1}{3\ln3}+\ldots+
+\frac{1}{n\ln n}+\ldots$\\
+
+\smallskip
+\noindent$\blacktriangleleft$ $\displaystyle\int_2^\infty\frac{dx}{x\ln x}=
+\int_2^\infty\frac{d\ln x}{\ln x}=\ln\ln x\big|_2^\infty$. Интеграл и ряд расходятся.
+$\blacktriangleright$
+
+\medskip
+\noindent{\bf 2769.} $\displaystyle\left(\frac{1+1}{1+1^2}\right)^2+
+\left(\frac{1+2}{1+2^2}\right)^2+\ldots+\left(\frac{1+n}{1+n^2}\right)^2+
+\ldots$\\
+$\blacktriangleleft$ $\displaystyle\int_1^\infty\left(\frac{1+x}{1+x^2}\right)^2dx=
+\int_1^\infty\frac{1+x^2}{(1+x^2)^2}\,dx+\int_1^\infty\frac{2x\,dx}{(1+x^2)^2}=$\\
+$\displaystyle =
+\int_1^\infty\frac{dx}{1+x^2}+\int_1^\infty\frac{d(x^2+1)}{(x^2+1)^2}=
+\arctg x\big|_1^\infty-\frac{1}{1+x^2}\big|_1^\infty$. Интеграл и ряд сходятся.
+$\blacktriangleright$
+
+\medskip
+\noindent Выяснить, какие из следующих рядов сходятся, какие расходятся.
+
+\medskip
+\noindent{\bf 2773.} $\displaystyle\sqrt2+\sqrt\frac32+\ldots+\sqrt\frac{n+1}{n}+\ldots$\\
+$\blacktriangleleft$ $\displaystyle\lim_{n\to\infty}\sqrt\frac{n}{n+1}=1\ne0$.
+Общий член ряда не стремится к нулю. Ряд расходится. $\blacktriangleright$
+
+\medskip
+\noindent{\bf 2777.} $\displaystyle\frac{1}{1+1^2}+\frac{2}{1+2^2}+\ldots+
+\frac{n}{1+n^2}+\ldots$\\
+$\blacktriangleleft$ Сравниваем данный ряд с расходящимся рядом
+$\displaystyle\sum_{n=1}^\infty\frac1n$. Вычисляем предел отношения общих членов:
+$\displaystyle\lim_{n\to\infty}\frac{n}{1+n^2}\cdot\frac{n}{1}=
+\lim_{n\to\infty}\frac{n^2}{1+n^2}=1$. Предел конечный и не равен нулю, поэтому
+исходный ряд также расходится. $\blacktriangleright$
+
+\medskip
+\noindent{\bf 2778.} $\displaystyle\frac13+\frac{3}{3^2}+\ldots+\frac{2n-1}{3^n}+\ldots$\\
+$\blacktriangleleft$ Применяем интегральный признак. Для этого сначала вычислим
+неопределенный интеграл:\\
+$\displaystyle\int\frac{2x-1}{3^x}\,dx=-\frac{1}{\ln3}\int(2x-1)\,d(3^{-x})=
+-\frac{2x-1}{\ln3\cdot3^x}+\frac{2}{\ln3}\int 3^{-x}dx=$\\
+$\displaystyle =
+-\frac{2x-1}{\ln3\cdot3^x}-\frac{2}{(\ln3)^2\cdot 3^x}$.\\
+Интеграл $\displaystyle\int_1^\infty\frac{2x-1}{3^x}\,dx$ сходится, поэтому
+данный ряд также сходится. $\blacktriangleright$
+
+\medskip
+\noindent Доказать каждое из следующих соотношений с помощью ряда, общим
+членом которого является данная функция.
+
+\medskip
+\noindent{\bf 2785.} $\displaystyle\lim_{n\to\infty}\frac{a^n}{n!}$.
+$\blacktriangleleft$ Доказываем сходимость ряда
+$\displaystyle\sum_{n=1}^{\infty}\frac{a^n}{n!}$ методом Даламбера:\\
+$\displaystyle\lim_{n\to\infty}\frac{a^{n+1}}{(n+1)!}\cdot\frac{n!}{a^n}=
+\lim_{n\to\infty}\frac{a}{n+1}=0$.\\
+Теперь можно применить необходимый признак сходимости ряда.
+$\blacktriangleright$
+
+\medskip
+\noindent{\bf 2788.} $\displaystyle\lim_{n\to\infty}\frac{n^n}{(n!)^2}$.
+$\blacktriangleleft$ Доказываем сходимость ряда
+$\displaystyle\sum_{n=1}^{\infty}\frac{n^n}{(n!)^2}$ методом Даламбера:\\
+$\displaystyle\lim_{n\to\infty}\frac{(n+1)^{n+1}}{[(n+1)!]^2}\cdot\frac{(n!)^2}{n^n}=
+\lim_{n\to\infty}\frac{n+1}{(n+1)^2}\left(1+\frac1n\right)^n=
+\lim_{n\to\infty}\frac{e}{n+1}=0$.\\
+Теперь можно применить необходимый признак сходимости ряда.
+$\blacktriangleright$
+
+\medskip\noindent
+Найти функцию по данному полному дифференциалу.
+
+\medskip
+\noindent Вычислить двойные интегралы, взятые по прямоугольным областям интегрирования $D$, заданным условиями в скобках.
+
+\medskip\noindent
+\noindent{\bf 3479.} $\displaystyle \iint_D\frac{x^2}{1+y^2}\,dxdy\qquad (0\le x \le1,\quad 0\le y\le 1)$.
+
+\smallskip
+\noindent $\blacktriangleleft$ $\displaystyle \iint_D\frac{x^2}{1+y^2}\,dxdy=\int_0^1x^2dx\int_0^1\frac{dy}{1+y^2}=
+\int_0^1x^2dx\cdot\arctg y\Big|_0^1=\frac{\pi}{4}\cdot\frac{x^3}{3}\Big|_0^1=\frac{\pi}{12}.$
+$\blacktriangleright$
+
+\medskip\noindent
+Вычислить интегралы.
+
+\medskip
+\noindent{\bf 3508.} $\displaystyle \iint_D(x^2+y)\,dx\,dy,\quad D$ -- область, ограниченная параболами
+$y=x^2$ и $y^2=x$.
+
+\smallskip
+\noindent $\blacktriangleleft$ $\displaystyle \iint_D(x^2+y)\,dx\,dy=
+\int_0^1dx\int_{x^2}^{\sqrt x}(x^2+y)\,dy=
+\int_0^1\left(x^2y+\frac{y^2}{2}\right)\Big|_{x^2}^{\sqrt x}dx=$\\
+$\displaystyle =\int_0^1\left(x^{5/2}+\frac{x}{2}-x^4-\frac{x^4}{2}\right)\,dx
+=\left(\frac27x^{7/2}+\frac{x^2}{4}-\frac{3}{10}x^5\right)\Big|_0^1
+=\frac27+\frac{1}{4}-\frac{3}{10}=\frac{33}{140}.$ $\blacktriangleright$
+
+\medskip
+\noindent{\bf 3519.} $\displaystyle \int_0^a dx\int_0^x dy\int_0^y xyz\,dz=
+\int_0^a dx\int_0^x dy\cdot xy\frac{z^2}{2}\Big|_0^y=\frac12\int_0^a dx\int_0^xxy^3dy=$\\
+$\displaystyle =\frac12\int_0^a dx\cdot x\frac{y^4}{4}\Big|_0^x=\frac18\int_0^a x^5 dx=
+\frac18\cdot\frac{x^6}{6}\Big|_0^a=\frac{a^6}{48}$.
+
+\medskip
+\noindent{\bf 3523.} $\displaystyle \iiint_\Omega xy\,dx\,dy\,dz,\quad\Omega$ -- область, ограниченная
+гиперболическим параболоидом $z=xy$ и плоскостями $x+y=1$ и $z=0\ (z\ge0)$.
+
+\smallskip\noindent $\blacktriangleleft$ $\displaystyle \iiint_\Omega xy\,dx\,dy\,dz=
+\int_0^1x\,dx\int_0^{1-x}y\,dy\int_0^{xy}dz=\int_0^1x\,dx\int_0^{1-x}y\,dy\cdot xy=$\\
+$\displaystyle =\int_0^1x^2\,dx\cdot\frac{y^3}{3}\Big|_0^{1-x}=\frac13\int_0^1(x^2-3x^3+3x^4-x^5)\,dx=$\\
+$\displaystyle =\frac13\cdot\left(\frac13x^3-\frac34x^4+\frac35x^5-\frac16x^6\right)\Big|_0^1=
+\frac13\cdot\left(\frac13-\frac34+\frac35-\frac16\right)=\frac13\cdot\frac{1}{60}=\frac{1}{180}$.
+$\blacktriangleright$
+
+\medskip
+\noindent Перейти в двойном интеграле $\displaystyle\iint_Df(x,y)\,dx\,dy$
+к полярным координатам $\rho$ и $\varphi$ $(x=\rho\cos\varphi,\quad y=\rho\sin\varphi)$,
+и расставить пределы интегрирования:
+
+\medskip
+\noindent{\bf 3527.} $D$ -- область, являющаяся общей частью двух кругов $x^2+y^2\le ax$ и $x^2+y^2\le by$.
+
+\smallskip
+\noindent $\blacktriangleleft$ Первая окружность в полярной системе координат имеет уравнение
+$\rho=a\cos\varphi$, вторая окружность -- уравнение $\rho=b\sin\varphi$. Они пересекаются в начале
+координат и в точке для которой $a\cos\varphi=b\sin\varphi$. Отсюда имеем
+$$a\cos\varphi-b\sin\varphi=\sqrt{a^2+b^2}\sin(\arctg\frac ab-\varphi)=0
+\mbox{ или }\varphi=\arctg\frac ab.$$
+Теперь можем записать искомый интеграл:
+$$\int_0^{\arctg\frac ab}d\varphi\int_0^
+{b\sin\varphi}f(\rho\cos\varphi,\rho\sin\varphi) \rho\, d\rho+\int_{\arctg\frac ab}^{\frac{\pi}{2}}d\varphi\int_0^
+{a\cos\varphi}f(\rho\cos\varphi,\rho\sin\varphi) \rho\, d\rho.$$
+$\blacktriangleright$
+
+\medskip
+\noindent{\bf 3531.} $D$ -- область, определенная неравенствами $x\ge0,\quad y\ge0,\quad
+(x^2+y^2)^3\le4a^2x^2y^2$.
+
+\smallskip\noindent $\blacktriangleleft$ Область представляет собой часть первого квадранта, отрезанную кривой, уравнение которой в полярных координатах будет следующим:
+$$(\rho^2\cos^2\varphi+\rho^2\sin^2\varphi)^3=4a^2\rho^4\cos^2\varphi\sin^2\varphi\mbox{ или }
+\rho=a\sin2\varphi.$$
+Теперь мы можем написать искомый интеграл:
+$$\int_0^{\frac{\pi}{2}}d\varphi\int_0^{a\sin2\varphi}f(\rho\cos\varphi,\rho\sin\varphi) \rho\, d\rho.$$
+$\blacktriangleright$
+
+\medskip
+\noindent Двойные интегралы преобразовать к полярным коордианатам:
+
+\medskip
+\noindent{\bf 3533.} $\displaystyle \int_{R/2}^{2R}dy\int_0^{\sqrt{2Ry-y^2}}f(x,y)\,dx$.
+
+\smallskip
+\noindent $\blacktriangleleft$ Выведем уравнение кривой $x=\sqrt{2Ry-y^2}$ в полярной системе
+координат:\\
+$\rho\cos\varphi=\sqrt{2R\rho\sin\varphi-\rho^2\sin^2\varphi^2};
+\quad\rho^2\cos^2\varphi=2R\rho\sin\varphi-\rho^2\sin^2\varphi^2;$\\
+$\rho^2=2R\rho\sin\varphi;\quad\rho=2R\sin\varphi.$
+Прямая $y=R/2$ имеет уравнение $\rho\sin\varphi=R/2$ или $\displaystyle\rho=\frac{R}{2\sin\varphi}$,
+Аналогично получаем уравнение прямой $y=2R$, которое имеет вид $\displaystyle\rho=\frac{2R}{\sin\varphi}.$ Найдем полярные углы $\varphi_A,\varphi_B$ точек $A,B$, в которых кривая пересекает эти прямые,
+для этого решим следующие уравнения:\\
+$\displaystyle2R\sin\varphi_A=\frac{R}{2\sin\varphi_A};\quad\sin^2\varphi_A=\frac{1}{4};
+\quad\sin\varphi_A=\frac{1}{2};\quad\varphi_A=\frac{\pi}{6};$\\
+$\displaystyle2R\sin\varphi_B=\frac{2R}{\sin\varphi_B};\quad\sin^2\varphi_B=1;
+\quad\sin\varphi_B=1;\quad\varphi_B=\frac{\pi}{2};$\\
+Теперь мы можем написать искомый интеграл.\\
+$\displaystyle \int_{R/2}^{2R}dy\int_0^{\sqrt{2Ry-y^2}}f(x,y)\,dx=
+\int_{\pi/6}^{\pi/2}d\varphi\int_{R/(2\sin\varphi)}^{2R\sin\varphi}f(\rho\cos\varphi,\rho\sin\varphi)\rho\,d\rho$.
+$\blacktriangleright$ 
+
+\medskip
+\noindent{\bf 3534.} $\displaystyle \int_0^Rdx\int_0^{\sqrt{R^2-x^2}}f(x^2+y^2)\,dy$.
+
+\smallskip
+\noindent $\blacktriangleleft$ Выведем уравнение кривой $x=\sqrt{R^2-x^2}$ в полярной системе
+координат:\\
+$\rho\cos\varphi=\sqrt{R^2-\rho^2\sin^2\varphi};
+\quad\rho^2\cos^2\varphi=R^2-\rho^2\sin^2\varphi;\quad\rho^2=R^2;\quad\rho=R.$\\
+Эта кривая пересекает прямую $y=R$ при значении полярного угла $\pi/2$. Теперь можно
+написать искомый интеграл:\\
+$\displaystyle \int_0^Rdx\int_0^{\sqrt{R^2-x^2}}f(x^2+y^2)\,dy=
+\int_{0}^{R}d\rho\int_{0}^{\pi/2}f(\rho^2)\rho\,d\varphi=\frac{\pi}{2}\int_{0}^{R}f(\rho^2)\rho\,d\rho$.
+ $\blacktriangleright$ 
+
+\medskip
+\noindent С помощью перехода к полярным координатам вычислить двойные интегралы:
+
+\medskip
+\noindent{\bf 3536.} $\displaystyle \int_0^Rdx\int_0^{\sqrt{R^2-x^2}}\ln(1+x^2+y^2)\,dy$.
+
+\smallskip
+\noindent $\blacktriangleleft$ Воспользовавшись результатом задачи 3534, мы можем написать:\\
+$\displaystyle \int_0^Rdx\int_0^{\sqrt{R^2-x^2}}\ln(1+x^2+y^2)\,dy=
+\frac{\pi}{2}\int_{0}^{R}\ln(1+\rho^2)\rho\,d\rho=$\\
+$\displaystyle =\frac{\pi}{4}\int_{0}^{R}\ln(1+\rho^2)\,d(1+\rho^2)=
+\frac{\pi}{4}\int_{1}^{1+R^2}\ln t\,dt=
+\frac{\pi}{4}t\ln t\Big|_{1}^{1+R^2}-\frac{\pi}{4}\int_{1}^{1+R^2}\frac tt\,dt=$\\
+$\displaystyle =\frac{\pi}{4}[(1+R^2)\ln(1+R^2)-\ln1-1-R^2+1]=\frac{\pi}{4}[(1+R^2)\ln(1+R^2)-R^2]$.
+$\blacktriangleright$ 
+
+\medskip
+\noindent{\bf 3539.} $\displaystyle \iint_D\sqrt{R^2-x^2-y^2}\,dx\,dy$, где $D$ -- круг $x^2+y^2\le Rx$.
+
+\smallskip
+\noindent $\blacktriangleleft$ В полярной системе круг имеет уравнение
+$\rho^2\cos^2\varphi+\rho^2\sin^2\varphi\le R\rho\cos\varphi$
+или $\rho\le R\cos\varphi,\ -\pi/2\le\varphi\le\pi/2$. Записываем интеграл\\
+$\displaystyle \iint_D\sqrt{R^2-x^2-y^2}\,dx\,dy=
+\int_{-\pi/2}^{\pi/2}d\varphi\int_0^{R\cos\varphi}\sqrt{R^2-\rho^2}\rho\,d\rho=$\\
+$\displaystyle =-\frac12\int_{-\pi/2}^{\pi/2}d\varphi\int_0^{R\cos\varphi}\sqrt{R^2-\rho^2}\,d(R^2-\rho^2)=
+-\frac13\int_{-\pi/2}^{\pi/2}d\varphi\cdot (R^2-\rho^2)^{3/2}\Big|_0^{R\cos\varphi}=$\\
+$\displaystyle =-\frac{R^3}{3}\int_{-\pi/2}^{\pi/2}(|\sin\varphi|^3-1)\,d\varphi=
+-\frac{2R^3}{3}\int_{0}^{\pi/2}(\sin^3\varphi-1)\,d\varphi=$\\
+$\displaystyle =\frac{2R^3}{3}\int_{0}^{\pi/2}(1-\cos^2\varphi)\,d(\cos\varphi)+\frac{\pi R^3}{3}=
+\frac{2R^3}{3}\left(\cos\varphi-\frac{\cos^3\varphi}{3}\right)\Big|_{0}^{\pi/2}+\frac{\pi R^3}{3}=$\\
+$\displaystyle =\frac{2R^3}{3}\cdot \left(-\frac{2}{3}\right)+\frac{\pi R^3}{3}=
+\frac{R^3}{3}\left(\pi-\frac43\right)$. $\blacktriangleright$
+
+\medskip
+\noindent Перейти в тройном интеграле $\displaystyle\iiint_\Omega f(x,y,z)\,dx\,dy\,dz$
+к цилиндрическим координатам
+$\rho$, $\varphi$,  $z$ $(x=\rho\cos\varphi,\ y=\rho\sin\varphi,\ z=z)$ или сферическим координатам
+$\rho$, $\theta$, $\varphi$ $(x=\rho\cos\varphi\sin\theta,\ y=
+\rho\sin\varphi\sin\theta,\ z=\rho\cos\theta)$
+и расставить пределы интегрирования:
+
+\medskip
+\noindent{\bf 3547.} $\Omega$ -- область, находящаяся в первом октанте и ограниченная цилиндром
+$x^2+y^2=R^2$ и плоскостями $z=0$, $z=1$, $y=x$, $y=x\sqrt3$.
+
+\smallskip
+\noindent $\blacktriangleleft$ Перейдем к цилиндрической системе координат. Для плоскости $y=x$
+имеем $\rho\sin\varphi=\rho\cos\varphi;\ \tg\varphi=1$ или $\varphi=\pi/4$.
+Для плоскости $y=x\sqrt3$ так же точно получаем $\varphi=\pi/3$.
+Теперь можно написать интеграл:\\
+$\displaystyle\iiint_\Omega f(x,y,z)\,dx\,dy\,dz=\int_0^1dz\int_{\pi/4}^{\pi/3}d\varphi
+\int_0^Rf(\rho\cos\varphi,\rho\sin\varphi,z)\rho\,d\rho$. $\blacktriangleright$ 
+
+\medskip
+\noindent{\bf 3551.} $\Omega$ -- общая часть двух шаров $x^2+y^2+z^2\le R^2$ и $x^2+y^2+(z-R)^2\le R^2$.
+
+\smallskip
+\noindent $\blacktriangleleft$ Перейдем к сферической системе координат. Уравнение второго шара в этой системе будет таким:
+$(\rho\cos\varphi\sin\theta)^2+(\rho\sin\varphi\sin\theta)^2+(\rho\cos\theta-R)^2\le R^2;$\\
+$\quad\rho^2\sin^2\theta+\rho^2\cos^2\theta-2R\rho\cos\theta+R^2\le R^2;\quad
+\rho\le2R\cos\theta.$\\
+Сферы пересекаются по окружности, для которой $2R\cos\theta=R$ или $\theta=\pi/3$.\\
+Теперь можем записать искомый интеграл:\\
+$\displaystyle\int_0^{2\pi}d\varphi\int_0^{\pi/3}\sin\theta\,d\theta\int_0^Rf(\rho\cos\varphi\sin\theta,
+\rho\sin\varphi\sin\theta,\rho\cos\theta)\rho^2d\rho+$\\
+$\displaystyle +\int_0^{2\pi}d\varphi\int_{\pi/3}^{\pi/2}\sin\theta\,d\theta
+\int_0^{2R\cos\theta}f(\rho\cos\varphi\sin\theta,
+\rho\sin\varphi\sin\theta,\rho\cos\theta)\rho^2d\rho$. $\blacktriangleright$ 
+
+\medskip
+\noindent Вычислить интегралы с помощью перехода к цилиндрическим или сферическим координатам:
+
+\medskip
+\noindent{\bf 3553.} $\displaystyle\int_0^2dx\int_0^{\sqrt{2x-x^2}}dy\int_0^az\sqrt{x^2+y^2}\,dz$.
+
+\smallskip
+\noindent $\blacktriangleleft$ Переходим к цилиндрической системе координат. Проекция области
+интегрирования на плоскость $Oxy$ представляет собой полукруг радиуса $1$
+с центром в точке $(1,0,0)$, расположенный в верхней полуплоскости.
+Уравнение ограничивающей его окружности будет иметь вид\\
+$y=\sqrt{2x-x^2}$ или $\rho\sin\varphi=\sqrt{2\rho\cos\varphi-\rho^2\cos^2\varphi;}\quad
+\rho^2\sin^2\varphi=2\rho\cos\varphi-\rho^2\cos^2\varphi;$\\
+$\rho=2\cos\varphi$. Теперь можем написать интеграл в цилиндрической системе координат:\\
+$\displaystyle\int_0^{\pi/2}d\varphi\int_0^{2\cos\varphi}d\rho\int_0^az\rho^2dz=
+\int_0^{\pi/2}d\varphi\int_0^{2\cos\varphi}\frac{a^2\rho^2}{2}d\rho=
+\frac{a^2}{6}\int_0^{\pi/2}(2\cos\varphi)^3d\varphi=$\\
+$\displaystyle\frac{4a^2}{3}\int_0^{\pi/2}(1-\sin^2\varphi)\,d(\sin\varphi)=
+\frac{4a^2}{3}\left(\sin\varphi-\frac{\sin^3\varphi}{3}\right)\Big|_0^{\pi/2}=\frac89a^2$.
+$\blacktriangleright$
+
+\medskip
+\noindent{\bf 3557.} $\displaystyle\iiint_\Omega\frac{dx\,dy\,dz}{\sqrt{x^2+y^2+(z-2)^2}}$,
+где $\Omega$ -- шар $x^2+y^2+z^2\le1$.
+
+\smallskip
+\noindent $\blacktriangleleft$ Переходим к сферической системе координат.
+Преобразуем интеграл в повторный.\\
+$\displaystyle\int_0^{2\pi}d\varphi\int_0^1d\rho\int_0^{\pi}\frac{\rho^2\sin\theta\,d\theta}
+{\sqrt{\rho^2\cos^2\varphi\sin^2\theta+\rho^2\sin^2\varphi\sin^2\theta+
+(\rho\cos\theta-2)^2}}=$\\
+$\displaystyle=\frac14\int_0^{2\pi}d\varphi\int_0^1\rho\,d\rho\int_0^{\pi}\frac{d(\rho^2-4\rho\cos\theta+4)}
+{\sqrt{\rho^2-4\rho\cos\theta+4}}=$\\
+$\displaystyle=\frac12\int_0^{2\pi}d\varphi\int_0^1\rho\,d\rho\cdot\sqrt{\rho^2-4\rho\cos\theta+4}\Big|_0^{\pi}=
+\frac12\int_0^{2\pi}d\varphi\int_0^1[(2+\rho)-(2-\rho)]\cdot\rho\,d\rho=$\\
+$\displaystyle=\int_0^{2\pi}d\varphi\int_0^1\rho^2d\rho=\frac13\int_0^{2\pi}d\varphi=\frac23\pi.$
+$\blacktriangleright$
+
+\medskip
+\noindent Найти двойным интегрированием объемы тел, ограниченных данными
+поверхностями (входящие в условия задач параметры считаются положительными):
+
+\medskip
+\noindent{\bf 3562.} Плоскостями $y=0$, $z=0$, $3x+y=6$, $3x+2y=12$ и $x+y+z=6$.
+
+\smallskip
+\noindent $\blacktriangleleft$ Объем равен двойному интегралу по треугольнику $D$,
+расположенному в плоскости $Oxy$ и имеющему вершины $(2,0),$ $(4,0)$ и $(0,6).$\\
+$\displaystyle V=\iint_D(6-x-y)\,dx\,dy=\int_0^6dy\int_{2-\frac y3}^{4-\frac23y}(6-x-y)\,dx=$\\
+$\displaystyle\int_0^6dy\cdot\left[(6-y)x-\frac{x^2}{2}\right]\Big|_{2-\frac y3}^{4-\frac23y}=
+\int_0^6dy\cdot\left[(6-y)\left(2-\frac13y\right)-\frac12\left(2-\frac13y\right)(6-y)\right]=$\\
+$\displaystyle\int_0^6\left(6-2y+\frac{y^2}{6}\right)\,dy=
+\left(6y-y^2+\frac{y^3}{6\cdot3}\right)\Big|_0^6=12.$
+$\blacktriangleright$
+
+\medskip
+\noindent{\bf 3568.} Цилиндром $z=4-x^2$, координатными плоскостями и плоскостью\\
+$2x+y=4\ (x\ge0)$.
+
+\smallskip
+\noindent $\blacktriangleleft$ Объем равен двойному интегралу по треугольнику $D$,
+расположенному в плоскости $Oxy$ и имеющему вершины $(0,0),$ $(2,0)$ и $(0,4).$\\
+$\displaystyle V=\iint_D(4-x^2)\,dx\,dy=\int_0^2(4-x^2)\,dx\int_{0}^{4-2x}dy=
+\int_0^2(4-x^2)(4-2x)\,dx=$\\
+$\displaystyle =\int_0^2(16-8x-4x^2+2x^3)\,dx=\left(16x-4x^2-\frac43x^3+\frac12x^4\right)\Big|_0^2=
+32-16-\frac{32}{3}+8=\frac{40}{3}.$\\
+$\blacktriangleright$
+
+\medskip
+\noindent{\bf 3571.} Эллиптическим цилиндром $\displaystyle \frac{x^2}{4}+y^2=1$,
+плоскостями $z=12-3x-4y$ и $z=1$.
+
+\smallskip
+\noindent $\blacktriangleleft$ Объем равен двойному интегралу по эллипсу $D$,
+расположенному в плоскости $Oxy$ и имеющему полуоси $2$ и $1$.\\
+$\displaystyle V=\iint_D(11-3x-4y)\,dx\,dy=
+\int_{-1}^1dy\int_{-2\sqrt{1-y^2}}^{2\sqrt{1-y^2}}(11-3x-4y)\,dx=$\\
+$\displaystyle=\int_{-1}^1dy\cdot\left[(11-4y)x-\frac32x^2\right]\Big|_{-2\sqrt{1-y^2}}^{2\sqrt{1-y^2}}=
+\int_{-1}^1 4(11-4y)\sqrt{1-y^2}\,dy=$\\
+$\displaystyle=44\int_{-1}^1 \sqrt{1-y^2}\,dy-16\int_{-1}^1 y\sqrt{1-y^2}\,dy)=22\pi.$\\
+Здесь первый интеграл равен $\pi/2$ -- площади единичной полуокружности, а второй интеграл равен нулю как интеграл по симметричному промежутку от нечетной функции.
+$\blacktriangleright$
+
+\medskip
+\noindent{\bf 3577.} Параболоидом $z=x^2+y^2$, цилиндром $y=x^2$ и плоскостями $y=1$ и $z=0$.
+
+\smallskip
+\noindent $\blacktriangleleft$ Объем равен двойному интегралу по области $D$, расположенной в плоскости
+$Oxy$ и представляющей собой сегмент параболы $y=x^2$, отсеченный прямой $y=1$.\\
+$\displaystyle V=\iint_D(x^2+y^2)\,dx\,dy=\int_{-1}^1dx\int_{x^2}^{1}(x^2+y^2)\,dy=
+\int_{-1}^1dx\cdot\left(x^2y+\frac{y^3}{3}\right)\Big|_{x^2}^{1}=$\\
+$\displaystyle =\int_{-1}^1\left(x^2+\frac{1}{3}-x^4-\frac{x^6}{3}\right)dx=
+\left(\frac{x^3}{3}+\frac{x}{3}-\frac{x^5}{5}-\frac{x^7}{21}\right)\Big|_{-1}^1=\frac{88}{105}.$
+$\blacktriangleright$
+
+\medskip
+\noindent{\bf 3588.} Цилиндром $x^2+y^2=2x$, плоскостями $2x-z=0$ и $4x-z=0$.
+
+\smallskip
+\noindent $\blacktriangleleft$ Объем равен двойному интегралу по области $D$, расположенной в плоскости
+$Oxy$ и представляющей собой круг $(x-1)^2+y^2=1$.\\
+$\displaystyle V=\iint_D(4x-2x)\,dx\,dy=\int_{0}^22x\,dx\int_{-\sqrt{1-(x-1)^2}}^{\sqrt{1-(x-1)^2}}dy=
+4\int_0^2x\sqrt{1-(x-1)^2}\,dx$\\
+$\displaystyle =-2\int_0^2\sqrt{1-(x-1)^2}\,d(1-(x-1)^2)+4\int_0^2\sqrt{1-(x-1)^2}\,dx=$\\
+Последний интеграл здесь равен $\pi/2$ как половина площади единичного круга.\\
+$\displaystyle =-2\cdot\frac23(1-(x-1)^2)^{3/2}\Big|_0^2+2\pi=0+2\pi=2\pi.$
+$\blacktriangleright$
+
+\medskip
+\noindent{\bf 3592.} Гиперболическим параболоидом $\displaystyle z=\frac{xy}{a}$,
+цилиндром $x^2+y^2=ax$ и плоскостью $z=0\ (x\ge0,\ y\ge0)$.
+
+\smallskip
+\noindent $\blacktriangleleft$ Объем равен двойному интегралу по области $D$, расположенной в плоскости
+$Oxy$ и представляющей собой полукруг $\displaystyle\left(x-\frac a2\right)^2+y^2=\frac{a^2}{4},\quad x\ge0$.\\
+$\displaystyle V=\iint_D\frac{xy}{a}\,dx\,dy=$ переходим к полярной системе координат:\\
+$\displaystyle=\int_{0}^{\pi/2}d\varphi\int_0^{a\cos\varphi}\frac{r^3\sin\varphi\cos\varphi}{a}\,dr
+=\frac1a\int_{0}^{\pi/2}\sin\varphi\cos\varphi\,d\varphi\int_0^{a\cos\varphi}{r^3}dr=$\\
+$\displaystyle=\frac{a^4}{4a}\int_{0}^{\pi/2}\cos^5\varphi\sin\varphi\,d\varphi=
+-\frac{a^4}{4a}\int_{0}^{\pi/2}\cos^5\varphi\,d(\cos\varphi)=
+-\frac{a^3}{24}\cos^6\varphi\Big|_{0}^{\pi/2}=\frac{a^3}{24}$.
+$\blacktriangleright$
+
+\medskip
+\noindent Найти двойным интегрированием площади указанных областей:
+
+\medskip
+\noindent{\bf 3598.} Области, ограниченной прямыми $y=x$, $y=5x$, $x=1$.
+
+\smallskip
+\noindent $\blacktriangleleft$ $\displaystyle\int_0^1dx\int_x^{5x}dy=\int_0^14x\,dx=2x^2\Big|_0^1=2.$ $\blacktriangleright$
+
+\medskip
+\noindent{\bf 3602*.} Области, ограниченной линией $(x^2+y^2)^2=2ax^3$.
+
+\smallskip
+\noindent $\blacktriangleleft$ Перейдем к полярной системе координат $x=r\cos \varphi,\ y=r\sin\varphi.$
+Получаем следующее уравнение кривой: $r=2a\cos^3\varphi.$ Площадь области с учетом якобиана можно
+записать в виде интеграла\\
+$\displaystyle \int_{-\pi/2}^{\pi/2}d\varphi\int_0^{2a\cos^3\varphi}r\,dr=
+\int_{-\pi/2}^{\pi/2}d\varphi\cdot 2a^2\cos^6\varphi=
+\frac{a^2}{4}\int_{-\pi/2}^{\pi/2}(1+\cos2\varphi)^3d\varphi=$\\
+$\displaystyle =\frac{a^2}{4}\left(\int_{-\pi/2}^{\pi/2}d\varphi+3\int_{-\pi/2}^{\pi/2}\cos2\varphi\,d\varphi+
+3\int_{-\pi/2}^{\pi/2}\cos^22\varphi\,d\varphi+\int_{-\pi/2}^{\pi/2}\cos^32\varphi\,d\varphi\right)=$\\
+$\displaystyle =\frac{a^2}{4}\left(\varphi\Big|_{-\pi/2}^{\pi/2}+\frac32\int_{-\pi/2}^{\pi/2}\cos2\varphi\,d(2\varphi)+
+\frac32\int_{-\pi/2}^{\pi/2}(1+\cos4\varphi)\,d\varphi+\right.$\\
+$\displaystyle \left.+\frac12\int_{-\pi/2}^{\pi/2}(1-\sin^22\varphi)\,d(\sin2\varphi)\right)=$\\
+$\displaystyle =\frac{a^2}{4}\left(\pi+\frac32\sin2\varphi\Big|_{-\pi/2}^{\pi/2}+
+\frac32\varphi\Big|_{-\pi/2}^{\pi/2}+\frac38\int_{-\pi/2}^{\pi/2}\cos4\varphi\,d(4\varphi)+\right.$\\
+$\displaystyle \left.+\frac12\sin2\varphi\Big|_{-\pi/2}^{\pi/2}-\frac16\sin^32\varphi\Big|_{-\pi/2}^{\pi/2}\right)=$\\
+$\displaystyle =\frac{a^2}{4}\left(\pi+0+
+\frac32\pi+\frac38\sin4\varphi\Big|_{-\pi/2}^{\pi/2}+0-0\right)=
+\frac{a^2}{4}\left(\pi+\frac32\pi+0\right)=\frac58\pi a^2$.
+$\blacktriangleright$
+
+\medskip
+\noindentВычислить тройным интегрированием объемы тел, ограниченных данными поверхностями (входящие в уловия задач параметры считаются положительными):
+
+\medskip
+\noindent{\bf 3612.} Цилиндрами $z=\ln(x+2)$ и $z=\ln(6-x)$ и плоскостями $x=0$, $x+y=2$, $x-y=2$.
+
+\smallskip
+\noindent $\blacktriangleleft$ Проекция тела на плоскость $Oxy$ представляет собой треугольник
+с вершинами $(0,2,0)$, $(0,-2,0)$ и $(2,0,0)$, а само тело расположено между двумя логарифмическими
+цилиндрами. Объем выражается интегралом\\
+$\displaystyle V=\int_0^2dx\int_{x-2}^{2-x}dy\int_{\ln(x+2)}^{\ln(6-x)}dz=
+\int_0^2[\ln(6-x)-\ln(x+2)]\,dx\int_{x-2}^{2-x}dy=$\\
+$\displaystyle =\int_0^2(4-2x)[\ln(6-x)-\ln(x+2)]\,dx=$\\
+$\displaystyle =\int_0^2[(4-2x)\ln(6-x)\,dx+(2x-4)\ln(x+2)]\,dx=$\\
+$\displaystyle =-2\int_0^2(6-x)\ln(6-x)\,d(6-x)+8\int_0^2\ln(6-x)\,d(6-x)+$\\
+$\displaystyle +2\int_0^2(x+2)\ln(x+2)\,d(x+2)-8\int_0^2\ln(x+2)\,d(x+2)=$\\
+Далее нам нужно вывести (или взять из справочника) следующие формулы:\\
+1. $\displaystyle\int\ln x\,dx=x\ln x-\int\frac xx\,dx=x(\ln x-1)$.\\
+2. $\displaystyle\int x\ln x\,dx=\frac12\int\ln x\,d(x^2)=\frac12x^2\ln x-\frac12\int x\,dx=\frac14x^2(2\ln x-1)$.\\
+Используя эти формулы вычисляем интегралы\\
+$\displaystyle =-\frac12(6-x)^2[2\ln(6-x)-1]\Big|_0^2+8(6-x)[\ln(6-x)-1]\Big|_0^2+$\\
+$\displaystyle +\frac12(x+2)^2(2\ln(x+2)-1)\Big|_0^2-8(x+2)[\ln(x+2)-1]\Big|_0^2=$\\
+$\displaystyle -\frac12[4^2(2\ln4-1)-6^2(2\ln6-1)]+8[4(\ln4-1)-6(\ln6-1)]+$\\
+$\displaystyle +\frac12[4^2(2\ln4-1)-2^2(2\ln2-1)]-8[4(\ln4-1)-2(\ln2-1)]=$\\
+Первые слагаемые каждой квадратной скобки сокращаются\\
+$18(2\ln6-1)-48(\ln6-1)-2(2\ln2-1)+16(\ln2-1)=$\\
+$(36-48)(\ln2+\ln3)-18+48+(-4+16)\ln2+2-16=16-12\ln3=$\\
+$=4(4-3\ln3).$ $\blacktriangleright$
+
+\medskip
+\noindent{\bf 3621.} $(x^2+y^2+z^2)^3=a^2z^4$.
+
+\smallskip
+\noindent $\blacktriangleleft$ Переходим к сферической системе координат. Получаем\\
+$(r^2\cos^2\varphi\sin^2\theta+r^2\sin^2\varphi\sin^2\theta+r^2\cos^2\theta)^3=a^2r^4\cos^4\theta;\quad
+r^6=a^2r^4\cos^4\theta;$\\
+$r^2=a^2\cos^4\theta;\quad r=a\cos^2\theta.$ Теперь можем написать интеграл.\\
+$\displaystyle V=\int_0^{2\pi}d\varphi\int_{0}^{\pi}d\theta\int_0^{a\cos^2\theta}r^2\sin\theta\,dr=
+\frac13\int_0^{2\pi}d\varphi\int_{0}^{\pi}\sin\theta\,d\theta\cdot r^3\Big|_0^{a\cos^2\theta}=$\\
+$\displaystyle =-\frac{a^3}{3}\int_0^{2\pi}d\varphi\int_{0}^{\pi}\cos^6\theta\,d(\cos\theta)=
+-\frac{a^3}{21}\int_0^{2\pi}d\varphi\cdot\cos^7\theta\Big|_{0}^{\pi}=
+\frac{2a^3}{21}\int_0^{2\pi}d\varphi=$\\
+$\displaystyle =\frac{4\pi}{21}a^3$. $\blacktriangleright$
+
+\medskip
+\noindent{\bf 3625.} $x^2+y^2+z^2=1$, $x^2+y^2+z^2=16$, $z^2=x^2+y^2$, $x=0$, $y=0$, $z=0$\\
+$(x\ge0,\ y\ge0,\ z\ge0)$.
+
+\smallskip
+\noindent $\blacktriangleleft$ Часть шарового слоя, расположенного в первом октанте разрезается конусом
+на две области. Мы будем вычислять объем области, которая примыкает к оси $Oz$, поскольку
+ответ задачника предполагает именно эту область. Переходим к сферической системе координат:\\
+$\displaystyle V=\int_0^{\pi/2}d\varphi\int_{0}^{\pi/4}d\theta\int_1^4r^2\sin\theta\,dr=
+\frac13\int_0^{\pi/2}d\varphi\int_{\pi/4}^{\pi/2}\sin\theta\,d\theta\cdot r^3\Big|_1^4=$\\
+$\displaystyle =\frac{63}{3}\int_0^{\pi/2}d\varphi\int_{0}^{\pi/4}\sin\theta\,d\theta=
+-21\int_0^{\pi/2}d\varphi\cdot\cos\theta\Big|_{0}^{\pi/4}=
+21\left(1-\frac{\sqrt2}{2}\right)\int_0^{\pi/2}d\varphi=$\\
+$\displaystyle =\frac{21}{4}(2-\sqrt2)\pi$. $\blacktriangleright$
+
+\medskip
+\noindent{\bf 3627.} Вычислить площадь той части поверхности $z^2=2xy$, 
+которая находится над прямоугольником, лежащим в плоскости $z=0$ и 
+ограниченным прямыми $x=0,\ y=0,\ x=3,\ y=6$.
+
+\smallskip
+\noindent $\blacktriangleleft$ 
+$\displaystyle z=\sqrt{xy};\ z'_x=\frac{\sqrt{2 y}}{2\sqrt x};
+\ z'^2_x=\frac{y}{2x}.\ z'_y=\frac{\sqrt{2 x}}{2\sqrt y};
+\ z'^2_y=\frac{x}{2y}.$\\[3pt]
+$\displaystyle S=\int_0^3dx\int_0^6\sqrt{1+\frac{y}{2x}+\frac{x}{2y}}\,dy=
+\int_0^3dx\int_0^6\sqrt{\frac{2xy+y^2+x^2}{2xy}}\,dy=\\[3pt]
+=\int_0^3dx\int_0^6\frac{x+y}{\sqrt{2xy}}\,dy=
+\int_0^3dx\cdot\left.\left(\frac{\sqrt x}{\sqrt2}\cdot2\sqrt y+
+\frac{1}{\sqrt{2x}}\cdot \frac{2y^{3/2}}{3}\right)\right|_0^6=\\[3pt]
+=\int_0^3\left(2\sqrt3\sqrt x+\frac{4\sqrt3}{\sqrt x}\right)\,dx=
+\left.\left(\frac{4\sqrt3x^{3/2}}{3}+8\sqrt3\sqrt x\right)\right|_0^3=12+24=36$.\\[3pt]
+Ответ: $36$. $\blacktriangleright$
+
+\medskip
+\noindent В задачах 3632, 3633, 3638 найти площади указанных частей данных поверхностей:
+
+\medskip
+\noindent{\bf 3632.} Части $z^2=4x$, вырезанной цилиндром $y^2=4x$ и плоскостью $x=1$.
+
+\smallskip
+\noindent $\blacktriangleleft$ Вырезанная из параболического цилиндра 
+часть состоит из двух симметричных относительно плоскости $Oxy$ 
+лепестков, имеющих общую точку в начале координат. Проекцией 
+вырезанной части на плоскость $Oxy$ служит сегмент параболы $y^2=4x$. 
+Верхний лепесток поверхности описывается функцией $z=2\sqrt x$.\\[3pt]
+$\displaystyle S=2\int_{0}^{1}dx\int_{-2\sqrt x}^{2\sqrt x}\sqrt{1+z^{'2}_x+z^{'2}_y}\,dy=
+2\int_{0}^{1}dx\int_{-2\sqrt x}^{2\sqrt x}\sqrt{1+\frac 1x}\,dy=$\\[3pt]
+$\displaystyle =8\int_{0}^{1}\sqrt{x+1}\,dx=
+\frac{16}{3}\cdot(x+1)\sqrt{x+1}\Big|_0^1=
+\frac{16}{3}\cdot(2\sqrt 2-1)$.\\[3pt]
+Ответ: $\displaystyle \frac{16}{3}\cdot(2\sqrt 2-1)$. 
+$\blacktriangleright$
+
+\medskip
+\noindent{\bf 3633.} Части $z=xy$, вырезанной цилиндром $x^2+y^2=R^2$.
+
+\smallskip
+\noindent $\blacktriangleleft$ $z=xy;\ z'_x=y;\ z'^2_x=y^2;\ z'_y=x;\ z'^2_y=x^2$. $C$ 
+-- круг $x^2+y^2\le R^2$ в плоскости $Oxy$.\\[3pt]
+$\displaystyle S=\iint_C\sqrt{1+x^2+y^2}\,dxdy=
+\int_0^{2\pi}d\varphi \int_0^R\sqrt{1+r^2}\cdot r\,dr=\\[3pt]
+=2\pi\cdot \frac12 \int_0^R\sqrt{1+r^2}\,d(1+r^2)=
+\pi \cdot \frac23 (1+r^2)^{3/2}\Big|_0^R=
+\frac{2\pi}{3}\left[ (1+R^2)^{3/2}-1\right]$.\\[3pt]
+Ответ: $\displaystyle \frac{2\pi}{3}\left[ (1+R^2)^{3/2}-1\right]$. $\blacktriangleright$
+
+\medskip
+\noindent{\bf 3638.} Части $\displaystyle z=\frac{x+y}{x^2+y^2}$, вырезанной поверхностями $x^2+y^2=1$, $x^2+y^2=4$ и лежащей в первом октанте.
+
+\smallskip
+\noindent $\blacktriangleleft$ $\displaystyle z_x=\frac{(x^2+y^2)-2x(x+y)}{(x^2+y^2)^2}$,
+$\displaystyle z_y=\frac{(x^2+y^2)-2y(x+y)}{(x^2+y^2)^2}$.\\
+Вырезанная часть проецируется на четверть кольца, лежащую в плоскости $Oxy$, которую обозначим через $D$.
+Тогда площадь равна интегралу\\
+$\displaystyle S=\int_D\sqrt{1+\frac{[(x^2+y^2)-2x(x+y)]^2}{(x^2+y^2)^4}+\frac{[(x^2+y^2)-2y(x+y)]^2}{(x^2+y^2)^4}}\,dx\,dy=$\\
+Переходим к полярной системе координат. Преобразуем отдельно подынтегральное выражение\\
+$\displaystyle \sqrt{1+\frac{[\rho^2-2\rho^2\cos\varphi(\cos\varphi+\sin\varphi)]^2}{\rho^8}+
+\frac{[\rho^2-2\sin\varphi(\cos\varphi+\sin\varphi)]^2}{\rho^8}}=$\\
+$\displaystyle =\sqrt{\frac{\rho^4+2-4(\sin\varphi+\cos\varphi)^2+4(\sin\varphi+\cos\varphi)^2}{\rho^4}}=
+\sqrt{\frac{\rho^4+2}{\rho^4}}$.\\
+Продолжим вычисление площади\\
+$\displaystyle S=\int_1^4\rho\,d\rho\int_0^{\pi/2}\sqrt{\frac{\rho^4+2}{\rho^4}}\,d\varphi=
+\frac{\pi}{2}\int_1^4\frac{\sqrt{\rho^4+2}}{\rho}\,d\rho$=\\
+$\displaystyle\Big|\rho^4+2=t^2;\quad \rho=(t^2-2)^{1/4};\quad d\rho=\frac 14(t^2-2)^{-3/4}\cdot 2t.\Big|$\\
+$\displaystyle =\frac{\pi}{4}\int_{\sqrt3}^{3\sqrt2}\frac{t^2}{t^2-2}\,dt=
+\frac{\pi}{4}\cdot\left.\left(t+\frac{1}{\sqrt2}\ln\left|\frac{t-\sqrt2}{t+\sqrt2}\right|\right)\right|_{\sqrt3}^{3\sqrt2}=$\\
+$\displaystyle =\frac{\pi}{4}\cdot\left(3\sqrt2+\frac{1}{\sqrt2}\ln\left|\frac{3\sqrt2-\sqrt2}{3\sqrt2+\sqrt2}\right|
+-\sqrt3-\frac{1}{\sqrt2}\ln\left|\frac{\sqrt3-\sqrt2}{\sqrt3+\sqrt2}\right|\right)=$\\
+$\displaystyle =\frac{\pi}{4}\cdot\left[3\sqrt2+\frac{1}{\sqrt2}\ln\frac{1}{2}
+-\sqrt3-\frac{1}{\sqrt2}\ln\frac{1}{(\sqrt3+\sqrt2)^2}\right]=$\\
+$\displaystyle =\frac{\pi}{4}\cdot\left[3\sqrt2-\frac{\sqrt2}{2}\ln2
+-\sqrt3+\sqrt2\ln(\sqrt3+\sqrt2)\right]$.
+$\blacktriangleright$
+
+\medskip
+\noindent{\bf 3641.} Вычислить полную поверхность тела, ограниченного сферой\\
+$x^2+y^2+z^2=3a^2$ и параболоидом $x^2+y^2=2az\ (z\ge 0)$.
+
+\smallskip
+\noindent $\blacktriangleleft$ Найдем пересечение поверхностей. 
+Сначала вычитаем первое уравнение из второго.\\[3pt]
+$\begin{cases}x^2+y^2+z^2=3a^2\\x^2+y^2=2az\end{cases};\quad 
+\begin{cases}x^2+y^2+z^2=3a^2\\-z^2=2az-3a^2\end{cases}$.\\[3pt]
+Ищем неотрицательное значение $z$ из квадратного уравнения 
+$z^2+2az-3a^2=0$. $z=-a\pm\sqrt{a^2+3a^2}=-a\pm 2a;\ z=a$. 
+Подставляем это значение во второе уравнение. $x^2+y^2=2a^2$. 
+Поверхность состоит из двух частей, расположенных над кругом $C$ 
+в плоскости $Oxy$ с уравнением $x^2+y^2\le 2a^2$.\\[3pt]
+Часть 1. $z=\sqrt{3a^2-x^2-y^2}$; $\displaystyle z'_x=
+\frac{-2x}{2\sqrt{3a^2-x^2-y^2}}$; $\displaystyle z'^2_x=
+\frac{x^2}{3a^2-x^2-y^2}$.\\[3pt]
+$\displaystyle z'_y=\frac{-2y}{2\sqrt{3a^2-x^2-y^2}}$; 
+$\displaystyle z'^2_y=\frac{y^2}{3a^2-x^2-y^2}$.\\[3pt]
+Часть 2. $\displaystyle z=\frac{x^2+y^2}{2a}$; 
+$\displaystyle z'_x=\frac{2x}{2a}$; $\displaystyle z'^2_x=\frac{x^2}{a^2}$.
+$\displaystyle z'_y=\frac{2y}{2a}$; $\displaystyle z'^2_y=
+\frac{y^2}{a^2}$.\\[3pt]
+$\displaystyle S=\iint_C\sqrt{1+\frac{x^2+y^2}{3a^2-x^2-y^2}}\,dxdy+
+\iint_C\sqrt{1+\frac{x^2+y^2}{a^2}}\,dxdy=\\[3pt]
+=\int_0^{2\pi}d\varphi\int_0^{a\sqrt2}\sqrt{1+\frac{r^2}{3a^2-r^2}}r\,dr+
+\int_0^{2\pi}d\varphi\int_0^{a\sqrt2}\sqrt{1+\frac{r^2}{a^2}}r\,dr=\\[3pt]
+=-2\pi\cdot\frac{a\sqrt3}{2}\int_0^{a\sqrt2}\frac{d(3a^2-r^2)}{\sqrt{3a^2-r^2}}+
+2\pi\cdot\frac{1}{2a}\int_0^{a\sqrt2}\sqrt{a^2+r^2}\,d(a^2+r^2)=\\[3pt]
+=-\pi a\sqrt{3}\cdot 2\sqrt{3a^2-r^2}\Big|_0^{a\sqrt2}+
+\frac{\pi}{a}\cdot\frac23 (a^2+r^2)^{3/2}\Big|_0^{a\sqrt2}=\\[3pt]
+=2\pi a\sqrt{3}(a\sqrt3-a)+\frac{2\pi}{3a} (3\sqrt{3}a^3-a^3)=
+6\pi a^2-2\sqrt3\pi a^2+2\sqrt3\pi a^2-\frac{2\pi a^2}{3}=
+\frac{16\pi a^2}{3}$.\\[3pt]
+Ответ: $\displaystyle \frac{16\pi a^2}{3}$. $\blacktriangleright$
+
+\medskip
+\noindent{\bf 3642.} Оси двух однаковых цилиндров радиуса $R$ пересекаются под прямым углом. Найти площадь части поверхности одного из цилиндров, лежащей в другом.
+
+\smallskip
+\noindent $\blacktriangleleft$ Выберем такую систему координат, чтобы оси $Ox$ и $Oy$ располагались по осям цилиндров.
+Тогда цилиндры будут иметь уравнения $y^2+z^2=R^2$ и $x^2+z^2=R^2$. Первая поверхность располагается вдоль оси $Ox$, вторая -- вдоль
+оси $Oy$. Вторая находится внутри первой, когда $-x<y<x$. Для того, чтобы получить эту площадь, можно вычислить одну восьмую этой площади, находящуюся в первом октанте, и умножить ее на 8.\\
+$\displaystyle S=8\int_0^Rdx\int_0^x\sqrt{1+\frac{x^2}{R^2-x^2}}\,dy=8\int_0^Rx\sqrt{1+\frac{x^2}{R^2-x^2}}\,dx=$\\
+$\displaystyle =8R\int_0^R\frac{x\,dx}{\sqrt{R^2-x^2}}\,dx=-4R\int_0^R\frac{d(R^2-x^2)}{\sqrt{R^2-x^2}}=
+-4R\int_0^R\frac{d(R^2-x^2)}{\sqrt{R^2-x^2}}=$\\
+$\displaystyle =-8R\sqrt{R^2-x^2}\Big|_0^R=8R^2.$
+$\blacktriangleright$
+
+\medskip
+\noindent Найти двойным интегрированием статические моменты однородных плоских фигур (плотность $\gamma=1$:
+
+\medskip
+\noindent{\bf 3644.} Полукруга радиуса $R$ относительно диаметра.
+
+\smallskip
+\noindent $\blacktriangleleft$ Расположим систему координат так, чтобы ее начало
+совпало с центром полукруга $D$, диаметр лежал на оси $Ox$,
+а сам полукруг находился в верхней полуплоскости. Тогда\\
+$\displaystyle M_x=\iint_Dy\,dx\,dy=\int_{-R}^{R}dx\int_0^{\sqrt{R^2-x^2}}y\, dy=
+\int_{-R}^{R}dx\cdot\frac{y^2}{2}\Big|_0^{\sqrt{R^2-x^2}}=\\
+=\frac12\int_{-R}^{R}(R^2-x^2)dx=
+\frac12\left(R^2x-\frac{x^3}{3}\right)\Big|_{-R}^{R}=
+\frac 12\left(R^3-\frac{R^3}{3}+R^3-\frac{R^3}{3}\right)=\frac32R^3.$
+$\blacktriangleright$
+
+\medskip
+\noindent{\bf 3646.} Правильного шестиугольника со стороной $a$ относительно стороны.
+
+\smallskip
+\noindent $\blacktriangleleft$ Расположим систему координат так, чтобы ее начало совпало с серединой
+строны шестиугольника $D$, эта сторона лежала на оси $Oy$, а сам шестиугольник
+находился в правой полуплоскости. Тогда\\
+$\displaystyle M_y=\iint_Dx\,dx\,dy=\int_0^{a\sqrt 3/2} x\,dx\int_{-\sqrt3x/3-a/2}^{\sqrt3x/3+a/2} dy+
+\int_{a\sqrt 3/2}^{a\sqrt 3} x\,dx\int_{\sqrt3x/3-3a/2}^{-\sqrt3x/3+3a/2} dy=\\
+=\int_0^{a\sqrt 3/2} x(2\sqrt3x/3+a)\,dx+
+\int_{a\sqrt 3/2}^{a\sqrt 3} x(-2\sqrt3x/3+3a)\,dx=\\
+\left.\left(\frac{2\sqrt3}{9}x^3+\frac{a}{2}x^2\right)\right|_0^{a\sqrt 3/2}+
+\left.\left(-\frac{2\sqrt3}{9}x^3+\frac{3a}{2}x^2\right)\right|_{a\sqrt 3/2}^{a\sqrt 3}=\\
+\frac28a^3+\frac38a^3-2a^3+\frac92a^3+\frac28a^3-\frac98a^3=\frac{2+3-16+36+2-9}{8}=\frac94a^3.$
+
+\medskip\noindent
+Задачу можно решить другим способом, если знать, что статический момент фигуры связан с ее центром ее
+тяжести. Мы знаем, что $x$-координаты центра тяжести выражается формулой
+$x_c=M_y/M$, где $M$ масса фигуры.
+Отсюда получаем $M_y=x_c\cdot M$. Из соображений симметрии мы знаем,
+что центр тяжести шестиугольника находится в его геометрическом центре, то есть
+$\displaystyle x_c=\frac{\sqrt3}{2}a$. Масса шестиугольника при единичной плотности
+равна его площади. Мы знаем, что равностронний треугольник со стороной $a$ имеет
+площадь $\displaystyle \frac{\sqrt3}{4}a^2$. А у шестиугольника площадь в $6$ раз больше,
+т. е. $\displaystyle M=\frac{3\sqrt3}{2}a^2$. Теперь можно вычислить статический момент.
+$\displaystyle M_y=\frac{\sqrt3}{2}a\cdot \frac{3\sqrt3}{2}a^2=\frac94a^3.$ $\blacktriangleright$
+
+\medskip
+\noindent{\bf 3647.} Доказать, что статический момент треугольника с основанием $a$ относительно этого основания зависит только от высоты треугольника.
+
+\smallskip
+\noindent $\blacktriangleleft$ Расположим систему координат так, чтобы точки треугольника $ABC$
+с основанием $AB=a$ и высотой $h$, опущенной на это основание, имели следующие
+координаты $A(0,0)$, $B(a,0)$, $C(t,h)$. Здесь $t$ -- произвольное число. Нам надо доказать,
+что статический момент треугольника от $t$ не зависит. Боковые стороны треугольника
+имеют уравнения $\displaystyle x=\frac th y$ и $\displaystyle x=\frac{t-a}{h}y+a$. Поэтому
+статический момент относительно основания равен
+$$\displaystyle M_x=\int_0^hy\,dy\int_{ty/h}^{(t-a)y/h+a} dx=\int_0^hy\left(\frac{h-y}{h}a\right)\,dy.$$
+Мы видим, что интеграл от $t$ не зависит.
+$\blacktriangleright$
+
+\medskip
+\noindent Найти двойным интегрированием центры масс однородных плоских фигур:
+
+\medskip
+\noindent{\bf 3649.} Фигуры ограниченной синусоидой $y=\sin x$, осью $Ox$ и прямой $x=\pi/4$.
+
+\smallskip
+\noindent $\blacktriangleleft$
+$\displaystyle M=\int_0^{\pi/4}\sin x\,dx=-\cos x\Big|_0^{\pi/4}=-\frac{\sqrt2}{2}+1=\frac{2-\sqrt2}{2}$.\\
+$\displaystyle M_x=\int_0^{\pi/4}dx\int_0^{\sin x}y\,dy=\frac12\int_0^{\pi/4}\sin^2x\,dx=
+\frac14\int_0^{\pi/4}(1-\cos2x)\,dx=\\
+=\frac14\left(x-\frac{\sin2x}{2}\right)\Big|_0^{\pi/4}=\frac14\left(\frac{\pi}{4}-\frac12\right)=
+\frac18\left(\frac{\pi}{2}-1\right)$.\\
+$\displaystyle M_y=\int_0^{\pi/4}x\,dx\int_0^{\sin x}\,dy=\int_0^{\pi/4}x\sin x\,dx=
+-x\cos x\Big|_0^{\pi/4}+\int_0^{\pi/4}\cos x\,dx=\\
+=-\frac{\pi}{4}\cdot\frac{\sqrt2}{2}+\sin x\Big|_0^{\pi/4}=
+-\frac{\pi}{4}\cdot\frac{\sqrt2}{2}+\frac{\sqrt2}{2}=\frac{\sqrt2}{2}\left(1-\frac{\pi}{4}\right)$.\\
+$\displaystyle x_c=M_y/M=\frac{\sqrt2}{2}\left(1-\frac{\pi}{4}\right)\cdot\frac{2}{2-\sqrt2}=
+\left(1-\frac{\pi}{4}\right)\cdot\frac{1}{\sqrt2-1}=\left(1-\frac{\pi}{4}\right)(\sqrt2+1)$.\\
+$\displaystyle y_c=M_x/M=\frac18\left(\frac{\pi}{2}-1\right)\cdot\frac{2}{2-\sqrt2}=
+\frac18\left(\frac{\pi}{2}-1\right)(2+\sqrt2)$.
+$\blacktriangleright$
+
+\medskip
+\noindent{\bf 3652.} Фигуры, ограниченной замкнутой линией $y^2=x^2-x^4\ (x\ge0)$.
+
+\smallskip
+\noindent $\blacktriangleleft$ Поскольку фигура симметрична относительно оси $Ox$, центр
+тяжести находится на оси $Ox$, т. е. $y_c=0$.\\
+$\displaystyle M=2\int_0^1\sqrt{x^2-x^4}\,dx=2\int_0^1x\sqrt{1-x^2}\,dx=
+-\int_0^1\sqrt{1-x^2}\,d(1-x^2)x=\\
+=-\frac23(1-x^2)^{3/2}\Big|_0^1=\frac23$.\\
+$\displaystyle M_y=\int_0^1x\,dx\int_{-\sqrt{x^2-x^4}}^{\sqrt{x^2-x^4}}dy=
+2\int_0^1x^2\sqrt{1-x^2}\,dx=\qquad\Big|x=\sin t.\Big|\qquad=\\
+2\int_0^{\pi/2}\sin^2t\cos^2t\,dt=\frac12\int_0^{\pi/2}\sin^22t\,dt=
+\frac14\int_0^{\pi/2}(1-\cos4t)\,dt=\\
+=\frac{\pi}{8}-\frac{1}{16}\sin4t\Big|_0^{\pi/2}=\frac{\pi}{8}$.\quad
+$\displaystyle x_c=M_y/M=\frac{\pi}{8}\cdot\frac32=\frac{3}{16}\pi$.
+$\blacktriangleright$
+
+\medskip
+\noindent Найти моменты инерции однородных плоских фигур (плотность $\gamma=1$):
+
+\medskip
+\noindent{\bf 3656.} Прямоугольника со сторонами $a$ и $b$ относительно точки пересечения диагоналей.
+
+\smallskip
+\noindent $\blacktriangleleft$
+Расположим систему координат так, чтобы начало находилось в точке пересечения диагоналей, ось
+$Ox$ была параллельна стороне $a$, а ось $Oy$ была параллельна стороне $b$.\\
+$\displaystyle J=\int_0^adx\int_0^b\left[\left(x-\frac a2\right)^2+\left(y-\frac b2\right)^2\right]\,dy=\\
+=\int_0^a\left[b\left(x-\frac a2\right)^2+
+\frac13\left(b-\frac b2\right)^3-\frac13\left(-\frac b2\right)^3\right]\,dx=
+\left[\frac b3\left(x-\frac a2\right)^3+\frac {b^3x}{12}\right]\Big|_0^a=\\
+=\frac{a^3b}{12}+\frac {ab^3}{12}=\frac{ab(a^2+b^2)}{12}$. $\blacktriangleright$
+
+\medskip
+\noindent{\bf 3658.} Круга радиуса $R$ относительно точки, лежащей на окружности.
+
+\smallskip\noindent $\blacktriangleleft$ Расположим систему координат так, чтобы круг $D$ касался
+оси $Oy$ в начале координат и находился в правой полуплоскости. В полярной системе координат
+окружность будет задаваться уравнением $\rho=2R\cos\varphi$. Вычисляем момент:\\
+$\displaystyle J=\iint_D(x^2+y^2)\,dx\,dy=\int_{-\pi/2}^{\pi/2}d\varphi\int_0^{2R\cos\varphi}\rho^3d\rho=
+\frac14\int_{-\pi/2}^{\pi/2}16R^4\cos^4\varphi\,d\varphi=
+4R^4\int_{-\pi/2}^{\pi/2}\left(\frac{1+\cos2\varphi}{2}\right)^2d\varphi=
+R^4\int_{-\pi/2}^{\pi/2}\left(1+2\cos2\varphi+\frac{1+\cos4\varphi}{2}\right)\,d\varphi=\\
+R^4\frac32\varphi\Big|_{-\pi/2}^{\pi/2}+R^4\sin2\varphi\Big|_{-\pi/2}^{\pi/2}+
+\frac{R^4}{8}\sin4\varphi\Big|_{-\pi/2}^{\pi/2}=\frac{3\pi R^4}{2}$.
+$\blacktriangleright$
+
+\medskip
+\noindent Найти статические моменты однородных тел (плотность $\gamma=1$):
+
+\medskip
+\noindent{\bf 3663.} Прямоугольного параллелепипеда с ребрами $a$, $b$ и $c$ относительно его граней.
+
+\smallskip\noindent
+$\blacktriangleleft$ Можно воспользоваться известными формулами о центре масс тела.
+Выберем начало системы координат в одной из вершин параллелепипеда и пустим ее оси так,
+чтобы ось $Ox$ шла по ребру параллелепипеда с длиной $a$, ось $Oy$ по ребру с длиной $b$
+и ось $Oz$ по ребру с длиной $c$. Из соображений симметрии мы заключаем, что центр тяжести
+параллелепипеда находится в геометрическом центре тела и имеет координаты
+$x_c=a/2,\quad y_c=b/2,\quad z_c=c/2$. Масса параллелепипеда $M=abc$. Отсюда,
+используя известные формулы для центра тяжести, можно сразу написать значения
+статических моментов тела относительно координатных плоскостей или, что то же самое,
+относительно граней. Имеем $x_c=M_{yz}/M$, отсюда
+$$M_{yz}=x_cM=\frac{a^2bc}{2}.$$
+Аналогично
+$$M_{zx}=y_cM=\frac{ab^2c}{2},$$
+$$M_{xy}=z_cM=\frac{abc^2}{2}.$$
+$\blacktriangleright$
+
+\medskip
+\noindent{\bf 3664.} Прямого кругового конуса (радиус основания $R$, высота $H$) относительно плоскости, проходящей через вершину параллельно основанию.
+
+\smallskip\noindent
+$\blacktriangleleft$ Расположим начало координат в вершине конуса, а ось $Oz$ пустим
+по оси конуса. Тогда радиус кругового сечения конуса плоскостью, параллельной плоскости
+$Oxy$ имеющей данную координату $z\ (0\le z\le H)$, будет $\displaystyle \frac RHz$, а его площадь,
+а значит и масса будет равна $\displaystyle \pi\frac {R^2}{H^2}z^2dz$. Нам осталось написать
+интеграл для вычисления момента\\
+$\displaystyle M_{xy}=\int_0^Hz\pi\frac {R^2}{H^2}z^2dz=
+\frac {\pi R^2}{H^2}\cdot\frac{z^4}{4}\Big|_0^H=\frac {\pi R^2H^2}{4}$.
+$\blacktriangleright$
+
+\medskip
+\noindent Найти центры масс однородных тел, ограниченных данными поверхностями:
+
+\medskip
+\noindent{\bf 3668.} Цилиндром $\displaystyle z=\frac{y^2}{2}$ и плоскостями $x=0$, $y=0$, $z=0$ и $2x+3y-12=0$.
+
+\smallskip\noindent
+$\blacktriangleleft$
+$\displaystyle M=\int_0^4dy\int_0^{6-3y/2}\int_0^{y^2/2}dz=
+\frac12\int_0^4y^2dy\int_0^{6-3y/2}dx=
+\frac14\int_0^4y^2(12-3y)\,dy=\\
+=\frac14\left(4y^3-\frac34y^4\right)\Big|_0^4=64-48=16$.\\
+$\displaystyle M_{yz}=\int_0^4dy\int_0^{6-3y/2}x\,dx\int_0^{y^2/2}dz=
+\frac12\int_0^4y^2dy\int_0^{6-3y/2}x\,dx=\\
+=\frac{1}{16}\int_0^4y^2(12-3y)^2dy=
+\frac{1}{16}\left(48y^3-18y^4+\frac95y^5\right)\Big|_0^4=\\
+48\cdot4-18\cdot16+\frac{9\cdot64}{5}=12\cdot16-18\cdot16+\frac{36\cdot16}{5}=\frac{6\cdot16}{5}$.\\
+$\displaystyle M_{zx}=\int_0^4y\,dy\int_0^{6-3y/2}dx\int_0^{y^2/2}dz=
+\frac12\int_0^4y^3dy\int_0^{6-3y/2}dx=\\
+=\frac14\int_0^4y^3(12-3y)\,dy=\frac14\left(3y^4-\frac35y^5\right)\Big|_0^4=
+3\cdot64-\frac{3\cdot4\cdot64}{5}=\frac{3\cdot64}{5}$.\\
+$\displaystyle M_{xy}=\int_0^4dy\int_0^{6-3y/2}dx\int_0^{y^2/2}z\,dz=
+\frac18\int_0^4y^4dy\int_0^{6-3y/2}dx=\\
+=\frac{1}{16}\int_0^4y^4(12-3y)\,dy=
+\frac{1}{16}\left(\frac{12}{5}y^5-\frac12y^6\right)\Big|_0^4=
+\frac{12\cdot64}{5}-2\cdot64=\frac{2\cdot64}{5}$.\\
+$\displaystyle c_x=\frac{6\cdot64}{5}:16=\frac65,\quad
+c_y=\frac{3\cdot64}{5}:16=\frac{12}{5},\quad c_z=\frac{2\cdot64}{5}:16=\frac85$.
+$\blacktriangleright$
+
+\medskip
+\noindent{\bf 3671.} Сферой $x^2+y^2+z^2=R^2$ и конусом
+$z\tg\alpha=\sqrt{x^2+y^2}$ (шаровой сектор).
+
+\smallskip\noindent
+$\blacktriangleleft$ Задача такова, что имеется два тела, на которые конус разбивает
+шар. Ответ задачника показывает, что имеется в виду часть, лежащая в верхней полуплоскости.
+Из соображений симметрии мы можем заключить, что центр тяжести
+лежит на оси $Oz$. Сразу перейдем к сферической системе координат.
+$\displaystyle M=\int_0^R\rho^2d\rho\int_0^{\pi/2-\alpha}\sin\theta\,d\theta\int_0^{2\pi}d\varphi=
+2\pi\int_0^R\rho^2d\rho\int_0^{\pi/2\alpha}\sin\theta\,d\theta=\\
+=-2\pi\int_0^R\rho^2d\rho\cdot\cos\theta\Big|_0^{\pi/2-\alpha}=
+2\pi(1-\sin\alpha)\int_0^R\rho^2d\rho=\frac{2\pi(1-\sin\alpha)R^3}{3}$.\\
+$\displaystyle M_{xy}=\int_0^R\rho^3d\rho\int_0^{\pi/2-\alpha}\sin\theta\cos\theta\,d\theta\int_0^{2\pi}d\varphi=
+2\pi\int_0^R\rho^3d\rho\int_0^{\pi/2-\alpha}\sin\theta\cos\theta\,d\theta=\\
+=-\frac{\pi}{2}\int_0^R\rho^3d\rho \cos2\theta\Big|_0^{\pi/2-\alpha}=
+\frac{\pi(\cos2\alpha+1)}{2}\int_0^R\rho^3d\rho=\frac{\pi(\cos2\alpha+1)R^4}{8}$.\\
+$\displaystyle x_c=0,\quad y_c=0,\quad z_c=
+\frac{\pi(\cos2\alpha+1)R^4}{8}:\frac{2\pi(1-\sin\alpha)R^3}{3}=
+\frac{3(\cos2\alpha+1)R}{16(1-\sin\alpha)}=\\
+=\frac{3(2-2\sin^2\alpha)R}{16(1-\sin\alpha)}=\frac{3R(1+\sin\alpha)}{8}$.
+$\blacktriangleright$
+
+\medskip
+\noindent Найти моменты инерции однородных тел с массой, равной $M$.
+
+\medskip
+\noindent{\bf 3676.} Шара радиуса $R$ относительно касательной прямой.
+
+\smallskip\noindent
+$\blacktriangleleft$ Уравнение шара $x^2+y^2+z^2=R^2$. Сначала вычислим момент инерции
+шара относительно оси $Oz$, проходящей через центр тяжести. Квадрат расстояния точки $(x,y,z)$
+до этой оси равен $x^2+y^2$. В сферической системе координат эта величина равна $\rho^2\sin^2\theta$.
+Момент инерции однородного шара плостности $\displaystyle\gamma=\frac{3M}{4\pi R^3}$ представим
+интегралом в сферической системе координат\\
+$\displaystyle J_c=\gamma\int_0^{2\pi}d\varphi\int_0^R\rho^4d\rho\int_0^{\pi}\sin^3\theta\,d\theta=
+\gamma\int_0^{2\pi}d\varphi\int_0^R\rho^4d\rho\int_0^{\pi}(\cos^2\theta-1)\,d(\cos\theta)=\\
+\gamma\int_0^{2\pi}d\varphi\int_0^R\rho^4d\rho\left(\frac{\cos^3\theta}{3}-\cos\theta\right)\Big|_0^{\pi}=
+\gamma\cdot\frac{4}{3}\int_0^{2\pi}d\varphi\int_0^R\rho^4d\rho=
+\gamma\cdot\frac{4 R^5}{15}\int_0^{2\pi}d\varphi=\\
+=\gamma\cdot\frac{8\pi R^5}{15}=\frac{3M}{4\pi R^3}\cdot\frac{8\pi R^5}{15}=\frac{2MR^2}{5}$.\\
+Чтобы вычислить момент инерции шара относительно касательной, воспользуемся
+теоремой Гюйгенса--Штейнера\\
+$\displaystyle J=J_c+MR^2=\frac{2MR^2}{5}+MR^2=\frac{7MR^2}{5}$.
+$\blacktriangleright$
+
+\medskip
+\noindent{\bf 3680.} Параболоида вращения (радиус основания $R$, высота $H$ относительно оси, проходящей через его центр масс перпендикулярно к оси вращения (экваториальный момент).
+
+\smallskip\noindent
+$\blacktriangleleft$ Расположим систему координат так, чтобы начало координат
+находилось в вершине параболоида, а ось $Oz$ шла по оси параболоида от вершины
+в сторону его основания. Тогда параболоид будет иметь уравнение
+$z=k(x^2+y^2)$. При $z=H$ мы оказываемся на основании параболоида,
+т. е. $(x^2+y^2)=R^2$. Из этого условия можно вычислить $k=H/R^2$.
+Итак, уравнение параболоида имеет вид
+$\displaystyle z=\frac{H}{R^2}(x^2+y^2),\ 0\le z \le H$.
+Из него получается, что $\displaystyle x^2+y^2=\frac{R^2}{H}z$, а это
+квадрат радиуса круга, который образуется при сечении параболоида плоскостью
+параллельной основанию на расстоянии $z$ от вершины. Площадь этого круга равна
+$\displaystyle S_z=\frac{\pi R^2}{H}z$. Пользуясь этим вычисляем $z$-координату центра тяжести.\\
+$\displaystyle M=\int_0^H\frac{\pi R^2}{H}z\,dz=\frac{\pi R^2H^2}{2H}=\frac{\pi R^2H}{2}$,\\
+$\displaystyle M_{xy}=\int_0^H\frac{\pi R^2}{H}z^2dz=\frac{\pi R^2H^3}{3H}=\frac{\pi R^2H^2}{3}$.\\
+$\displaystyle z_c=\frac{\pi R^2H^2}{3}:\frac{\pi R^2H}{2}=\frac 23H$.\\
+Вычислим момент инерции параболоида относительно оси $Oy$. Интеграл запишем
+в цилиндрической системе координат\\
+$\displaystyle J=\int_0^{2\pi}d\varphi\int_0^Rd\rho\int_{H\rho^2/R^2}^H(\rho^2\cos^2\varphi+z^2)\rho\,dz=\\
+=\int_0^{2\pi}d\varphi\int_0^Rd\rho
+\left(\rho^3\cos^2\varphi\cdot z+\frac{\rho z^3}{3}\right)\Big|_{H\rho^2/R^2}^H=\\
+=\int_0^{2\pi}d\varphi\int_0^R\left[\rho^3\cos^2\varphi\cdot
+H\left(1-\frac{\rho^2}{R^2}\right)+\frac{\rho H^3}{3}\left(1-\frac{\rho^6}{R^6}\right)\right]d\rho=\\
+=\int_0^{2\pi}\left[H\cos^2\varphi\left(\frac{R^4}{4}-\frac{R^6}{6R^2}\right)+
+\frac{H^3}{3}\left(\frac{R^2}{2}-\frac{R^8}{8R^6}\right)\right]d\varphi=\\
+=\int_0^{2\pi}\left(\frac{HR^4}{12}\cos^2\varphi+\frac{H^3R^2}{8}\right)d\varphi=
+\int_0^{2\pi}\left(\frac{HR^4}{24}+\frac{HR^4}{24}\cos2\varphi+\frac{H^3R^2}{8}\right)d\varphi=\\
+=\frac{HR^4\pi}{12}+\frac{HR^4}{48}\sin2\varphi\Big|_0^{2\pi}+\frac{H^3R^2\pi}{4}
+=\frac{HR^4\pi}{12}+\frac{H^3R^2\pi}{4}$.\\
+Пользуясь теоремой Гюйгенса--Штейнера вычисляем момент относительно оси параллельной оси $Oy$
+и проходящей через центр тяжести параболоида.\\
+$\displaystyle J_c=J-\frac{4H^2}{9}\cdot\frac{\pi R^2H}{2}=
+\frac{HR^4\pi}{12}+\frac{H^3R^2\pi}{4}-\frac{2H^3R^2\pi}{9}=
+\frac{HR^2\pi}{36}(3R^2+H^2)$.
+$\blacktriangleright$
+
+\medskip
+\noindent{\bf 3685.} Плоское кольцо ограничено двумя концентрическими окружностями, радиусы которых равны $R$ и $r$ $(R>r)$. Зная, что плотность материала обратно пропорциональна расстоянию от центра окружностей, найти массу кольца. Плотность на окружности внутреннего круга равна единице.
+
+\smallskip\noindent
+$\blacktriangleleft$ Сначала определим поверхностную плотность. Если точка кольца
+находится на расстоянии $\rho$ от центра кольца, тогда плотность в этой точке должна
+быть равна $\displaystyle\frac r\rho$. Теперь массу кольца можно записать интегралом в
+полярной системе координат.\\
+$\displaystyle M=\int_0^{2\pi}d\varphi\int_r^Rr\,d\rho=2\pi r(R-r)$.
+$\blacktriangleright$
+
+\medskip
+\noindent{\bf 3689*.} Вычислить массу тела, ограниченного круглым конусом, высота которого равна $h$, а угол между осью и образующей равен $\alpha$, если плотность пропорциональна $n\mbox{-й}$ степени расстояния от плоскости, проведенной через вершину конуса параллельно основанию, причем на единице расстояния она равна $\gamma$ $(n>0)$.
+
+\smallskip\noindent
+$\blacktriangleleft$
+Расположим начало системы координат в вершине конуса, а координатную ось $Oz$ направим
+по оси конуса в сторону основания. Тогда уравнение конуса будет
+$\displaystyle z=\tg\left(\frac{\pi}{2}-\alpha\right)\sqrt{x^2-y^2}$ или
+$\displaystyle z=\ctg\alpha\sqrt{x^2-y^2}$. Радиус основания при $z=h$
+будет равен $h\tg\alpha$. Объемная плотность конуса будет равна $\gamma z^n$.
+Теперь мы можем записать массу конуса интегралом в цилиндрической системе координат.\\
+$\displaystyle M=\int_0^{2\pi}d\varphi\int_0^{h\tg\alpha}d\rho
+\int_{\rho\ctg\alpha}^h\gamma z^n\rho\,dz=
+\frac{\gamma}{n+1}\int_0^{2\pi}d\varphi\int_0^{h\tg\alpha}\rho\,d\rho\cdot
+ z^{n+1}\Big|_{\rho\ctg\alpha}^h=\\
+=\frac{\gamma}{n+1}\int_0^{2\pi}d\varphi\int_0^{h\tg\alpha}
+\rho(h^{n+1}-\rho^{n+1}\ctg^{n+1}\alpha)\,d\rho=\\
+=\frac{\gamma}{n+1}\int_0^{2\pi}\left(\frac{h^2\tg^2\alpha}{2}h^{n+1}-
+\frac{h^{n+3}\tg^{n+3}\alpha}{n+3}\ctg^{n+1}\alpha\right)d\varphi=\\
+=\frac{2\pi\gamma h^{n+3}}{n+1}\left(\frac{\tg^2\alpha}{2}-
+\frac{\tg^2\alpha}{n+3}\right)=
+\frac{2\pi\gamma h^{n+3}}{n+1}\cdot\frac{n+1}{2(n+3)}\tg^2\alpha=
+\frac{\pi\gamma h^{n+3}\tg^2\alpha}{n+3}$.
+$\blacktriangleright$
+
+\medskip
+\noindent{\bf 3691.} Вычислить массу тела, ограниченного параболоидом $x^2+y^2=2az$ и сферой $x^2+y^2+z^2=3a^2$ $(z>0)$, если плотность в каждой точке равна сумме квадратов координат.
+
+\smallskip\noindent
+$\blacktriangleleft$
+Найдем уравнения поверхностей в сферической системе координат.\\
+Параболоид\\
+$\displaystyle r^2\sin^2\theta\cos^2\varphi+r^2\sin^2\theta\sin^2\varphi=2ar\cos\theta;\quad
+r^2\sin^2\theta=2ar\cos\theta;\quad r=\frac{2a\cos\theta}{\sin^2\theta}$.\\
+Сфера\\
+$\displaystyle r^2\sin^2\theta\cos^2\varphi+r^2\sin^2\theta\sin^2\varphi+r^2\cos^2\theta=3a^2;\quad
+r^2=3a^2;\quad r=\sqrt3a$.\\
+Эти поверхности пересекаются по окружности, точки которой имеют одну и ту же координату $\theta$.
+Для нахождения этого $\theta$ решаем уравнение\\
+$\displaystyle \frac{2a\cos\theta}{\sin^2\theta}=\sqrt3a;\quad
+\frac{2a\cos\theta}{1-\cos^2\theta}=\sqrt3a;\quad \sqrt3\cos^2\theta+2\cos\theta-\sqrt3=0;$\\
+При решении квадратного уравнения оставляем корень, попадающий в диапазон $[-1,1]$
+(выбираем знак плюс перед радикалом)\\
+$\displaystyle \cos\theta=\frac{-1\pm\sqrt{1+3}}{\sqrt3}=\frac{1}{\sqrt3}=\frac{\sqrt3}{3}.\quad
+\sin\theta=\frac{\sqrt6}{3}.\quad \theta=\arcsin\frac{\sqrt6}{3}=\arccos\frac{\sqrt3}{3}$.\\
+Теперь можно записать массу в виде суммы двух интегралов\\
+$\displaystyle M=\int_0^{2\pi}d\varphi\int_0^{\arcsin(\sqrt6/3)}d\theta\int_0^{\sqrt3a}r^4\sin\theta\,dr+\\
++\int_0^{2\pi}d\varphi\int_{\arcsin(\sqrt6/3)}^{\pi/2}d\theta
+\int_0^{2a\cos\theta/\sin^2\theta}r^4\sin\theta\,dr=\\
+=\int_0^{2\pi}d\varphi\int_0^{\arcsin(\sqrt6/3)}\sin\theta\,d\theta\cdot
+\frac{r^5}{5}\Big|_0^{\sqrt3a}+\\
++\int_0^{2\pi}d\varphi\int_{\arcsin(\sqrt6/3)}^{\pi/2}\sin\theta\,d\theta\cdot
+\frac{r^5}{5}\Big|_0^{2a\cos\theta/\sin^2\theta}=\\
+=\frac{9\sqrt3a^5}{5}\int_0^{2\pi}d\varphi\int_0^{\arcsin(\sqrt6/3)}\sin\theta\,d\theta+
+\frac15\int_0^{2\pi}d\varphi\int_{\arcsin(\sqrt6/3)}^{\pi/2}
+\frac{32a^5\cos^5\theta\sin\theta}{\sin^{10}\theta}\,d\theta=\\
+=\frac{9\sqrt3a^5}{5}\int_0^{2\pi}d\varphi\cdot(-\cos\theta)\Big|_0^{\arcsin(\sqrt6/3)}+\\
++\frac15\int_0^{2\pi}d\varphi\int_{\arcsin(\sqrt6/3)}^{\pi/2}
+\frac{32a^5(1-\sin^2\theta)^2}{\sin^{9}\theta}\,d(\sin\theta)=\\
+=\frac{9\sqrt3a^5}{5}\int_0^{2\pi}d\varphi\cdot(-\cos\theta)\Big|_0^{\arccos(\sqrt3/3)}+\\
++\frac{32a^5}{5}\int_0^{2\pi}d\varphi\int_{\arcsin(\sqrt6/3)}^{\pi/2}
+(\sin^{-9}\theta-2\sin^{-7}\theta+\sin^{-5}\theta)\,d(\sin\theta)=\\
+=\frac{9\sqrt3a^5}{5}\left(1-\frac{\sqrt3}{3}\right)\int_0^{2\pi}d\varphi+\\
++\frac{32a^5}{5}\int_0^{2\pi}d\varphi\cdot
+\left(-\frac{\sin^{-8}\theta}{8}+\frac{\sin^{-6}\theta}{3}-\frac{\sin^{-4}\theta}{4}\right)\Big|_{\arcsin(\sqrt6/3)}^{\pi/2}=\\
+=\frac{18\pi a^5(\sqrt3-1)}{5}+
+\frac{64\pi a^5}{5}\cdot\left(-\frac18+\frac13-\frac14+\frac{81}{8\cdot16}-\frac{27}{3\cdot8}+\frac{9}{4\cdot4}\right)=\\
+=\frac{18\pi a^5(\sqrt3-1)}{5}+
+\frac{64\pi a^5}{5}\cdot\frac{-48+128-96+243-432-216}{8\cdot16\cdot3}=\\
+=\frac{18\pi a^5(\sqrt3-1)}{5}+
+\frac{\pi a^5}{5}\cdot\frac{11}{6}=\frac{\pi a^5}{5}\left(18\sqrt3-\frac{97}{6} \right)$.
+$\blacktriangleright$
+
+\medskip
+\noindent Вычислить криволинейные интегралы:
+
+\medskip
+\noindent{\bf 3773.} $\displaystyle \int_L(x^2+y^2)^nds,$ где $L$ --
+окружность $x=a\cos t,\quad y=a\sin t.$
+
+\smallskip\noindent
+$\blacktriangleleft$ $\displaystyle \int_L(x^2+y^2)^nds=
+\int_0^{2\pi}(a^2\cos^2t+a^2\sin^2t)^n\sqrt{(-a\sin t)^2+(a\cos t)^2}dt=\\
+=\int_0^{2\pi}(a^2)^n\cdot a\,dt=a^{2n+1}\int_0^{2\pi}dt=2\pi a^{2n+1}.$
+$\blacktriangleright$
+
+\medskip
+\noindent{\bf 3774.} $\displaystyle \int_L xy\,ds,$ где $L$ -- четверть эллипса
+$\displaystyle \frac{x^2}{a^2}+\frac{y^2}{b^2}=1,$ лежащая в первом квадранте. 
+
+\smallskip\noindent
+$\blacktriangleleft$ Введем параметризацию кривой $L$: $x=a\cos t,\quad y=b\sin t.\quad
+0\le t\le \pi/2.$\\
+$\displaystyle \int_L xy\,ds=\int_0^{\pi/2}a\cos t\cdot b\cos t\cdot\sqrt{(-a\sin t)^2+(b\cos t)^2}\,dt=\\
+=\int_0^{\pi/2}ab\sin t\cdot\sqrt{a^2\sin^2 t+b^2(1-\sin^2 t)}\,d(\sin t)=\\
+=\frac{ab}{2}\int_0^{\pi/2}\sqrt{(a^2-b^2)\sin^2 t+b^2}\,d(\sin^2 t)=\\
+=\frac{ab}{3(a^2-b^2)}\int_0^{\pi/2}\sqrt{(a^2-b^2)\sin^2 t+b^2}\,
+d\left((a^2-b^2)\sin^2 t+b^2\right)=\\
+=\frac{ab}{3(a^2-b^2)}\left((a^2-b^2)\sin^2 t+b^2\right)^{3/2}\Big|_0^{\pi/2}=
+\frac{ab(a^3-b^3)}{3(a^2-b^2)}=\frac{ab(a^2+ab+b^2)}{3(a+b)}.$
+$\blacktriangleright$
+
+\medskip
+\noindent{\bf 3775.} $\displaystyle \int_L\sqrt{2y}\,ds,$ где $L$ -- первая арка циклоиды
+$x=a(t-\sin t),\quad y=a(1-\cos t).$
+
+\smallskip\noindent
+$\blacktriangleleft$ $\displaystyle \int_L\sqrt{2y}\,ds=\int_0^{2\pi}
+\sqrt{2a(1-\cos t)}\sqrt{a^2(1-\cos t)^2+a^2\sin^2t}\,dt=\\
+=a^{3/2}\int_0^{2\pi}\sqrt{2(1-\cos t)(2-2\cos t)}\,dt=2a^{3/2}\int_0^{2\pi}(1-\cos t)\,dt=\\
+=2a^{3/2}(t-\sin t)\Big|_0^{2\pi}=4\pi a^{3/2}.$
+$\blacktriangleright$
+
+\medskip
+\noindent{\bf 3777*.} Вычислить $\displaystyle \int_L(x-y)\,ds,$ где $L$ -- окружность $x^2+y^2=ax.$
+
+\smallskip\noindent
+$\blacktriangleleft$ Уравнение окружности можно представить как
+$\displaystyle \left(x-\frac a2\right)^2+y^2=\left(\frac a2\right)^2.$\\
+Параметризация $L$: $\displaystyle x=\frac a2+\frac a2\cos t,\quad y=\frac a2\sin t.\quad 0\le t\le2\pi.$\\
+$\displaystyle \int_L(x-y)\,ds=\int_0^{2\pi}\left(\frac a2+\frac a2\cos t-\frac a2\sin t\right)
+\cdot\frac a2\sqrt{(-\sin t)^2+\cos^2t}\,dt=\\
+=\frac{a^2}{4}\int_0^{2\pi}(1+\cos t-\sin t)\,dt=\frac{a^2}{4}(t+\sin t+\cos t)\Big|_0^{2\pi}=\frac{\pi a^2}{2}.$
+$\blacktriangleright$
+
+\medskip
+\noindent Разложить в ряд Фурье данные функции в указанных интервалах.
+
+\medskip
+\noindent{\bf 4385.} Функцию $y=\cos ax$ в интервале $(-\pi,\pi)$
+($a$ -- не целое число).
+
+\smallskip
+\noindent $\blacktriangleleft$
+$\displaystyle a_0=\frac{1}{2\pi}\int_{-\pi}^{\pi}\cos ax\,dx=
+\left.\frac{1}{2\pi a}\sin ax\right|_{-\pi}^{\pi}=\frac{\sin\pi a}{\pi a}.\\
+a_n=\frac{1}{\pi}\int_{-\pi}^{\pi}\cos ax\cos nx\,dx=
+\frac{1}{2\pi}\int_{-\pi}^{\pi}(\cos (a-n)x+\cos (a+n)x)\,dx=$\\
+$\displaystyle =\left.\frac{1}{2(a-n)\pi}\sin (a-n)x\right|_{-\pi}^{\pi}+
+\left.\frac{1}{2(a+n)\pi}\sin (a+n)x\right|_{-\pi}^{\pi}=$\\
+$\displaystyle =\frac{\sin (a-n)\pi}{(a-n)\pi}+\frac{\sin (a+n)\pi}{(a+n)\pi}=$\\
+$\displaystyle =\frac{\sin a\pi\cos n\pi-\cos a\pi\sin n\pi}{(a-n)\pi}+
+\frac{\sin a\pi\cos n\pi+\cos a\pi\sin n\pi}{(a+n)\pi}=$\\
+$\displaystyle =\frac{(-1)^n\sin a\pi}{(a-n)\pi}+\frac{(-1)^n\sin a\pi}{(a+n)\pi}=
+\frac{(-1)^n2a\sin a\pi}{(a^2-n^2)\pi}$.\\
+$b_n=0$, поскольку $y=\cos ax$ функция четная.\\
+Ответ: $\displaystyle \cos ax\sim\frac{2\sin\pi a}{\pi}\left(\frac{1}{2a}+
+\sum_{n=1}^{\infty}\frac{(-1)^na}{a^2-n^2}\cos nx\right)$.
+$\blacktriangleright$
+
+\medskip
+\noindent{\bf 4387.} Функцию $y=\sin ax$ ($a$ -- целое число) в
+интервале $(0,\pi)$ в ряд косинусов.
+
+\smallskip
+\noindent $\blacktriangleleft$
+$\displaystyle a_0=\frac{1}{\pi}\int_0^{\pi}\sin ax\,dx=
+-\left.\frac{1}{\pi a}\cos ax\right|_0^{\pi}=
+\frac{1-\cos\pi a}{\pi a}.\\
+a_n=\frac{2}{\pi}\int_0^{\pi}\sin ax\cos nx\,dx=
+\frac{1}{\pi}\int_0^{\pi}(\sin (a+n)x+\sin (a-n)x)\,dx=$\\
+$\displaystyle =-\frac{1}{\pi}\left(\left.\frac{\cos (a+n)x}{a+n}\right|_0^{\pi}+
+\left.\frac{\cos (a-n)x}{a-n}\right|_0^{\pi}\right)=$\\
+$\displaystyle =\frac{1}{\pi}\left(\frac{1-\cos[\pi(a+n)]}{a+n}+
+\frac{1-\cos[\pi(a-n)]}{a-n}\right)=$\\
+$\displaystyle =\frac{1}{\pi}\cdot\frac{(a-n)(1-\cos[\pi(a+n)]+
+(a+n)(1-\cos[\pi(a-n)])}{a^2-n^2}=$\\
+$\displaystyle =\frac{1}{\pi}\cdot\frac{2a-a(\cos[\pi(a+n)]+\cos[\pi(a-n)])+
+n(\cos[\pi(a+n)]-\cos[\pi(a-n)])}{a^2-n^2}=$\\
+$\displaystyle =\frac{1}{\pi}\cdot\frac{2a-2a\cos\pi a\cos\pi n-2n\sin\pi a\sin\pi n}{a^2-n^2}=
+\frac{2a}{\pi}\cdot\frac{1-(-1)^n\cos\pi a}{a^2-n^2}.\\
+\sin ax\sim \frac{2a}{\pi}\left(\frac{1-\cos\pi a}{2a^2}+\right.\\
+\left.+\frac{1+\cos\pi a}{a^2-1^2}\cos x+
+\frac{1-\cos\pi a}{a^2-2^2}\cos 2x+
+\frac{1+\cos\pi a}{a^2-3^2}\cos 3x+\dots\right)$.\\
+Для четного $a$ $\displaystyle \sin ax\sim \frac{4a}{\pi}\left(\frac{\cos x}{a^2-1^2}+
+\frac{\cos 3x}{a^2-3^2}+\frac{\cos 5x}{a^2-5^2}+\dots\right)$.\\
+Для нечетного $a$ $\displaystyle \sin ax\sim \frac{4a}{\pi}\left(\frac{1}{2a^2}+
+\frac{\cos 2x}{a^2-2^2}+\frac{\cos 4x}{a^2-4^2}+\dots\right)$.
+$\blacktriangleright$
+
+\bigskip
+\noindent{\scriptsize \copyright Alidoro, 2016. palva@mail.ru }
+
+\end{document}

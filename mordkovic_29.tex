@@ -1,0 +1,300 @@
+\documentclass[a5paper,10pt]{article}
+\oddsidemargin=0pt
+\hoffset=-1.5cm
+\voffset=-1.5cm
+\topmargin=-1.5cm
+\textwidth=12.8cm
+\textheight=18.6cm
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage[russian]{babel}
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{bm}
+\usepackage{graphicx}
+
+\begin{document}
+
+{\it Мордкович А. Г. и др. -- Алгебра, 10 класс. Задачник (проф. уровень) (2009).}
+
+\section*{\S 29. Преобразование произведения\\
+тригонометрических функций в сумму}
+
+\medskip
+\noindent
+Преобразуйте произведение в сумму:
+
+\medskip
+\noindent
+{\bf 29.1.} а) $\sin23^\circ\sin32^\circ=\frac12[\cos(-9^\circ)-\cos(55^\circ)]=
+\frac12[\cos(9^\circ)-\cos(55^\circ)].$
+
+\medskip
+\noindent
+г) $\displaystyle 2\sin\frac{\pi}{8}\cos\frac{\pi}{5}=
+\frac12\left[\sin\frac{13\pi}{40}+\sin\frac{-3\pi}{40}\right]=
+\frac12\left[\sin\frac{13\pi}{40}-\sin\frac{3\pi}{40}\right].$
+
+\medskip
+\noindent
+{\bf 29.2.} в) $\displaystyle \cos\left(\frac{\alpha}{2}+\frac{\beta}{2}\right)
+\cos\left(\frac{\alpha}{2}-\frac{\beta}{2}\right)=\frac12[\cos\alpha+\cos\beta].$
+
+\medskip
+\noindent
+{\bf 29.3.} а) $\cos\alpha\sin(\alpha+\beta)=\frac12[\sin(2\alpha+\beta)-\sin(-\beta)]=\frac12[\sin(2\alpha+\beta)+\sin\beta].$
+
+\medskip
+\noindent
+{\bf 29.4.} a) $\displaystyle \sin10^\circ\cos8^\circ\cos6^\circ=
+\sin10^\circ\cdot\frac12(\cos2^\circ+\cos14^\circ)=\\[3pt]
+=\frac12(\sin10^\circ\cos2^\circ+\sin10^\circ\cos14^\circ)=
+\frac14(\sin12^\circ+\sin8^\circ+\sin24^\circ-\sin4^\circ).$
+
+\medskip
+\noindent
+{\bf 29.5.} б) $\displaystyle \cos x\cos y\cos z=
+\cos x\cdot\frac12[\cos(y-z)+\cos(y+z)]=\\[3pt]
+\frac12[\cos x\cos(y-z)+\cos x\cos(y+z)]=\\[3pt]
+=\frac14[\cos(x-y+z)+\cos(x+y-z)+\cos(x-y-z)+\cos(x+y+z)]=\\[3pt]
+=\frac14[\cos(-x+y+z)+\cos(x-y+z)+\cos(x+y-z)+\cos(x+y+z)].$
+
+\medskip
+\noindent
+{\bf 29.6.} б) $\displaystyle \cos^22x\sin3x=
+\frac12(1+\cos4x)\sin3x=\frac12(\sin3x+\cos4x\sin3x)=\\[3pt]
+=\frac14(2\sin3x+\sin7x-\sin x).$
+
+\medskip
+\noindent
+Докажите тождество:
+
+\medskip
+\noindent
+{\bf 29.7.} а) $2\sin t\sin2t+\cos3t=\cos t.$\\
+$2\sin t\sin2t+\cos3t=2\sin t\sin2t+\cos t\cos2t-\sin t\sin2t=\cos t\cos2t+\sin t\sin2t=\\
+=\cos(t-2t)=\cos t.$
+
+\medskip
+\noindent
+{\bf 29.8.} а) $\displaystyle \sin^2x+\cos\left(\frac{\pi}{3}-x\right)
+\cos\left(\frac{\pi}{3}+x\right)=\frac14.$\\[3pt]
+Преобразуем левую часть.\\[3pt]
+$\displaystyle \frac{1-\cos2t}{2}+\frac12\left[\cos(-2t)+\cos\frac{2\pi}{3}\right]=
+\frac12-\frac{\cos2t}{2}+\frac{\cos2t}{2}+\frac12\cdot\left(-\sin\frac{\pi}{6}\right)=
+\frac12-\frac14=\frac14.$
+
+\medskip
+\noindent
+{\bf 29.9.} б) $\displaystyle \tg x\tg\left(\frac{\pi}{3}-x\right)
+\tg\left(\frac{\pi}{3}+x\right)=\tg3x.$\\[3pt]
+Первый способ преобразованием произведения в сумму.\\[3pt]
+$\displaystyle \frac{\sin x\sin(\frac{\pi}{3}-x)\sin(\frac{\pi}{3}+x)}{\cos x\cos(\frac{\pi}{3}-x)\cos(\frac{\pi}{3}+x)}=
+\frac{\sin x\cdot\frac12(\cos(-2x)-\cos\frac{2\pi}{3})}
+{\cos x\cdot\frac12(\cos(-2x)+\cos\frac{2\pi}{3})}=
+\frac{\sin x(\cos2x+\frac12)}{\cos x(\cos2x-\frac12)}=\\[3pt]
+=\frac{\frac12(\sin3x+\sin(-x)+\sin x)}
+{\frac12(\cos3x+\cos(-x)-\cos x)}=\frac{\sin3x}{\cos3x}=\tg3x.$\\[3pt]
+Второй способ с использованием формулы тангенса суммы. Преобразуем левую часть.\\[3pt]
+$\displaystyle \tg x\cdot\frac{\tg\frac{\pi}{3}-\tg x}{1+\tg\frac{\pi}{3}\tg x}\cdot
+\frac{\tg\frac{\pi}{3}+\tg x}{1-\tg\frac{\pi}{3}\tg x}=
+\tg x\cdot\frac{\sqrt3-\tg x}{1+\sqrt3\tg x}\cdot\frac{\sqrt3+\tg x}{1-\sqrt3\tg x}=
+\tg x\cdot\frac{3-\tg^2x}{1-3\tg^2x}.$\\[3pt]
+Преобразуем правую часть.\\[3pt]
+$\displaystyle \tg3x=\frac{\tg x+\tg2x}{1-\tg x\tg2x}=
+\frac{\tg x+\frac{2\tg x}{1-\tg^2x}}{1-\tg x\cdot\frac{2\tg x}{1-\tg^2x}}=\frac{(\tg x-\tg^3x+2\tg x)(1-\tg^2x)}{(1-\tg^2x)(1-\tg^2x-2\tg^2x)}=\\[3pt]
+=\tg x\cdot\frac{3-\tg^2x}{1-3\tg^2x}.$ Совпадают.
+
+\medskip
+\noindent
+{\bf 29.10.} $\cos^2(45^\circ-\alpha)-\cos^2(60^\circ+\alpha)-
+\cos75^\circ\sin(75^\circ-2\alpha)=\sin2\alpha.$\\[3pt]
+Преобразуем левую часть.\\[3pt]
+$\displaystyle \frac{1+\cos(90^\circ-2\alpha)}{2}-\frac{1+\cos(120^\circ+2\alpha)}{2}-
+\frac12[\sin(150^\circ-2\alpha)-\sin2\alpha]=\\[3pt]
+\frac12+\frac{\sin2\alpha}{2}-\frac12+\frac{\sin(30^\circ+2\alpha)}{2}-
+\frac{\sin(30^\circ+2\alpha)}{2}+\frac{\sin2\alpha}{2}=\sin2\alpha.$
+
+\medskip
+\noindent
+{\bf 29.11.} a) $\displaystyle \sin x+\sin2x+\sin3x+\sin4x+\ldots+\sin nx=
+\frac{\sin\frac{(n+1)x}{2}\sin\frac{nx}{2}}{\sin\frac x2}.$\\
+Для доказательства домножим и разделим левую часть тождества на
+$\displaystyle \sin\frac x2.$\\[3pt]
+$\displaystyle \frac{\sin\frac x2(\sin x+\sin2x+\sin3x+\ldots+\sin nx)}
+{\sin\frac x2}=\\[3pt]
+=\frac{\cos\frac x2-\cos\frac{3x}{2}+\cos\frac{3x}{2}-\cos\frac{5x}{2}+
+\ldots+\cos\frac{(2n-1)x}{2}-\cos\frac{(2n+1)x}{2}}{2\sin\frac x2}=\\[3pt]
+=\frac{\cos\frac x2-\cos\frac{(2n+1)x}{2}}{2\sin\frac x2}=
+\frac{-2\sin\frac{(n+1)x}{2}\sin(-\frac{nx}{2})}{2\sin\frac x2}=
+\frac{\sin\frac{(n+1)x}{2}\sin\frac{nx}{2}}{\sin\frac x2}.$
+
+\medskip
+\noindent
+б) $\displaystyle \cos x+\cos2x+\cos3x+\cos4x+\ldots+\cos nx=
+\frac{\cos\frac{(n+1)x}{2}\sin\frac{nx}{2}}{\sin\frac x2}.$\\
+Для доказательства домножим и разделим левую часть тождества на
+$\displaystyle \sin\frac x2.$\\[3pt]
+$\displaystyle \frac{\sin\frac x2(\cos x+\cos2x+\cos3x+\ldots+\cos nx)}
+{\sin\frac x2}=\\[3pt]
+=\frac{\sin\frac{3x}{2}-\sin\frac x2+\sin\frac{5x}{2}-\sin\frac{3x}{2}+
+\ldots+\sin\frac{(2n+1)x}{2}-\sin\frac{(2n-1)x}{2}}{2\sin\frac x2}=\\[3pt]
+=\frac{-\sin\frac x2+\sin\frac{(2n+1)x}{2}}{2\sin\frac x2}=
+\frac{2\cos\frac{(n+1)x}{2}\sin\frac{nx}{2}}{2\sin\frac x2}=
+\frac{\cos\frac{(n+1)x}{2}\sin\frac{nx}{2}}{\sin\frac x2}.$
+
+\medskip
+\noindent
+Вычислите:
+
+\medskip
+\noindent
+{\bf 29.12.} а) $\displaystyle \cos^23^\circ+\cos^21^\circ-\cos4^\circ\cos2^\circ=
+\cos^23^\circ+\cos^21^\circ-\frac12(\cos6^\circ-\cos2^\circ)=\\[3pt]
+=\cos^23^\circ+\cos^21^\circ-\frac12(2\cos3^\circ-1+2\cos1^\circ-1)=1.$
+
+\medskip
+\noindent
+{\bf 29.13.} б) $\displaystyle \frac{\tg60^\circ}{\sin40^\circ}+4\cos100^\circ=
+\frac{\sin60^\circ+4\cos60^\circ\sin40^\circ\cos100^\circ}{\cos60^\circ\sin40^\circ}=\\[3pt]
+\frac{\sin60^\circ+2\sin40^\circ\cos100^\circ}{\frac12\sin40^\circ}=
+\frac{2[\sin60^\circ+\sin140^\circ+\sin(-60^\circ)]}
+{\sin40^\circ}=2\cdot\frac{\sin40^\circ}{\sin40^\circ}=2.$
+
+\medskip
+\noindent
+{\bf 29.14.} а) $\displaystyle 2\sin87^\circ\cos57^\circ-\sin36^\circ=
+\sin144^\circ+\sin30^\circ-\sin36^\circ=\\
+\sin36^\circ+\frac12-\sin36^\circ=\frac12.$
+
+\medskip
+\noindent
+{\bf 29.15.} б) $\displaystyle 2\cos28^\circ\cos17^\circ-2\sin31^\circ\sin14^\circ-
+2\sin14^\circ\sin3^\circ=\\[3pt]
+=\cos11^\circ+\cos45^\circ-(\cos17^\circ-\cos45^\circ)-(\cos11^\circ-\cos17^\circ)=
+\frac{\sqrt2}{2}+\frac{\sqrt2}{2}=\sqrt2.$
+
+\medskip
+\noindent
+{\bf 29.16.} а) $\displaystyle \cos10^\circ\cos30^\circ\cos50^\circ\cos70^\circ=\\[3pt]
+=\frac12(\cos40^\circ+\cos20^\circ)\cdot\frac12(\cos120^\circ+\cos20^\circ)=\\[3pt]
+=\frac14(\cos40^\circ\cos120^\circ+\cos40^\circ\cos20^\circ+
+\cos20^\circ\cos120^\circ+\cos20^\circ\cos20^\circ)=\\[3pt]
+=\frac18(\cos160^\circ+\cos80^\circ+\cos60^\circ+\cos20^\circ+
+\cos140^\circ+\cos100^\circ+\cos40^\circ+\cos0^\circ)=\\[3pt]
+=\frac18(-\cos20^\circ+\cos80^\circ+\frac12+\cos20^\circ
+-\cos40^\circ-\cos80^\circ+\cos40^\circ+1)=
+\frac18\cdot\frac32=\frac{3}{16}.$
+
+\medskip
+\noindent
+{\bf 29.17.} Сравните числа:\\
+а) $a=\sin1\cos2,\ b=\sin3\cos4.$\\
+$\displaystyle a-b=\sin1\cos2-\sin3\cos4=
+\frac12(\sin3-\sin1)-\frac12(\sin7-\sin1)=\frac12(\sin3-\sin7)=\\
+=\frac12[2\sin(-2)\cos5]=-2\sin2\cos5.$ Это выражение меньше нуля,
+поскольку угол $2$ принадлежит второй четверти и $\sin2>0,$ а угол $5$
+принадлежит четвертой четверти и $\cos5>0.$ Таким образом, $a<b.$
+
+\medskip
+\noindent
+{\bf 29.18.} Докажите неравенство:\\
+б) $\cos(2x-3)\cos(2x+3)>\sin(1+2x)\sin(1-2x).$\\
+$\displaystyle \cos(2x-3)\cos(2x+3)-\sin(1+2x)\sin(1-2x)=
+\frac12(\cos4x+\cos6)-\frac12(\cos4x+\cos2)=\frac12(\cos6-\cos2)=
+\frac12(-2\sin4\sin2)=-\sin4\sin2.$ Это выражение больше нуля, поскольку
+угол $4$ принадлежит третьей четверти и $\sin4<0,$ а угол
+$2$ принадлежит второй четверти и $\sin2>0.$ Таким образом, неравенство доказано. 
+
+\medskip
+\noindent
+{\bf 29.19.} а) Зная, что $\displaystyle \cos x=\frac34,$ вычислите
+$\displaystyle 16\sin\frac x2\sin\frac{3x}{2}.$\\
+$\displaystyle 16\sin\frac x2\sin\frac{3x}{2}=8(\cos x-\cos2x)=
+8(\cos x-2\cos^2x+1)=8\left(\frac34-2\cdot\frac{9}{16}+1\right)=\\[3pt]
+=8\cdot\frac{12-18+16}{16}=5.$
+
+\medskip
+\noindent
+Решите уравнение:
+
+\medskip
+\noindent
+{\bf 29.20.} б) $\displaystyle \sin\left(x+\frac{\pi}{3}\right)\cos\left(x-\frac{\pi}{6}\right)=1.$\\[3pt]
+$\displaystyle \frac12\left[\sin\left(2x+\frac{\pi}{6}\right)+\sin\frac{\pi}{2}\right]=1;\ \frac12\sin\left(2x+\frac{\pi}{6}\right)+\frac12=1;\ \sin\left(2x+\frac{\pi}{6}\right)=1;\\[3pt]
+2x+\frac{\pi}{6}=\frac{\pi}{2}+2k\pi;\ 2x=\frac{\pi}{3}+2k\pi;\ x=\frac{\pi}{6}+k\pi.$
+
+\medskip
+\noindent
+{\bf 29.21.} а) $2\sin x\cos3x+\sin4x=0.$\\
+$\displaystyle \sin4x+\sin(-2x)+\sin4x=0;\ 2\sin4x-\sin2x;\ 4\sin2x\cos2x-\sin2x)=0;\\
+\sin2x(4\cos2x-1)=0. \sin2x=0;\ 2x=k\pi;\ x=\frac{k\pi}{2}.\\
+4\cos2x-1=0;\ \cos2x=\frac14;\ 2x=\pm\arccos\frac14+2k\pi;
+\ x=\pm\frac12\arccos\frac14+k\pi.$\\[3pt]
+Ответ: $\displaystyle \frac{k\pi}{2},\ \pm\frac12\arccos\frac14+k\pi.$
+
+\medskip
+\noindent
+{\bf 29.22.} в) $\displaystyle \sin2x\cos x=\sin x\cos2x.\\[3pt]
+\frac12(\sin3x+\sin x)=\frac12[\sin3x+\sin(-x)];\ \sin x=-\sin x;
+\ \sin x=0;\ x=k\pi.$
+
+\medskip
+\noindent
+{\bf 29.23.} Найдите наименьший положительный и наибольший
+отрицательный корень уравнения:\\
+a) $\displaystyle \sin x\sin3x=0{,}5.\\
+\frac12[\cos(-2x)-\cos4x]=0{,}5;\ \cos2x-2\cos^22x+1=1;
+\ \cos2x(1-2\cos2x)=0.\\
+\cos2x=0;\ 2x=\frac{\pi}{2}+k\pi;\ \frac{\pi}{4}+\frac{k\pi}{2}.\\[3pt]
+1-2\cos2x=0;\ \cos2x=\frac12;\ 2x=\pm\frac{\pi}{3}+2k\pi;\ x=\pm\frac{\pi}{6}+k\pi.$\\
+Ответ: $\displaystyle \frac{\pi}{6},\ -\frac{\pi}{6}.$
+
+\medskip
+\noindent
+{\bf 29.24.} При каких значениях $x$ числа $a,\ b,\ c$ образуют
+геометрическую прогрессию, если:\\
+б) $a=\sin2x,\ b=\sin3x,\ c=\sin4x.$\\[3pt]
+$\displaystyle \frac ba=\frac cb;\ ac=b^2;\ \sin2x\sin4x=\sin^23x;
+\ \frac12(\cos2x-\cos6x)=\frac12(1-\cos6x);\\[3pt]
+\cos2x=1;\ 2x=2k\pi;\ x=k\pi.$\\[3pt]
+Ответ: при $x=k\pi.$
+
+\medskip
+\noindent
+{\bf 29.25.} Решите неравенство:\\[3pt]
+а) $\displaystyle \sin\left(\frac{\pi}{8}+
+x\right)\sin\left(\frac{\pi}{8}-x\right)<0.$\\
+$\displaystyle \frac14\left(\cos2x-\cos\frac{\pi}{4}\right)<0;
+\ \cos2x<\frac{\sqrt2}{2};\ \frac{\pi}{4}+2k\pi<2x<\frac{7\pi}{4}+2k\pi;\\[3pt]
+\frac{\pi}{8}+k\pi<x<\frac{7\pi}{8}+k\pi.$
+
+
+\medskip
+\noindent
+{\bf 29.26.} Решить систему уравнений :\\[3pt]
+б) $\displaystyle \begin{cases}\cos(x+y)\cos(x-y)=\frac14\\
+\sin(x+y)\sin(x-y)=\frac34\end{cases}.$\\[3pt]
+$\displaystyle \begin{cases}\frac12(\cos2y+\cos2x)=\frac14\\
+\frac12(\cos2y-\cos2x)=\frac34\end{cases};\quad
+\begin{cases}\cos2y+\cos2x=\frac12\\
+\cos2y-\cos2x=\frac32\end{cases};\quad
+\begin{cases}\cos2y=1\\ \cos2x=-\frac12\end{cases}.\\[3pt]
+\cos2x=-\frac12;\ 2x=\pm\frac{2\pi}{3}+2k\pi;\ x=\pm\frac{\pi}{3}+k\pi;\ \cos2y=1;\ 2y=2n\pi;\ y=n\pi.$\\
+Ответ: $\displaystyle x=\pm\frac{\pi}{3}+k\pi,\ y=n\pi.$
+
+\medskip
+\noindent
+{\bf 29.27.} Найдите наименьшее и наибольшее значение функции:\\[3pt]
+а) $\displaystyle y=\sin\left(x+\frac{\pi}{8}\right)
+\cos\left(x-\frac{\pi}{24}\right)=
+\frac12\left[\sin\left(2x+\frac{\pi}{12}\right)+\sin\frac{\pi}{6}\right]=\\[3pt]
+=\frac12\sin\left(2x+\frac{\pi}{12}\right)+\frac14.$\\[3pt]
+Ответ: Наименьшее значение $\displaystyle -\frac14,$
+наибольшее значение $\displaystyle \frac34.$
+
+\bigskip
+\noindent{\scriptsize \copyright Alidoro, 2022. palva@mail.ru }
+
+\end{document}
